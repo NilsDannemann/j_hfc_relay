@@ -1,39 +1,44 @@
 ---
-layout: styleguide
+layout: default
 ---
 
-<h1>HFC Relay - Frotend Framework</h1>
-<p>Instructions - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque blanditiis.</p>
+<h1 class="sg-h1">HFC Relay - Frotend Framework</h1>
+
+<p>Boilerplate for creating components based style guides using <a href="http://jekyllrb.com">Jekyll</a>. Here is the <a href="https://github.com/jeromecoupe/jekyllstyleguide">Github repository</a> for it, should you want to have a peek at the code, fork it or report an issue.</p>
 
 {% assign entries = site.components %}
 {% for entry in entries %}
-	{% include component.html %}
+  {% include component.html %}
 {% endfor %}
 
 {% comment %}
-	If you want to make sure your types are grouped (file names are not enough), you could use this group_by loop instead
 
-	{% assign componentsByType = site.components | group_by:"type" %}
-	{% for type in componentsByType %}
-		<h3 class="sg-h2">{{ type.name | capitalize }}</h3>
-		{% for entry in type.items %}
-			{% include component.html %}
-		{% endfor %}
-	{% endfor %}
+If you want to make sure your types are grouped (file names are not enough), you could use this group_by loop instead
+
+{% assign componentsByType = site.components | group_by:"type" %}
+{% for type in componentsByType %}
+  <h3 class="sg-h2">{{ type.name | capitalize }}</h3>
+  {% for entry in type.items %}
+    {% include component.html %}
+  {% endfor %}
+{% endfor %}
+
 {% endcomment %}
 
 
 
 {% comment %}
-	If you want to use pages and/or posts to create a more comple styleguide with pages / intros for every type of components, you can use these where loops on those pages / posts instead
 
-	{% assign entries = site.components | where:"type","buttons" %}
-	{% for entry in entries %}
-		{% include component.html %}
-	{% endfor %}
+If you want to use pages and/or posts to create a more comple styleguide with pages / intros for every type of components, you can use these where loops on those pages / posts instead
 
-	{% assign entries = site.components | where:"type","typography" %}
-	{% for entry in entries %}
-		{% include component.html %}
-	{% endfor %}
+{% assign entries = site.components | where:"type","buttons" %}
+{% for entry in entries %}
+  {% include component.html %}
+{% endfor %}
+
+{% assign entries = site.components | where:"type","typography" %}
+{% for entry in entries %}
+  {% include component.html %}
+{% endfor %}
+
 {% endcomment %}
