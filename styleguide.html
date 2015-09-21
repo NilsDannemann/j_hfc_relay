@@ -1,0 +1,13 @@
+---
+permalink: "/styleguide/"
+layout: styleguide
+title:  "About Us"
+---
+
+<h1>HFC Relay - Frotend Framework</h1>
+<p>Some Info</p>
+
+{% assign entries = site.components %}
+{% for entry in entries %}
+	{% include styleguide/component.html %}
+{% endfor %}

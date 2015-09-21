@@ -7,8 +7,8 @@
 	<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- favicon.ico and apple-touch-icon.png in root directory -->
-	<link rel="stylesheet" href="css/style.css" media="screen">
+
+	<link rel="stylesheet" href="{{ site.baseurl}}/css/style.css" media="screen">
 </head>
 <body>
 	Layout: Main
