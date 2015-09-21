@@ -9,8 +9,8 @@ github_username:  nilsdannemann
 
 # Collections
 collections:
-  components:
-    output: false
+	components:
+		output: false
 
 # Front Matter Defaults
 
@@ -18,7 +18,7 @@ collections:
 highlighter: pygments
 markdown: kramdown
 kramdown:
-  input: GFM
+	input: GFM
 sass:
-  sass_dir: _scss
-  style: :compressed
+	sass_dir: _scss
+	style: :compressed
