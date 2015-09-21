@@ -2,7 +2,8 @@
 title: HFC Relay - Frontend Framework
 email: nd@hfci.de
 description: Extremely efficient prototyping
-baseurl: /j_hfc_relay
+baseurl: "/j_hfc_relay"
+url: ""
 github_username: nilsdannemann
 
 
