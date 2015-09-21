@@ -1,12 +1,15 @@
 <article class="component">
 
 	<header class="component__header">
-		<h2 class="component__title">
+		<h2 class="component__title" id="guide-{{ entry.title | slugify }}">
 			{{ entry.title }}
 		</h2>
-		<p class="component__sass">
-			Sass file: {{ entry.scss }}
-		</p>
+		{% if entry.scss %}
+			<p class="component__sass">SCSS file: <a href="{{ site.github_username + "lorem"}}.github.io{{ site.baseurl }}{{ entry.scss }}">{{ entry.scss }}</a></p>
+		{% endif %}
+		{% if entry.usage %}
+			<p class="component__usage">Usage: {{ entry.usage }}</p>
+		{% endif %}
 	</header>
 	<div class="component__body">
 		<div class="component__display">
@@ -14,9 +17,9 @@
 		</div>
 		<div class="component__source">
 			{% highlight html %}
-				{{ entry.content }}
+			{{ entry.content }}
 			{% endhighlight %}
 		</div>
 	</div>
 
-</article>
+</article><!-- /.component -->

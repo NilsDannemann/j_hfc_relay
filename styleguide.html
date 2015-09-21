@@ -7,7 +7,15 @@ title:  "Styleguide"
 <h1>HFC Relay - Frotend Framework</h1>
 <p>Some Info</p>
 
-{% assign entries = site.components %}
+{% comment %}{% assign entries = site.components %}
 {% for entry in entries %}
 	{% include styleguide/component.html %}
+{% endfor %}{% endcomment %}
+
+{% assign componentsByType = site.components | group_by:"type" %}
+{% for type in componentsByType %}
+	<h2 id="guide-{{ type.name }}">{{ type.name | capitalize }}</h2>
+{% for entry in type.items %}
+	{% include styleguide/component.html %}
+{% endfor %}
 {% endfor %}
