@@ -6,9 +6,8 @@
 	border: none;
 	border-radius: .2em;
 	cursor: pointer;
-	background-color: #399FD3;
+	background-color: #2196F3;
 	color: #fff;
-	text-shadow: 1px 1px 0 rgba(0,0,0,.35);
 
 	font-size: 1rem;
 	font-weight: 400;
@@ -20,6 +19,6 @@
 
 	&:hover
 	{
-		background-color: mix(#fff, #399FD3, 20%);
+		background-color: mix(#fff, #2196F3, 20%);
 	}
 }

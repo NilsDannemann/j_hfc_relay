@@ -8,11 +8,13 @@
 	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="{{ site.baseurl}}/css/style.css" media="screen">
-	<link rel="stylesheet" href="{{ site.baseurl}}/css/styleguide.css" media="screen">
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" media="screen">
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/styleguide.css" media="screen">
 </head>
 <body>
-	Layout: Styleguide
-	{{ content }}
+	{% include header.html %}
+	{% include content.html %}
+	{% include footer.html %}
 </body>
 </html>
+
