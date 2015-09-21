@@ -1,13 +1,17 @@
 ---
 ---
+// SETUP
 @import 'vendor/normalize';
 
+// BASE STYLES
 @import 'base/base';
-@import 'base/typography';
 @import 'base/syntax-highlighting';
 
+// LAYOUTS
 @import 'layout/styleguide';
 
-@import 'components/buttons';
+// COMPONENTS
+@import 'components/button';
 
+// HELPERS
 @import 'utils/helpers';
