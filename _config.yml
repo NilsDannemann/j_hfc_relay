@@ -3,8 +3,7 @@ title: HFC Relay - Frontend Framework
 description: Extremely efficient prototyping
 baseurl: "/j_hfc_relay"
 url: ""
-github_username: nilsdannemann
-
+github_repo: https://github.com/NilsDannemann/j_hfc_relay/blob/gh-pages
 
 # Collections
 collections:
@@ -21,3 +20,5 @@ kramdown:
 sass:
   sass_dir: _scss
   style: :compressed
+
+

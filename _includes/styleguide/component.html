@@ -5,10 +5,14 @@
 			{{ entry.title }}
 		</h2>
 		{% if entry.scss %}
-			<p class="component__sass">SCSS file: <a href="{{ site.github_username + "lorem"}}.github.io{{ site.baseurl }}{{ entry.scss }}">{{ entry.scss }}</a></p>
+			<p class="component__sass">
+				SCSS file: <a href="{{ site.github_repo }}{{ entry.scss }}" target="_blank">{{ entry.scss }}</a>
+			</p>
 		{% endif %}
 		{% if entry.usage %}
-			<p class="component__usage">Usage: {{ entry.usage }}</p>
+			<p class="component__usage">
+				Usage: {{ entry.usage }}
+			</p>
 		{% endif %}
 	</header>
 	<div class="component__body">
