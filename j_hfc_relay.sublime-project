@@ -1,0 +1,18 @@
+{
+	"folders":
+	[
+		{
+			"folder_exclude_patterns": [
+				".sass-cache",
+				"_site"
+			],
+			"file_exclude_patterns": [
+				"j_hfc_relay.sublime-project",
+				".gitattributes",
+				".gitignore",
+				"README.md"
+			],
+			"path": "."
+		}
+	]
+}
