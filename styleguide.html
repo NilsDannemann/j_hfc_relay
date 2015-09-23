@@ -10,6 +10,9 @@ title:  "Styleguide"
 <!-- ASSIGN COMPONENTS -->
 {% assign componentsByType = site.components | group_by:"type" %}
 
+<!-- COMPONENT NAV -->
+{% include styleguide/component_nav.html %}
+
 <!-- DISPLAY COMPONENTS -->
 {% for type in componentsByType %}
 	<h2 id="styleguide-section-{{ type.name }}">{{ type.name | capitalize }}</h2>
@@ -17,6 +20,3 @@ title:  "Styleguide"
 	{% include styleguide/component.html %}
 {% endfor %}
 {% endfor %}
-
-<!-- COMPONENT NAV -->
-{% include styleguide/component_nav.html %}
