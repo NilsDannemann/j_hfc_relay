@@ -4,13 +4,19 @@ layout: styleguide
 title:  "Styleguide"
 ---
 
-<h1>HFC Relay - Dev Styleguide</h1>
+<h1>HFC Relay - Developer Styleguide</h1>
 <p>Some Info</p>
 
+<!-- ASSIGN COMPONENTS -->
 {% assign componentsByType = site.components | group_by:"type" %}
+
+<!-- DISPLAY COMPONENTS -->
 {% for type in componentsByType %}
-	<h2 id="guide-{{ type.name }}">{{ type.name | capitalize }}</h2>
+	<h2 id="styleguide-section-{{ type.name }}">{{ type.name | capitalize }}</h2>
 {% for entry in type.items %}
 	{% include styleguide/component.html %}
 {% endfor %}
 {% endfor %}
+
+<!-- COMPONENT NAV -->
+{% include styleguide/component_nav.html %}
