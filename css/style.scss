@@ -6,13 +6,13 @@
 /* PARTIALS
 /*
 /* =======================================*/
+	
+	/* ===THEME=== */
+	@import 'theme';
 
 	/* ===RESET=== */
 	@import 'reset/normalize';
 	@import 'reset/base';
-	
-	/* ===THEME=== */
-	@import 'theme';
 
 	/* ===LAYOUTS=== */
 	@import 'layouts/main';
