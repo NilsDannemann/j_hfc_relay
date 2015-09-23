@@ -1,22 +1,31 @@
 ---
 ---
-// SETUP
-@import 'vendor/normalize';
 
-// BASE STYLES
-@import 'base/base';
+/* =======================================*/
+/*
+/* PARTIALS
+/*
+/* =======================================*/
 
-// LAYOUTS
-@import 'layouts/main';
+	/* ===RESET=== */
+	@import 'reset/normalize';
+	@import 'reset/base';
+	
+	/* ===THEME=== */
+	@import 'theme';
 
-// INCLUDES
-@import 'includes/header';
-@import 'includes/content';
-@import 'includes/sidebar';
-@import 'includes/footer';
+	/* ===LAYOUTS=== */
+	@import 'layouts/main';
 
-// COMPONENTS
-@import 'components/button';
+	/* ===COMPONENTS=== */
+	@import 'components/typography';
+	@import 'components/button';
 
-// HELPERS
-@import 'utils/helpers';
+	/* ===INCLUDES=== */
+	@import 'includes/header';
+	@import 'includes/content';
+	@import 'includes/sidebar';
+	@import 'includes/footer';
+
+	/* ===HELPERS=== */
+	@import 'utils/helpers';

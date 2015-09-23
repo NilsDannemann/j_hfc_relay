@@ -1,34 +1,38 @@
 .component {
-	margin: 2em 0 0 0;
+	margin: $spacing 0 0 0;
 	border: 1px solid #ececec;
 	
 	&__header {
-		padding: 1.5em;
+		padding: $spacing;
 		background: #f7f7f7;
 		border-bottom: 1px solid #ececec;
 	}
 
 	&__title {
-		margin: 0;
+		margin: 0 0 ($spacing / 2) 0;
 		padding: 0;
-		font: 600 0.75rem/1.2 'Helvetica', 'Arial', sans-serif;
-		text-transform: uppercase;
-		color: #333;
+		font-family: $font-family;
+		font-size: $font-size + 2;
+		line-height: $line-height;
 	}
 
 	&__usage {
-		margin: .5em 0 0;
+		margin: 0;
 		padding: 0;
-		font: 400 italic 0.75rem/1.2 'Helvetica', 'Arial', sans-serif;
+		font-family: $font-family;
+		font-size: $font-size - 2;
+		line-height: $line-height;
 	}
 	
 	&__sass {
-		margin: .5em 0 0;
+		margin: 0;
 		padding: 0;
-		font: 400 italic 0.75rem/1.2 'Helvetica', 'Arial', sans-serif;
+		font-family: $font-family;
+		font-size: $font-size - 2;
+		line-height: $line-height;
 	}
 
 	&__body {
-		padding: 1.5em;
+		padding: $spacing;
 	}
 }

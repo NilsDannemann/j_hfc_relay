@@ -1,8 +1,19 @@
 ---
 ---
-// LAYOUTS
 
-// INCLUDES
-@import 'includes/styleguide/component';
-@import 'includes/styleguide/component_nav';
-@import 'includes/styleguide/highlight';
+/* =======================================*/
+/*
+/* PARTIALS
+/*
+/* =======================================*/
+	
+	/* ===THEME=== */
+	@import 'theme';
+
+	/* ===LAYOUTS=== */
+	@import 'layouts/styleguide';
+
+	/* ===INCLUDES=== */
+	@import 'includes/styleguide/component';
+	@import 'includes/styleguide/component_nav';
+	@import 'includes/styleguide/highlight';

@@ -2,15 +2,15 @@
 	display: inline-block;
 	vertical-align: middle;
 	margin: 0;
-	padding: .75em 1em;
+	padding: $spacing/2.5 $spacing;
 	border: none;
 	border-radius: .2em;
 	cursor: pointer;
-	background-color: #2196F3;
+	background: $color-blue;
 	color: #fff;
 
-	font-size: 1rem;
-	line-height: 1;
+	font-size: $font-size;
+	line-height: $line-height;
 	text-align: center;
 	text-decoration: none;
 
@@ -18,6 +18,6 @@
 
 	&:hover
 	{
-		background-color: mix(#fff, #2196F3, 20%);
+		background: lighten( $color-blue, 10% );
 	}
 }
