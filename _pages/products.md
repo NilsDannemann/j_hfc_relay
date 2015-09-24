@@ -2,7 +2,7 @@
 title: "Products"
 layout: main
 permalink: "/products/"
-mnav_weight: 3
+mnav_position: 3
 ---
 
 <h1>Products</h1>

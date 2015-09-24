@@ -2,7 +2,7 @@
 title: "Contact"
 layout: main
 permalink: "/contact/"
-mnav_weight: 4
+mnav_position: 4
 ---
 
 <h1>Contact</h1>

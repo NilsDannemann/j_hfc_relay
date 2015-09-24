@@ -1,19 +1,21 @@
 .mnav {
-	background-color: $color-blue;
-}
-.mnav ul {
-	margin: 0;
-	padding: 0; 
-}
-.mnav li {
-	display: inline-block;
-}
-.mnav li:last-child {
-	border-right-width: 0;
-}
-.mnav a {
-	color: #fff;
-	font-size: $font-size;
-	display: block;
-	padding: $spacing $spacing;
+	background: $color-brand;
+	
+	&__item {
+		display: inline-block;
+
+	}
+	
+	&__link {
+		display: block;
+		color: #fff;
+		font-size: $font-size;
+		padding: $spacing $spacing;
+
+		&:hover,
+		&.is-active {
+			background: lighten($color-brand, 10%);
+		}
+	}
+
 }

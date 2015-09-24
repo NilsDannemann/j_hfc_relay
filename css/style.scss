@@ -7,26 +7,26 @@
 /*
 /* =======================================*/
 	
-	/* ===THEME=== */
-	@import 'theme';
+/* ===THEME=== */
+@import 'config';
 
-	/* ===RESET=== */
-	@import 'reset/normalize';
-	@import 'reset/base';
+/* ===RESET=== */
+@import 'reset/normalize';
+@import 'reset/base';
 
-	/* ===LAYOUTS=== */
-	@import 'layouts/main';
+/* ===LAYOUTS=== */
+@import 'layouts/main';
 
-	/* ===INCLUDES=== */
-	@import 'includes/mnav';
-	@import 'includes/header';
-	@import 'includes/content';
-	@import 'includes/sidebar';
-	@import 'includes/footer';
-	
-	/* ===COMPONENTS=== */
-	@import 'components/typography';
-	@import 'components/button';
+/* ===INCLUDES=== */
+@import 'includes/mnav';
+@import 'includes/header';
+@import 'includes/content';
+@import 'includes/sidebar';
+@import 'includes/footer';
 
-	/* ===HELPERS=== */
-	@import 'utils/helpers';
+/* ===COMPONENTS=== */
+@import 'components/typography';
+@import 'components/button';
+
+/* ===HELPERS=== */
+@import 'utils/helpers';

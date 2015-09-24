@@ -1,13 +1,11 @@
-<nav class="mnav">
-	{% assign pages = site.pages | sort:"mnav_weight"  %}
-	<ul>
+<nav>
+	<ul class="mnav">
+		{% assign pages = site.pages | sort:"mnav_position"  %}
 		{% for p in pages %}
-			{% unless p.url == "/styleguide/" %}
+			{% unless p.url contains "styleguide" %}
 			{% unless p.url contains "css" %}
-				<li>
-					<a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.baseurl }}{{ p.url }}">
-						{{ p.title }}
-					</a>
+				<li class="mnav__item">
+					<a class="mnav__link {% if p.url == page.url %}is-active{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
 				</li>
 			{% endunless %}
 			{% endunless %}
