@@ -1,0 +1,13 @@
+<article class="teaser">
+	<a class="teaser__title" href="{% if include.link != null %}{{ include.link }}{% else %}#{% endif %}">
+		<h3>{% if include.title != null %}{{ include.title }}{% else %}Headline{% endif %}</h3>
+	</a>
+	<a class="teaser__img" href="{% if include.link != null %}{{ include.link }}{% else %}#{% endif %}">
+		<img src="http://placehold.it/350x180/eeeeee" alt="image" />
+	</a>
+	<p class="teaser__content">
+		{% if include.text != null %}{{ include.text }}{% else %}Text{% endif %}
+	</p>
+	<a class="teaser__link" href="{% if include.link != null %}{{ include.link }}{% else %}#{% endif %}">Read more</a>
+</article>
+

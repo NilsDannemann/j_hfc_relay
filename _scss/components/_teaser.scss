@@ -1,0 +1,36 @@
+.teaser {
+	max-width: 275px;
+	background: #fff;
+	border: 1px solid $color-grey;
+	margin-bottom: $spacing;
+
+	&__title {
+		display: block;
+		color: $color-black;
+		padding: $spacing;
+
+		& * {margin: 0;}
+	}
+	&__img {
+		display: block;
+	}
+	&__content {
+		display: block; // no-webkit fallback
+		display: -webkit-box; // no-webkit fallback
+		height: $font-size * $line-height * $teaser-lines-to-show;
+
+		margin: $spacing/2 $spacing;
+		font-size: $font-size;
+		line-height: $line-height;
+
+		-webkit-line-clamp: $teaser-lines-to-show;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	&__link {
+		display: block;
+		font-size: $font-size;
+		padding: 0 $spacing $spacing $spacing;
+	}
+}

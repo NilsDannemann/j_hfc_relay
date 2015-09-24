@@ -4,7 +4,7 @@
 /*
 /* =======================================*/
 
-/* ===COLORS - CONFIGURATION=== */
+/* ===COLORS - GENERAL=== */
 $color-black: #333;
 $color-spaceblack: #2F394D;
 $color-grey: #eee;
@@ -30,7 +30,7 @@ $color-yellow: #FFEB3B;
 $color-amber: #FFC107;
 $color-orange: #FF9800;
 
-/* ===COLORS - BRAND=== */
+/* ===COLORS - THEME=== */
 $color-brand: $color-blue;
 
 /* ===LAYOUT=== */
@@ -39,4 +39,10 @@ $spacing: 20px;
 /* ===TYPOGRAPHY=== */
 $font-family: 'Helvetica', 'Arial', sans-serif;
 $font-size: 14px;
-$line-height: 1.6em;
+$line-height: 1.6;
+
+/* ===UI=== */
+$box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+
+/* ===COMPONENTS=== */
+$teaser-lines-to-show: 3;
