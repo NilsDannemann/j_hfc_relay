@@ -10,6 +10,9 @@ collections:
   components:
     output: false
 
+# Pages
+include: ['_pages']
+
 # Front Matter Defaults
 
 # General settings
