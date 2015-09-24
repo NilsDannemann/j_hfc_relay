@@ -4,7 +4,7 @@
 	margin: 0;
 	padding: $spacing/2.5 $spacing;
 	border: none;
-	border-radius: .2em;
+	border-radius: $border-radius;
 	cursor: pointer;
 	background: $color-brand;
 	color: #fff;
@@ -14,7 +14,7 @@
 	text-align: center;
 	text-decoration: none;
 
-	transition: all 0.15s linear;
+	transition: $transition;
 
 	&:hover
 	{
