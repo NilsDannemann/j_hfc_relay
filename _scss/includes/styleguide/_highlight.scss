@@ -1,10 +1,12 @@
 // Syntax highlighting styles
+pre {-moz-tab-size: 4;} /* Firefox */
+pre {tab-size: 4;}
+
 .highlight {
-	margin:1em 0 0 0;
-	padding:0 1em;
-	background: #f6f6f6;
-	border:1px solid #EEEEEE;
-	border-radius:.15em;
+	margin:$spacing 0 0 0;
+	padding:0 $spacing;
+	background: #f9f9f9;
+	border:1px solid $color-grey;
 
 	.c     { color: #998; font-style: italic } // Comment
 	.err   { color: #a61717; background-color: #e3d2d2 } // Error

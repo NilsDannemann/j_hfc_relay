@@ -1,11 +1,11 @@
 .component {
 	margin: $spacing 0 0 0;
-	border: 1px solid #ececec;
+	border: 1px solid $color-grey;
 	
 	&__header {
 		padding: $spacing;
-		background: #f7f7f7;
-		border-bottom: 1px solid #ececec;
+		background: #f9f9f9;
+		border-bottom: 1px solid $color-grey;
 	}
 
 	&__title {
