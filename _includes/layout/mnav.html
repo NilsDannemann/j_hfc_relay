@@ -2,12 +2,10 @@
 	<ul class="mnav">
 		{% assign pages = site.pages | sort:"mnav_position"  %}
 		{% for p in pages %}
-			{% unless p.url contains "styleguide" %}
-			{% unless p.url contains "css" %}
+			{% unless p.url contains "style" %}
 				<li class="mnav__item">
 					<a class="mnav__link {% if p.url == page.url %}is-active{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
 				</li>
-			{% endunless %}
 			{% endunless %}
 		{% endfor %}
 	</ul>
