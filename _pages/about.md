@@ -1,7 +1,8 @@
 ---
-permalink: "/about/"
+title: "About us"
 layout: main
-title:  "About us"
+permalink: "/about/"
+mnav_weight: 2
 ---
 
 <h1>About us</h1>

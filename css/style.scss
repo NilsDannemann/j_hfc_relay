@@ -17,15 +17,16 @@
 	/* ===LAYOUTS=== */
 	@import 'layouts/main';
 
-	/* ===COMPONENTS=== */
-	@import 'components/typography';
-	@import 'components/button';
-
 	/* ===INCLUDES=== */
+	@import 'includes/mnav';
 	@import 'includes/header';
 	@import 'includes/content';
 	@import 'includes/sidebar';
 	@import 'includes/footer';
+	
+	/* ===COMPONENTS=== */
+	@import 'components/typography';
+	@import 'components/button';
 
 	/* ===HELPERS=== */
 	@import 'utils/helpers';
