@@ -6,4 +6,4 @@ mnav_position: 3
 ---
 
 <h1>Products</h1>
-{% include button.html text="Button" %}
+{% include components/button/button.html text="Button" %}

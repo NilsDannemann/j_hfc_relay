@@ -11,12 +11,12 @@ permalink: "/styleguide/"
 {% assign componentsByType = site.components | group_by:"type" %}
 
 <!-- COMPONENT NAV -->
-{% include styleguide/component_nav.html %}
+{% include styleguide/component_nav/component_nav.html %}
 
 <!-- DISPLAY COMPONENTS -->
 {% for type in componentsByType %}
 	<h2 id="styleguide-section-{{ type.name }}">{{ type.name | capitalize }}</h2>
 {% for entry in type.items %}
-	{% include styleguide/component.html %}
+	{% include styleguide/component_mask/component_mask.html %}
 {% endfor %}
 {% endfor %}

@@ -1,0 +1,140 @@
+/* =======================================*/
+/*
+/* BASE
+/*
+/* =======================================*/
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #333;
+	background: #fff;
+}
+
+img {
+	display:block;
+	width: 100%;
+}
+
+/* =======================================*/
+/*
+/* TYPOGRAPHY
+/*
+/* =======================================*/
+
+body {
+	font-family: $font-family;
+	font-size: $font-size;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	line-height: $line-height;
+}
+
+a {
+	color: $color-brand;
+	text-decoration: none;
+}
+
+/* =======================================*/
+/*
+/* HEADER
+/*
+/* =======================================*/
+
+.header {
+	width: 100%;
+	min-height: $spacing*15;
+	padding: $spacing;
+	background: #eee;
+}
+
+/* =======================================*/
+/*
+/* MNAV
+/*
+/* =======================================*/
+
+.mnav {
+	background: $color-brand;
+	
+	&__item {
+		display: inline-block;
+	}
+	
+	&__link {
+		display: block;
+		color: #fff;
+		font-size: $font-size;
+		padding: $spacing $spacing;
+
+		transition: $transition;
+
+		&:hover,
+		&.is-active {
+			background: lighten($color-brand, 10%);
+		}
+	}
+}
+
+/* =======================================*/
+/*
+/* CONTENT
+/*
+/* =======================================*/
+
+.content {
+	width: 100%;
+	padding: 20px;
+}
+
+/* =======================================*/
+/*
+/* SIDEBAR
+/*
+/* =======================================*/
+
+.sidebar {
+	width: 100%;
+	padding: 20px;
+	border: 1px solid #eee;
+}
+
+/* =======================================*/
+/*
+/* FOOTER
+/*
+/* =======================================*/
+
+.footer {
+	width: 100%;
+	padding: 20px;
+	border-top: 1px solid #eee;
+}
+
+/* =======================================*/
+/*
+/* HELPERS
+/*
+/* =======================================*/
+
+%clearfix, .clearfix {
+	&:after {
+		content:"";
+		display:table;
+		clear:both;
+	}
+}

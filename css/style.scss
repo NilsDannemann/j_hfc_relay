@@ -5,28 +5,14 @@
 /* PARTIALS
 /*
 /* =======================================*/
-	
-/* ===THEME=== */
-@import 'config';
 
 /* ===RESET=== */
-@import 'reset/normalize';
-@import 'reset/base';
+@import 'normalize';
 
-/* ===LAYOUTS=== */
-@import 'layouts/main';
-
-/* ===INCLUDES=== */
-@import 'includes/mnav';
-@import 'includes/header';
-@import 'includes/content';
-@import 'includes/sidebar';
-@import 'includes/footer';
+/* ===THEME=== */
+@import 'config';
+@import 'base';
 
 /* ===COMPONENTS=== */
-@import 'components/typography';
-@import 'components/button';
-@import 'components/teaser';
-
-/* ===HELPERS=== */
-@import 'utils/helpers';
+@import 'components/button/button';
+@import 'components/teaser/teaser';
