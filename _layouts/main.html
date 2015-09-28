@@ -11,14 +11,14 @@
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" media="screen">
 </head>
 <body>
-	{% include base/mnav.html %}
-	{% include base/header.html %}
+	{% include components_base/mnav/mnav.html %}
+	{% include components_base/header/header.html %}
 	<section class="content">
 		<div class="content__inner">
-			{% include base/sidebar.html %}
+			{% include components_base/sidebar/sidebar.html %}
 			{{ content }}
 		</div>
 	</section>
-	{% include base/footer.html %}
+	{% include components_base/footer/footer.html %}
 </body>
 </html>

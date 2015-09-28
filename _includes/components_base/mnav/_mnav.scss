@@ -1,0 +1,30 @@
+/* =======================================*/
+/*
+/* MNAV
+/*
+/* =======================================*/
+
+.mnav {
+
+	&__inner {
+		background: $color-brand;
+	}
+
+	&__item {
+		display: inline-block;
+	}
+	
+	&__link {
+		display: block;
+		color: #fff;
+		font-size: $font-size;
+		padding: $whitespace $whitespace;
+
+		transition: $transition;
+
+		&:hover,
+		&.is-active {
+			background: lighten($color-brand, 10%);
+		}
+	}
+}

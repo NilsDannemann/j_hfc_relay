@@ -1,0 +1,14 @@
+/* =======================================*/
+/*
+/* HEADER
+/*
+/* =======================================*/
+
+.header {
+	width: 100%;
+	min-height: $whitespace*20;
+	padding: $whitespace;
+	background: #eee;
+
+	&.__inner {}
+}

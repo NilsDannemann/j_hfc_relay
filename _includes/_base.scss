@@ -25,113 +25,16 @@ img {
 
 /* =======================================*/
 /*
-/* TYPOGRAPHY
+/* IMPORTS
 /*
 /* =======================================*/
 
-body {
-	font-family: $font-family;
-	font-size: $font-size;
-}
-
-ul {
-	margin: 0;
-	padding: 0;
-}
-
-p {
-	line-height: $line-height;
-}
-
-a {
-	color: $color-brand;
-	text-decoration: none;
-}
-
-/* =======================================*/
-/*
-/* HEADER
-/*
-/* =======================================*/
-
-.header {
-	width: 100%;
-	min-height: $whitespace*20;
-	padding: $whitespace;
-	background: #eee;
-
-	&.__inner {}
-}
-
-/* =======================================*/
-/*
-/* MNAV
-/*
-/* =======================================*/
-
-.mnav {
-
-	&__inner {
-		background: $color-brand;
-	}
-
-	&__item {
-		display: inline-block;
-	}
-	
-	&__link {
-		display: block;
-		color: #fff;
-		font-size: $font-size;
-		padding: $whitespace $whitespace;
-
-		transition: $transition;
-
-		&:hover,
-		&.is-active {
-			background: lighten($color-brand, 10%);
-		}
-	}
-}
-
-/* =======================================*/
-/*
-/* CONTENT
-/*
-/* =======================================*/
-
-.content {
-	width: 100%;
-	padding: 20px;
-
-	&.__inner {}
-}
-
-/* =======================================*/
-/*
-/* SIDEBAR
-/*
-/* =======================================*/
-
-.sidebar {
-	width: 100%;
-	padding: 20px;
-	border: 1px solid #eee;
-}
-
-/* =======================================*/
-/*
-/* FOOTER
-/*
-/* =======================================*/
-
-.footer {
-	width: 100%;
-	padding: 20px;
-	border-top: 1px solid #eee;
-
-	&.__inner {}
-}
+@import 'components_base/typography/typography';
+@import 'components_base/header/header';
+@import 'components_base/mnav/mnav';
+@import 'components_base/content/content';
+@import 'components_base/sidebar/sidebar';
+@import 'components_base/footer/footer';
 
 /* =======================================*/
 /*
