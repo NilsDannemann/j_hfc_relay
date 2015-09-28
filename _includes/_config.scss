@@ -37,11 +37,11 @@ $color-brand: $color-blue;
 $whitespace: 20px;
 $responsive: yes;
 $breakpoints: (
-	'x-small': ( min-width:  321px ),
-	'small'  : ( min-width:  641px ),
-	'medium' : ( min-width:  769px ),
-	'large'  : ( min-width: 1025px ),
-	'x-large': ( min-width: 1201px )
+	'x-small': 321px,
+	'small'  : 641px,
+	'medium' : 769px,
+	'large'  : 960px,
+	'x-large': 1201px
 );
 
 /* ===TYPOGRAPHY=== */
@@ -68,7 +68,7 @@ $teaser-lines-to-show: 3;
 // Usage: @include respond-to(small) { ... }
 @mixin respond-to($name) {
 	@if map-has-key($breakpoints, $name) and $responsive == yes {
-		@media #{ inspect(map-get($breakpoints, $name))} {
+		@media (min-width: #{ inspect(map-get($breakpoints, $name))}) {
 			@content;
 		}
 	}

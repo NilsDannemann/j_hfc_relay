@@ -10,5 +10,11 @@
 	padding: $whitespace;
 	background: #eee;
 
-	&.__inner {}
+	&__inner {
+		min-width: map-get($breakpoints, large);
+		max-width: map-get($breakpoints, x-large);
+		margin: auto;
+		
+		@include respond-to(x-small) {min-width: 0;}
+	}
 }
