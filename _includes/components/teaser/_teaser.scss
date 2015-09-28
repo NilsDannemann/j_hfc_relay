@@ -2,13 +2,13 @@
 	display: inline-block;
 	max-width: 275px;
 	background: #fff;
-	margin-bottom: $spacing;
+	margin-bottom: $whitespace;
 	border: 1px solid $color-grey;
 
 	&__title {
 		display: block;
 		color: $color-black;
-		padding: $spacing;
+		padding: $whitespace;
 
 		& * {margin: 0;}
 	}
@@ -20,7 +20,7 @@
 		display: -webkit-box; // no-webkit fallback
 		height: $font-size * $line-height * $teaser-lines-to-show;
 
-		margin: $spacing/2 $spacing;
+		margin: $whitespace/2 $whitespace;
 		font-size: $font-size;
 		line-height: $line-height;
 
@@ -33,6 +33,6 @@
 		display: block;
 		font-size: $font-size;
 		border-top: 1px solid $color-grey;
-		padding: $spacing;
+		padding: $whitespace;
 	}
 }

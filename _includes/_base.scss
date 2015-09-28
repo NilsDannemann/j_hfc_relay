@@ -57,8 +57,8 @@ a {
 
 .header {
 	width: 100%;
-	min-height: $spacing*15;
-	padding: $spacing;
+	min-height: $whitespace*15;
+	padding: $whitespace;
 	background: #eee;
 }
 
@@ -79,7 +79,7 @@ a {
 		display: block;
 		color: #fff;
 		font-size: $font-size;
-		padding: $spacing $spacing;
+		padding: $whitespace $whitespace;
 
 		transition: $transition;
 
