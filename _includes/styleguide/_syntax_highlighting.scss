@@ -1,10 +1,13 @@
-// Syntax highlighting styles
-pre {-moz-tab-size: 4;} /* Firefox */
-pre {tab-size: 4;}
+// Styleguide Syntax Highlighting
+pre {
+	-moz-tab-size: 4;
+	tab-size: 4; 	
+	margin: 0;
+}
 
 .highlight {
 	margin:$whitespace 0 0 0;
-	padding:0 $whitespace;
+	padding:$whitespace;
 	background: #f9f9f9;
 	border:1px solid $color-grey;
 

@@ -1,10 +1,9 @@
 /* =======================================*/
 /*
-/* CONFIG
+/* COLORS
 /*
 /* =======================================*/
 
-/* ===COLORS - GENERAL=== */
 $color-black: #333;
 $color-spaceblack: #2F394D;
 $color-grey: #eee;
@@ -30,12 +29,16 @@ $color-yellow: #FFEB3B;
 $color-amber: #FFC107;
 $color-orange: #FF9800;
 
-/* ===COLORS - THEME=== */
 $color-brand: $color-blue;
 
-/* ===LAYOUT=== */
+/* =======================================*/
+/*
+/* LAYOUT
+/*
+/* =======================================*/
+
 $whitespace: 20px;
-$responsive: yes;
+$responsive: true; // true or false
 $breakpoints: (
 	'x-small': 321px,
 	'small'  : 641px,
@@ -44,17 +47,38 @@ $breakpoints: (
 	'x-large': 1201px
 );
 
-/* ===TYPOGRAPHY=== */
+/* =======================================*/
+/*
+/* TYPOGRAPHY
+/*
+/* =======================================*/
+
 $font-family: 'Helvetica', 'Arial', sans-serif;
 $font-size: 14px;
 $line-height: 1.6;
 
-/* ===UI=== */
-$box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+/* =======================================*/
+/*
+/* USER INTERFACE
+/*
+/* =======================================*/
+
+$box-shadow-depth-1: 0px 1px 3px rgba(0, 0, 0, 0.15);
+$box-shadow-depth-2: 0px 2px 5px rgba(0, 0, 0, 0.15);
+$box-shadow-depth-3: 0px 4px 9px rgba(0, 0, 0, 0.15);
+$box-shadow-depth-4: 0px 8px 18px rgba(0, 0, 0, 0.15);
+$box-shadow-depth-5: 0px 16px 32px rgba(0, 0, 0, 0.15);
+
+$box-shadow: $box-shadow-depth-1;
 $border-radius: 2px;
 $transition: all 0.15s ease-in;
 
-/* ===COMPONENTS=== */
+/* =======================================*/
+/*
+/* COMPONENTS
+/*
+/* =======================================*/
+
 $teaser-lines-to-show: 3;
 
 
@@ -67,7 +91,7 @@ $teaser-lines-to-show: 3;
 
 // Usage: @include respond-to(small) { ... }
 @mixin respond-to($name) {
-	@if map-has-key($breakpoints, $name) and $responsive == yes {
+	@if map-has-key($breakpoints, $name) and $responsive == true {
 		@media (min-width: #{ inspect(map-get($breakpoints, $name))}) {
 			@content;
 		}

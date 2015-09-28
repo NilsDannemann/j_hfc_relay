@@ -1,5 +1,5 @@
 ---
-title: "About us"
+title: "About"
 layout: main
 permalink: "/about/"
 mnav_position: 2

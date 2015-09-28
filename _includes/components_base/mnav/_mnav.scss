@@ -8,6 +8,8 @@
 	background: $color-brand;
 
 	&__inner {
+		@include flexbox;
+
 		min-width: map-get($breakpoints, large);
 		max-width: map-get($breakpoints, x-large);
 		margin: auto;
