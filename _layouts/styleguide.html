@@ -17,7 +17,9 @@
 	<section class="content">
 		<div class="content__inner">
 			{% include components_base/sidebar/sidebar.html %}
-			{{ content }}
+			<div class="content__page">
+				{{ content }}
+			</div>
 		</div>
 	</section>
 	{% include components_base/footer/footer.html %}
