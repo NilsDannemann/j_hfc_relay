@@ -59,6 +59,8 @@ a {
 	min-height: $whitespace*20;
 	padding: $whitespace;
 	background: #eee;
+
+	&.__inner {}
 }
 
 /* =======================================*/
@@ -68,8 +70,11 @@ a {
 /* =======================================*/
 
 .mnav {
-	background: $color-brand;
-	
+
+	&__inner {
+		background: $color-brand;
+	}
+
 	&__item {
 		display: inline-block;
 	}
@@ -98,6 +103,8 @@ a {
 .content {
 	width: 100%;
 	padding: 20px;
+
+	&.__inner {}
 }
 
 /* =======================================*/
@@ -122,6 +129,8 @@ a {
 	width: 100%;
 	padding: 20px;
 	border-top: 1px solid #eee;
+
+	&.__inner {}
 }
 
 /* =======================================*/

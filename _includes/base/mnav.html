@@ -1,5 +1,5 @@
-<nav>
-	<ul class="mnav">
+<nav class="mnav">
+	<ul class="mnav__inner">
 		{% assign pages = site.pages | sort:"mnav_position"  %}
 		{% for p in pages %}
 			{% unless p.url contains "style" %}

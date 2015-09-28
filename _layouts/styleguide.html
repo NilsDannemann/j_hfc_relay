@@ -14,9 +14,12 @@
 <body>
 	{% include base/mnav.html %}
 	{% include base/header.html %}
-	<div class="content">
-		{{ content }}
-	</div>
+	<section class="content">
+		<div class="content__inner">
+			{% include base/sidebar.html %}
+			{{ content }}
+		</div>
+	</section>
 	{% include base/footer.html %}
 </body>
 </html>
