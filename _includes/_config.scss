@@ -31,10 +31,18 @@ $color-amber: #FFC107;
 $color-orange: #FF9800;
 
 /* ===COLORS - THEME=== */
-$color-brand: $color-teal;
+$color-brand: $color-blue;
 
 /* ===LAYOUT=== */
-$whitespace: 12px;
+$whitespace: 20px;
+$responsive: yes;
+$breakpoints: (
+	'x-small': ( min-width:  321px ),
+	'small'  : ( min-width:  641px ),
+	'medium' : ( min-width:  769px ),
+	'large'  : ( min-width: 1025px ),
+	'x-large': ( min-width: 1201px )
+);
 
 /* ===TYPOGRAPHY=== */
 $font-family: 'Helvetica', 'Arial', sans-serif;
@@ -48,3 +56,20 @@ $transition: all 0.15s ease-in;
 
 /* ===COMPONENTS=== */
 $teaser-lines-to-show: 3;
+
+
+
+/* =======================================*/
+/*
+/* MIXINS
+/* 
+/* =======================================*/
+
+// Usage: @include respond-to(small) { ... }
+@mixin respond-to($name) {
+	@if map-has-key($breakpoints, $name) and $responsive == yes {
+		@media #{ inspect(map-get($breakpoints, $name))} {
+			@content;
+		}
+	}
+}
