@@ -29,36 +29,6 @@ img {
 
 /* =======================================*/
 /*
-/* HELPERS
-/*
-/* =======================================*/
-
-@mixin flexbox {
-	display: table-cell; // IE9 FALLBACK
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-}
-@mixin flexbox-width($width) {
-	-webkit-box-flex: 1;
-	-moz-box-flex: 1;
-	width: $width;
-	-webkit-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
-}
-@mixin flexbox-order($order) {
-	-webkit-box-ordinal-group: $order;
-	-moz-box-ordinal-group: $order;
-	-ms-flex-order: $order;
-	-webkit-order: $order;
-	order: $order;
-}
-
-/* =======================================*/
-/*
 /* IMPORTS
 /*
 /* =======================================*/

@@ -1,11 +1,13 @@
 .teaser {
-	display: inline-block;
-	max-width: 275px;
+	@include flexbox(column);
+	@include flexbox-width(33%);
+	
 	background: #fff;
 	margin-bottom: $whitespace;
 	border: 1px solid $color-grey;
 
 	&__title {
+		
 		display: block;
 		color: $color-black;
 		padding: $whitespace;
@@ -37,3 +39,6 @@
 	}
 }
 
+.teaser--single {
+
+}
