@@ -29,7 +29,7 @@ $color-yellow: #FFEB3B;
 $color-amber: #FFC107;
 $color-orange: #FF9800;
 
-$color-brand: $color-blue;
+$color-brand: $color-lightblue;
 
 /* =======================================*/
 /*
@@ -106,7 +106,7 @@ $teaser-lines-to-show: 3;
 @mixin responsive-container() {
 	min-width: map-get($breakpoints, large);
 	max-width: map-get($breakpoints, x-large);
-	margin: auto;
+	margin: 0 auto;
 	@include respond-to(x-small) {min-width: 0;}
 }
 
