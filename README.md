@@ -7,11 +7,20 @@ Coming.
 ##Flexbox 
 
 Use Flexbox with Fallback:
-'@include flexbox(column);'
+```sass
+@include flexbox(column);
+```
+
 
 Specify Flexbox width:
-'@include flexbox-width(33%);'
+```sass
+@include flexbox-width(33%);
+```
+
 
 Specify Flexbox order:
-'@include flexbox-order(1);'
+```sass
+@include flexbox-order(1);
+```
+
 
