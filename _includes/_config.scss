@@ -29,7 +29,7 @@ $color-yellow: #FFEB3B;
 $color-amber: #FFC107;
 $color-orange: #FF9800;
 
-$color-brand: $color-lightblue;
+$color-brand: $color-blue;
 
 /* =======================================*/
 /*
@@ -64,14 +64,22 @@ $line-height: 1.6;
 /*
 /* =======================================*/
 
-$box-shadow-depth-1: 0px 1px 3px rgba(0, 0, 0, 0.15);
-$box-shadow-depth-2: 0px 2px 5px rgba(0, 0, 0, 0.15);
-$box-shadow-depth-3: 0px 4px 9px rgba(0, 0, 0, 0.15);
-$box-shadow-depth-4: 0px 8px 18px rgba(0, 0, 0, 0.15);
-$box-shadow-depth-5: 0px 16px 32px rgba(0, 0, 0, 0.15);
+$box-shadow-size-1: 0px 1px 3px rgba(0, 0, 0, 0.15);
+$box-shadow-size-2: 0px 2px 5px rgba(0, 0, 0, 0.15);
+$box-shadow-size-3: 0px 4px 9px rgba(0, 0, 0, 0.15);
+$box-shadow-size-4: 0px 8px 18px rgba(0, 0, 0, 0.15);
+$box-shadow-size-5: 0px 16px 32px rgba(0, 0, 0, 0.15);
 
-$box-shadow: $box-shadow-depth-3;
-$border-radius: 2px;
+$box-shadow: $box-shadow-size-3;
+
+$border-radius-size-1: 2px;
+$border-radius-size-2: 4px;
+$border-radius-size-3: 6px;
+$border-radius-size-4: 8px;
+$border-radius-size-5: 10px;
+
+$border-radius: $border-radius-size-1;
+
 $transition: all 0.15s ease-in;
 
 /* =======================================*/
@@ -88,7 +96,6 @@ $teaser-lines-to-show: 3;
 /* 
 /* =======================================*/
 
-// Usage: @include respond-to(small) { ... }
 @mixin respond-to($name) {
 	@if map-has-key($breakpoints, $name) and $responsive == true {
 		@media (min-width: #{ inspect(map-get($breakpoints, $name))}) {
