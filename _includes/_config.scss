@@ -122,7 +122,7 @@ $teaser-lines-to-show: 3;
 		flex-direction: column;
 	}
 }
-@mixin flexbox-width($width) {
+@mixin flexbox-width($width: 50%) {
 	-webkit-box-flex: 1;
 	-moz-box-flex: 1;
 	width: $width;
@@ -130,7 +130,7 @@ $teaser-lines-to-show: 3;
 	-ms-flex: 1;
 	flex: 1;
 }
-@mixin flexbox-order($order) {
+@mixin flexbox-order($order: -1) {
 	-webkit-box-ordinal-group: $order;
 	-moz-box-ordinal-group: $order;
 	-ms-flex-order: $order;
