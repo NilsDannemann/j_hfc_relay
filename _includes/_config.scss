@@ -45,7 +45,7 @@ $breakpoints: (
 	'small'  : 641px,
 	'medium' : 769px,
 	'large'  : 960px,
-	'x-large': 1280px
+	'x-large': 1180px
 );
 
 /* =======================================*/
@@ -123,7 +123,7 @@ $teaser-lines-to-show: 3;
 /* 
 /* =======================================*/
 
-@mixin flexbox($direction: 'row', $wrap: 'nowrap') {
+@mixin flexbox($direction: 'row') {
 	display: table-cell; // IE9 FALLBACK
 	display: -webkit-box;
 	display: -moz-box;
@@ -142,15 +142,6 @@ $teaser-lines-to-show: 3;
 		-webkit-flex-direction: column;
 		-ms-flex-direction: column;
 		flex-direction: column;
-	}
-	@if $wrap == 'nowrap' {
-		-webkit-flex-wrap: nowrap;
-		-ms-flex-wrap: nowrap;
-		flex-wrap: nowrap;
-	} @else {
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
 	}
 }
 @mixin flexbox-width($width: 50%) {
