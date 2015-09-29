@@ -7,23 +7,16 @@
 	border: 1px solid $color-grey;
 
 	&__title {
-		display: block;
 		color: $color-black;
 		padding: $whitespace;
 
 		& * {margin: 0;}
 	}
 	&__img {
-		display: block;
 	}
 	&__content {
-		display: block; // no-webkit fallback
-		display: -webkit-box; // no-webkit fallback
 		height: $font-size * $line-height * $teaser-lines-to-show;
-
 		margin: $whitespace/2 $whitespace;
-		font-size: $font-size;
-		line-height: $line-height;
 
 		-webkit-line-clamp: $teaser-lines-to-show;
 		-webkit-box-orient: vertical;
@@ -31,8 +24,6 @@
 		text-overflow: ellipsis;
 	}
 	&__link {
-		display: block;
-		font-size: $font-size;
 		border-top: 1px solid $color-grey;
 		padding: $whitespace;
 	}

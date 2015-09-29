@@ -5,16 +5,11 @@
 /* =======================================*/
 
 .content {
-	padding: 20px;
+	padding: $whitespace;
 
 	&__inner {
 		@include flexbox;
-
-		min-width: map-get($breakpoints, large);
-		max-width: map-get($breakpoints, x-large);
-		margin: auto;
-		
-		@include respond-to(x-small) {min-width: 0;}
+		@include responsive-container();
 	}
 
 	&__page {

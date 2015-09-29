@@ -100,6 +100,14 @@ $teaser-lines-to-show: 3;
 	}
 }
 
+// CONTAINER
+@mixin responsive-container() {
+	min-width: map-get($breakpoints, large);
+	max-width: map-get($breakpoints, x-large);
+	margin: auto;
+	@include respond-to(x-small) {min-width: 0;}
+}
+
 // FLEXBOX
 @mixin flexbox($direction: 'row') {
 	display: table-cell; // IE9 FALLBACK
