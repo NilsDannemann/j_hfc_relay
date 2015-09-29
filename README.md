@@ -18,21 +18,21 @@ Coming.
 Use Flexbox with Fallback:
 Default: row
 ```sass
-@include flexbox();
+@include flexbox($direction);
 ```
 
 
 Specify Flexbox width:
 Default: 50%
 ```sass
-@include flexbox-width();
+@include flexbox-width($width);
 ```
 
 
 Specify Flexbox order:
 Default: 1 up
 ```sass
-@include flexbox-order();
+@include flexbox-order($order);
 ```
 
 
