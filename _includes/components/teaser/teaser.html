@@ -1,43 +1,12 @@
-<section style="display: flex;">
-
-	<article class="teaser">
-		<a class="teaser__title" href="{% if include.link1 != null %}{{ include.link1 }}{% else %}#{% endif %}">
-			<h3>{% if include.title1 != null %}{{ include.title1 }}{% else %}Headline{% endif %}</h3>
-		</a>
-		<a class="teaser__img" href="{% if include.link1 != null %}{{ include.link1 }}{% else %}#{% endif %}">
-			<img src="http://placehold.it/350x180/eeeeee" alt="image" />
-		</a>
-		<p class="teaser__content">
-			{% if include.text1 != null %}{% if include.text1 == "lorem" %}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ips cupiditate itaque aliquid.{% else %}{{ include.text1 }}{% endif %}{% else %}Text{% endif %}
-		</p>
-		<a class="teaser__link" href="{% if include.link1 != null %}{{ include.link1 }}{% else %}#{% endif %}">More</a>
-	</article>
-
-	<article class="teaser">
-		<a class="teaser__title" href="{% if include.link2 != null %}{{ include.link2 }}{% else %}#{% endif %}">
-			<h3>{% if include.title2 != null %}{{ include.title2 }}{% else %}Headline{% endif %}</h3>
-		</a>
-		<a class="teaser__img" href="{% if include.link2 != null %}{{ include.link2 }}{% else %}#{% endif %}">
-			<img src="http://placehold.it/350x180/eeeeee" alt="image" />
-		</a>
-		<p class="teaser__content">
-			{% if include.text2 != null %}{% if include.text2 == "lorem" %}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ips cupiditate itaque aliquid.{% else %}{{ include.text2 }}{% endif %}{% else %}Text{% endif %}
-		</p>
-		<a class="teaser__link" href="{% if include.link2 != null %}{{ include.link2 }}{% else %}#{% endif %}">More</a>
-	</article>
-
-	<article class="teaser">
-		<a class="teaser__title" href="{% if include.link3 != null %}{{ include.link3 }}{% else %}#{% endif %}">
-			<h3>{% if include.title3 != null %}{{ include.title3 }}{% else %}Headline{% endif %}</h3>
-		</a>
-		<a class="teaser__img" href="{% if include.link3 != null %}{{ include.link3 }}{% else %}#{% endif %}">
-			<img src="http://placehold.it/350x180/eeeeee" alt="image" />
-		</a>
-		<p class="teaser__content">
-			{% if include.text3 != null %}{% if include.text3 == "lorem" %}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ips cupiditate itaque aliquid.{% else %}{{ include.text3 }}{% endif %}{% else %}Text{% endif %}
-		</p>
-		<a class="teaser__link" href="{% if include.link3 != null %}{{ include.link3 }}{% else %}#{% endif %}">More</a>
-	</article>
-
-</section>
-
+<article class="teaser teaser--triple">
+	<a class="teaser__title" href="{% if include.link != null %}{{ include.link }}{% else %}#{% endif %}">
+		<h3>{% if include.title != null %}{{ include.title }}{% else %}Title{% endif %}</h3>
+	</a>
+	<a class="teaser__img" href="{% if include.link != null %}{{ include.link }}{% else %}#{% endif %}">
+		<img src="http://placehold.it/350x180/eeeeee" alt="image" />
+	</a>
+	<p class="teaser__content">
+		{% if include.text != null %}{% if include.text == "Lorem" or include.text == "lorem" %}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ips cupiditate itaque aliquid.{% else %}{{ include.text }}{% endif %}{% else %}Text{% endif %}
+	</p>
+	<a class="teaser__link" href="{% if include.link != null %}{{ include.link }}{% else %}#{% endif %}">Link</a>
+</article>

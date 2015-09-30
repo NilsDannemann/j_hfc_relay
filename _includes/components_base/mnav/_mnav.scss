@@ -10,10 +10,11 @@
 	&__inner {
 		@include flexbox();
 		@include responsive-container();
+		list-style-type: none;
 	}
 
 	&__item {
-		display: inline-block;
+
 	}
 	
 	&__link {

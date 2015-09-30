@@ -123,20 +123,31 @@ $teaser-lines-to-show: 3;
 /* 
 /* =======================================*/
 
-@mixin flexbox($direction: 'row') {
-	display: table-cell; // IE9 FALLBACK
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	@if $direction == 'row' {
+@mixin flexbox($type: null, $direction: null) {
+	@if $type == null or $type == 'flex' {
+		display: table-cell; // IE9 FALLBACK
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	} 
+	@if $type == 'inline-flex' {
+		display: inline-block; // IE9 FALLBACK
+		display: -webkit-inline-box;
+		display: -webkit-inline-flex;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		margin-right: -4px; //fix for: invisible spacing for inline-block
+	}
+	@if $direction == null or $direction == 'row' {
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		-webkit-flex-direction: row;
 		-ms-flex-direction: row;
 		flex-direction: row;
-	} @else {
+	} 
+	@if $direction == 'column' or $direction == 'col' {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		-webkit-flex-direction: column;
@@ -144,6 +155,7 @@ $teaser-lines-to-show: 3;
 		flex-direction: column;
 	}
 }
+
 @mixin flexbox-width($width: 50%) {
 	-webkit-box-flex: 1;
 	-moz-box-flex: 1;
@@ -152,6 +164,7 @@ $teaser-lines-to-show: 3;
 	-ms-flex: 1;
 	flex: 1;
 }
+
 @mixin flexbox-order($order: -1) {
 	-webkit-box-ordinal-group: $order;
 	-moz-box-ordinal-group: $order;
