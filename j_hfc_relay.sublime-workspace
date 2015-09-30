@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"fo",
+				"font-size"
+			],
+			[
 				"col",
 				"column	(_config.scss)"
 			],
@@ -131,7 +135,7 @@
 			"file": "_includes/_config.scss",
 			"settings":
 			{
-				"buffer_size": 3607,
+				"buffer_size": 3847,
 				"line_ending": "Windows"
 			}
 		},
@@ -139,7 +143,23 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 967,
+				"buffer_size": 966,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_includes/components/teaser/_teaser.scss",
+			"settings":
+			{
+				"buffer_size": 673,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_components/teaser.html",
+			"settings":
+			{
+				"buffer_size": 194,
 				"line_ending": "Windows"
 			}
 		},
@@ -155,15 +175,7 @@
 			"file": "_includes/components/teaser/teaser.html",
 			"settings":
 			{
-				"buffer_size": 796,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "_includes/components/teaser/_teaser.scss",
-			"settings":
-			{
-				"buffer_size": 637,
+				"buffer_size": 811,
 				"line_ending": "Windows"
 			}
 		}
@@ -175,10 +187,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 400.0,
-		"last_filter": "insta",
+		"height": 304.0,
+		"last_filter": "java",
 		"selected_items":
 		[
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
 			[
 				"insta",
 				"Package Control: Install Package"
@@ -328,9 +344,10 @@
 	},
 	"console":
 	{
-		"height": 126.0,
+		"height": 85.0,
 		"history":
 		[
+			"git clone https://github.com/alienhard/SublimeAllAutocomplete",
 			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
@@ -502,6 +519,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			":",
+			"$direction",
+			"while",
+			"if",
+			"@include flexbox",
+			"$type",
 			"1",
 			"  ",
 			"text1",
@@ -623,13 +646,7 @@
 			"canvas",
 			"\"",
 			"navigation_overlay",
-			"navigation_icon",
-			"navigation__overlay",
-			"navigation__icon",
-			"<div class=\"price\">",
-			"5px",
-			"[price]",
-			"price]"
+			"navigation_icon"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -647,7 +664,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -656,15 +673,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3607,
+						"buffer_size": 3847,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2953,
-								2953
+								758,
+								738
 							]
 						],
 						"settings":
@@ -676,10 +693,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1944.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -688,15 +705,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 967,
+						"buffer_size": 966,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								296,
-								296
+								966,
+								966
 							]
 						],
 						"settings":
@@ -711,11 +728,75 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
+					"file": "_includes/components/teaser/_teaser.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 673,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								371,
+								371
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "_components/teaser.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 194,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								144,
+								144
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "_includes/components_base/mnav/_mnav.scss",
 					"semi_transient": false,
 					"settings":
@@ -747,20 +828,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "_includes/components/teaser/teaser.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 796,
+						"buffer_size": 811,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								22,
-								23
+								126,
+								126
 							]
 						],
 						"settings":
@@ -776,39 +857,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "_includes/components/teaser/_teaser.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 637,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								259,
-								259
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -866,6 +915,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"teaser",
+				"_components\\teaser.html"
+			],
 			[
 				"mnav",
 				"_includes\\components_base\\mnav\\_mnav.scss"
@@ -945,10 +998,6 @@
 			[
 				"lain",
 				"_layouts\\main.html"
-			],
-			[
-				"teaser",
-				"_includes\\components\\teaser\\_teaser.scss"
 			],
 			[
 				"footer",
