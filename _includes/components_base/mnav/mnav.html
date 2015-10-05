@@ -1,12 +1,31 @@
-<nav class="mnav">
-	<ul class="mnav__inner">
-		{% assign pages = site.pages | sort:"position"  %}
-		{% for p in pages %}
-			{% unless p.url contains "style" %}
+{% capture html %}
+	<nav class="mnav">
+		<ul class="mnav__inner">
+			
+			{% if include.context == "/" %}
 				<li class="mnav__item">
-					<a class="mnav__link {% if p.url == page.url %}is-active{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+					<a class="mnav__link {% if page.url == "/" %}is-active{% endif %}" href="{{ site.baseurl }}/">Start</a>
 				</li>
-			{% endunless %}
-		{% endfor %}
-	</ul>
-</nav>
+			{% endif %}
+
+			{% assign pages = site.pages | sort: "position" %}
+			{% for p in pages %}
+			
+			{% capture slug    %}{{ p.url | split: "/"   | last                       }}{% endcapture %}
+			{% capture current %}{{ p.url | remove: slug | remove: "//" | append: "/" }}{% endcapture %}
+			
+			{% if current == include.context %}
+				{% unless p.url contains "style" %}
+					<li class="mnav__item">
+						<a class="mnav__link {% if page.url contains p.url %}is-active{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+						{% if p.children == true %}
+							{% include components_base/mnav/mnav.html context=p.url %}
+						{% endif %}
+					</li>
+				{% endunless %}
+			{% endif %}
+			
+			{% endfor %}
+		</ul>
+	</nav>
+{% endcapture %}{{ html | strip_newlines | replace:'    ','' | replace:'    ','' | replace:'  ',' ' }}
