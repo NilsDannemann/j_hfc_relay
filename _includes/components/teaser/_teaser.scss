@@ -1,6 +1,5 @@
 .teaser {
 	@include flexbox(inline-flex, column);
-	@include flexbox-width(100%);
 
 	background: #fff;
 	margin-bottom: $whitespace;
@@ -28,12 +27,19 @@
 		border-top: 1px solid $color-grey;
 		padding: $whitespace;
 	}
-
+	
+	// SINGLE TEASER
+	&--single {@include flexbox-width(100%);}
+	
 	// DOUBLE TEASER
 	&--double {@include flexbox-width(50%);}
 	
 	// TRIPLE TEASER
 	&--triple {
-		@include flexbox-width(33.333333333333%);
+		@include respond-above(x-small) { @include flexbox-width(100%); }
+		@include respond-above(small) 	{ @include flexbox-width(50%); }
+		@include respond-above(medium) 	{ @include flexbox-width(100%); }
+		@include respond-above(large) 	{ @include flexbox-width(50%); }
+		@include respond-above(x-large) { @include flexbox-width(33.333333333333%); }
 	}
 }

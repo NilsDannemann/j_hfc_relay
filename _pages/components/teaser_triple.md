@@ -6,5 +6,5 @@ position: 3
 children: false
 ---
 
-<h1>About us</h1>
+<h1>Teaser Triple</h1>
 {% include components/button/button.html text="Button" %}

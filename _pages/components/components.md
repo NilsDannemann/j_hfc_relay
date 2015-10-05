@@ -3,8 +3,10 @@ title: "Components"
 permalink: "/components/"
 layout: main
 position: 99
-children: true
+children: false
 ---
 
-<h1>About us</h1>
-{% include components/button/button.html text="Button" %}
+<h1>Components</h1>
+{% include components/teaser/teaser.html title="About" text="lorem" %}
+{% include components/teaser/teaser.html title="About" text="lorem" %}
+{% include components/teaser/teaser.html title="About" text="lorem" %}

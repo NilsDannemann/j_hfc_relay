@@ -35,13 +35,4 @@
 			background: lighten($color-brand, 10%);
 		}
 	}
-
-	// SUBNAV
-	.nav {
-		position: absolute;
-	}
-
-	&__inner &__inner {
-		flex-direction: column;
-	}
 }

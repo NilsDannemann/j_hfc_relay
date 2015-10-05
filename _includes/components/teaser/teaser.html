@@ -3,7 +3,7 @@
 		<h3>{% if include.title != null %}{{ include.title }}{% else %}Title{% endif %}</h3>
 	</a>
 	<a class="teaser__img" href="{% if include.link != null %}{{ include.link }}{% else %}#{% endif %}">
-		<img src="http://placehold.it/350x180/eeeeee" alt="image" />
+		<img src="http://placehold.it/550x380/eeeeee" alt="image" />
 	</a>
 	<p class="teaser__content">
 		{% if include.text != null %}{% if include.text == "Lorem" or include.text == "lorem" %}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ips cupiditate itaque aliquid.{% else %}{{ include.text }}{% endif %}{% else %}Text{% endif %}

@@ -5,7 +5,9 @@
 /* =======================================*/
 
 .content {
-	padding: $whitespace;
+	@include respond-above(x-small) { padding: $whitespace; }
+	@include respond-above(medium) { padding: $whitespace 0; }
+	@include respond-above(large) { padding: $whitespace; }
 
 	&__inner {
 		@include flexbox();

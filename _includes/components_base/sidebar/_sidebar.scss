@@ -10,14 +10,15 @@
 	padding: $whitespace;
 	border: 1px solid #eee;
 	
-	@include respond-below(medium) {	width: 100%; }
+	@include respond-below(medium) { width: 100%; }
 
 	&__inner {
+		
 	}
 }
 
 * + .sidebar {
 	margin: 0 0 0 $whitespace;
 
-	@include respond-below(medium) {	margin: 0; }
+	@include respond-below(medium) { margin: 0; }
 }
