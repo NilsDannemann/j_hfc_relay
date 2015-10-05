@@ -1,8 +1,9 @@
 ---
-title: "About"
 layout: main
-permalink: "/about/"
-mnav_position: 2
+menu:
+  name: About
+  parent: none
+  position: 2
 ---
 
 <h1>About us</h1>

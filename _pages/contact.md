@@ -1,8 +1,9 @@
 ---
-title: "Contact"
 layout: main
-permalink: "/contact/"
-mnav_position: 4
+menu:
+  name: Contact
+  parent: Products
+  position: 4
 ---
 
 <h1>Contact</h1>

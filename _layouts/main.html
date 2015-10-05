@@ -11,7 +11,9 @@
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" media="screen">
 </head>
 <body>
-	{% include components_base/mnav/mnav.html %}
+	<nav class="mnav"> 
+	{% include components_base/mnav/mnav.html menu=site.menu %}
+	</nav>
 	{% include components_base/header/header.html %}
 	<section class="content">
 		<div class="content__inner">
