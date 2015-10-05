@@ -1,9 +1,8 @@
 ---
+title: "Products"
+permalink: "/products/"
 layout: main
-menu:
-  name: Products
-  parent: none
-  position: 3
+position: 3
 ---
 
 <h1>Products</h1>

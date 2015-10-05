@@ -1,19 +1,12 @@
-{% if include.level == null %}
-	{% assign menu_level = 0 %}
-{% else %}
-	{% capture menu_level %}
-		{{ include.level | plus:1 }}
-	{% endcapture %}
-{% endif %}
-
-
-<ul class="mnav__inner mnav__level-{{menu_level}}">
-	{% for menu_page in include.menu %}
-	<li class="mnav__item {% if menu_page.suburls contains page.url %}current-parent{% endif %}">
-		<a class="mnav__link {% if page.url == menu_page.url %}is-active{% endif %}" href="{{ site.baseurl }}{{ menu_page.url }}">{{ menu_page.menu.name }}</a>
-		{% unless menu_page.subpages contains 0 %}
-			{% include components_base/mnav/mnav.html menu=menu_page.subpages current_url=page.url level=menu_level %}
-		{% endunless %}
-	</li>
-	{% endfor %}
-</ul>
+<nav class="mnav">
+	<ul class="mnav__inner">
+		{% assign pages = site.pages | sort:"position"  %}
+		{% for p in pages %}
+			{% unless p.url contains "style" %}
+				<li class="mnav__item">
+					<a class="mnav__link {% if p.url == page.url %}is-active{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+				</li>
+			{% endunless %}
+		{% endfor %}
+	</ul>
+</nav>

@@ -1,9 +1,8 @@
 ---
+title: "Contact"
+permalink: "/contact/"
 layout: main
-menu:
-  name: Contact
-  parent: Products
-  position: 4
+position: 4
 ---
 
 <h1>Contact</h1>
