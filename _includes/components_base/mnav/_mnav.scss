@@ -8,9 +8,13 @@
 	background: $color-brand;
 
 	&__inner {
-		@include flexbox();
+		@include flexbox($direction: row);
 		@include responsive-container();
 		list-style-type: none;
+
+		@include respond-below(small) {
+			@include flexbox($direction: column);
+		}
 	}
 
 	&__item {
@@ -20,6 +24,7 @@
 	&__link {
 		display: block;
 		color: #fff;
+		text-align: center;
 		font-size: $font-size;
 		padding: $whitespace $whitespace;
 
