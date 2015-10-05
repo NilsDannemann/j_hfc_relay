@@ -6,6 +6,17 @@
 				<li class="mnav__item">
 					<a class="mnav__link {% if page.url == "/" %}is-active{% endif %}" href="{{ site.baseurl }}/">Start</a>
 				</li>
+				<li class="mnav__item">
+					<a class="mnav__link {% if page.url == "/" %}is-active{% endif %}" href="#">Components</a>
+					
+					<!-- Subnav -->
+					<ul class="mnav__inner">
+						<li><a class="mnav__link {% if page.url == "/" %}is-active{% endif %}" href="#">1x Teaser</a></li>
+						<li><a class="mnav__link {% if page.url == "/" %}is-active{% endif %}" href="#">2x Teaser</a></li>
+						<li><a class="mnav__link {% if page.url == "/" %}is-active{% endif %}" href="#">3x Teaser</a></li>
+					</ul>
+
+				</li>
 			{% endif %}
 
 			{% assign pages = site.pages | sort: "position" %}

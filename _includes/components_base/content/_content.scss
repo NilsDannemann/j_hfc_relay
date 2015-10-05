@@ -10,6 +10,10 @@
 	&__inner {
 		@include flexbox();
 		@include responsive-container();
+
+		@include respond-below(medium) {
+			@include flexbox($direction: column);
+		}
 	}
 
 	&__page {

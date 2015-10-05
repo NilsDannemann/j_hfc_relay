@@ -6,9 +6,6 @@
 	margin-bottom: $whitespace;
 	border: 1px solid $color-grey;
 
-	&--double {@include flexbox-width(50%);}
-	&--triple {@include flexbox-width(33.333333333333%);}
-
 	&__title {
 		color: $color-black;
 		padding: $whitespace;
@@ -30,5 +27,13 @@
 	&__link {
 		border-top: 1px solid $color-grey;
 		padding: $whitespace;
+	}
+
+	// DOUBLE TEASER
+	&--double {@include flexbox-width(50%);}
+	
+	// TRIPLE TEASER
+	&--triple {
+		@include flexbox-width(33.333333333333%);
 	}
 }

@@ -12,7 +12,7 @@
 		@include responsive-container();
 		list-style-type: none;
 
-		@include respond-below(small) {
+		@include respond-below(medium) {
 			@include flexbox($direction: column);
 		}
 	}
