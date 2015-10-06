@@ -15,11 +15,18 @@ Coming.
 
 ##Grid
 
-Use Fraction-based Grid System
+Use Fraction-based Grid Columns
 ```sass
 @include column('1/4');
-@include column('1/4', 10px); 	//gutters = 10px
 @include column('1/4', 0); 		//gutters = disabled
+@include column('1/4', 10px); 	//gutters = 10px
+```
+
+Use Fraction-based Grid Rows
+```sass
+@include row('1/4');
+@include row('1/4', 10px); 	//gutters = 10px
+@include row('1/4', 0); 	//gutters = disabled
 ```
 
 
