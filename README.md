@@ -35,25 +35,25 @@ Use Fraction-based Grid **Rows**
 ```
 
 ##Responsive Rules
-Important: Think **Mobile-first**
+Important: Think **mobile-first**
 ```sass
 .foo {
-	width: 10px;
+	//styles
 
 	@include respond-to(x-small) { 
-		width: 20px 
+		//styles above x-small
 	}
 	@include respond-to(small) { 
-		width: 30px 
+		//styles above small
 	}
 	@include respond-to(medium) { 
-		width: 40px 
+		//styles above medium
 	}
 	@include respond-to(large) { 
-		width: 50px 
+		//styles above large
 	}
 	@include respond-to(x-large) { 
-		width: 60px 
+		//styles above x-large
 	}
 }
 ```
