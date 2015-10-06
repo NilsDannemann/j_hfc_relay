@@ -35,7 +35,7 @@ Use Fraction-based Grid **Rows**
 ```
 
 ##Responsive Rules
-Important: Mobile first, so think upwards
+Important: Think **Mobile-first**
 ```sass
 .foo {
 	width: 10px;
