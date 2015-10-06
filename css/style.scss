@@ -16,23 +16,3 @@
 /* ===COMPONENTS=== */
 @import 'components/button/button';
 @import 'components/teaser/teaser';
-
-
-.box {
-	@include column('1/1');
-	padding: $whitespace;
-	margin-bottom: $whitespace;
-	background: #eee;
-	
-	@include respond-to(small) {
-		@include column('1/2', 0);
-	}
-
-	@include respond-to(large) {
-		@include column('1/2');
-	}
-
-	@include respond-to(x-large) {
-		@include column('1/4');
-	}
-}

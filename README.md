@@ -34,6 +34,30 @@ Use Fraction-based Grid **Rows**
 @include row('1/4', 0); 	//gutters = disabled
 ```
 
+##Responsive Rules
+Important: Mobile first, so think upwards
+```sass
+.foo {
+	width: 10px;
+
+	@include respond-to(x-small) { 
+		width: 20px 
+	}
+	@include respond-to(small) { 
+		width: 30px 
+	}
+	@include respond-to(medium) { 
+		width: 40px 
+	}
+	@include respond-to(large) { 
+		width: 50px 
+	}
+	@include respond-to(x-large) { 
+		width: 60px 
+	}
+}
+```
+
 
 ##Flexbox 
 
