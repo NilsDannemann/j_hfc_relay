@@ -22,16 +22,16 @@ Coming.
 
 **Use Columns**
 ```sass
-@include column('1/4');
+@include column('1/4');			//basic gutters
 @include column('1/4', 0); 		//gutters = disabled
 @include column('1/4', 10px); 	//gutters = 10px
 ```
 
 **Use Rows**
 ```sass
-@include row('1/4');
-@include row('1/4', 10px); 	//gutters = 10px
-@include row('1/4', 0); 	//gutters = disabled
+@include row('1/4');			//basic gutters
+@include row('1/4', 10px); 		//gutters = 10px
+@include row('1/4', 0); 		//gutters = disabled
 ```
 
 ##Responsive Rules
