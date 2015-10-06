@@ -11,20 +11,16 @@ Coming.
 - UI Animations
 
 
-# Developer Snippets
+# Developer Snippets/Includes
 
 ##Grid
 
-Fraction-based Grid System
+Use Fraction-based Grid System
 ```sass
 @include column('1/4');
+@include column('1/4', 10px); 	//gutters = 10px
+@include column('1/4', 0); 		//gutters = disabled
 ```
-###Options 
-Specify gutter:
-```sass
-@include column('1/4', 10px);
-```
-
 
 
 ##Flexbox 
