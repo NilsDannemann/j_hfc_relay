@@ -7,8 +7,7 @@
 				"j_hfc_relay.sublime-project",
 				".gitattributes",
 				".gitignore",
-				"_normalize.scss",
-				"README.md"
+				"_normalize.scss"
 			],
 			"folder_exclude_patterns":
 			[

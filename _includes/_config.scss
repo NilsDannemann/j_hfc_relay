@@ -40,7 +40,7 @@ $color-brand: $color-spaceblack;
 $whitespace		: 20px;
 $sidebar-width	: 215px;
 $responsive		: true 	!default; // true or false
-$use-flexbox	: false !default; // true or false
+$use-flexbox	: false !default; // true or false (used in grid only so far)
 $breakpoints: (
 	'x-small': 321px,
 	'small'  : 641px,

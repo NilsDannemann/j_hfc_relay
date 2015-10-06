@@ -13,6 +13,20 @@ Coming.
 
 # Developer Snippets
 
+##Grid
+
+Fraction-based Grid System
+```sass
+@include column('1/4');
+```
+###Options 
+Specify gutter:
+```sass
+@include column('1/4', 10px);
+```
+
+
+
 ##Flexbox 
 
 Use Flexbox with Fallback:
