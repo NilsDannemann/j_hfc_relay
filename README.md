@@ -20,14 +20,14 @@ Coming.
 
 ##Grid
 
-Use Fraction-based Grid **Columns**
+**Use Columns**
 ```sass
 @include column('1/4');
 @include column('1/4', 0); 		//gutters = disabled
 @include column('1/4', 10px); 	//gutters = 10px
 ```
 
-Use Fraction-based Grid **Rows**
+**Use Rows**
 ```sass
 @include row('1/4');
 @include row('1/4', 10px); 	//gutters = 10px
@@ -35,7 +35,7 @@ Use Fraction-based Grid **Rows**
 ```
 
 ##Responsive Rules
-Important: Think **mobile-first**
+Think **mobile-first**
 ```sass
 .foo {
 	//styles
@@ -61,14 +61,14 @@ Important: Think **mobile-first**
 
 ##Flexbox 
 
-Use Flexbox with Fallback:
-Default: row
+**Use Flexbox** (with Fallback):
+Default: flex, row
 ```sass
-@include flexbox($direction);
+@include flexbox($type, $direction);
 ```
 
 
-Specify Flexbox width:
+**Flexbox width**:
 Default: 50%
 ```sass
 @include flexbox-width($width);
