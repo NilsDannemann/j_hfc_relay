@@ -11,8 +11,8 @@ Coming.
 - UI Animations
 
 # Creating Pages
-On Parent: Set Children to true
-On Children: Implement correct permalink (e.g. /parentpage/childpage)
+1. On Parent: Set Children to true
+2. On Children: Implement correct permalink (e.g. /parentpage/childpage)
 
 
 
