@@ -27,12 +27,14 @@ img {
 	width: 100%;
 }
 
+
 /* =======================================*/
 /*
 /* IMPORTS
 /*
 /* =======================================*/
 
+@import 'components_base/grid/grid';
 @import 'components_base/typography/typography';
 @import 'components_base/header/header';
 @import 'components_base/nav/nav';

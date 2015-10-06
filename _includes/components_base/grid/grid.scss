@@ -1,0 +1,119 @@
+// Lost Grid v5.1.5 - https://github.com/corysimmons/lost
+/* =======================================*/
+/*
+/* GRID
+/*
+/* =======================================*/
+
+/* =======================================*/
+/* SETUP
+/* =======================================*/
+@function sl-explode($string, $delimiter: '', $separator: "space") {
+	@if type-of($string) != "string" {
+		@warn "`sl-explode` function expecting a string; #{type-of($string)} given.";
+		@return null;
+	}
+	@if type-of($delimiter) != "string" {
+		@warn "`sl-explode` function expecting a string; #{type-of($delimiter)} given.";
+		@return null;
+	}
+	$result: ();
+	$length: str-length($string);
+	@if not index("space" "comma", $separator) {
+		$separator: "space";
+	}
+	@if str-length($delimiter) == 0 {
+		@for $i from 1 through $length {
+			$result: append($result, str-slice($string, $i, $i));
+		}
+		@return $result;
+	}
+	$running: true;
+	$remaining: $string;
+	@while $running {
+		$index: str-index($remaining, $delimiter);
+		@if not $index {
+			$running: false;
+		}
+		@else {
+			$slice: str-slice($remaining, 1, $index - 1);
+			$result: append($result, $slice, $separator);
+			$remaining: str-slice($remaining, $index + str-length($delimiter));
+		}
+	}
+	@return append($result, $remaining, $separator);
+}
+
+
+/* =======================================*/
+/* FLEXBOX
+/* =======================================*/
+@mixin flex-container($direction: row) {
+	display: flex;
+	@if ($direction == row) {
+		flex-flow: row wrap;
+	}
+	@if ($direction == column) {
+		flex-flow: column nowrap;
+	}
+}
+
+
+/* =======================================*/
+/* COLUMNS
+/* =======================================*/
+@mixin column($fraction: '1/1', $space: $whitespace, $cycle: nth(sl-explode($fraction, '/'), 2), $flex: $use-flexbox) {
+	@if ($space == 0) {
+		width: calc(99.999999% * #{$fraction});
+	} @else {
+		width: calc(99.99% * #{$fraction} - (#{$space} - #{$space} * #{$fraction}));
+	}
+	@if ($flex == false) {
+		&:nth-child(n) {
+			margin-right: $space;
+			float: left;
+			clear: none;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&:nth-child(#{$cycle}n) {
+			margin-right: 0;
+			float: right;
+		}
+		&:nth-child(#{$cycle}n + 1) {
+			clear: left;
+		}
+	} @else {
+		flex: 0 0 auto;
+		&:nth-child(n) {
+			margin-right: $space;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&:nth-child(#{$cycle}n) {
+			margin-right: 0;
+		}
+	}
+}
+
+
+/* =======================================*/
+/* ROWS
+/* =======================================*/
+@mixin row($fraction: '1/1', $space: $whitespace, $flex: $use-flexbox) {
+	width: 100%;
+	@if ($space == 0) {
+		height: calc(99.999999% * #{$fraction});
+	} @else {
+		height: calc(99.99% * #{$fraction} - (#{$space} - #{$space} * #{$fraction}));
+	}
+	margin-bottom: $space;
+	@if ($flex == true) {
+		flex: 0 0 auto;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

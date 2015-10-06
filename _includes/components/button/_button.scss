@@ -1,3 +1,9 @@
+/* =======================================*/
+/*
+/* BUTTON
+/*
+/* =======================================*/
+
 .button {
 	display: inline-block;
 	padding: $whitespace/2.5 $whitespace;
@@ -14,8 +20,7 @@
 
 	transition: $transition;
 
-	&:hover
-	{
+	&:hover	{
 		background: lighten( $color-brand, 10% );
 	}
 }

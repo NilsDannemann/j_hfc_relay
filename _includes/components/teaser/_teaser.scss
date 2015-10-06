@@ -1,5 +1,12 @@
+/* =======================================*/
+/*
+/* TEASER
+/*
+/* =======================================*/
+
 .teaser {
 	@include flexbox(inline-flex, column);
+	@include flexbox-width(100%);
 
 	background: #fff;
 	margin-bottom: $whitespace;
@@ -9,11 +16,11 @@
 		color: $color-black;
 		padding: $whitespace;
 
-		& * {margin: 0;}
+		* {margin: 0;}
 	}
-	&__img {
 
-	}
+	&__img {}
+
 	&__content {
 		height: $font-size * $line-height * $teaser-lines-to-show;
 		margin: $whitespace/2 $whitespace;
@@ -23,23 +30,64 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
+
 	&__link {
 		border-top: $border;
 		padding: $whitespace;
 	}
 	
 	// SINGLE TEASER
-	&--single {@include flexbox-width(100%);}
+	&--single {}
 	
 	// DOUBLE TEASER
-	&--double {@include flexbox-width(50%);}
+	&--double {}
 	
 	// TRIPLE TEASER
-	&--triple {
-		@include respond-to(x-small) { @include flexbox-width(100%); }
-		@include respond-to(small) 	{ @include flexbox-width(50%); }
-		@include respond-to(medium) 	{ @include flexbox-width(100%); }
-		@include respond-to(large) 	{ @include flexbox-width(50%); }
-		@include respond-to(x-large) { @include flexbox-width(33.333333333333%); }
+	&--triple {}
+}
+
+
+/* =======================================*/
+/* RESPONSIVE BEHAVIOR
+/* =======================================*/
+
+@include respond-to(x-small) {
+	.teaser {
+		
+		&--single {}
+		&--double {}
+		&--triple {}
+	}
+}
+@include respond-to(small) {
+	.teaser {
+		
+		&--single {}
+		&--double {}
+		&--triple {@include flexbox-width(50%);}
+	}
+}
+@include respond-to(medium) {
+	.teaser {
+		
+		&--single {}
+		&--double {}
+		&--triple {@include flexbox-width(100%);}
+	}
+}
+@include respond-to(large) {
+	.teaser {
+		
+		&--single {}
+		&--double {}
+		&--triple {@include flexbox-width(50%);}
+	}
+}
+@include respond-to(x-large) {
+	.teaser {
+		
+		&--single {}
+		&--double {}
+		&--triple {@include flexbox-width(33.333333333333%);}
 	}
 }

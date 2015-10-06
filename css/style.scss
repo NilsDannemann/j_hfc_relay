@@ -16,3 +16,14 @@
 /* ===COMPONENTS=== */
 @import 'components/button/button';
 @import 'components/teaser/teaser';
+
+
+.box {
+	@include column('1/4');
+	padding: $whitespace;
+	background: #eee;
+
+	@include respond-to(x-small) {
+		@include column('1/2', 0);
+	}
+}
