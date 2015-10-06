@@ -6,17 +6,23 @@
 
 .content {
 	padding: $whitespace;
-
+	
 	&__inner {
-		@include flexbox();
+		@include flexbox($direction: column);
 		@include responsive-container();
-
-		@include respond-below(medium) {
-			@include flexbox($direction: column);
-		}
 	}
 
 	&__page {
 		flex: 1;
+	}
+}
+		
+
+@include respond-to(medium) {
+	.content {
+		
+		&__inner {
+			@include flexbox($direction: row);
+		}
 	}
 }

@@ -7,7 +7,7 @@
 .footer {
 	width: 100%;
 	padding: $whitespace;
-	border-top: 1px solid #eee;
+	border-top: $border;
 
 	&__inner {
 		@include responsive-container();

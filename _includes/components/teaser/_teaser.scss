@@ -3,7 +3,7 @@
 
 	background: #fff;
 	margin-bottom: $whitespace;
-	border: 1px solid $color-grey;
+	border: $border;
 
 	&__title {
 		color: $color-black;
@@ -24,7 +24,7 @@
 		text-overflow: ellipsis;
 	}
 	&__link {
-		border-top: 1px solid $color-grey;
+		border-top: $border;
 		padding: $whitespace;
 	}
 	
@@ -36,10 +36,10 @@
 	
 	// TRIPLE TEASER
 	&--triple {
-		@include respond-above(x-small) { @include flexbox-width(100%); }
-		@include respond-above(small) 	{ @include flexbox-width(50%); }
-		@include respond-above(medium) 	{ @include flexbox-width(100%); }
-		@include respond-above(large) 	{ @include flexbox-width(50%); }
-		@include respond-above(x-large) { @include flexbox-width(33.333333333333%); }
+		@include respond-to(x-small) { @include flexbox-width(100%); }
+		@include respond-to(small) 	{ @include flexbox-width(50%); }
+		@include respond-to(medium) 	{ @include flexbox-width(100%); }
+		@include respond-to(large) 	{ @include flexbox-width(50%); }
+		@include respond-to(x-large) { @include flexbox-width(33.333333333333%); }
 	}
 }

@@ -5,7 +5,7 @@
 /* =======================================*/
 
 $color-black		: #333;
-$color-spaceblack	: #1F242E;
+$color-spaceblack	: #171F2D;
 $color-grey			: #eee;
 $color-spacegrey	: #a7adba;
 
@@ -64,13 +64,7 @@ $line-height	: 1.6;
 /*
 /* =======================================*/
 
-$box-shadow-size-1	: 0px 1px 3px rgba(0, 0, 0, 0.15);
-$box-shadow-size-2	: 0px 2px 5px rgba(0, 0, 0, 0.15);
-$box-shadow-size-3	: 0px 4px 9px rgba(0, 0, 0, 0.15);
-$box-shadow-size-4	: 0px 8px 18px rgba(0, 0, 0, 0.15);
-$box-shadow-size-5	: 0px 16px 32px rgba(0, 0, 0, 0.15);
-
-$box-shadow			: $box-shadow-size-3;
+$border: 1px solid $color-grey;
 
 $border-radius-size-1	: 2px;
 $border-radius-size-2	: 4px;
@@ -79,6 +73,14 @@ $border-radius-size-4	: 8px;
 $border-radius-size-5	: 10px;
 
 $border-radius			: $border-radius-size-1;
+
+$box-shadow-size-1	: 0px 1px 3px rgba(0, 0, 0, 0.15);
+$box-shadow-size-2	: 0px 2px 5px rgba(0, 0, 0, 0.15);
+$box-shadow-size-3	: 0px 4px 9px rgba(0, 0, 0, 0.15);
+$box-shadow-size-4	: 0px 8px 18px rgba(0, 0, 0, 0.15);
+$box-shadow-size-5	: 0px 16px 32px rgba(0, 0, 0, 0.15);
+
+$box-shadow			: $box-shadow-size-3;
 
 $transition: all 0.15s ease-in;
 
@@ -96,17 +98,9 @@ $teaser-lines-to-show: 3;
 /* 
 /* =======================================*/
 
-@mixin respond-above($name) {
+@mixin respond-to($name) {
 	@if map-has-key($breakpoints, $name) and $responsive == true {
 		@media (min-width: #{ inspect(map-get($breakpoints, $name))}) {
-			@content;
-		}
-	}
-}
-
-@mixin respond-below($name) {
-	@if map-has-key($breakpoints, $name) and $responsive == true {
-		@media (max-width: #{ inspect(map-get($breakpoints, $name))}) {
 			@content;
 		}
 	}
@@ -122,7 +116,7 @@ $teaser-lines-to-show: 3;
 	min-width: map-get($breakpoints, large);
 	max-width: map-get($breakpoints, x-large);
 	margin: 0 auto;
-	@include respond-above(x-small) {min-width: 0;}
+	@include respond-to(x-small) {min-width: 0;}
 }
 
 /* =======================================*/

@@ -8,9 +8,11 @@
 	width: 100%;
 	min-height: $whitespace*20;
 	padding: $whitespace;
-	background: #eee;
+	background: $color-brand;
 
 	&__inner {
 		@include responsive-container();
+		min-height: $whitespace*20;
+		color: #fff;
 	}
 }

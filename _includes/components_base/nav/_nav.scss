@@ -5,34 +5,39 @@
 /* =======================================*/
 
 .nav {
-	background: $color-brand;
+	background: #fff;
 
 	&__inner {
-		@include flexbox($direction: row);
+		@include flexbox($direction: column);
 		@include responsive-container();
+		justify-content: flex-end;
 		list-style-type: none;
-
-		@include respond-below(medium) {
-			@include flexbox($direction: column);
-		}
 	}
 
-	&__item {
-
-	}
+	&__item {}
 	
 	&__link {
 		display: block;
-		color: #fff;
+		color: $color-black;
 		text-align: center;
 		font-size: $font-size;
 		padding: $whitespace $whitespace;
+		border-right: $border;
 
 		transition: $transition;
 
 		&:hover,
 		&.is-active {
-			background: lighten($color-brand, 10%);
+			background: $color-grey;
+		}
+	}
+}
+
+@include respond-to(medium) {
+	.nav {
+
+		&__inner {
+			@include flexbox($direction: row);
 		}
 	}
 }
