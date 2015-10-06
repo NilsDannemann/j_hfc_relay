@@ -10,6 +10,11 @@ Coming.
 - Intelligent Fallbacks (e.g. no image)
 - UI Animations
 
+# Creating Pages
+On Parent: Set Children to true
+On Children: Implement correct permalink (e.g. /parentpage/childpage)
+
+
 
 # Developer Snippets/Includes
 
