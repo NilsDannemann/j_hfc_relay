@@ -75,7 +75,7 @@ Default: 50%
 ```
 
 
-Specify Flexbox order:
+**Flexbox order**:
 Default: 1 up
 ```sass
 @include flexbox-order($order);
