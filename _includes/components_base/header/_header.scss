@@ -11,7 +11,7 @@
 	background: $color-brand;
 
 	&__inner {
-		@include responsive-container();
+		@include container();
 		min-height: $whitespace*20;
 		color: #fff;
 	}

@@ -8,8 +8,8 @@
 	background: #fff;
 
 	&__inner {
-		@include flexbox($direction: row);
-		@include responsive-container();
+		@include flexbox();
+		@include container();
 		justify-content: flex-end;
 		list-style-type: none;
 	}

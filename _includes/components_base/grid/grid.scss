@@ -71,6 +71,7 @@
 	@if ($flex == false) {
 		&:nth-child(n) {
 			margin-right: $gutter;
+			margin-bottom: $gutter;
 			float: left;
 			clear: none;
 		}

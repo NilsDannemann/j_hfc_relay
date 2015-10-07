@@ -124,7 +124,7 @@ $teaser-lines-to-show: 3;
 /* 
 /* =======================================*/
 
-@mixin responsive-container() {
+@mixin container() {
 	@if $responsive == true {
 		min-width: 0;
 	} 
@@ -202,4 +202,21 @@ $teaser-lines-to-show: 3;
 		background: rgba($color-brand, 0.075) !important;
 	}
 } 
+
+/* =======================================*/
+/*
+/* CLEARFIX
+/* 
+/* =======================================*/
+
+@mixin clearfix() {
+  *zoom: 1;
+  &:before, &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
 

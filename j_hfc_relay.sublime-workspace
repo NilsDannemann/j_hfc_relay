@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"div",
+				"div	<div>"
+			],
+			[
+				"spa",
+				"spacing	(_config.scss)"
+			],
+			[
+				"respond",
+				"respond	hfc_relay_respond"
+			],
+			[
 				"resp",
 				"responds	hfc_relay_responds"
 			],
@@ -14,10 +26,6 @@
 			[
 				"respon",
 				"respondm	hfc_relay_respondm"
-			],
-			[
-				"respond",
-				"responds	hfc_relay_responds"
 			],
 			[
 				"res",
@@ -151,6 +159,62 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 1614,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_includes/_config.scss",
+			"settings":
+			{
+				"buffer_size": 4657,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1204,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/style.scss",
+			"settings":
+			{
+				"buffer_size": 669,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_grid_col.sublime-snippet",
+			"settings":
+			{
+				"buffer_size": 285,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_includes/components_base/footer/_footer.scss",
+			"settings":
+			{
+				"buffer_size": 217,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_includes/components_base/content/_content.scss",
+			"settings":
+			{
+				"buffer_size": 453,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -159,10 +223,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 230.0,
-		"last_filter": "liq",
+		"height": 400.0,
+		"last_filter": "scss",
 		"selected_items":
 		[
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
 			[
 				"liq",
 				"Set Syntax: HTML (Liquid)"
@@ -312,7 +380,7 @@
 				"Set Syntax: CSS3"
 			]
 		],
-		"width": 536.0
+		"width": 424.0
 	},
 	"console":
 	{
@@ -335,34 +403,55 @@
 	"expanded_folders":
 	[
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav"
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/css"
 	],
 	"file_history":
 	[
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/components.md",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/nav.html",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/header/_header.scss",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/_nav.scss",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/index.html",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/css/style.scss",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/_base.scss",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/grid/grid.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/_config.scss",
+		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_respond_belowxs.sublime-snippet",
+		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_respond_belows.sublime-snippet",
+		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_respond_belowm.sublime-snippet",
+		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_respond_belowl.sublime-snippet",
+		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_respondl.sublime-snippet",
+		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_respond_belowxl.sublime-snippet",
+		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_respond_below.sublime-snippet",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components/teaser/_teaser.scss",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/README.md",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/sidebar/_sidebar.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/content/_content.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/index.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components/teaser/teaser.html",
+		"/C/Users/Gothmog/Desktop/Sites/testy/.meteor/packages",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/j_hfc_relay.sublime-project",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/j_hfc_relay.sublime-workspace",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components/button/_button.scss",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/footer/_footer.scss",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_layouts/main.html",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_layouts/styleguide.html",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/styleguide.html",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/components.md",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/_syntax_highlighting.scss",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_nav/_component_nav.scss",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_mask/_component_mask.scss",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/header/header.html",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/nav.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/teaser_double.md",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/teaser_single.md",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/teaser_triple.md",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/footer/footer.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/_nav.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/_base.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_layouts/main.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_layouts/styleguide.html",
 		"/C/Users/Gothmog/Desktop/ResponsiveMultiLevelMenu/css/default.css",
 		"/C/Users/Gothmog/Desktop/ResponsiveMultiLevelMenu/css/component.css",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/mnav/mnav.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/products.md",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/contact.md",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/about.md",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/styleguide.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/css/style.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/css/styleguide.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_plugins/menu_generator.rb",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/menu.html",
@@ -370,28 +459,18 @@
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_plugins/site_menus.rb",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_components/teaser.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/mnav/_mnav.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/header/_header.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/footer/_footer.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_mask/component_mask.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components/button/_button.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_sidebar/sidebar.html",
 		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_respond.sublime-snippet",
 		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_respondxl.sublime-snippet",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/README.md",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/typography/_typography.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/_syntax_highlighting.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/header/header.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/sidebar/sidebar.html",
 		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/snippet_grid__1_liquid.sublime-snippet",
 		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_button.sublime-snippet",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_mask/_component_mask.scss",
 		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_teaser.sublime-snippet",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_nav/_component_nav.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_components/button.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/j_hfc_relay.sublime-project",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_nav/component_nav.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_nav/component_nav.js",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/j_hfc_relay.sublime-workspace",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/base/footer.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/scss/_base.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/scss/utils/_helpers.scss",
@@ -457,16 +536,7 @@
 		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/js/jquery.countdown.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/_inc/css/responsive.css",
 		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/template-angebot-overview.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/js/countdown.js",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/sftp-config.json",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/functions.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-includes/functions.php",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/STProjectMaker/Sample-Templates/New Project [Mixture]/assets/scss/base/_main.scss",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/STProjectMaker/Sample-Templates/New Project [Mixture]/assets/scripts/main.js",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/STProjectMaker/Sample-Templates/New Project [Mixture]/assets/scss/base/_navigation.scss",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/STProjectMaker/Sample-Templates/New Project [Mixture]/assets/scss/_settings.scss",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/STProjectMaker/Sample-Templates/New Project [Mixture]/project.todo",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/template-download.php"
+		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/js/countdown.js"
 	],
 	"find":
 	{
@@ -485,6 +555,45 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"6",
+			"responsive-cont",
+			"3/6",
+			"8",
+			"5",
+			" $gutter: 35px, ",
+			"$gutter: 0",
+			"$cycle: 3",
+			", $cycle: 3",
+			"grid",
+			"99.99",
+			"99.999",
+			"99.999999",
+			"elements",
+			"$elements",
+			"respond-to",
+			"$cycle",
+			"$space",
+			"//styles }",
+			"below",
+			"}",
+			"//styles",
+			"respond-to",
+			"box-width",
+			"width:",
+			"}",
+			"column",
+			"lost",
+			"$spacing",
+			"typography",
+			"$gut",
+			"$usw-flexbox",
+			"$flexbox",
+			"gut",
+			"rtl",
+			"gutter",
+			"below",
+			"above",
+			"1px solid $color-grey",
 			"mnav",
 			"child",
 			"entry",
@@ -573,46 +682,7 @@
 			"    ",
 			"   ",
 			"  ",
-			"  {",
-			".sg-component",
-			"{",
-			"  .",
-			"collaps",
-			" <",
-			"</",
-			"%",
-			"countdown",
-			"</",
-			"<",
-			"    ",
-			".js",
-			"  ",
-			";",
-			"  ",
-			"width: 25%;\n			font-family: 'DroidSansBold', sans-serif;",
-			"  ",
-			"figure",
-			"iframe",
-			"blog-post-right .panel",
-			".blog-post-right .panel",
-			"grid",
-			"angebot",
-			"footer",
-			"body",
-			"{\n",
-			"body",
-			"</span><span class=\"ra",
-			"'rating')",
-			"rating__star",
-			"rating-star",
-			"shortc",
-			"ratin",
-			"full",
-			"\") :",
-			"\")",
-			"}?>",
-			")\n								{",
-			"star"
+			"  {"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -630,8 +700,230 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1614,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1264,
+								1264
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 810.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_includes/_config.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4657,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								808,
+								808
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1204,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/style.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 669,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								660,
+								660
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_grid_col.sublime-snippet",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 285,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								73,
+								73
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/XML/XML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "_includes/components_base/footer/_footer.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								215,
+								215
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "_includes/components_base/content/_content.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 453,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								201,
+								201
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -688,40 +980,144 @@
 		"selected_items":
 		[
 			[
+				"sty",
+				"css\\style.scss"
+			],
+			[
 				"inde",
 				"index.html"
 			],
 			[
-				"conten",
-				"_includes\\components_base\\content\\_content.scss"
-			],
-			[
-				"sideb",
-				"_includes\\components_base\\sidebar\\_sidebar.scss"
-			],
-			[
-				"teaser",
-				"_includes\\components\\teaser\\teaser.html"
-			],
-			[
-				"teas",
-				"_includes\\components\\teaser\\_teaser.scss"
-			],
-			[
 				"nav",
-				"_includes\\components_base\\nav\\nav.html"
+				"_includes\\components_base\\nav\\_nav.scss"
+			],
+			[
+				"head",
+				"_includes\\components_base\\header\\_header.scss"
+			],
+			[
+				"rea",
+				"README.md"
+			],
+			[
+				"styl",
+				"css\\style.scss"
 			],
 			[
 				"confi",
 				"_includes\\_config.scss"
 			],
 			[
-				"com",
-				"_pages\\components\\components.md"
+				"read",
+				"README.md"
+			],
+			[
+				"teas",
+				"_includes\\components\\teaser\\_teaser.scss"
+			],
+			[
+				"cont",
+				"_includes\\components_base\\content\\_content.scss"
+			],
+			[
+				"sid",
+				"_includes\\components_base\\sidebar\\_sidebar.scss"
+			],
+			[
+				"nva",
+				"_includes\\components_base\\nav\\_nav.scss"
+			],
+			[
+				"conten",
+				"_includes\\components_base\\content\\_content.scss"
+			],
+			[
+				"teaser",
+				"_includes\\components\\teaser\\_teaser.scss"
+			],
+			[
+				"config",
+				"_includes\\_config.scss"
+			],
+			[
+				"gird",
+				"_includes\\components_base\\grid\\grid.scss"
+			],
+			[
+				"base",
+				"_includes\\_base.scss"
+			],
+			[
+				"side",
+				"_includes\\components_base\\sidebar\\_sidebar.scss"
+			],
+			[
+				"teasersc",
+				"_includes\\components\\teaser\\_teaser.scss"
+			],
+			[
+				"footer",
+				"_includes\\components_base\\footer\\_footer.scss"
+			],
+			[
+				"content",
+				"_includes\\components_base\\content\\_content.scss"
+			],
+			[
+				"main",
+				"_layouts\\main.html"
+			],
+			[
+				"styleg",
+				"styleguide.html"
 			],
 			[
 				"comp",
 				"_pages\\components\\components.md"
+			],
+			[
+				"conf",
+				"_includes\\_config.scss"
+			],
+			[
+				"com",
+				"_includes\\styleguide\\component_mask\\_component_mask.scss"
+			],
+			[
+				"comn",
+				"_includes\\styleguide\\component_nav\\_component_nav.scss"
+			],
+			[
+				"style",
+				"_includes\\styleguide\\_syntax_highlighting.scss"
+			],
+			[
+				"foot",
+				"_includes\\components_base\\footer\\_footer.scss"
+			],
+			[
+				"sideb",
+				"_includes\\components_base\\sidebar\\_sidebar.scss"
+			],
+			[
+				"teass",
+				"_includes\\components\\teaser\\_teaser.scss"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"hea",
+				"_includes\\components_base\\header\\header.html"
+			],
+			[
+				"header",
+				"_includes\\components_base\\header\\_header.scss"
+			],
+			[
+				"heads",
+				"_includes\\components_base\\header\\_header.scss"
 			],
 			[
 				"mnav",
@@ -736,22 +1132,6 @@
 				"_pages\\products.md"
 			],
 			[
-				"conf",
-				"_includes\\_config.scss"
-			],
-			[
-				"head",
-				"_includes\\components_base\\header\\_header.scss"
-			],
-			[
-				"foot",
-				"_includes\\components_base\\footer\\_footer.scss"
-			],
-			[
-				"cont",
-				"_includes\\components_base\\content\\_content.scss"
-			],
-			[
 				"mask",
 				"_includes\\styleguide\\component_mask\\component_mask.html"
 			],
@@ -760,32 +1140,12 @@
 				"_includes\\components\\button\\_button.scss"
 			],
 			[
-				"index",
-				"index.html"
-			],
-			[
 				"fot",
 				"_includes\\components_base\\footer\\_footer.scss"
 			],
 			[
-				"header",
-				"_includes\\components_base\\header\\_header.scss"
-			],
-			[
-				"side",
-				"_includes\\components_base\\sidebar\\_sidebar.scss"
-			],
-			[
-				"base",
-				"_includes\\_base.scss"
-			],
-			[
 				"tea",
 				"_includes\\components\\teaser\\_teaser.scss"
-			],
-			[
-				"main",
-				"_layouts\\main.html"
 			],
 			[
 				"typo",
@@ -796,16 +1156,8 @@
 				"_layouts\\main.html"
 			],
 			[
-				"footer",
-				"_includes\\components_base\\footer\\_footer.scss"
-			],
-			[
 				"sidebar",
 				"_includes\\components_base\\sidebar\\_sidebar.scss"
-			],
-			[
-				"sty",
-				"styleguide.html"
 			],
 			[
 				"but",
@@ -854,10 +1206,6 @@
 			[
 				"stys",
 				"_scss\\includes\\styleguide\\_component.scss"
-			],
-			[
-				"style",
-				"styleguide.html"
 			],
 			[
 				"mna",

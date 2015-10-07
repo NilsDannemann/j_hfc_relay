@@ -8,8 +8,8 @@
 	padding: $whitespace;
 	
 	&__inner {
-		@include flexbox($direction: row);
-		@include responsive-container();
+		@include flexbox();
+		@include container();
 	}
 
 	&__page {
