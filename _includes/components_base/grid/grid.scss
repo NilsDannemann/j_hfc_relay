@@ -62,15 +62,15 @@
 /* =======================================*/
 /* COLUMNS
 /* =======================================*/
-@mixin column($fraction: '1/1', $space: $whitespace, $cycle: nth(sl-explode($fraction, '/'), 2), $flex: $use-flexbox) {
-	@if ($space == 0) {
+@mixin column($fraction: '1/1', $gutter: $whitespace, $cycle: nth(sl-explode($fraction, '/'), 2), $flex: $use-flexbox) {
+	@if ($gutter == 0) {
 		width: calc(99.999999% * #{$fraction});
 	} @else {
-		width: calc(99.99% * #{$fraction} - (#{$space} - #{$space} * #{$fraction}));
+		width: calc(99.99% * #{$fraction} - (#{$gutter} - #{$gutter} * #{$fraction}));
 	}
 	@if ($flex == false) {
 		&:nth-child(n) {
-			margin-right: $space;
+			margin-right: $gutter;
 			float: left;
 			clear: none;
 		}
@@ -87,7 +87,7 @@
 	} @else {
 		flex: 0 0 auto;
 		&:nth-child(n) {
-			margin-right: $space;
+			margin-right: $gutter;
 		}
 		&:last-child {
 			margin-right: 0;
@@ -102,14 +102,14 @@
 /* =======================================*/
 /* ROWS
 /* =======================================*/
-@mixin row($fraction: '1/1', $space: $whitespace, $flex: $use-flexbox) {
+@mixin row($fraction: '1/1', $gutter: $whitespace, $flex: $use-flexbox) {
 	width: 100%;
-	@if ($space == 0) {
+	@if ($gutter == 0) {
 		height: calc(99.999999% * #{$fraction});
 	} @else {
-		height: calc(99.99% * #{$fraction} - (#{$space} - #{$space} * #{$fraction}));
+		height: calc(99.99% * #{$fraction} - (#{$gutter} - #{$gutter} * #{$fraction}));
 	}
-	margin-bottom: $space;
+	margin-bottom: $gutter;
 	@if ($flex == true) {
 		flex: 0 0 auto;
 	}

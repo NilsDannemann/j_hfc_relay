@@ -27,16 +27,16 @@ Coming.
 
 **Use Columns**
 ```sass
-@include column('1/4');			//basic gutters
-@include column('1/4', 0); 		//optional: no gutters
-@include column('1/4', 10px); 	//optional: 10px gutters
+@include column('1/4');					//basic gutters
+@include column('1/4', $gutter: 0); 	//optional: no gutters
+@include column('1/4', $gutter: 10px); 	//optional: 10px gutters
 ```
 
 **Use Rows**
 ```sass
-@include row('1/4');			//basic gutters
-@include row('1/4', 0); 		//optional: no gutters
-@include row('1/4', 10px); 		//optional: 10px gutters
+@include row('1/4');					//basic gutters
+@include row('1/4', $gutter: 0); 		//optional: no gutters
+@include row('1/4', $gutter: 10px); 	//optional: 10px gutters
 ```
 
 ##Responsive Rules

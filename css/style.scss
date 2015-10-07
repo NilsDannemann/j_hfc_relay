@@ -16,3 +16,34 @@
 /* ===COMPONENTS=== */
 @import 'components/button/button';
 @import 'components/teaser/teaser';
+
+
+.box {
+  @include column('1/6', $gutter: 10px, $cycle: 3);
+  background: #eee;
+  padding: 20px;
+  margin-bottom: 10px;
+
+  @include below(medium) {
+  	@inlcude column('1/1');
+  }
+}
+
+.box2 {
+  @include column('4/6', $gutter: 10px, $cycle: 3);
+  background: #eee;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+@include below(medium) {
+	.box, .box2 {
+	  @include column('1/3');
+	}
+}
+
+@include below(small) {
+	.box, .box2 {
+	  @include column('1/1');
+	}
+}

@@ -39,8 +39,9 @@ $color-brand: $color-spaceblack;
 
 $whitespace		: 20px;
 $sidebar-width	: 215px;
-$responsive		: true 	!default; // true or false
-$use-flexbox	: false !default; // true or false (used in grid only so far)
+$responsive		: true; 	// true or false
+$use-flexbox	: false; 	// true or false (used in grid only so far)
+$use-devmode	: false; 	// true or false
 $breakpoints: (
 	'x-small': 401px,
 	'small'  : 641px,
@@ -189,3 +190,16 @@ $teaser-lines-to-show: 3;
 	-webkit-order: $order;
 	order: $order;
 }
+
+/* =======================================*/
+/*
+/* DEVMODE
+/* 
+/* =======================================*/
+
+@if $use-devmode == true {
+	* {
+		background: rgba($color-brand, 0.075) !important;
+	}
+} 
+
