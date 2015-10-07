@@ -43,7 +43,7 @@
 	&--double {}
 	
 	// TRIPLE TEASER
-	&--triple {}
+	&--triple {@include flexbox-width(33.333333333333%);}
 }
 
 
@@ -51,15 +51,7 @@
 /* RESPONSIVE BEHAVIOR
 /* =======================================*/
 
-@include respond-to(x-small) {
-	.teaser {
-		
-		&--single {}
-		&--double {}
-		&--triple {}
-	}
-}
-@include respond-to(small) {
+@include below(x-large) {
 	.teaser {
 		
 		&--single {}
@@ -67,7 +59,7 @@
 		&--triple {@include flexbox-width(50%);}
 	}
 }
-@include respond-to(medium) {
+@include below(large) {
 	.teaser {
 		
 		&--single {}
@@ -75,7 +67,15 @@
 		&--triple {@include flexbox-width(100%);}
 	}
 }
-@include respond-to(large) {
+@include below(medium) {
+	.teaser {
+		
+		&--single {}
+		&--double {}
+		&--triple {@include flexbox-width(33.333333333333%);}
+	}
+}
+@include below(small) {
 	.teaser {
 		
 		&--single {}
@@ -83,11 +83,11 @@
 		&--triple {@include flexbox-width(50%);}
 	}
 }
-@include respond-to(x-large) {
+@include below(x-small) {
 	.teaser {
 		
 		&--single {}
 		&--double {}
-		&--triple {@include flexbox-width(33.333333333333%);}
+		&--triple {@include flexbox-width(100%);}
 	}
 }

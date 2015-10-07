@@ -42,7 +42,7 @@ $sidebar-width	: 215px;
 $responsive		: true 	!default; // true or false
 $use-flexbox	: false !default; // true or false (used in grid only so far)
 $breakpoints: (
-	'x-small': 321px,
+	'x-small': 401px,
 	'small'  : 641px,
 	'medium' : 769px,
 	'large'  : 960px,
@@ -99,7 +99,17 @@ $teaser-lines-to-show: 3;
 /* 
 /* =======================================*/
 
-@mixin respond-to($name) {
+// Desktop-First Mixins
+@mixin below($name) {
+	@if map-has-key($breakpoints, $name) and $responsive == true {
+		@media (max-width: #{ inspect(map-get($breakpoints, $name))}) {
+			@content;
+		}
+	}
+}
+
+// Mobile-First Mixins
+@mixin above($name) {
 	@if map-has-key($breakpoints, $name) and $responsive == true {
 		@media (min-width: #{ inspect(map-get($breakpoints, $name))}) {
 			@content;
@@ -114,10 +124,14 @@ $teaser-lines-to-show: 3;
 /* =======================================*/
 
 @mixin responsive-container() {
-	min-width: map-get($breakpoints, large);
+	@if $responsive == true {
+		min-width: 0;
+	} 
+	@else {
+		min-width: map-get($breakpoints, large);
+	}
 	max-width: map-get($breakpoints, x-large);
 	margin: 0 auto;
-	@include respond-to(x-small) {min-width: 0;}
 }
 
 /* =======================================*/

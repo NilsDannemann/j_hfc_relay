@@ -5,7 +5,7 @@
 /* =======================================*/
 
 .sidebar {
-	width: 100%;
+	width: $sidebar-width;
 	margin: 0 $whitespace 0 0;
 	padding: $whitespace;
 	border: $border;
@@ -15,8 +15,8 @@
 
 // For: 2 sidebars
 * + .sidebar {
-	margin: 0;
-	@include respond-to(medium) { margin: 0 0 0 $whitespace; }
+	margin: 0 0 0 $whitespace;
+	@include below(medium) { margin: 0; }
 }
 
 
@@ -24,9 +24,9 @@
 /* RESPONSIVE BEHAVIOR
 /* =======================================*/
 
-@include respond-to(medium) { 
+@include below(medium) { 
 	.sidebar {
-		width: $sidebar-width; 
+		width: 100%;
 	}
 }
 

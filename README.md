@@ -35,26 +35,28 @@ Coming.
 ```
 
 ##Responsive Rules
-Think **mobile-first**
+**Desktop-first**
 ```sass
 .foo {
 	//styles
 
-	@include respond-to(x-small) { 
-		//styles above x-small
-	}
-	@include respond-to(small) { 
-		//styles above small
-	}
-	@include respond-to(medium) { 
-		//styles above medium
-	}
-	@include respond-to(large) { 
-		//styles above large
-	}
-	@include respond-to(x-large) { 
-		//styles above x-large
-	}
+	@include below(x-small) { //styles }
+	@include below(small) { //styles }
+	@include below(medium) { //styles }
+	@include below(large) { //styles }
+	@include below(x-large) { //styles }
+}
+```
+**Mobile-first**
+```sass
+.foo {
+	//styles
+
+	@include above(x-small) { //styles }
+	@include above(small) { //styles }
+	@include above(medium) { //styles }
+	@include above(large) { //styles }
+	@include above(x-large) { //styles }
 }
 ```
 

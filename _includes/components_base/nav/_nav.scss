@@ -8,7 +8,7 @@
 	background: #fff;
 
 	&__inner {
-		@include flexbox($direction: column);
+		@include flexbox($direction: row);
 		@include responsive-container();
 		justify-content: flex-end;
 		list-style-type: none;
@@ -38,11 +38,11 @@
 /* RESPONSIVE BEHAVIOR
 /* =======================================*/
 
-@include respond-to(medium) {
+@include below(medium) {
 	.nav {
 
 		&__inner {
-			@include flexbox($direction: row);
+			@include flexbox($direction: column);
 		}
 	}
 }
