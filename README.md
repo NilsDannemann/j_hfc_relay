@@ -10,13 +10,18 @@ Coming.
 - Intelligent Fallbacks (e.g. no image)
 - UI Animations
 
-# Creating Pages
-1. On Parent: Set Children to true
-2. On Children: Implement correct permalink (e.g. /parentpage/childpage)
+# Pages
+
+## Create
+1. Create your page.md in _pages
+
+##Navigation
+1. On parent-page: Set Children to true
+2. On child-pages: Implement correct permalink (e.g. /parentpage/childpage)
 
 
 
-# Developer Snippets/Includes
+# Developer Snippets
 
 ##Grid
 
@@ -40,11 +45,11 @@ Coming.
 .foo {
 	//styles
 
-	@include below(x-small) { //styles }
-	@include below(small) { //styles }
-	@include below(medium) { //styles }
-	@include below(large) { //styles }
-	@include below(x-large) { //styles }
+	@include below(x-small) { ... }
+	@include below(small) { ... }
+	@include below(medium) { ... }
+	@include below(large) { ... }
+	@include below(x-large) { ... }
 }
 ```
 **Mobile-first**
@@ -52,11 +57,11 @@ Coming.
 .foo {
 	//styles
 
-	@include above(x-small) { //styles }
-	@include above(small) { //styles }
-	@include above(medium) { //styles }
-	@include above(large) { //styles }
-	@include above(x-large) { //styles }
+	@include above(x-small) { ... }
+	@include above(small) { ... }
+	@include above(medium) { ... }
+	@include above(large) { ... }
+	@include above(x-large) { ... }
 }
 ```
 
