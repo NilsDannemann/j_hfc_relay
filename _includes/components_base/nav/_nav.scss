@@ -1,6 +1,6 @@
 /* =======================================*/
 /*
-/* MNAV
+/* NAV
 /*
 /* =======================================*/
 
@@ -14,15 +14,26 @@
 		list-style-type: none;
 	}
 
-	&__item {}
+	&__item {
+		border-right: $border;
+
+		&:hover {
+
+			.nav--subnav {
+
+				.nav__inner {
+					display: block;
+				}
+			}
+		}
+	}
 	
 	&__link {
-		display: block;
+		display: inline-block;
 		color: $color-black;
 		text-align: center;
 		font-size: $font-size;
 		padding: $whitespace $whitespace;
-		border-right: $border;
 
 		transition: $transition;
 
@@ -31,7 +42,35 @@
 			background: $color-grey;
 		}
 	}
+
+	.icon {
+		float: right;
+		height: $whitespace;
+		width: $whitespace;
+		position: relative;
+		top: $whitespace;
+		right: $whitespace/2;
+		fill: $color-brand;
+	}
 }
+
+
+/* =======================================*/
+/*
+/* SUBNAV
+/*
+/* =======================================*/
+
+.nav--subnav {
+
+	.nav__inner {
+		@include flexbox($direction: column);
+		background-color: #fff;
+		display: none;
+		position: absolute;
+	}
+}
+
 
 
 /* =======================================*/
@@ -43,6 +82,13 @@
 
 		&__inner {
 			@include flexbox($direction: column);
+		}
+	}
+
+	.nav--subnav {
+
+		.nav__inner {
+			position: relative;
 		}
 	}
 }
