@@ -3,7 +3,7 @@ title: "Components"
 permalink: "/components/"
 layout: main
 position: 99
-children: false
+children: true
 ---
 
 <h1>Components</h1>

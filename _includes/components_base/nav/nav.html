@@ -22,16 +22,15 @@
 	{% comment %}
 	Top Level
 	{% endcomment %}
-	{% if level == null %}
-	<div class="nav">
+	{% if include.level == null %}
+	<nav class="nav">
+		<a class="nav__icon" href="#" style="display: none;">Menu</a>
 		<ul class="nav__inner">
 	{% else %}
 	{% comment %}
 	Sub Level
 	{% endcomment %}
-	<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="27" height="27"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg>
-	<div class="nav nav--subnav">
-		<ul class="nav__inner">
+	<ul class="nav__subnav">
 	{% endif %}
 			
 		{% comment %}Start-Page (fixed) {% endcomment %}
@@ -54,15 +53,26 @@
 						{% if p.children == true %}
 							{% comment %}Increment Level{% endcomment %}
 							{% assign level = level | plus: 1 %}
-							{% include components_base/nav/nav.html context=p.url %}
+							{% include components_base/nav/nav.html context=p.url level=level %}
 						{% endif %}
 					</li>
 				{% endunless %}
 			{% endif %}
 
 			{% endfor %}
-
+	
+	{% comment %}
+	End: Top Level
+	{% endcomment %}
+	{% if include.level == null %}
 		</ul>
-	</div>
+	</nav>
+	{% else %}
+	{% comment %}
+	End: Sub Level
+	{% endcomment %}
+	</ul>
+	{% endif %}
+
 
 {% endcapture %}{{ html | strip_newlines | replace:'    ','' | replace:'    ','' | replace:'  ',' ' }}
