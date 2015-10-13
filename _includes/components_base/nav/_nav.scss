@@ -39,6 +39,7 @@
 	/* =======================================*/
 	> .nav__item {
 		float: left;
+		border-top: none;
 		border-right: $border;
 		
 		&:first-child {
@@ -61,25 +62,44 @@
 	/* =======================================*/
 	.nav__subnav {
 		position: absolute;
-		left: -9999px;
-		
-	}
-	> .nav__item.is-hovered > .nav__subnav {
-		left: 0;
+		visibility: hidden;
 
+		opacity: 0;
+		transform: translateY(10px);
+		@include transition();
 	}
-	.nav__subnav .nav__item.is-hovered .nav__subnav {
-		left: 100%;
-		top: -1px;
-		border-left: 1px solid #eee;
+
+	> .nav__item.is-hovered > .nav__subnav {
+		visibility: visible;
+
+		opacity: 1;
+		transform: translateY(0px);
+		@include transition();
 	}
-	
+
+
 	/* =======================================*/
 	/* LEVEL 3
 	/* =======================================*/
+	.nav__subnav .nav__subnav {
+		left: 100%;
+		top: -1px;
+		border-left: 1px solid #eee;
+		transform: translateX(10px);
+	}
+
+	.nav__subnav .nav__item.is-hovered .nav__subnav {
+		visibility: visible;
+
+		opacity: 1;
+		transform: translateX(0px);
+		@include transition();
+	}
+
 	.nav__item .nav__item a {
 		display: block;
 	}
+
 	.nav__item .nav__item .nav__item a {
 
 	}
@@ -95,9 +115,10 @@
 
 		> .nav__item {
 			float: none;
+			border-top: $border;
 			border-right: none;
 			
-			&:first-child {border-left: none;}
+			&:first-child { border-left: none; }
 		}
 		> .nav__item > .nav__link--parent {
 			background-position: 95% 50%;
@@ -118,10 +139,11 @@
 		}
 
 		.nav__subnav {
-			display: block;
+			display: none;
 			width: 100%;
 		}
 		> .nav__item.is-hovered > .nav__subnav, .nav__item .nav__item.is-hovered .nav__subnav {
+			display: block;
 			position: static;
 		}
 	}

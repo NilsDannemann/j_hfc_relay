@@ -2,7 +2,7 @@
 title: "Teaser"
 permalink: "/components/teaser/"
 layout: main
-position: 1
+position: 2
 children: true
 ---
 
