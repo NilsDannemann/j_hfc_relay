@@ -2,7 +2,7 @@
 title: "Downloads"
 permalink: "/components/downloads/"
 layout: main
-position: 3
+position: 4
 children: false
 ---
 

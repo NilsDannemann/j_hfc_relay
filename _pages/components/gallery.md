@@ -2,7 +2,7 @@
 title: "Gallery"
 permalink: "/components/gallery/"
 layout: main
-position: 2
+position: 3
 children: false
 ---
 
