@@ -1,6 +1,6 @@
 ---
 title: "Teaser Single"
-permalink: "/components/teaser_single/"
+permalink: "/components/teaser/teaser_single/"
 layout: main
 position: 1
 children: false

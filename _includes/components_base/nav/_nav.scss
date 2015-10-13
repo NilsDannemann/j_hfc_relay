@@ -63,22 +63,15 @@
 		position: absolute;
 		left: -9999px;
 		
-		transform: translateY(10px);
-		opacity: 0;
-		-webkit-transition: transform 125ms ease-in, opacity 125ms ease-in;
-		-moz-transition: transform 125ms ease-in, opacity 125ms ease-in;
-		-ms-transition: transform 125ms ease-in, opacity 125ms ease-in; /* IE10 is actually unprefixed */
-		-o-transition: transform 125ms ease-in, opacity 125ms ease-in;
-		transition: transform 125ms ease-in, opacity 125ms ease-in;
 	}
-	> .nav__item.hover > .nav__subnav {
+	> .nav__item.is-hovered > .nav__subnav {
 		left: 0;
-		transform: translateY(0px);
-		opacity: 1;
+
 	}
-	.nav__item .nav__item.hover .nav__subnav {
+	.nav__subnav .nav__item.is-hovered .nav__subnav {
 		left: 100%;
-		top: 0;
+		top: -1px;
+		border-left: 1px solid #eee;
 	}
 	
 	/* =======================================*/
@@ -128,7 +121,7 @@
 			display: block;
 			width: 100%;
 		}
-		> .nav__item.hover > .nav__subnav, .nav__item .nav__item.hover .nav__subnav {
+		> .nav__item.is-hovered > .nav__subnav, .nav__item .nav__item.is-hovered .nav__subnav {
 			position: static;
 		}
 	}

@@ -1,10 +1,10 @@
 ---
-title: "Teaser Double"
-permalink: "/components/teaser/teaser_double/"
+title: "Gallery"
+permalink: "/components/gallery/"
 layout: main
 position: 2
 children: false
 ---
 
-<h1>Teaser Double</h1>
+<h1>Gallery</h1>
 {% include components/button/button.html text="Button" %}

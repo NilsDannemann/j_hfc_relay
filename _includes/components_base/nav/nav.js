@@ -37,19 +37,19 @@
 			$(".nav__inner li a.nav__link--parent").unbind('click');
 		$(".nav__inner li .more").unbind('click').bind('click', function() {
 				
-				$(this).parent("li").toggleClass("hover");
+				$(this).parent("li").toggleClass("is-hovered");
 			});
 		} 
-		else if (ww >= 768) {
+		else if (ww > 768) {
 		// remove .more link in desktop view
 		$('.more').remove(); 
 			$(".nav__icon").css("display", "none");
 			$(".nav__inner").show();
-			$(".nav__inner li").removeClass("hover");
+			$(".nav__inner li").removeClass("is-hovered");
 			$(".nav__inner li a").unbind('click');
 			$(".nav__inner li").unbind('mouseenter mouseleave').bind('mouseenter mouseleave', function() {
-				// must be attached to li so that mouseleave is not triggered when hover over submenu
-				$(this).toggleClass('hover');
+				// must be attached to li so that mouseleave is not triggered when is-hovered over submenu
+				$(this).toggleClass("is-hovered");
 			});
 		}
 	}
