@@ -3,7 +3,7 @@ title: "Slider"
 permalink: "/components/slider/"
 layout: main
 position: 1
-children: true
+children: false
 ---
 
 <h1>Slider</h1>
