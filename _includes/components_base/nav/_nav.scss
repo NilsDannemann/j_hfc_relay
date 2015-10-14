@@ -2,25 +2,8 @@
 	background: #fff;
 	
 	// General: State
-	.is-active {background-color: #f6f6f6;}
+	.is-active {}
 	.is-hovered {background-color: #f6f6f6;}
-
-	// General: Icon
-	&__icon {
-		border-right: $border;
-		padding: $whitespace;
-		background-image: url('../_includes/components_base/nav/navicon.svg');
-		background-repeat: no-repeat; 
-		background-position: 50% 85%;
-
-		svg {
-			width: 26px;
-			height: 26px;
-			float: left;
-			fill: $color-brand;
-			margin: -5px 20px -10px 0;
-		}
-	}
 
 	// General: Elements
 	&__inner {
@@ -123,11 +106,28 @@
 
 @include below(medium) {
 	.nav {
-			
+
 		// General: State
 		.is-active {}
 		.is-hovered {background-color: transparent;}
 		
+		// General: NavIcon
+		&__icon {
+			border-right: $border;
+			padding: $whitespace;
+			background-image: url('../_includes/components_base/nav/navicon.svg');
+			background-repeat: no-repeat; 
+			background-position: 50% 85%;
+
+			svg {
+				width: 26px;
+				height: 26px;
+				float: left;
+				fill: $color-brand;
+				margin: -5px 20px -10px 0;
+			}
+		}
+			
 		// General: Elements
 		&__item {
 			float: none;
