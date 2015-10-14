@@ -37,6 +37,24 @@
 		{% if include.context == "/" %}
 			<li class="nav__item">
 				<a class="nav__link {% if page.url == "/" %}is-active{% endif %}" href="{{ site.baseurl }}/">Startseite</a>
+				<ul class="nav__subnav">
+					<li class="nav__item">
+						<a class="nav__link" href="#">Link</a>
+						<ul class="nav__subnav">
+							<li class="nav__item">
+								<a class="nav__link" href="#">Link</a>
+								<ul class="nav__subnav">
+									<li class="nav__item">
+										<a class="nav__link" href="#">Link</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="#">Link</a>
+					</li>
+				</ul>
 			</li>
 		{% endif %}
 		

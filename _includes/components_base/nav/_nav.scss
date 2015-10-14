@@ -1,66 +1,44 @@
 .nav {
 	background: #fff;
 	
+	// General: State
+	.is-active {background-color: #eee;}
+	.is-hovered {}
+
+	// General: Icon
 	&__icon {
 		border-right: $border;
 		padding: $whitespace;
 	}
-}
-.is-active {
-	background-color: #eee;
-}
 
-.nav__inner {
-	@include container();
-	padding: 0;
-	list-style: none;
-	
-	// General: Clearfix
-	&:before,
-	&:after {content: " "; display: table;}
-	&:after {clear: both;}
-	
-	// General: Setup
-	.nav__subnav {
+	// General: Elements
+	&__inner {
+		@include container();
+		@include clearfix();
+		padding: 0;
+		list-style: none;
+	}
+	&__item {
+		float: left;
+		position: relative;
+		border-right: $border;
+		
+		&:first-child {border-left: $border;}
+	}
+	&__link {
+		padding: $whitespace;
+		display: block;
+	}
+	&__link--parent {
+		background-image: url("http://webdesigntutsplus.s3.amazonaws.com/tuts/378_tessa/tessa-lt-dropdowns-21c7868/images/downArrow.png");
+		background-repeat: no-repeat; 
+		background-position: 50% 85%;
+	}
+	&__subnav {
 		min-width: 150px;
 		list-style: none;
 		background-color: #fff;
-	}
-	.nav__item {
-		position: relative;
-		border-top: $border;
-	}
-	.nav__link {
-		padding: $whitespace;
-	}
-	
-	/* =======================================*/
-	/* LEVEL 1
-	/* =======================================*/
-	> .nav__item {
-		float: left;
-		border-top: none;
-		border-right: $border;
-		
-		&:first-child {
-			border-left: $border;
-		}
 
-		> .nav__link--parent {
-			background-image: url("http://webdesigntutsplus.s3.amazonaws.com/tuts/378_tessa/tessa-lt-dropdowns-21c7868/images/downArrow.png");
-			background-repeat: no-repeat; 
-			background-position: 50% 85%;
-		}
-		
-		> .nav__link {
-			display: block;
-		}
-	}
-
-	/* =======================================*/
-	/* LEVEL 2
-	/* =======================================*/
-	.nav__subnav {
 		position: absolute;
 		visibility: hidden;
 
@@ -68,8 +46,17 @@
 		transform: translateY(10px);
 		@include transition();
 	}
+}
 
-	> .nav__item.is-hovered > .nav__subnav {
+
+/* =======================================*/
+/* SUBNAV - LEVEL 1
+/* =======================================*/
+
+.nav {
+
+	// Show Subnav
+	&__item.is-hovered > &__subnav {
 		visibility: visible;
 
 		opacity: 1;
@@ -77,18 +64,31 @@
 		@include transition();
 	}
 
+	// Subnav Level 1
+	&__subnav {
 
-	/* =======================================*/
-	/* LEVEL 3
-	/* =======================================*/
-	.nav__subnav .nav__subnav {
-		left: 100%;
-		top: -1px;
-		border-left: 1px solid #eee;
-		transform: translateX(10px);
+		.nav__item {
+			float: none;
+			border-top: $border;
+			border-right: none;
+
+			&:first-child {border-left: none;}
+		}
+		.nav__link--parent {
+			background-image: none;
+		}
 	}
+}
 
-	.nav__subnav .nav__item.is-hovered .nav__subnav {
+
+/* =======================================*/
+/* SUBNAV - LEVEL 2 & 3
+/* =======================================*/
+
+.nav {
+
+	// Show Subnav
+	&__item.is-hovered > &__subnav {
 		visibility: visible;
 
 		opacity: 1;
@@ -96,12 +96,12 @@
 		@include transition();
 	}
 
-	.nav__item .nav__item a {
-		display: block;
-	}
-
-	.nav__item .nav__item .nav__item a {
-
+	// Subnav Level 2 & 3
+	&__subnav &__subnav {
+		left: 100%;
+		top: -1px;
+		border-left: 1px solid #eee;
+		transform: translateX(10px);
 	}
 }
 
@@ -111,23 +111,19 @@
 /* =======================================*/
 
 @include below(medium) {
-	.nav__inner {
+	.nav {
 
-		> .nav__item {
+		&__item {
 			float: none;
 			border-top: $border;
 			border-right: none;
 			
 			&:first-child { border-left: none; }
 		}
-		> .nav__item > .nav__link--parent {
-			background-position: 95% 50%;
-		}
-		
-		> .nav__item > .nav__link--parent {
+		&__link--parent {
 			background-image: none; 
 		}
-		.nav__item .more {
+		&__more {
 			background: url("http://webdesigntutsplus.s3.amazonaws.com/tuts/378_tessa/tessa-lt-dropdowns-21c7868/images/downArrow.png") no-repeat 50%;
 			float: right;
 			width: $whitespace;
@@ -137,18 +133,16 @@
 			z-index: 200; //For: Nested Subnav
 			position: relative; //For: Nested Subnav
 		}
-
-		.nav__subnav {
+		&__subnav {
 			display: none;
 			width: 100%;
 		}
-		> .nav__item.is-hovered > .nav__subnav, .nav__item .nav__item.is-hovered .nav__subnav {
+		&__subnav &__subnav {
+			border-left: none;
+		}
+		&__item.is-hovered > &__subnav {
 			display: block;
 			position: static;
 		}
-	}
-
-	.is-active {
-		display: block;
 	}
 }

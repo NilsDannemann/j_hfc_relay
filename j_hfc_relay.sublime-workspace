@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"tea",
+				"teaser	(teaser.md)"
+			],
+			[
+				"background",
+				"background-color: "
+			],
+			[
+				"borr",
+				"border-right: "
+			],
+			[
+				"compo",
+				"components_base	(nav.html)"
+			],
+			[
+				"color",
+				"color-brand"
+			],
+			[
 				"white",
 				"whitespace"
 			],
@@ -171,7 +191,39 @@
 			"file": "_includes/_config.scss",
 			"settings":
 			{
-				"buffer_size": 4657,
+				"buffer_size": 4896,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_pages/components/slider.md",
+			"settings":
+			{
+				"buffer_size": 172,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_includes/components_base/nav/nav.html",
+			"settings":
+			{
+				"buffer_size": 2004,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_includes/components_base/nav/_nav.scss",
+			"settings":
+			{
+				"buffer_size": 2890,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_includes/components_base/nav/nav.js",
+			"settings":
+			{
+				"buffer_size": 1610,
 				"line_ending": "Windows"
 			}
 		}
@@ -363,21 +415,35 @@
 	"expanded_folders":
 	[
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components"
 	],
 	"file_history":
 	[
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/_config.scss",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/_nav.scss",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/teaser.md",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/slider.md",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/gallery.md",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/downloads.md",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/forms.md",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/nav.html",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_components/teaser.html",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/nav.js",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/teaser_double.md",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/teaser_single.md",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/teaser_triple.md",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/components.md",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/footer/footer.html",
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/about.md",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/README.md",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/css/style.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/_config.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/about.md",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/contact.md",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/components.md",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/index.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/nav.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/_nav.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/nav.js",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/products.md",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/content/_content.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/footer/_footer.scss",
@@ -406,10 +472,6 @@
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_nav/_component_nav.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_mask/_component_mask.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/header/header.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/teaser_double.md",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/teaser_single.md",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/teaser_triple.md",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/footer/footer.html",
 		"/C/Users/Gothmog/Desktop/ResponsiveMultiLevelMenu/css/default.css",
 		"/C/Users/Gothmog/Desktop/ResponsiveMultiLevelMenu/css/component.css",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/mnav/mnav.html",
@@ -418,7 +480,6 @@
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/menu.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_config.yml",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_plugins/site_menus.rb",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_components/teaser.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/mnav/_mnav.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_mask/component_mask.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_sidebar/sidebar.html",
@@ -490,12 +551,7 @@
 		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/template-angebot.php",
 		"/C/Users/Nils Dannemann/Desktop/functions.php",
 		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/footer.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/frontpage1.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-includes/theme-compat/footer.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/header.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/_inc/css/jquery.countdown.css",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/js/jquery.countdown.js",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/_inc/css/responsive.css"
+		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/frontpage1.php"
 	],
 	"find":
 	{
@@ -514,6 +570,28 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"none",
+			"$property: \"height\"",
+			"property",
+			"all ",
+			"all",
+			", opacity 0.3s ease 0.5s;",
+			"is-hover",
+			"hover",
+			"768",
+			"76",
+			"0.5s",
+			"-out",
+			"0.3",
+			"height",
+			"trans",
+			"parent",
+			"nav__parent",
+			"icon",
+			"brand",
+			"background",
+			"20px",
+			"p.url",
 			"20px",
 			"16",
 			"page.",
@@ -619,29 +697,7 @@
 			"sidebar",
 			"base/",
 			"{",
-			"  ",
-			"  '",
-			"  ",
-			"...",
-			"spacing",
-			"layout",
-			"layout/",
-			"scss",
-			"styleguide",
-			"includes",
-			"rt '",
-			"16",
-			"#ececec",
-			"title",
-			"light-",
-			"light",
-			"blue",
-			"  ",
-			"navigation",
-			"'Helvetica', 'Arial', sans-serif;",
-			"chauf",
-			"-select",
-			"component-selector"
+			"  "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -659,7 +715,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -668,15 +724,111 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4657,
+						"buffer_size": 4896,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								157,
-								157
+								624,
+								634
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 285.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_pages/components/slider.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								114,
+								114
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_includes/components_base/nav/nav.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								18
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "_includes/components_base/nav/_nav.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2890,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								633,
+								633
 							]
 						],
 						"settings":
@@ -692,6 +844,38 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "_includes/components_base/nav/nav.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1610,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -750,12 +934,36 @@
 		"selected_items":
 		[
 			[
-				"con",
+				"slide",
+				"_pages\\components\\slider.md"
+			],
+			[
+				"conf",
 				"_includes\\_config.scss"
 			],
 			[
 				"nav",
 				"_includes\\components_base\\nav\\_nav.scss"
+			],
+			[
+				"teas",
+				"_pages\\components\\teaser.md"
+			],
+			[
+				"te",
+				"_components\\teaser.html"
+			],
+			[
+				"foo",
+				"_includes\\components_base\\footer\\footer.html"
+			],
+			[
+				"abou",
+				"_pages\\about.md"
+			],
+			[
+				"con",
+				"_includes\\_config.scss"
 			],
 			[
 				"sty",
@@ -784,10 +992,6 @@
 			[
 				"read",
 				"README.md"
-			],
-			[
-				"teas",
-				"_includes\\components\\teaser\\_teaser.scss"
 			],
 			[
 				"cont",
@@ -848,10 +1052,6 @@
 			[
 				"comp",
 				"_pages\\components\\components.md"
-			],
-			[
-				"conf",
-				"_includes\\_config.scss"
 			],
 			[
 				"com",

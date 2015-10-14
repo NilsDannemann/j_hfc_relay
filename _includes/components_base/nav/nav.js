@@ -23,9 +23,9 @@
 
 	var adjustMenu = function() {
 		if (ww < 768) {
-		// if "more" link not in DOM, add it
-		if (!$(".more")[0]) {
-		$('<div class="more">&nbsp;</div>').insertBefore($('.nav__link--parent')); 
+		// if "nav__more" link not in DOM, add it
+		if (!$(".nav__more")[0]) {
+		$('<div class="nav__more">&nbsp;</div>').insertBefore($('.nav__link--parent')); 
 		}
 			$(".nav__icon").css("display", "inline-block");
 			if (!$(".nav__icon").hasClass("is-active")) {
@@ -35,14 +35,14 @@
 			}
 			$(".nav__inner li").unbind('mouseenter mouseleave');
 			$(".nav__inner li a.nav__link--parent").unbind('click');
-		$(".nav__inner li .more").unbind('click').bind('click', function() {
+		$(".nav__inner li .nav__more").unbind('click').bind('click', function() {
 				
 				$(this).parent("li").toggleClass("is-hovered");
 			});
 		} 
 		else if (ww > 768) {
-		// remove .more link in desktop view
-		$('.more').remove(); 
+		// remove .nav__more link in desktop view
+		$('.nav__more').remove(); 
 			$(".nav__icon").css("display", "none");
 			$(".nav__inner").show();
 			$(".nav__inner li").removeClass("is-hovered");
