@@ -24,7 +24,10 @@
 	{% endcomment %}
 	{% if include.level == null %}
 	<nav class="nav">
-		<a class="nav__icon" href="#" style="display: none;">Menu</a>
+		<a class="nav__icon" href="#" style="display: none;">
+			{% include components_base/nav/navicon.svg %}
+			Menu
+		</a>
 		<ul class="nav__inner">
 	{% else %}
 	{% comment %}

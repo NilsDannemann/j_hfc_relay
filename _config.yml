@@ -22,4 +22,4 @@ kramdown:
   input: GFM
 sass:
   sass_dir: _includes
-  style: :compressed
+  style: compressed
