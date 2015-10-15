@@ -207,24 +207,24 @@
 			"file": "_includes/components_base/nav/nav.html",
 			"settings":
 			{
-				"buffer_size": 2004,
-				"line_ending": "Windows"
+				"buffer_size": 2060,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "_includes/components_base/nav/_nav.scss",
 			"settings":
 			{
-				"buffer_size": 2890,
-				"line_ending": "Windows"
+				"buffer_size": 3065,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "_includes/components_base/nav/nav.js",
 			"settings":
 			{
-				"buffer_size": 1610,
-				"line_ending": "Windows"
+				"buffer_size": 1640,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -235,10 +235,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 230.0,
-		"last_filter": "liq",
+		"height": 400.0,
+		"last_filter": "packin",
 		"selected_items":
 		[
+			[
+				"packin",
+				"Package Control: Install Package"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
 			[
 				"liq",
 				"Set Syntax: HTML (Liquid)"
@@ -246,10 +254,6 @@
 			[
 				"html",
 				"Set Syntax: HTML"
-			],
-			[
-				"scss",
-				"Set Syntax: SCSS"
 			],
 			[
 				"java",
@@ -274,10 +278,6 @@
 			[
 				"browp",
 				"Preferences: Browse Packages"
-			],
-			[
-				"packin",
-				"Package Control: Install Package"
 			],
 			[
 				"browpac",
@@ -392,7 +392,7 @@
 				"Set Syntax: CSS3"
 			]
 		],
-		"width": 536.0
+		"width": 457.0
 	},
 	"console":
 	{
@@ -414,13 +414,7 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components"
+		"/Users/nilsdannemann/Sites/j_hfc_relay"
 	],
 	"file_history":
 	[
@@ -788,15 +782,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2004,
+						"buffer_size": 2060,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								18,
-								18
+								0,
+								0
 							]
 						],
 						"settings":
@@ -820,15 +814,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2890,
+						"buffer_size": 3065,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								633,
-								633
+								185,
+								185
 							]
 						],
 						"settings":
@@ -836,7 +830,7 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -852,7 +846,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1610,
+						"buffer_size": 1640,
 						"regions":
 						{
 						},

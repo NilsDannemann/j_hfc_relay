@@ -1,4 +1,3 @@
-// Lost Grid v5.1.5 - https://github.com/corysimmons/lost
 /* =======================================*/
 /*
 /* GRID
@@ -6,7 +5,7 @@
 /* =======================================*/
 
 /* =======================================*/
-/* SETUP
+/* STRING SPLITTING -> Sass can't split strings natively.
 /* =======================================*/
 @function sl-explode($string, $delimiter: '', $separator: "space") {
 	@if type-of($string) != "string" {
@@ -46,75 +45,29 @@
 
 
 /* =======================================*/
-/* FLEXBOX
-/* =======================================*/
-@mixin flex-container($direction: row) {
-	display: flex;
-	@if ($direction == row) {
-		flex-flow: row wrap;
-	}
-	@if ($direction == column) {
-		flex-flow: column nowrap;
-	}
-}
-
-
-/* =======================================*/
 /* COLUMNS
 /* =======================================*/
-@mixin column($fraction: '1/1', $gutter: $whitespace, $cycle: nth(sl-explode($fraction, '/'), 2), $flex: $use-flexbox) {
-	@if ($gutter == 0) {
+@mixin column($fraction: '1/1', $gutter: $whitespace, $cycle: nth(sl-explode($fraction, '/'), 2)) {
+	@if ($gutter == 0 or $gutter == none) {
 		width: calc(99.999999% * #{$fraction});
-	} @else {
-		width: calc(99.99% * #{$fraction} - (#{$gutter} - #{$gutter} * #{$fraction}));
+	} 
+	@else {
+		width: calc(99.999999% * #{$fraction} - (#{$gutter} - #{$gutter} * #{$fraction}));
 	}
-	@if ($flex == false) {
-		&:nth-child(n) {
-			margin-right: $gutter;
-			margin-bottom: $gutter;
-			float: left;
-			clear: none;
-		}
-		&:last-child {
-			margin-right: 0;
-		}
-		&:nth-child(#{$cycle}n) {
-			margin-right: 0;
-			float: right;
-		}
-		&:nth-child(#{$cycle}n + 1) {
-			clear: left;
-		}
-	} @else {
-		flex: 0 0 auto;
-		&:nth-child(n) {
-			margin-right: $gutter;
-		}
-		&:last-child {
-			margin-right: 0;
-		}
-		&:nth-child(#{$cycle}n) {
-			margin-right: 0;
-		}
-	}
-}
-
-
-/* =======================================*/
-/* ROWS
-/* =======================================*/
-@mixin row($fraction: '1/1', $gutter: $whitespace, $flex: $use-flexbox) {
-	width: 100%;
-	@if ($gutter == 0) {
-		height: calc(99.999999% * #{$fraction});
-	} @else {
-		height: calc(99.99% * #{$fraction} - (#{$gutter} - #{$gutter} * #{$fraction}));
-	}
-	margin-bottom: $gutter;
-	@if ($flex == true) {
-		flex: 0 0 auto;
+	&:nth-child(n) {
+		margin-right: $gutter;
+		margin-bottom: $gutter;
+		float: left;
+		clear: none;
 	}
 	&:last-child {
-		margin-bottom: 0;
+		margin-right: 0;
+	}
+	&:nth-child(#{$cycle}n) {
+		margin-right: 0;
+		float: right;
+	}
+	&:nth-child(#{$cycle}n + 1) {
+		clear: left;
 	}
 }
