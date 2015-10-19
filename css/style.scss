@@ -21,6 +21,7 @@
 
 .container {
 	@include container();
+	@include flexbox();
 	@include clearfix();
 }
 
