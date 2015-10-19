@@ -47,34 +47,21 @@
 /* =======================================*/
 /* COLUMNS
 /* =======================================*/
-@mixin column($fraction: '1/1', $gutter: true, $cycle: nth(sl-explode($fraction, '/'), 2)) {
+@mixin column($fraction: '1/1', $gutter: null, $cycle: nth(sl-explode($fraction, '/'), 2)) {
 	// No gutter (default)
-	@if ($gutter == 0px) {
+	@if ($gutter == null or $gutter == 0px or $gutter == false or $gutter == none) {
 		width: calc(99.999999% * #{$fraction});
+		margin-bottom: 0;
 	} 
 	// Base gutter
 	@else if ($gutter == true) {
 		$gutter: $whitespace;
 		width: calc(99.999999% * #{$fraction} - (#{$gutter} - #{$gutter} * #{$fraction}));
+		margin-bottom: $whitespace;
 	}
-	//Specified gutter
+	// Specified gutter in px or %
 	@else {
 		width: calc(99.999999% * #{$fraction} - (#{$gutter} - #{$gutter} * #{$fraction}));
-	}
-	&:nth-child(n) {
-		margin-right: $gutter;
 		margin-bottom: $gutter;
-		float: left;
-		clear: none;
-	}
-	&:last-child {
-		margin-right: 0;
-	}
-	&:nth-child(#{$cycle}n) {
-		margin-right: 0;
-		float: right;
-	}
-	&:nth-child(#{$cycle}n + 1) {
-		clear: left;
 	}
 }
