@@ -35,4 +35,8 @@
 	&__body {
 		padding: $whitespace;
 	}
+
+	&__display {
+		@include clearfix();
+	}
 }

@@ -14,18 +14,23 @@ children: false
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab deleniti, aliquid a quaerat architecto consequatur dolore pariatur asperiores fuga necessitatibus.</p>
 
 <section class="container">
-	<div class="box">grid</div>
-	<div class="box2">grid</div>
-	<div class="box">grid</div>
+	<div class="aside">grid</div>
+	<div class="main">grid</div>
+	<div class="aside">grid</div>
 	
-	<div class="box">grid</div>
-	<div class="box">grid</div>
-	<div class="box2">grid</div>
+	<div class="aside">grid</div>
+	<div class="aside">grid</div>
+	<div class="main">grid</div>
 </section>
 
-{% include components/teaser/teaser.html title="Teaser 1" text="lorem" %}
-{% include components/teaser/teaser.html title="Teaser 2" text="lorem" %}
-{% include components/teaser/teaser.html title="Teaser 3" text="lorem" %}
+<div class="container">
+	{% include components/teaser/teaser.html title="Teaser 1" text="lorem" %}
+	{% include components/teaser/teaser.html title="Teaser 2" text="lorem" %}
+	{% include components/teaser/teaser.html title="Teaser 3" text="lorem" %}
+	{% include components/teaser/teaser.html title="Teaser 1" text="lorem" %}
+	{% include components/teaser/teaser.html title="Teaser 2" text="lorem" %}
+	{% include components/teaser/teaser.html title="Teaser 3" text="lorem" %}
+</div>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

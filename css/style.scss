@@ -19,22 +19,25 @@
 
 
 
-
-
-
-.container{
+.container {
+	@include container();
 	@include clearfix();
 }
-.box, .box2 {padding: $whitespace; background: $color-grey;}
-.box {@include column('2/8', $gutter: 10px, $cycle: 3);}
-.box2 {@include column('4/8', $gutter: 10px, $cycle: 3);}
+
+.aside, .main {padding: $whitespace; border: $border;}
+
+.aside {@include column('1/6', $cycle: 3);}
+.main {@include column('4/6', $cycle: 3);}
+
 @include below(x-large) {
-	.box, .box2 {
-		@include column('1/3', $gutter: 10px);
-	}
+	.aside {@include column('1/6', $gutter: 10px, $cycle: 3);}
+	.main {@include column('4/6', $gutter: 10px, $cycle: 3);}
 }
 @include below(large) {
-	.box, .box2 {
-		@include column('1/1', $gutter: 2px);
-	}
+	.aside {@include column('3/6', $gutter: 3px, $cycle: 2);}
+	.main {@include column('3/6', $gutter: 3px, $cycle: 2);}
+}
+@include below(medium) {
+	.aside {@include column('6/6');}
+	.main {@include column('6/6');}
 }
