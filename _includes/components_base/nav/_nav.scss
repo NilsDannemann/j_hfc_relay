@@ -6,6 +6,9 @@
 	.is-hovered {background-color: #f6f6f6;}
 
 	// General: Elements
+	&__icon {
+		display: none;
+	}
 	&__inner {
 		@include container();
 		@include clearfix();
@@ -24,9 +27,22 @@
 		display: block;
 	}
 	&__link--parent {
-		background-image: url("http://webdesigntutsplus.s3.amazonaws.com/tuts/378_tessa/tessa-lt-dropdowns-21c7868/images/downArrow.png");
-		background-repeat: no-repeat; 
-		background-position: 50% 85%;
+		
+		&:after {
+			content: '';
+			position: relative;
+			top: 5px;
+			margin-left: 15px;
+			float: right;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 5px 5px 0 5px;
+			border-color: $color-brand transparent transparent transparent;
+		}
+	}
+	&__more {
+		display: none;
 	}
 	&__subnav {
 		min-width: 150px;
@@ -69,7 +85,11 @@
 			&:first-child {border-left: none;}
 		}
 		.nav__link--parent {
-			background-image: none;
+			
+			&:after {
+				border-width: 5px 0 5px 5px;
+				border-color: transparent transparent transparent $color-brand;
+			}
 		}
 	}
 }
@@ -113,22 +133,62 @@
 		
 		// General: NavIcon
 		&__icon {
+			display: inline-block;
 			border-right: $border;
 			padding: $whitespace;
-			background-image: url('../_includes/components_base/nav/navicon.svg');
-			background-repeat: no-repeat; 
-			background-position: 50% 85%;
 
-			svg {
-				width: 26px;
-				height: 26px;
+			// Toggle Navigation
+			&.is-active {
+				+.nav__inner {display: block;}
+			}
+			
+			// Icon
+			i:before, i:after {
+				position: absolute;
+				content: '';
+			}
+			i, i:before, i:after {
+				display: block;
+				width: 25px;
+				height: 2px;
+				background-color: $color-brand;
 				float: left;
-				fill: $color-brand;
-				margin: -5px 20px -10px 0;
+				margin: 7px 15px 0 0;
+			}
+			i:before {margin-top: -8px;}
+			i:after {margin-top: 8px;}
+			
+			// Transition
+			&.is-active i {
+				background: rgba(0,0,0,0.0);
+				-webkit-transition-delay: 175ms; transition-delay: 175ms;
+			}
+			& i:before {
+				-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+				-webkit-transition-duration: 175ms; transition-duration: 175ms;
+				-webkit-transition-delay: 175ms, 0s; transition-delay: 175ms, 0s;
+			}
+			&.is-active i:before {
+				margin-top: 0;
+				-webkit-transform: rotate(45deg); transform: rotate(45deg);
+				-webkit-transition-delay: 0s, 175ms; transition-delay: 0s, 175ms;
+			}
+			& i:after {
+				-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+				-webkit-transition-duration: 175ms; transition-duration: 175ms;
+				-webkit-transition-delay: 175ms, 0s; transition-delay: 175ms, 0s;
+			}
+			&.is-active i:after {
+				margin-top: 0;
+				-webkit-transform: rotate(-45deg); transform: rotate(-45deg);
+				-webkit-transition-delay: 0s, 175ms; transition-delay: 0s, 175ms;
 			}
 		}
 			
 		// General: Elements
+		&__inner {
+			display: none;
+		}
 		&__item {
 			float: none;
 			border-top: $border;
@@ -137,19 +197,34 @@
 			&:first-child { border-left: none; }
 		}
 		&__link--parent {
-			background-image: none; 
+			
+			&:after {
+				display: none;
+			}
 		}
 
 		// Subnav - Level 1, 2, 3
 		&__more {
-			background: url("http://webdesigntutsplus.s3.amazonaws.com/tuts/378_tessa/tessa-lt-dropdowns-21c7868/images/downArrow.png") no-repeat 50%;
+			display: block;
 			float: right;
-			width: $whitespace;
+			width: $whitespace*2.8;
 			padding: $whitespace;
 			cursor: pointer;
 			border-left: $border;
 			z-index: 200; //For: Nested Subnav
 			position: relative; //For: Nested Subnav
+			
+			// Triangle
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 5px 5px 0 5px;
+				border-color: $color-brand transparent transparent transparent;
+			}
 		}
 		&__subnav {
 			display: none;
