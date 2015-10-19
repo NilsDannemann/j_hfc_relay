@@ -24,6 +24,7 @@
 	}
 	&__link {
 		padding: $whitespace;
+		color: $color-black;
 		display: block;
 	}
 	&__link--parent {
@@ -134,6 +135,7 @@
 		// General: NavIcon
 		&__icon {
 			display: inline-block;
+			color: $color-black;
 			border-right: $border;
 			padding: $whitespace;
 
