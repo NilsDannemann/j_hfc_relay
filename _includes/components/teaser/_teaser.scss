@@ -78,7 +78,7 @@
 		
 		&--single {}
 		&--double {}
-		&--triple {}
+		&--triple {@include column('1/2', $gutter: 5px)}
 	}
 }
 @include below(x-small) {
