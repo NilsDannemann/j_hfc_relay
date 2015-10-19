@@ -31,4 +31,5 @@ p {
 a {
 	color: $color-brand;
 	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
 }
