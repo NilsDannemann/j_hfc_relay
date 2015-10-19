@@ -49,12 +49,15 @@
 /* =======================================*/
 @mixin column($fraction: '1/1', $gutter: null, $cycle: nth(sl-explode($fraction, '/'), 2)) {
 	// No gutter (default)
-	@if ($gutter == null or $gutter == 0px or $gutter == false or $gutter == none) {
+	@if ($gutter == null) {
+		width: calc(99.999999% * #{$fraction});
+	} 
+	@else if ($gutter == 0px or $gutter == false or $gutter == none) {
 		width: calc(99.999999% * #{$fraction});
 		margin-bottom: 0;
 	} 
 	// Base gutter
-	@else if ($gutter == true) {
+	@else if ($gutter == true or $gutter == base) {
 		$gutter: $whitespace;
 		width: calc(99.999999% * #{$fraction} - (#{$gutter} - #{$gutter} * #{$fraction}));
 		margin-bottom: $whitespace;

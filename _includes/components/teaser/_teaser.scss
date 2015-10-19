@@ -5,11 +5,11 @@
 /* =======================================*/
 
 .teaser {
+	@include flexbox($direction: column);
 	background: #fff;
 	border: $border;
 
 	&__title {
-		display: block;
 		color: $color-black;
 		padding: $whitespace;
 
@@ -17,11 +17,9 @@
 	}
 
 	&__img {
-		display: block;
 	}
 
 	&__content {
-		display: block;
 		height: $font-size * $line-height * $teaser-lines-to-show;
 		margin: $whitespace/2 $whitespace;
 
@@ -32,7 +30,6 @@
 	}
 
 	&__link {
-		display: block;
 		border-top: $border;
 		padding: $whitespace;
 	}
@@ -81,7 +78,7 @@
 		
 		&--single {}
 		&--double {}
-		&--triple {@include column('1/2', $gutter: true);}
+		&--triple {}
 	}
 }
 @include below(x-small) {
@@ -89,6 +86,6 @@
 		
 		&--single {}
 		&--double {}
-		&--triple {@include column('1/1', $gutter: true);}
+		&--triple {@include column('1/1');}
 	}
 }

@@ -16,7 +16,6 @@
 // For: 2 sidebars
 * + .sidebar {
 	margin: 0 0 0 $whitespace;
-	@include below(medium) { margin: 0; }
 }
 
 
@@ -27,6 +26,10 @@
 @include below(medium) { 
 	.sidebar {
 		width: 100%;
+	}
+
+	* + .sidebar {
+		margin: 0;
 	}
 }
 
