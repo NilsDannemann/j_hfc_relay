@@ -35,13 +35,16 @@
 	
 	// SINGLE TEASER
 	&--single {
-		.teaser__wrapper {
-			@include flexbox($direction: column);
-			@include column(2/3, $gutter: true);
+		@include flexbox($direction: row, $wrap: nowrap);
+		@include column('1/1', $gutter: true);
+
+		.teaser__img {
+			@include column('1/3', $gutter: true);
 			margin-bottom: 0;
 		}
-		.teaser__img {
-			@include column(1/3, $gutter: true);
+		.teaser__wrapper {
+			@include flexbox($direction: column);
+			@include column('2/3', $gutter: true);
 			margin-bottom: 0;
 		}
 		.teaser__title {
@@ -50,14 +53,10 @@
 		}
 		.teaser__content {
 			margin-left: 0;
-			flex: 1;
 		}
 		.teaser__link {
-			padding-top: $whitespace/2;
-			padding-left: 0;
+			padding: $whitespace/1.5 $whitespace $whitespace/1.5 0;
 		}
-		@include flexbox($direction: row, $wrap: nowrap);
-		@include column('1/1', $gutter: true);
 	}
 	
 	// DOUBLE TEASER
@@ -81,7 +80,28 @@
 @include below(x-large) {
 	.teaser {
 		
-		&--single {@include column('1/1', $gutter: 5px);}
+		&--single {
+			@include flexbox($direction: column);
+			@include column('1/2', $gutter: 5px);
+			
+			.teaser__img {
+				@include column('1/1', $gutter: false);
+				margin-bottom: 0;
+			}
+			.teaser__wrapper {
+				@include column('1/1', $gutter: true);
+				margin-bottom: 0;
+			}
+			.teaser__title {
+				padding-left: $whitespace;
+			}
+			.teaser__content {
+				margin-left: $whitespace;
+			}
+			.teaser__link {
+				padding: $whitespace;
+			}
+		}
 		&--double {@include column('1/2', $gutter: 5px);}
 		&--triple {@include column('1/3', $gutter: 5px);}
 	}
@@ -89,7 +109,7 @@
 @include below(large) {
 	.teaser {
 		
-		&--single {}
+		&--single {@include column('1/1', $gutter: 5px);}
 		&--double {@include column('1/1', $gutter: 5px);}
 		&--triple {@include column('1/1', $gutter: 5px);}
 	}
@@ -97,7 +117,32 @@
 @include below(medium) {
 	.teaser {
 		
-		&--single {@include column('1/1', $gutter: true);}
+		&--single {
+			@include flexbox($direction: row, $wrap: nowrap);
+			@include column('1/1', $gutter: true);
+
+			.teaser__img {
+				@include column('1/3', $gutter: true);
+				margin-bottom: 0;
+			}
+			.teaser__wrapper {
+				@include flexbox($direction: column);
+				@include column('2/3', $gutter: true);
+				margin-bottom: 0;
+			}
+			.teaser__title {
+				padding-bottom: 0;
+				padding-left: 0;
+			}
+			.teaser__content {
+				margin-left: 0;
+			}
+			.teaser__link {
+				padding: $whitespace/1.5 $whitespace $whitespace/1.5 0;
+			}
+			
+
+		}
 		&--double {@include column('1/2', $gutter: true);}
 		&--triple {@include column('1/3', $gutter: true);}
 	}
@@ -105,7 +150,29 @@
 @include below(small) {
 	.teaser {
 		
-		&--single {@include column('1/1', $gutter: 5px);}
+		&--single {
+			@include flexbox($direction: column);
+			@include column('1/2', $gutter: 5px);
+			
+			.teaser__img {
+				@include column('1/1', $gutter: false);
+				margin-bottom: 0;
+			}
+			.teaser__wrapper {
+				@include column('1/1', $gutter: true);
+				margin-bottom: 0;
+			}
+			.teaser__title {
+				padding-left: $whitespace;
+			}
+			.teaser__content {
+				margin-left: $whitespace;
+			}
+			.teaser__link {
+				padding: $whitespace;
+			}
+
+		}
 		&--double {@include column('1/2', $gutter: 5px);}
 		&--triple {@include column('1/2', $gutter: 5px)}
 	}
@@ -113,7 +180,7 @@
 @include below(x-small) {
 	.teaser {
 		
-		&--single {}
+		&--single {@include column('1/1')}
 		&--double {@include column('1/1');}
 		&--triple {@include column('1/1');}
 	}
