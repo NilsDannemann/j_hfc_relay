@@ -7,6 +7,7 @@
 .button {
 	display: inline-block;
 	padding: $whitespace/2.5 $whitespace;
+	margin-bottom: $whitespace;
 	border: none;
 	border-radius: $border-radius;
 	cursor: pointer;
