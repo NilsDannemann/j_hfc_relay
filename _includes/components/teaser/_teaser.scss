@@ -41,6 +41,8 @@
 		.teaser__img {
 			@include column('1/3', $gutter: true);
 			margin-bottom: 0;
+
+			img {min-height: 170px;}
 		}
 		.teaser__wrapper {
 			@include flexbox($direction: column);
