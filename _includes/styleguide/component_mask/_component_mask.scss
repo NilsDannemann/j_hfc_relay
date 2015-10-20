@@ -1,5 +1,8 @@
 .component {
 	border: $border;
+	margin-bottom: $whitespace;
+
+	&:last-child {margin-bottom: 0;}
 	
 	&__header {
 		padding: $whitespace;

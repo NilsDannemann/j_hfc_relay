@@ -7,4 +7,15 @@ children: true
 ---
 
 <h1>Teaser</h1>
-{% include components/button/button.html text="Button" %}
+
+{% include components/teaser/teaser.html title="Teaser 1" text="lorem" %}
+{% include components/teaser/teaser.html title="Teaser 2" text="lorem" %}
+{% include components/teaser/teaser.html title="Teaser 3" text="lorem" %}
+{% include components/teaser/teaser.html title="Teaser 4" text="lorem" %}
+
+{% include components/teaser/teaser_triple.html title="Teaser 1" text="lorem" %}
+{% include components/teaser/teaser_triple.html title="Teaser 2" text="lorem" %}
+{% include components/teaser/teaser_triple.html title="Teaser 3" text="lorem" %}
+
+{% include components/teaser/teaser_double.html title="Teaser 1" text="lorem" %}
+{% include components/teaser/teaser_double.html title="Teaser 2" text="lorem" %}
