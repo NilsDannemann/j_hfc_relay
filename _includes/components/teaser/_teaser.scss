@@ -42,10 +42,10 @@
 			@include column('1/3', $gutter: true);
 			margin-bottom: 0;
 
-			img {min-height: 170px;}
+			img {min-height: 170px;} // Not so cool!
 		}
 		.teaser__wrapper {
-			@include flexbox($direction: column);
+			@include flexbox($direction: column, $justify: flex-start);
 			@include column('2/3', $gutter: true);
 			margin-bottom: 0;
 		}
@@ -55,6 +55,7 @@
 		}
 		.teaser__content {
 			margin-left: 0;
+			flex-grow: 1;
 		}
 		.teaser__link {
 			padding: $whitespace/1.5 $whitespace $whitespace/1.5 0;

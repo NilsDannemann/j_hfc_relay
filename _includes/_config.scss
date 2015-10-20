@@ -146,7 +146,7 @@ $teaser-lines-to-show: 3;
 /* 
 /* =======================================*/
 
-@mixin flexbox($type: null, $direction: null, $wrap: null, $justifiy: null, $align: null) {
+@mixin flexbox($type: null, $direction: null, $wrap: null, $justify: null, $align: null) {
 	// Flex or Inline-Flex
 	@if $type == 'inline-flex' {
 		display: inline-flex;
@@ -167,15 +167,15 @@ $teaser-lines-to-show: 3;
 		flex-wrap: wrap;
 	}
 	// Justify Content
-	@if $justifiy == null or $justifiy == 'space-between' or $justifiy == 'spacebetween' {
+	@if $justify == null or $justify == 'space-between' or $justify == 'spacebetween' {
 		justify-content: space-between;
-	} @else if $justifiy == 'space-around' or $justifiy == 'spacearound' {
+	} @else if $justify == 'space-around' or $justify == 'spacearound' {
 		justify-content: space-around;
-	} @else if $justifiy == 'center' {
+	} @else if $justify == 'center' {
 		justify-content: center;
-	} @else if $justifiy == 'flex-start' or $justifiy == 'flexstart' or $justifiy == 'start'{
+	} @else if $justify == 'flex-start' or $justify == 'flexstart' or $justify == 'start'{
 		justify-content: flex-start;
-	} @else if $justifiy == 'flex-end' or $justifiy == 'flexend' or $justifiy == 'end' {
+	} @else if $justify == 'flex-end' or $justify == 'flexend' or $justify == 'end' {
 		justify-content: flex-end;
 	}
 	// Align items
