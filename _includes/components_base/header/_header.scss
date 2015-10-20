@@ -9,7 +9,6 @@
 	min-height: $whitespace*20;
 	padding: $whitespace;
 	background: $color-brand;
-	background-image: url(../assets/logo_light.jpg);
 
 	&__inner {
 		@include container();
