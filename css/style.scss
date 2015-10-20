@@ -17,28 +17,3 @@
 @import 'components/button/button';
 @import 'components/teaser/teaser';
 
-
-
-.container {
-	@include container();
-	@include flexbox();
-}
-
-.aside, 
-.main {padding: $whitespace; border: $border;}
-
-.aside {@include column('1/6', $gutter: true)}
-.main {@include column('4/6', $gutter: true)}
-
-@include below(x-large) {
-	.aside {@include column('1/6', $gutter: 10px);}
-	.main {@include column('4/6', $gutter: 10px);}
-}
-@include below(large) {
-	.aside {@include column('3/6', $gutter: 3px);}
-	.main {@include column('3/6', $gutter: 3px);}
-}
-@include below(medium) {
-	.aside {@include column('6/6');}
-	.main {@include column('6/6');}
-}
