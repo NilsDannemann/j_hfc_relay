@@ -14,6 +14,11 @@
 
 	&__page {
 		flex: 1;
+		@include flexbox();
+
+		> h1, h2, h3, h4, h5, h6, p {
+			width: 100%; // for: flexbox
+		}
 	}
 }
 		
@@ -27,6 +32,10 @@
 		
 		&__inner {
 			@include flexbox($direction: column);
+		}
+
+		&__page {
+			flex: inherit;
 		}
 	}
 }
