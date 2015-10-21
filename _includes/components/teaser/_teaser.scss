@@ -9,14 +9,14 @@
 	border: $border;
 
 	&__title {
+		width: 100%;
 		color: $color-black;
 		padding: $whitespace;
 
 		* {margin: 0;}
 	}
 
-	&__img {
-	}
+	&__img {}
 
 	&__content {
 		height: $font-size * $line-height * $teaser-lines-to-show;
@@ -29,36 +29,25 @@
 	}
 
 	&__link {
+		width: 100%;
 		border-top: $border;
 		padding: $whitespace;
 	}
 	
 	// SINGLE TEASER
 	&--single {
-		@include flexbox($direction: row, $wrap: nowrap);
+		@include flexbox($direction: column);
 		@include column('1/1', $gutter: true);
 
 		.teaser__img {
-			@include column('1/3', $gutter: true);
-			margin-bottom: 0;
-
-			img {min-height: 170px;} // Not so cool!
+			@include column('1/1');
 		}
 		.teaser__wrapper {
-			@include flexbox($direction: column, $justify: flex-start);
-			@include column('2/3', $gutter: true);
-			margin-bottom: 0;
-		}
-		.teaser__title {
-			padding-bottom: 0;
-			padding-left: 0;
+			@include flexbox($direction: column);
+			@include column('1/1');
 		}
 		.teaser__content {
-			margin-left: 0;
-			flex-grow: 1;
-		}
-		.teaser__link {
-			padding: $whitespace/1.5 $whitespace $whitespace/1.5 0;
+			margin-top: 0;
 		}
 	}
 	
@@ -79,43 +68,58 @@
 /* =======================================*/
 /* RESPONSIVE BEHAVIOR
 /* =======================================*/
-@include below(l) {
-	.teaser {
-		
-		&--single {}
-		&--double {@include column('1/2', $gutter: 5px);}
-		&--triple {@include column('1/3', $gutter: 5px);}
+@include at(xxl) {
+	.teaser--single {
+		@include flexbox($direction: row);
+
+		.teaser__img {
+			@include column('1/3');
+		}
+		.teaser__wrapper {
+			@include flexbox($direction: row);
+			@include column('2/3');
+		}
 	}
 }
-@include below(l) {
-	.teaser {
-		
-		&--single {@include column('1/1', $gutter: 5px);}
-		&--double {@include column('1/1', $gutter: 5px);}
-		&--triple {@include column('1/1', $gutter: 5px);}
+@include at(m) {
+	.teaser--single {
+		@include flexbox($direction: row);
+
+		.teaser__img {
+			@include column('1/3');
+		}
+		.teaser__wrapper {
+			@include flexbox($direction: row);
+			@include column('2/3');
+		}
 	}
 }
-@include below(m) {
+
+@include at(xl) {
 	.teaser {
-		
-		&--single {}
+		&--single {@include column('1/2', $gutter: true);}
 		&--double {@include column('1/2', $gutter: true);}
-		&--triple {@include column('1/3', $gutter: true);}
+		&--triple {@include column('1/2', $gutter: true);}
 	}
 }
-@include below(s) {
+@include at(l) {
 	.teaser {
-		
-		&--single {}
-		&--double {@include column('1/2', $gutter: 5px);}
-		&--triple {@include column('1/2', $gutter: 5px)}
+		&--single {@include column('1/1', $gutter: true);}
+		&--double {@include column('1/1', $gutter: true);}
+		&--triple {@include column('1/1', $gutter: true);}
 	}
 }
-@include below(xs) {
+@include at(s) {
 	.teaser {
-		
-		&--single {@include column('1/1')}
-		&--double {@include column('1/1');}
-		&--triple {@include column('1/1');}
+		&--single {@include column('1/2', $gutter: true);}
+		&--double {@include column('1/2', $gutter: true);}
+		&--triple {@include column('1/2', $gutter: true);}
+	}
+}
+@include at(xs) {
+	.teaser {
+		&--single {@include column('1/1', $gutter: true);}
+		&--double {@include column('1/1', $gutter: true);}
+		&--triple {@include column('1/1', $gutter: true);}
 	}
 }
