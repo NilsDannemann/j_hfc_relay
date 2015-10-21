@@ -44,8 +44,17 @@ You can test the grid over here:<br>
 [Grid-Playground](http://codepen.io/NilsDannemann/pen/NGwmqq?editors=110)
 
 
-#Breakpoint Management
-**Above**
+#Responsive Workflow
+Four sets of sass-mixins to control the responsive flow of your document:
+
+1. **Above** - Example:``` @include above(breakpoint-name) { ... } ```
+2. **Below** - Example:``` @include below(breakpoint-name) { ... } ```
+3. **At** - Example:``` @include at(breakpoint-name) { ... } ```
+4. **From** - Example:``` @include from(breakpoint-name, breakpoint-name) { ... } ```
+
+###Above
+Styles apply to all withs **above** the breakpoint you pass along.<br>
+Recommended for: a mobile-first approach.
 ```sass
 .foo {
 	//styles
@@ -58,7 +67,10 @@ You can test the grid over here:<br>
 	@include above(xxl) { ... }
 }
 ```
-**Below**
+
+###Below
+Styles apply to all withs **below** the breakpoint you pass along.<br>
+Recommended for: a desktop-first approach.
 ```sass
 .foo {
 	//styles
@@ -71,7 +83,9 @@ You can test the grid over here:<br>
 	@include below(xxl) { ... }
 }
 ```
-**At**
+
+###At
+Styles apply only to the breakpoint you pass along.<br>
 ```sass
 .foo {
 	//styles
@@ -84,7 +98,9 @@ You can test the grid over here:<br>
 	@include at(xxl) { ... }
 }
 ```
-**Between**
+
+###Between
+Styles apply **between** the two breakpoint you pass along.<br>
 ```sass
 .foo {
 	//styles
@@ -94,32 +110,16 @@ You can test the grid over here:<br>
 }
 ```
 
-##Container
+
+
+###Container
 **Basic Container**
 ```sass
 @include container();
 ```
 
-##Flexbox 
-
-**Use Flexbox** (with Fallback):
-Default: flex, row
+###Flexbox 
+**Use Flexbox**
 ```sass
-@include flexbox($type, $direction);
+@include flexbox();
 ```
-
-
-**Flexbox width**:
-Default: 50%
-```sass
-@include flexbox-width($width);
-```
-
-
-**Flexbox order**:
-Default: 1 up
-```sass
-@include flexbox-order($order);
-```
-
-
