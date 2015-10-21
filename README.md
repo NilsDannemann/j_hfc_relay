@@ -41,6 +41,7 @@ You can also specify your own gutters like so:
 
 ###Play with it
 You can test the grid over here:<br>
+![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
 [Grid-Playground](http://codepen.io/NilsDannemann/pen/NGwmqq?editors=110)
 
 
@@ -114,7 +115,7 @@ Both is fine.
 
 ###Play with it
 You can test the breakpoint management over here:<br>
-![alt tag](http://icons.iconarchive.com/icons/thehoth/seo/48/seo-web-code-icon.png)
+![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
 [Breakpoint-Playground](http://codepen.io/NilsDannemann/pen/gaoZrE?editors=110)
 
 
