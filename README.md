@@ -47,14 +47,14 @@ You can test the grid over here:<br>
 #Responsive Workflow
 Four sets of sass-mixins to control the responsive flow of your document:
 
-1. **Above** - Example:``` @include above(breakpoint-name) { ... } ```
-2. **Below** - Example:``` @include below(breakpoint-name) { ... } ```
-3. **At** - Example:``` @include at(breakpoint-name) { ... } ```
-4. **From** - Example:``` @include from(breakpoint-name, breakpoint-name) { ... } ```
+- **Above** a certain breakpoint (``` @include above(breakpoint-name) { ... } ```)
+- **Below** a certain breakpoint (``` @include below(breakpoint-name) { ... } ```)
+- **At** a certain breakpoint (``` @include at(breakpoint-name) { ... } ```)
+- **From** a certain breakpoint (``` @include from(breakpoint-name, breakpoint-name) { ... } ```)
 
-###Options
+###Basic Examples
 
-#####Above
+**Above** a certain breakpoint
 Styles apply to all withs **above** the breakpoint you pass.<br>
 Recommended for: a mobile-first approach.
 ```sass
@@ -64,7 +64,7 @@ Recommended for: a mobile-first approach.
 }
 ```
 
-#####Below
+**Below** a certain breakpoint
 Styles apply to all withs **below** the breakpoint you pass.<br>
 Recommended for: a desktop-first approach.
 ```sass
@@ -74,7 +74,7 @@ Recommended for: a desktop-first approach.
 }
 ```
 
-#####At
+**At** a certain breakpoint
 Styles apply only **at** the breakpoint you pass.<br>
 ```sass
 .foo {
@@ -83,7 +83,7 @@ Styles apply only **at** the breakpoint you pass.<br>
 }
 ```
 
-#####Between
+**Between** a certain breakpoint
 Styles apply **between** the two breakpoint you pass.<br>
 ```sass
 .foo {
@@ -92,7 +92,7 @@ Styles apply **between** the two breakpoint you pass.<br>
 }
 ```
 
-###Flexible Usage
+###Usage
 You can use the breakpoint-mixins in two ways:
 
 Inside your class-declarations...
@@ -102,7 +102,7 @@ Inside your class-declarations...
 	@include above(l) { color: blue }
 }
 ```
-![alt tag](https://raw.github.com/username/projectname/branch/path/to/img.png)
+
 ... or on their own.
 ```sass
 .foo {color: red}
