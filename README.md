@@ -40,7 +40,7 @@ You can also specify your own gutters like so:
 ```
 
 ###Play with it
-You can test the grid over here:<br>
+You can test the mixins over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
 [Open Grid-Playground](http://codepen.io/NilsDannemann/pen/NGwmqq?editors=110)
 
@@ -90,7 +90,7 @@ Four sets of sass-mixins let you control the responsive flow of your document:
 ###Usage
 You can use the breakpoint-mixins in two ways:
 
-Inside your class-declarations...
+Either inside your class-declarations...
 ```sass
 .foo {
 	color: red
@@ -102,13 +102,13 @@ Inside your class-declarations...
 ```sass
 .foo {color: red}
 @include above(l) { 
-	.foo {color: red}
+	.foo { color: red }
 }
 ```
 Both is fine.
 
 ###Play with it
-You can test the breakpoint management over here:<br>
+You can test the mixins over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
 [Open Breakpoint-Playground](http://codepen.io/NilsDannemann/pen/gaoZrE?editors=110)
 
