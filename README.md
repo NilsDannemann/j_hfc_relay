@@ -38,10 +38,9 @@ This approach has the following advantages over conventional grids:<br>
 @include column('14/23');
 ```
 
-###Adding global Gutters
+###Adding Gutters
 
-By default a column has no gutters.<br>
-You can add gutters like so:
+By default a column has no gutters. You can add gutters like so:
 
 ```sass
 @include column('1/4', $gutter: true); 		// adds global gutters (use: 'true' or 'basic')
@@ -49,7 +48,6 @@ You can add gutters like so:
 ```
 **Note:** This uses the global ```$whitespace``` variable for gutters.
 
-###Adding yout own Gutters
 You can also specify your own gutters like so:
 ```sass
 @include column('1/4', $gutter: 10px); 		// adds px gutters
