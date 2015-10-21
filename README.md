@@ -46,7 +46,7 @@ You can test the grid over here:<br>
 
 
 #Responsive Workflow
-Four sets of sass-mixins to control the responsive flow of your document:
+Four sets of sass-mixins let you control the responsive flow of your document:
 
 - **Above** a certain breakpoint (``` @include above(breakpoint-name) { ... } ```)
 - **Below** a certain breakpoint (``` @include below(breakpoint-name) { ... } ```)
@@ -55,8 +55,7 @@ Four sets of sass-mixins to control the responsive flow of your document:
 
 ###Basic Examples
 
-**Above** a certain breakpoint<br>
-Recommended for: a mobile-first approach.
+**Above** a certain breakpoint (mobile-first)
 ```sass
 .foo {
 	//styles
@@ -64,8 +63,7 @@ Recommended for: a mobile-first approach.
 }
 ```
 
-**Below** a certain breakpoint<br>
-Recommended for: a desktop-first approach.
+**Below** a certain breakpoint (desktop-first)
 ```sass
 .foo {
 	//styles
