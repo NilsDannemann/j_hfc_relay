@@ -39,29 +39,53 @@ Coming.
 @include row('1/4', $gutter: 10px); 	//optional: 10px gutters
 ```
 
-##Responsive Rules
-**Desktop-first**
+##Breakpoint Management
+**Above**
 ```sass
 .foo {
 	//styles
 
-	@include below(x-small) { ... }
-	@include below(small) { ... }
-	@include below(medium) { ... }
-	@include below(large) { ... }
-	@include below(x-large) { ... }
+	@include above(xs) { ... }
+	@include above(s) { ... }
+	@include above(m) { ... }
+	@include above(l) { ... }
+	@include above(xl) { ... }
+	@include above(xxl) { ... }
 }
 ```
-**Mobile-first**
+**Below**
 ```sass
 .foo {
 	//styles
 
-	@include above(x-small) { ... }
-	@include above(small) { ... }
-	@include above(medium) { ... }
-	@include above(large) { ... }
-	@include above(x-large) { ... }
+	@include below(xs) { ... }
+	@include below(s) { ... }
+	@include below(m) { ... }
+	@include below(l) { ... }
+	@include below(xl) { ... }
+	@include below(xxl) { ... }
+}
+```
+**At**
+```sass
+.foo {
+	//styles
+
+	@include at(xs) { ... }
+	@include at(s) { ... }
+	@include at(m) { ... }
+	@include at(l) { ... }
+	@include at(xl) { ... }
+	@include at(xxl) { ... }
+}
+```
+**Between**
+```sass
+.foo {
+	//styles
+
+	@include between(xs, m) { ... }
+	@include between(s, xl) { ... }
 }
 ```
 

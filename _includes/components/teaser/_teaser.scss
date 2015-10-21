@@ -79,37 +79,15 @@
 /* =======================================*/
 /* RESPONSIVE BEHAVIOR
 /* =======================================*/
-
-@include below(x-large) {
+@include below(l) {
 	.teaser {
 		
-		&--single {
-			@include flexbox($direction: column);
-			@include column('1/2', $gutter: 5px);
-			
-			.teaser__img {
-				@include column('1/1', $gutter: false);
-				margin-bottom: 0;
-			}
-			.teaser__wrapper {
-				@include column('1/1', $gutter: true);
-				margin-bottom: 0;
-			}
-			.teaser__title {
-				padding-left: $whitespace;
-			}
-			.teaser__content {
-				margin-left: $whitespace;
-			}
-			.teaser__link {
-				padding: $whitespace;
-			}
-		}
+		&--single {}
 		&--double {@include column('1/2', $gutter: 5px);}
 		&--triple {@include column('1/3', $gutter: 5px);}
 	}
 }
-@include below(large) {
+@include below(l) {
 	.teaser {
 		
 		&--single {@include column('1/1', $gutter: 5px);}
@@ -117,70 +95,23 @@
 		&--triple {@include column('1/1', $gutter: 5px);}
 	}
 }
-@include below(medium) {
+@include below(m) {
 	.teaser {
 		
-		&--single {
-			@include flexbox($direction: row, $wrap: nowrap);
-			@include column('1/1', $gutter: true);
-
-			.teaser__img {
-				@include column('1/3', $gutter: true);
-				margin-bottom: 0;
-			}
-			.teaser__wrapper {
-				@include flexbox($direction: column);
-				@include column('2/3', $gutter: true);
-				margin-bottom: 0;
-			}
-			.teaser__title {
-				padding-bottom: 0;
-				padding-left: 0;
-			}
-			.teaser__content {
-				margin-left: 0;
-			}
-			.teaser__link {
-				padding: $whitespace/1.5 $whitespace $whitespace/1.5 0;
-			}
-			
-
-		}
+		&--single {}
 		&--double {@include column('1/2', $gutter: true);}
 		&--triple {@include column('1/3', $gutter: true);}
 	}
 }
-@include below(small) {
+@include below(s) {
 	.teaser {
 		
-		&--single {
-			@include flexbox($direction: column);
-			@include column('1/2', $gutter: 5px);
-			
-			.teaser__img {
-				@include column('1/1', $gutter: false);
-				margin-bottom: 0;
-			}
-			.teaser__wrapper {
-				@include column('1/1', $gutter: true);
-				margin-bottom: 0;
-			}
-			.teaser__title {
-				padding-left: $whitespace;
-			}
-			.teaser__content {
-				margin-left: $whitespace;
-			}
-			.teaser__link {
-				padding: $whitespace;
-			}
-
-		}
+		&--single {}
 		&--double {@include column('1/2', $gutter: 5px);}
 		&--triple {@include column('1/2', $gutter: 5px)}
 	}
 }
-@include below(x-small) {
+@include below(xs) {
 	.teaser {
 		
 		&--single {@include column('1/1')}
