@@ -114,7 +114,8 @@ Both is fine.
 
 ###Play with it
 You can test the breakpoint management over here:<br>
-[Grid-Playground](http://codepen.io/NilsDannemann/pen/NGwmqq?editors=110)
+![alt tag](http://icons.iconarchive.com/icons/thehoth/seo/48/seo-web-code-icon.png)
+[Breakpoint-Playground](http://codepen.io/NilsDannemann/pen/gaoZrE?editors=110)
 
 
 #Other (in progress)
