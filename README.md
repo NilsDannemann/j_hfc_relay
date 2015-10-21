@@ -57,6 +57,10 @@ You can also specify your own gutters like so:
 @include column('1/4', $gutter: $var/2); 	// you can even do math with them
 ```
 
+###Play with it
+You can test the grid over here:
+[Grid-Playground](http://codepen.io/NilsDannemann/pen/NGwmqq?editors=110)
+
 
 
 
