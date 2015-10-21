@@ -23,7 +23,6 @@ Coming.
 
 # The Grid
 The Grid uses flexible sass-mixins instead of fixed classes.<br>
-You can pass the arguments ```$fraction``` and ```$gutter``` (optional).
 
 This approach has the following advantages over conventional grids:<br>
 
