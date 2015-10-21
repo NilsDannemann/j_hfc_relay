@@ -1,24 +1,6 @@
 # HFC Relay - Readme
 
-Coming.
-
-
-# Component Goals
-- Better clickable Areas
-- Better accessibility (HTML Outliner)
-- Intelligent Behavior (responsive, equal height, text-overflow)
-- Intelligent Fallbacks (e.g. no image)
-- UI Animations
-
-# Pages
-
-## Create
-1. Create your page.md in _pages
-
-##Navigation
-1. On parent-page: Set Children to true
-2. On child-pages: Implement correct permalink (e.g. /parentpage/childpage)
-
+In progress.
 
 
 # The Grid
@@ -58,10 +40,8 @@ You can also specify your own gutters like so:
 ```
 
 ###Play with it
-You can test the grid over here:
+You can test the grid over here:<br>
 [Grid-Playground](http://codepen.io/NilsDannemann/pen/NGwmqq?editors=110)
-
-
 
 
 #Breakpoint Management
