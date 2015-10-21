@@ -58,7 +58,6 @@ Recommended for: a mobile-first approach.
 ```sass
 .foo {
 	//styles
-
 	@include above(xs) { ... }				// breakpoint-names: xs, s, m, l, xl, xxl
 }
 ```
@@ -69,17 +68,15 @@ Recommended for: a desktop-first approach.
 ```sass
 .foo {
 	//styles
-
 	@include below(xs) { ... }				// breakpoint-names: xs, s, m, l, xl, xxl
 }
 ```
 
 ###At
-Styles apply only to the breakpoint you pass.<br>
+Styles apply only **at** the breakpoint you pass.<br>
 ```sass
 .foo {
 	//styles
-
 	@include at(xs) { ... }					// breakpoint-names: xs, s, m, l, xl, xxl
 }
 ```
@@ -89,10 +86,29 @@ Styles apply **between** the two breakpoint you pass.<br>
 ```sass
 .foo {
 	//styles
-
 	@include between(xs, m) { ... }			// breakpoint-names: xs, s, m, l, xl, xxl
 }
 ```
+
+###Flexible Usage
+You can use the breakpoint-mixins in two ways:
+
+1. Inside your class-declarations: <br>
+```sass
+.foo {
+	color: red
+	@include above(l) { color: blue }
+}
+```
+
+2. On their own: <br>
+```sass
+.foo {color: red}
+@include above(l) { 
+	.foo {color: red}
+}
+```
+Both is fine.
 
 ###Play with it
 You can test the breakpoint management over here:<br>
