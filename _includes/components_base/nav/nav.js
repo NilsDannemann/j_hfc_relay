@@ -1,5 +1,5 @@
 <script>
-	var ww = document.body.clientWidth;
+	var ww = window.innerWidth;
 
 	$(document).ready(function() {
 		
@@ -23,20 +23,19 @@
 	})
 
 	$(window).bind('resize orientationchange', function() {
-		ww = document.body.clientWidth;
+		ww = window.innerWidth;
 		adjustMenu();
 	});
 
 	var adjustMenu = function() {
-		if (ww < 768) {
+		if (ww < 800) {
 			$(".nav__inner li").unbind('mouseenter mouseleave');
 			$(".nav__inner li a.nav__link--parent").unbind('click');
 			$(".nav__inner li .nav__more").unbind('click').bind('click', function() {
 				$(this).parent("li").toggleClass("is-hovered");
 			});
 		} 
-		else if (ww > 768) {
-			$(".nav__inner").show();
+		else if (ww > 800) {
 			$(".nav__inner li").removeClass("is-hovered");
 			$(".nav__inner li a").unbind('click');
 			$(".nav__inner li").unbind('mouseenter mouseleave').bind('mouseenter mouseleave', function() {

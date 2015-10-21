@@ -24,19 +24,30 @@ Coming.
 # Developer Snippets
 
 ##Grid
+The Grid uses flexible sass-mixins instead of fixed classes.
+You can pass two $arguments:
 
-**Use Columns**
+
+This has the following advantages:
+1. Flexibility - you can pass any fraction you like
+2. 
+
+**Examples**
 ```sass
-@include column('1/4');					//basic gutters
-@include column('1/4', $gutter: 0); 	//optional: no gutters
-@include column('1/4', $gutter: 10px); 	//optional: 10px gutters
+@include column('1/4');
+@include column('2/9');
+@include column('14/232');
+```
+**Adding Gutters**
+
+```sass
+@include column('1/4', $gutter: true); 	// add global gutters (use: 'true' or 'basic')
+@include column('1/4', $gutter: true); 	// add global gutters (use: 'true' or 'basic')
 ```
 
-**Use Rows**
 ```sass
-@include row('1/4');					//basic gutters
-@include row('1/4', $gutter: 0); 		//optional: no gutters
-@include row('1/4', $gutter: 10px); 	//optional: 10px gutters
+@include column('1/4', $gutter: true); 	// add global gutters (use: 'true' or 'basic')
+@include column('1/4', $gutter: 10px); 	// add fixed gutters (use: px, em or %)
 ```
 
 ##Breakpoint Management
