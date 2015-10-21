@@ -42,7 +42,7 @@ You can also specify your own gutters like so:
 ###Play with it
 You can test the grid over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
-[Grid-Playground](http://codepen.io/NilsDannemann/pen/NGwmqq?editors=110)
+[Open Grid-Playground](http://codepen.io/NilsDannemann/pen/NGwmqq?editors=110)
 
 
 #Responsive Workflow
@@ -55,8 +55,8 @@ Four sets of sass-mixins to control the responsive flow of your document:
 
 ###Basic Examples
 
-**Above** a certain breakpoint
-Styles apply to all withs **above** the breakpoint you pass.<br>
+**Above** a certain breakpoint<br>
+Styles apply to all withs **above** the breakpoint you pass.
 Recommended for: a mobile-first approach.
 ```sass
 .foo {
@@ -65,8 +65,8 @@ Recommended for: a mobile-first approach.
 }
 ```
 
-**Below** a certain breakpoint
-Styles apply to all withs **below** the breakpoint you pass.<br>
+**Below** a certain breakpoint<br>
+Styles apply to all withs **below** the breakpoint you pass.
 Recommended for: a desktop-first approach.
 ```sass
 .foo {
@@ -75,8 +75,8 @@ Recommended for: a desktop-first approach.
 }
 ```
 
-**At** a certain breakpoint
-Styles apply only **at** the breakpoint you pass.<br>
+**At** a certain breakpoint<br>
+Styles apply only **at** the breakpoint you pass.
 ```sass
 .foo {
 	//styles
@@ -84,8 +84,8 @@ Styles apply only **at** the breakpoint you pass.<br>
 }
 ```
 
-**Between** a certain breakpoint
-Styles apply **between** the two breakpoint you pass.<br>
+**Between** a certain breakpoint<br>
+Styles apply **between** the two breakpoint you pass.
 ```sass
 .foo {
 	//styles
@@ -116,7 +116,7 @@ Both is fine.
 ###Play with it
 You can test the breakpoint management over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
-[Breakpoint-Playground](http://codepen.io/NilsDannemann/pen/gaoZrE?editors=110)
+[Open Breakpoint-Playground](http://codepen.io/NilsDannemann/pen/gaoZrE?editors=110)
 
 
 #Other (in progress)
