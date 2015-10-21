@@ -26,7 +26,7 @@ The Grid uses flexible sass-mixins instead of fixed classes.<br>
 
 This approach has the following advantages over conventional grids:<br>
 
-- **Flexibility** - just pass any ```$fraction``` and ```$gutter```
+- **Flexibility** - just pass any ```$fraction``` and ```$gutter``` you like
 - **Cleanliness** - keep your Markup clean and readable
 - **Simplicity** - keep all styles in one place (no separation of concerns)
 
@@ -52,7 +52,9 @@ You can add gutters like so:
 ###Adding yout own Gutters
 You can also specify your own gutters like so:
 ```sass
-@include column('1/4', $gutter: 10px); 		// adds fixed gutters (use: px, em or %)
+@include column('1/4', $gutter: 10px); 		// adds px gutters
+@include column('1/4', $gutter: 2em); 		// adds em gutters
+@include column('1/4', $gutter: 3%); 		// adds % gutters
 @include column('1/4', $gutter: $var); 		// you can also use sass-variables
 @include column('1/4', $gutter: $var/2); 	// you can even do math with them
 ```
