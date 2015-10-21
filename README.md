@@ -21,22 +21,17 @@ Coming.
 
 
 
-# Developer Snippets
-
-##Grid
+# The Grid
 The Grid uses flexible sass-mixins instead of fixed classes.<br>
-You can pass two ```$arguments```: 
-
-1. ```$fraction```
-2. ```$gutter```
+You can pass the arguments ```$fraction``` and ```$gutter``` (optional).
 
 This approach has the following advantages over conventional grids:<br>
 
-1. Flexibility - you can pass any ```$fraction``` and ```$gutter```
-2. Cleanliness - you keep your Markup clean and readable
-3. Simplicity - you have all styles in one place (no separation of concerns)
+- Flexibility - just pass any ```$fraction``` and ```$gutter```
+- Cleanliness - keep your Markup clean and readable
+- Simplicity - keep all styles in one place (no separation of concerns)
 
-**Basic Examples**
+##Basic Examples
 
 ```sass
 @include column('1/4');
@@ -44,7 +39,7 @@ This approach has the following advantages over conventional grids:<br>
 @include column('14/23');
 ```
 
-**Adding global Gutters**
+##Adding global Gutters
 
 By default a column has no gutters.<br>
 You can add gutters like so:
@@ -55,7 +50,7 @@ You can add gutters like so:
 ```
 **Note:** This uses the global ```$whitespace``` variable for gutters.
 
-**Adding yout own Gutters**
+##Adding yout own Gutters
 You can also specify your own gutters like so:
 ```sass
 @include column('1/4', $gutter: 10px); 		// adds fixed gutters (use: px, em or %)
@@ -63,7 +58,10 @@ You can also specify your own gutters like so:
 @include column('1/4', $gutter: $var/2); 	// you can even do math with them
 ```
 
-##Breakpoint Management
+
+
+
+#Breakpoint Management
 **Above**
 ```sass
 .foo {
