@@ -25,31 +25,37 @@ Coming.
 
 ##Grid
 The Grid uses flexible sass-mixins instead of fixed classes.<br>
-You can pass two $arguments: 
-1. $fraction
-2. $gutter
+You can pass two ```$arguments```: 
+
+1. ```$fraction```
+2. ```$gutter```
 
 This approach has the following advantages over conventional grids:<br>
-1. Flexibility - you can pass any $fraction and $gutter
+
+1. Flexibility - you can pass any ```$fraction``` and ```$gutter```
 2. Cleanliness - you keep your Markup clean and readable
 3. Simplicity - you have all styles in one place (no separation of concerns)
 
 **Basic Examples**
+
 ```sass
 @include column('1/4');
 @include column('2/9');
 @include column('14/23');
 ```
 
-**Adding Gutters**
-By default a column has no gutters. 
+**Adding global Gutters**
+
+By default a column has no gutters.<br>
 You can add gutters like so:
+
 ```sass
 @include column('1/4', $gutter: true); 		// adds global gutters (use: 'true' or 'basic')
 @include column('1/4', true); 				// shorthand 
 ```
-Note: This uses the global ```sass $whitespace ``` variable for gutters.
+**Note:** This uses the global ```$whitespace``` variable for gutters.
 
+**Adding yout own Gutters**
 You can also specify your own gutters like so:
 ```sass
 @include column('1/4', $gutter: 10px); 		// adds fixed gutters (use: px, em or %)
