@@ -56,7 +56,6 @@ Four sets of sass-mixins to control the responsive flow of your document:
 ###Basic Examples
 
 **Above** a certain breakpoint<br>
-Styles apply to all withs **above** the breakpoint you pass.
 Recommended for: a mobile-first approach.
 ```sass
 .foo {
@@ -66,7 +65,6 @@ Recommended for: a mobile-first approach.
 ```
 
 **Below** a certain breakpoint<br>
-Styles apply to all withs **below** the breakpoint you pass.
 Recommended for: a desktop-first approach.
 ```sass
 .foo {
@@ -76,7 +74,6 @@ Recommended for: a desktop-first approach.
 ```
 
 **At** a certain breakpoint<br>
-Styles apply only **at** the breakpoint you pass.
 ```sass
 .foo {
 	//styles
@@ -84,8 +81,7 @@ Styles apply only **at** the breakpoint you pass.
 }
 ```
 
-**Between** a certain breakpoint<br>
-Styles apply **between** the two breakpoint you pass.
+**Between** two breakpoints<br>
 ```sass
 .foo {
 	//styles
