@@ -95,15 +95,15 @@ Styles apply **between** the two breakpoint you pass.<br>
 ###Flexible Usage
 You can use the breakpoint-mixins in two ways:
 
-1. Inside your class-declarations: <br>
+Inside your class-declarations...
 ```sass
 .foo {
 	color: red
 	@include above(l) { color: blue }
 }
 ```
-
-2. On their own: <br>
+![alt tag](https://raw.github.com/username/projectname/branch/path/to/img.png)
+... or on their own.
 ```sass
 .foo {color: red}
 @include above(l) { 
