@@ -52,7 +52,9 @@ Four sets of sass-mixins to control the responsive flow of your document:
 3. **At** - Example:``` @include at(breakpoint-name) { ... } ```
 4. **From** - Example:``` @include from(breakpoint-name, breakpoint-name) { ... } ```
 
-###Above
+###Options
+
+#####Above
 Styles apply to all withs **above** the breakpoint you pass.<br>
 Recommended for: a mobile-first approach.
 ```sass
@@ -62,7 +64,7 @@ Recommended for: a mobile-first approach.
 }
 ```
 
-###Below
+#####Below
 Styles apply to all withs **below** the breakpoint you pass.<br>
 Recommended for: a desktop-first approach.
 ```sass
@@ -72,7 +74,7 @@ Recommended for: a desktop-first approach.
 }
 ```
 
-###At
+#####At
 Styles apply only **at** the breakpoint you pass.<br>
 ```sass
 .foo {
@@ -81,7 +83,7 @@ Styles apply only **at** the breakpoint you pass.<br>
 }
 ```
 
-###Between
+#####Between
 Styles apply **between** the two breakpoint you pass.<br>
 ```sass
 .foo {
