@@ -53,64 +53,53 @@ Four sets of sass-mixins to control the responsive flow of your document:
 4. **From** - Example:``` @include from(breakpoint-name, breakpoint-name) { ... } ```
 
 ###Above
-Styles apply to all withs **above** the breakpoint you pass along.<br>
+Styles apply to all withs **above** the breakpoint you pass.<br>
 Recommended for: a mobile-first approach.
 ```sass
 .foo {
 	//styles
 
-	@include above(xs) { ... }
-	@include above(s) { ... }
-	@include above(m) { ... }
-	@include above(l) { ... }
-	@include above(xl) { ... }
-	@include above(xxl) { ... }
+	@include above(xs) { ... }				// breakpoint-names: xs, s, m, l, xl, xxl
 }
 ```
 
 ###Below
-Styles apply to all withs **below** the breakpoint you pass along.<br>
+Styles apply to all withs **below** the breakpoint you pass.<br>
 Recommended for: a desktop-first approach.
 ```sass
 .foo {
 	//styles
 
-	@include below(xs) { ... }
-	@include below(s) { ... }
-	@include below(m) { ... }
-	@include below(l) { ... }
-	@include below(xl) { ... }
-	@include below(xxl) { ... }
+	@include below(xs) { ... }				// breakpoint-names: xs, s, m, l, xl, xxl
 }
 ```
 
 ###At
-Styles apply only to the breakpoint you pass along.<br>
+Styles apply only to the breakpoint you pass.<br>
 ```sass
 .foo {
 	//styles
 
-	@include at(xs) { ... }
-	@include at(s) { ... }
-	@include at(m) { ... }
-	@include at(l) { ... }
-	@include at(xl) { ... }
-	@include at(xxl) { ... }
+	@include at(xs) { ... }					// breakpoint-names: xs, s, m, l, xl, xxl
 }
 ```
 
 ###Between
-Styles apply **between** the two breakpoint you pass along.<br>
+Styles apply **between** the two breakpoint you pass.<br>
 ```sass
 .foo {
 	//styles
 
-	@include between(xs, m) { ... }
-	@include between(s, xl) { ... }
+	@include between(xs, m) { ... }			// breakpoint-names: xs, s, m, l, xl, xxl
 }
 ```
 
+###Play with it
+You can test the breakpoint management over here:<br>
+[Grid-Playground](http://codepen.io/NilsDannemann/pen/NGwmqq?editors=110)
 
+
+#Other (in progress)
 
 ###Container
 **Basic Container**
