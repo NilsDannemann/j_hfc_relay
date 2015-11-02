@@ -9,7 +9,7 @@ layout: styleguide
 <p>2. Include: <a href="{{ site.github_repo }}/_includes/_base.scss" target="_blank">base.scss</a></p>
 
 <!-- ASSIGN COMPONENTS -->
-{% assign componentsByType = site.components | group_by:"type" %}
+{% assign componentsByType = site.components | sort:"title" | group_by:"type" %}
 
 <!-- COMPONENT NAV -->
 {% include styleguide/component_nav/component_nav.html %}
