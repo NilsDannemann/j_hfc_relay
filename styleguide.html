@@ -17,7 +17,7 @@ layout: styleguide
 <!-- DISPLAY COMPONENTS -->
 {% for type in componentsByType %}
 	<h2 id="styleguide-section-{{ type.name }}">{{ type.name | capitalize }}</h2>
-{% for entry in type.items %}
-	{% include styleguide/component_mask/component_mask.html %}
-{% endfor %}
+	{% for entry in type.items %}
+		{% include styleguide/component_mask/component_mask.html %}
+	{% endfor %}
 {% endfor %}

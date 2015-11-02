@@ -25,6 +25,21 @@
 @include at(xl) {
 	.teaser--single {
 		@include flexbox($direction: column);
+		@include column('1/2', $gutter: true);
+
+		.teaser__img {
+			@include column('1/1');
+		}
+		.teaser__wrapper {
+			@include flexbox($direction: column);
+			@include column('1/1');
+		}
+	}
+}
+
+@include at(l) {
+	.teaser--single {
+		@include flexbox($direction: column);
 		@include column('1/1', $gutter: true);
 
 		.teaser__img {
@@ -34,11 +49,9 @@
 			@include flexbox($direction: column);
 			@include column('1/1');
 		}
-		.teaser__content {
-			margin-top: 0;
-		}
 	}
 }
+
 @include at(m) {
 	.teaser--single {
 		@include flexbox($direction: row);
@@ -53,12 +66,7 @@
 	}
 }
 
-@include at(xl) {
-	.teaser--single {@include column('1/2', $gutter: true);}
-}
-@include at(l) {
-	.teaser--single {@include column('1/1', $gutter: true);}
-}
+
 @include at(s) {
 	.teaser--single {@include column('1/2', $gutter: true);}
 }
