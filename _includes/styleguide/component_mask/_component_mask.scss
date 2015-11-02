@@ -18,20 +18,24 @@
 		line-height: $line-height;
 	}
 
-	&__usage {
+	&__scss {
 		margin: 0;
 		padding: 0;
 		font-family: $font-family;
 		font-size: $font-size - 2;
 		line-height: $line-height;
 	}
-	
-	&__sass {
+
+	&__note {
 		margin: 0;
 		padding: 0;
 		font-family: $font-family;
 		font-size: $font-size - 2;
 		line-height: $line-height;
+	}
+
+	&__label {
+		font-weight: bold;
 	}
 
 	&__body {

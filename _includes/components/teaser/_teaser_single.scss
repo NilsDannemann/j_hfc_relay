@@ -1,0 +1,67 @@
+/* =======================================*/
+/*
+/* TEASER SINGLE
+/*
+/* =======================================*/
+.teaser--single {
+	@include flexbox($direction: row);
+	@include column('1/1', $gutter: true);
+
+	.teaser__img {
+		@include column('1/3');
+	}
+	.teaser__wrapper {
+		@include flexbox($direction: row);
+		@include column('2/3');
+	}
+	.teaser__content {
+		margin-top: 0;
+	}
+}
+
+/* =======================================*/
+/* RESPONSIVE BEHAVIOR
+/* =======================================*/
+@include at(xl) {
+	.teaser--single {
+		@include flexbox($direction: column);
+		@include column('1/1', $gutter: true);
+
+		.teaser__img {
+			@include column('1/1');
+		}
+		.teaser__wrapper {
+			@include flexbox($direction: column);
+			@include column('1/1');
+		}
+		.teaser__content {
+			margin-top: 0;
+		}
+	}
+}
+@include at(m) {
+	.teaser--single {
+		@include flexbox($direction: row);
+
+		.teaser__img {
+			@include column('1/3');
+		}
+		.teaser__wrapper {
+			@include flexbox($direction: row);
+			@include column('2/3');
+		}
+	}
+}
+
+@include at(xl) {
+	.teaser--single {@include column('1/2', $gutter: true);}
+}
+@include at(l) {
+	.teaser--single {@include column('1/1', $gutter: true);}
+}
+@include at(s) {
+	.teaser--single {@include column('1/2', $gutter: true);}
+}
+@include at(xs) {
+	.teaser--single {@include column('1/1', $gutter: true);}
+}

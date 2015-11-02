@@ -4,14 +4,19 @@
 		<h2 class="component__title" id="styleguide-section-{{ entry.title | slugify }}">
 			{{ entry.title }}
 		</h2>
-		{% if entry.scss %}
-			<p class="component__sass">
-				SCSS: <a href="{{ site.github_repo }}{{ entry.scss }}" target="_blank">{{ entry.scss }}</a>
+		{% if entry.basescss %}
+			<p class="component__scss">
+				<span class="component__label">Scss:</span> <a href="{{ site.github_repo }}{{ entry.basescss }}" target="_blank">{{ entry.basescss }}</a>
+			</p>
+		{% endif %}
+		{% if entry.componentscss %}
+			<p class="component__scss">
+				<span class="component__label">Scss:</span> <a href="{{ site.github_repo }}{{ entry.componentscss }}" target="_blank">{{ entry.componentscss }}</a>
 			</p>
 		{% endif %}
 		{% if entry.usage %}
-			<p class="component__usage">
-				Usage: {{ entry.usage }}
+			<p class="component__note">
+				<span class="component__label">Note:</span> {{ entry.usage }}
 			</p>
 		{% endif %}
 	</header>
