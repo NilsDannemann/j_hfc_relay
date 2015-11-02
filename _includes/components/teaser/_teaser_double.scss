@@ -1,0 +1,58 @@
+/* =======================================*/
+/*
+/* TEASER DOUBLE
+/*
+/* =======================================*/
+
+.teaser {
+	background: #fff;
+	border: $border;
+
+	&--double {
+		@include flexbox($direction: column);
+		@include column('1/2', $gutter: true);
+	}
+
+	&__title {
+		width: 100%;
+		color: $color-black;
+		padding: $whitespace;
+
+		* {margin: 0;}
+	}
+
+	&__img {}
+
+	&__content {
+		height: $font-size * $line-height * $teaser-lines-to-show;
+		margin: $whitespace/2 $whitespace;
+
+		-webkit-line-clamp: $teaser-lines-to-show;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__link {
+		width: 100%;
+		border-top: $border;
+		padding: $whitespace;
+	}
+}
+
+
+/* =======================================*/
+/* RESPONSIVE BEHAVIOR
+/* =======================================*/
+@include at(xl) {
+	.teaser--double {@include column('1/2', $gutter: true);}
+}
+@include at(l) {
+	.teaser--double {@include column('1/1', $gutter: true);}
+}
+@include at(s) {
+	.teaser--double {@include column('1/2', $gutter: true);}
+}
+@include at(xs) {
+	.teaser--double {@include column('1/1', $gutter: true);}
+}
