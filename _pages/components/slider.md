@@ -1,7 +1,7 @@
 ---
 title: "Slider"
 permalink: "/components/slider/"
-layout: main
+layout: sidebar_double
 position: 1
 children: false
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Products"
 permalink: "/products/"
-layout: main
+layout: sidebar_double
 position: 3
 children: false
 ---

@@ -1,14 +1,14 @@
 <div class="teaser teaser--single">
-	<a class="teaser__img" href="{% if include.link != null %}{{ include.link }}{% else %}#{% endif %}">
+	<a class="teaser__img" href="{% if include.link != null %}{{site.baseurl}}/{{ include.link }}{% else %}#{% endif %}">
 		<img src="{{ site.baseurl }}/assets/placeholder.png" alt="image" />
 	</a>
 	<div class="teaser__wrapper">
-		<a class="teaser__title" href="{% if include.link != null %}{{ include.link }}{% else %}#{% endif %}">
+		<a class="teaser__title" href="{% if include.link != null %}{{site.baseurl}}/{{ include.link }}{% else %}#{% endif %}">
 			<h3>{% if include.title != null %}{{ include.title }}{% else %}Title{% endif %}</h3>
 		</a>
 		<p class="teaser__content">
 			{% if include.text != null %}{% if include.text == "Lorem" or include.text == "lorem" %}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ips cupiditate itaque aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quisquam soluta unde minima dolorum. Quos beatae sequi harum eos ipsam!{% else %}{{ include.text }}{% endif %}{% else %}Text{% endif %}
 		</p>
-		<a class="teaser__link" href="{% if include.link != null %}{{ include.link }}{% else %}#{% endif %}">Link</a>
+		<a class="teaser__link" href="{% if include.link != null %}{{site.baseurl}}/{{ include.link }}{% else %}#{% endif %}">Link</a>
 	</div>
 </div>

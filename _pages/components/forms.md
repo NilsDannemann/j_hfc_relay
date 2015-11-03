@@ -1,7 +1,7 @@
 ---
 title: "Forms"
 permalink: "/components/forms/"
-layout: main
+layout: sidebar_double
 position: 5
 children: false
 ---

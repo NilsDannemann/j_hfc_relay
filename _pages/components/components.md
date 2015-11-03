@@ -1,7 +1,7 @@
 ---
 title: "Components"
 permalink: "/components/"
-layout: main
+layout: sidebar_double
 position: 99
 children: true
 ---

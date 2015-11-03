@@ -1,7 +1,7 @@
 ---
 title: "Teaser Double"
 permalink: "/components/teaser/teaser_double/"
-layout: main
+layout: sidebar_double
 position: 2
 children: false
 ---

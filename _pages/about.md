@@ -1,7 +1,7 @@
 ---
 title: "About"
 permalink: "/about/"
-layout: main
+layout: sidebar_double
 position: 2
 children: false
 ---

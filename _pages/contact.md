@@ -1,7 +1,7 @@
 ---
 title: "Contact"
 permalink: "/contact/"
-layout: main
+layout: sidebar_double
 position: 4
 children: false
 ---
