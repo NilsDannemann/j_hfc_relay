@@ -18,8 +18,9 @@
 	&__img {}
 
 	&__content {
-		height: $font-size * $line-height * $teaser-lines-to-show;
+		height: ($font-size - 1) * $line-height * $teaser-lines-to-show;
 		margin: $whitespace/2 $whitespace;
+		font-size: $font-size - 1;
 
 		-webkit-line-clamp: $teaser-lines-to-show;
 		-webkit-box-orient: vertical;

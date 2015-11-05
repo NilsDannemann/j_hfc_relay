@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"color-sp",
+				"color-spaceblack"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
 				"font",
 				"font-weight: "
 			],
@@ -14,10 +22,6 @@
 			[
 				"bac",
 				"background-image: "
-			],
-			[
-				"trans",
-				"transform"
 			],
 			[
 				"ul",
@@ -228,18 +232,50 @@
 			}
 		},
 		{
-			"file": "_includes/styleguide/component_mask/component_mask.html",
+			"file": "_includes/components_base/header/_header.scss",
 			"settings":
 			{
-				"buffer_size": 1039,
-				"line_ending": "Windows"
+				"buffer_size": 387,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_includes/styleguide/component_mask/_component_mask.scss",
+			"file": "_includes/components_base/typography/_typography.scss",
 			"settings":
 			{
-				"buffer_size": 710,
+				"buffer_size": 665,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/_base.scss",
+			"settings":
+			{
+				"buffer_size": 779,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 709,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_pages/icecream.md",
+			"settings":
+			{
+				"buffer_size": 2283,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/components/teaser/_teaser_single.scss",
+			"settings":
+			{
+				"buffer_size": 1590,
 				"line_ending": "Windows"
 			}
 		},
@@ -247,16 +283,16 @@
 			"file": "_includes/components/teaser/_teaser.scss",
 			"settings":
 			{
-				"buffer_size": 580,
-				"line_ending": "Windows"
+				"buffer_size": 615,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_includes/components/teaser/_teaser_single.scss",
+			"file": "_includes/components/teaser/teaser_triple.html",
 			"settings":
 			{
-				"buffer_size": 1400,
-				"line_ending": "Windows"
+				"buffer_size": 994,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -267,13 +303,29 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 230.0,
+		"height": 107.0,
 		"last_filter": "liq",
 		"selected_items":
 		[
 			[
 				"liq",
 				"Set Syntax: HTML (Liquid)"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
 			],
 			[
 				"scss",
@@ -298,10 +350,6 @@
 			[
 				"packlis",
 				"Package Control: List Packages"
-			],
-			[
-				"ins",
-				"Package Control: Install Package"
 			],
 			[
 				"browp",
@@ -334,10 +382,6 @@
 			[
 				"packins",
 				"Package Control: Install Package"
-			],
-			[
-				"remo",
-				"Package Control: Remove Package"
 			],
 			[
 				"pack inst",
@@ -424,7 +468,7 @@
 				"Set Syntax: CSS3"
 			]
 		],
-		"width": 536.0
+		"width": 583.0
 	},
 	"console":
 	{
@@ -446,10 +490,21 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/nilsdannemann/Sites/j_hfc_relay"
+		"/Users/nilsdannemann/Sites/j_hfc_relay",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser"
 	],
 	"file_history":
 	[
+		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_respond_at.sublime-snippet",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_pages/icecream.md",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/j_hfc_relay.sublime-project",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/j_hfc_relay.sublime-workspace",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/_config.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/component_mask/_component_mask.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/component_mask/component_mask.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components/teaser/_teaser_triple.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components/teaser/_teaser_double.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/styleguide.html",
@@ -569,19 +624,11 @@
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/index.liquid",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/layout/content.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/utils/_helpers.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/base/_base.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/sidebar.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/content.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/base/_syntax-highlighting.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/css/screen.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/layout/_component.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/component.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/layout/_styleguide.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/styleguide.html"
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/base/_base.scss"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -596,6 +643,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"20px",
+			"    ",
+			"\".gitattributes\",",
 			", $gutter: 5px",
 			"play",
 			"// ",
@@ -720,10 +770,7 @@
 			"responsive-cont",
 			"3/6",
 			"8",
-			"5",
-			" $gutter: 35px, ",
-			"$gutter: 0",
-			"$cycle: 3"
+			"5"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -741,7 +788,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -757,49 +804,99 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								385,
+								385
 							]
 						],
 						"settings":
 						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 475.0,
+						"translation.y": 254.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "_includes/styleguide/component_mask/component_mask.html",
+					"file": "_includes/components_base/header/_header.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1039,
+						"buffer_size": 387,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								634,
-								634
+								267,
+								267
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_includes/components_base/typography/_typography.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 665,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								190,
+								169
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 153.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "_includes/_base.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 779,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								97,
+								97
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -810,85 +907,76 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "_includes/styleguide/component_mask/_component_mask.scss",
+					"buffer": 4,
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 710,
+						"buffer_size": 709,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								341,
-								341
+								473,
+								473
 							]
 						],
 						"settings":
 						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 95.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "_includes/components/teaser/_teaser.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 580,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								261,
-								261
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"open_with_edit": true,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Siteleaf Liquid Syntax/Syntaxes/HTML (Liquid).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "_includes/components/teaser/_teaser_single.scss",
+					"buffer": 5,
+					"file": "_pages/icecream.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1400,
+						"buffer_size": 2283,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								380,
-								380
+								1001,
+								1001
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Siteleaf Liquid Syntax/Syntaxes/HTML (Liquid).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 131.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "_includes/components/teaser/_teaser_single.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1590,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1346,
+								1346
 							]
 						],
 						"settings":
@@ -900,10 +988,68 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
+						"translation.y": 207.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "_includes/components/teaser/_teaser.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 615,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								408,
+								408
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "_includes/components/teaser/teaser_triple.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 994,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								37,
+								986
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -962,6 +1108,38 @@
 		"selected_items":
 		[
 			[
+				"head",
+				"_includes/components_base/header/_header.scss"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"base",
+				"_includes/_base.scss"
+			],
+			[
+				"typo",
+				"_includes/components_base/typography/_typography.scss"
+			],
+			[
+				"teas",
+				"_includes/components/teaser/_teaser.scss"
+			],
+			[
+				"ice",
+				"_pages/icecream.md"
+			],
+			[
+				"teassc",
+				"_includes/components/teaser/_teaser.scss"
+			],
+			[
+				"cong",
+				"_includes/_config.scss"
+			],
+			[
 				"mask",
 				"_includes\\styleguide\\component_mask\\component_mask.html"
 			],
@@ -980,10 +1158,6 @@
 			[
 				"read",
 				"README.md"
-			],
-			[
-				"teas",
-				"_includes\\components\\teaser\\_teaser.scss"
 			],
 			[
 				"confi",
@@ -1042,14 +1216,6 @@
 				"_pages\\components\\teaser_single.md"
 			],
 			[
-				"head",
-				"_includes\\components_base\\header\\_header.scss"
-			],
-			[
-				"inde",
-				"index.html"
-			],
-			[
 				"teaht",
 				"_includes\\components\\teaser\\teaser.html"
 			],
@@ -1064,10 +1230,6 @@
 			[
 				"sty",
 				"css\\style.scss"
-			],
-			[
-				"base",
-				"_includes\\_base.scss"
 			],
 			[
 				"config",
@@ -1088,10 +1250,6 @@
 			[
 				"abou",
 				"_pages\\about.md"
-			],
-			[
-				"typo",
-				"_includes\\components_base\\typography\\_typography.scss"
 			],
 			[
 				"conten",
@@ -1260,10 +1418,6 @@
 			[
 				"ma",
 				"_includes\\layout\\mnav.html"
-			],
-			[
-				"teassc",
-				"_scss\\components\\_teaser.scss"
 			],
 			[
 				"incltea",

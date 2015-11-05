@@ -67,8 +67,19 @@
 }
 
 
-@include at(s) {
-	.teaser--single {@include column('1/2', $gutter: true);}
+@include below(s) {
+	.teaser--single {
+		@include flexbox($direction: column);
+		@include column('1/2', $gutter: true);
+
+		.teaser__img {
+			@include column('1/1');
+		}
+		.teaser__wrapper {
+			@include flexbox($direction: column);
+			@include column('1/1');
+		}
+	}
 }
 @include at(xs) {
 	.teaser--single {@include column('1/1', $gutter: true);}

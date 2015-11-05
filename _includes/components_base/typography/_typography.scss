@@ -10,9 +10,17 @@ body {
 	color: $color-text;
 }
 
-ul {
+ul, ol {
 	margin: 0;
 	padding: 0;
+}
+
+.content__page ul,
+.content__page ol {
+	margin: $whitespace/2 $whitespace $whitespace/2 0;
+	padding: 0 0 0 $whitespace*2;
+
+	li {margin-bottom: $whitespace/2;}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,4 +41,8 @@ p {
 a {
 	color: $color-brand;
 	text-decoration: none;
+}
+
+blockquote {
+	margin: $whitespace/2 $whitespace;
 }
