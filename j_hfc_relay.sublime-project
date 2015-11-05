@@ -6,6 +6,7 @@
 			[
 				"j_hfc_relay.sublime-project",
 				".gitattributes",
+				".jekyll-metadata",
 				".gitignore",
 				"_normalize.scss"
 			],

@@ -223,8 +223,8 @@
 			"file": "_includes/_config.scss",
 			"settings":
 			{
-				"buffer_size": 8636,
-				"line_ending": "Windows"
+				"buffer_size": 8665,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -446,16 +446,7 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_components",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components/teaser",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_mask",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/css"
+		"/Users/nilsdannemann/Sites/j_hfc_relay"
 	],
 	"file_history":
 	[
@@ -759,15 +750,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8636,
+						"buffer_size": 8665,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								711,
-								711
+								0,
+								0
 							]
 						],
 						"settings":
@@ -896,8 +887,8 @@
 						"selection":
 						[
 							[
-								512,
-								512
+								380,
+								380
 							]
 						],
 						"settings":
@@ -905,7 +896,7 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
