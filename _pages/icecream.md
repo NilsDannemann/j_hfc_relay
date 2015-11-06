@@ -6,35 +6,34 @@ position: 5
 children: false
 ---
 
-# Why eat Icecream?
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eius repellendus necessitatibus minus non quis aliquam quas iure, eos facilis!
+# Headline
 
-- Delicious: <http://example.com/>
-- Good for you: <http://example.com/>
-- You know you want it!
+Lorem ipsum **dolor sit amet**, consectetur adipisicing elit. Esse ullam nulla id culpa. Repudiandae incidunt, aspernatur, reprehenderit iste illum voluptate suscipit cupiditate. Ex voluptates rem earum amet perspiciatis explicabo sit quo dignissimos tempore. *Beatae expedita rem ab, similique atque sed nesciunt voluptatum ex, provident fugit quidem fugiat aperiam, odio? Et*
 
-**Its has been proven:** 
-Lorem *ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor* incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. *Lorem ipsum dolor sit amet.* Yay!
+1. What people say about Icecream: <http://www.google.de/>
+1. Why people like Icecream? Because: Delicious
+1. You should buy some!
 
-> *"Yes, you'll like it!"*
-- **Sting**
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, consectetur adipisci id minus ipsum reiciendis vitae laudantium, perspiciatis voluptas officiis.
 
-Icecream is **totally** awesome! Definitely *enjoy* some today!
+> *"I loooove it!!"*
+- Sting
 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, natus.
 
-## Choose your Icecream
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, nisi.
+## Make your choice!
 
 {% include components/teaser/teaser_triple.html title="Vanilla" text="lorem" link="#" %}
 {% include components/teaser/teaser_triple.html title="Chocolate" text="lorem" link="#" %}
-{% include components/teaser/teaser_triple.html title="Strwaberry" text="lorem" link="#" %}
+{% include components/teaser/teaser_triple.html title="Strawberry" text="lorem" link="#" %}
 {% include components/teaser/teaser_triple.html title="Vanilla" text="lorem" link="#" %}
 {% include components/teaser/teaser_triple.html title="Chocolate" text="lorem" link="#" %}
-{% include components/teaser/teaser_triple.html title="Strwaberry" text="lorem" link="#" %}
+{% include components/teaser/teaser_triple.html title="Strawberry" text="lorem" link="#" %}
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur deleniti corporis error tenetur impedit nulla nesciunt, exercitationem veniam corrupti optio quam, quas dicta debitis, libero dolore dolorem officiis at voluptatum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ea, nesciunt! Officia doloribus necessitatibus laborum velit ipsa saepe voluptatibus ut ratione. Expedita animi nostrum alias placeat, perferendis dolorum tempora, minima, eius incidunt ab autem quam voluptates eveniet ipsam nulla quos pariatur doloremque porro, accusantium dolore maxime repellat praesentium!
 
-{% include components/teaser/teaser_double.html title="Ice-Quality" text="Its good." link="#" %}
-{% include components/teaser/teaser_double.html title="Problems" text="Expensive" link="#" %}
+## Buy now!
+{% include components/teaser/teaser_double.html title="Buy one" text="lorem" link="#" %}
+{% include components/teaser/teaser_double.html title="Pricing" text="lorem" link="#" %}
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis velit, deserunt deleniti adipisci dolorum, laudantium perspiciatis expedita cum alias odio doloribus porro ullam nulla voluptas, ex dolor incidunt necessitatibus fuga!
+Thanks!
