@@ -1,6 +1,6 @@
 <div class="teaser teaser--single">
 	<a class="teaser__img" href="{% if include.link != null %}{{site.baseurl}}/{{ include.link }}{% else %}#{% endif %}">
-		<img src="{{ site.baseurl }}/assets/placeholder.png" alt="image" />
+		{% if include.image != null %}<img src="{{ site.baseurl }}/assets/{{ include.image }}" alt="image" />{% else %}<img src="{{ site.baseurl }}/assets/placeholder.png" alt="image" />{% endif %}
 	</a>
 	<div class="teaser__wrapper">
 		<a class="teaser__title" href="{% if include.link != null %}{{site.baseurl}}/{{ include.link }}{% else %}#{% endif %}">
