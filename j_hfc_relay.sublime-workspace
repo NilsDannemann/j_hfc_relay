@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"color-spac",
+				"color-spaceblack"
+			],
+			[
 				"color-sp",
 				"color-spaceblack"
 			],
@@ -231,17 +235,17 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 277.0,
-		"last_filter": "mark",
+		"height": 107.0,
+		"last_filter": "liq",
 		"selected_items":
 		[
 			[
-				"mark",
-				"Set Syntax: Markdown"
-			],
-			[
 				"liq",
 				"Set Syntax: HTML (Liquid)"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
 			],
 			[
 				"remo",
@@ -418,18 +422,18 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/nilsdannemann/Sites/j_hfc_relay",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide"
+		"/Users/nilsdannemann/Sites/j_hfc_relay"
 	],
 	"file_history":
 	[
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/_config.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser_triple.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_pages/icecream.md",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/_config.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_pages/contact.md",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/index.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/header/_header.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/typography/_typography.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/_base.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/index.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser_single.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_triple.html",
@@ -549,8 +553,7 @@
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/header.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/includes/_content.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/includes/_footer.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/includes/_sidebar.scss"
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/includes/_footer.scss"
 	],
 	"find":
 	{
@@ -569,6 +572,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"teaser_triple",
+			"placeholder",
 			"triple",
 			"20px",
 			"    ",
@@ -694,9 +699,7 @@
 			"Navigation",
 			"navigation",
 			"6",
-			"responsive-cont",
-			"3/6",
-			"8"
+			"responsive-cont"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -772,6 +775,26 @@
 		"selected_items":
 		[
 			[
+				"teaserscss",
+				"_includes/components/teaser/_teaser_triple.scss"
+			],
+			[
+				"config",
+				"_includes/_config.scss"
+			],
+			[
+				"confi",
+				"_includes/_config.scss"
+			],
+			[
+				"teasescss",
+				"_includes/components/teaser/_teaser_triple.scss"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
 				"teasersc",
 				"_includes/components/teaser/_teaser_triple.scss"
 			],
@@ -782,10 +805,6 @@
 			[
 				"head",
 				"_includes/components_base/header/_header.scss"
-			],
-			[
-				"inde",
-				"index.html"
 			],
 			[
 				"base",
@@ -830,10 +849,6 @@
 			[
 				"read",
 				"README.md"
-			],
-			[
-				"confi",
-				"_includes\\_config.scss"
 			],
 			[
 				"cont",
@@ -902,10 +917,6 @@
 			[
 				"sty",
 				"css\\style.scss"
-			],
-			[
-				"config",
-				"_includes\\_config.scss"
 			],
 			[
 				"grid",
