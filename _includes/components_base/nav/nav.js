@@ -11,7 +11,7 @@
 		});
 		
 		// Add nav__more class
-		$('<div class="nav__more">&nbsp;</div>').insertBefore($('.nav__link--parent'));
+		$('<div class="nav__more"></div>').insertBefore($('.nav__link--parent'));
 		
 		// Toggle Navigation
 		$(".nav__icon").click(function(e) {

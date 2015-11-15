@@ -30,16 +30,11 @@
 	&__link--parent {
 		
 		&:after {
-			content: '';
-			position: relative;
-			top: 5px;
+			content: '\f107';
+			font-family: 'FontAwesome';
 			margin-left: 15px;
 			float: right;
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 5px 5px 0 5px;
-			border-color: $color-brand transparent transparent transparent;
+			color: $color-brand;
 		}
 	}
 	&__more {
@@ -56,6 +51,13 @@
 		opacity: 0;
 		transform: translateY(10px);
 		@include transition();
+
+		.nav__link--parent {
+		
+			&:after {
+				content: '\f105';
+			}
+		}
 	}
 }
 
@@ -84,13 +86,6 @@
 			border-right: none;
 
 			&:first-child {border-left: none;}
-		}
-		.nav__link--parent {
-			
-			&:after {
-				border-width: 5px 0 5px 5px;
-				border-color: transparent transparent transparent $color-brand;
-			}
 		}
 	}
 }
@@ -209,6 +204,9 @@
 		&__more {
 			display: block;
 			float: right;
+			color: $color-brand;
+			text-align: center;
+			height: $whitespace*2.8;
 			width: $whitespace*2.8;
 			padding: $whitespace;
 			cursor: pointer;
@@ -216,16 +214,10 @@
 			z-index: 200; //For: Nested Subnav
 			position: relative; //For: Nested Subnav
 			
-			// Triangle
+			// Dropdown Icon
 			&:after {
-				content: '';
-				position: absolute;
-				top: 50%;
-				width: 0;
-				height: 0;
-				border-style: solid;
-				border-width: 5px 5px 0 5px;
-				border-color: $color-brand transparent transparent transparent;
+				content: '\f107';
+				font-family: 'FontAwesome';
 			}
 		}
 		&__subnav {
