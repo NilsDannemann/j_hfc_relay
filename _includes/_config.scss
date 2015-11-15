@@ -29,7 +29,7 @@ $color-yellow		: #FFEB3B;
 $color-amber		: #FFC107;
 $color-orange		: #FF9800;
 
-$color-brand: $color-spaceblack;
+$color-brand: $color-green;
 
 /* =======================================*/
 /*
@@ -60,6 +60,18 @@ $font-family	: 'Helvetica', 'Arial', sans-serif;
 $font-size		: 14px;
 $line-height	: 1.6;
 $color-text		: $color-black;
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../assets/fonts/fontawesome-webfont.eot?v=4.4.0');
+	src: url('../assets/fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), 
+		 url('../assets/fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), 
+		 url('../assets/fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), 
+		 url('../assets/fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), 
+		 url('../assets/fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 
 /* =======================================*/
 /*

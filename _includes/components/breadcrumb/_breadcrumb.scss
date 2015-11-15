@@ -1,0 +1,37 @@
+/* =======================================*/
+/*
+/* BREADCRUMB
+/*
+/* =======================================*/
+.breadcrumb {
+	margin-bottom: $whitespace;
+	padding-bottom: $whitespace/2;
+	border-bottom: $border;
+
+	@include below(m) {
+		padding-top: $whitespace/2;
+	}
+
+	&__link {
+		display: inline-block;
+		color: $color-brand;
+		padding: 0 ($whitespace/3);
+
+		&:first-child {padding-left: 0;}
+		&:last-child {padding-right: 0;}
+
+		&--active {
+			color: $color-black;
+		}
+	}
+	
+	&__divider {
+		display: inline-block; 
+		color: darken($color-grey, 10%);
+		
+		&:before {
+			font-family: 'FontAwesome';
+			content: "\f105";
+		}
+	}
+}
