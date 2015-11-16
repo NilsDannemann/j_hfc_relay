@@ -1,19 +1,4 @@
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
-<head>
-	<meta charset="utf-8">
-	<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	{% if site.use_fontawesome == true %}
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	{% endif %}
-	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" media="screen">
-	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styleguide.css" media="screen">
-</head>
+{% include components_base/head/head.html styleguide_css=true %}
 <body>
 	{% include components_base/nav/nav.html context="/" %}
 	{% include components_base/header/header.html %}
