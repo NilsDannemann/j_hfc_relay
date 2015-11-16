@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"color-space",
+				"color-spacegrey"
+			],
+			[
+				"col",
+				"color-brand"
+			],
+			[
+				"colo",
+				"color-black"
+			],
+			[
+				"color",
+				"color-black"
+			],
+			[
 				"color-spac",
 				"color-spaceblack"
 			],
@@ -64,10 +80,6 @@
 				"components_base	(nav.html)"
 			],
 			[
-				"color",
-				"color-brand"
-			],
-			[
 				"white",
 				"whitespace"
 			],
@@ -108,10 +120,6 @@
 				"font-size"
 			],
 			[
-				"col",
-				"column	(_config.scss)"
-			],
-			[
 				"flex",
 				"flexbox"
 			],
@@ -126,10 +134,6 @@
 			[
 				"flex-",
 				"flex-direction: "
-			],
-			[
-				"colo",
-				"color"
 			],
 			[
 				"box",
@@ -244,12 +248,28 @@
 				"Set Syntax: HTML (Liquid)"
 			],
 			[
-				"mark",
-				"Set Syntax: Markdown"
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
 			],
 			[
 				"remo",
 				"Package Control: Remove Package"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
 			],
 			[
 				"inst",
@@ -260,20 +280,8 @@
 				"Package Control: Install Package"
 			],
 			[
-				"scss",
-				"Set Syntax: SCSS"
-			],
-			[
-				"html",
-				"Set Syntax: HTML"
-			],
-			[
 				"java",
 				"Set Syntax: JavaScript"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
 			],
 			[
 				"rmeopa",
@@ -306,10 +314,6 @@
 			[
 				"htm",
 				"Set Syntax: HTML"
-			],
-			[
-				"sass",
-				"Set Syntax: Sass"
 			],
 			[
 				"packins",
@@ -422,22 +426,47 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/nilsdannemann/Sites/j_hfc_relay"
+		"/Users/nilsdannemann/Sites/j_hfc_relay",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/assets/fonts"
 	],
 	"file_history":
 	[
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser_triple.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/_config.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_config.yml",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/head/head.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/breadcrumb/_breadcrumb.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/nav/_nav.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/index.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/slider.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/full.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/sidebar_double.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/sidebar_single.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/styleguide.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/_slider.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/_base.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_single.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/assets/css/style.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/footer/footer.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/breadcrumb/breadcrumb.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_triple.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_double.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_single.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_components/breadcrumb.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/nav/nav.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/nav/nav.js",
+		"/Users/nilsdannemann/Downloads/font-awesome-4.4.0/css/font-awesome.css",
+		"/Users/nilsdannemann/Downloads/Linearicons-Free-v1.0.0/Web Font/demo.html",
+		"/Users/nilsdannemann/Downloads/Linearicons-Free-v1.0.0/Web Font/style.css",
+		"/Users/nilsdannemann/Downloads/Linearicons.eot",
+		"/Users/nilsdannemann/Downloads/Linearicons.ttf",
+		"/Users/nilsdannemann/Downloads/Linearicons.woff",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/css/style.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser_triple.scss",
 		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_teaser.sublime-snippet",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_pages/icecream.md",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/_config.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_pages/contact.md",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/header/_header.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/typography/_typography.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/_base.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser_single.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser.scss",
 		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_respond_at.sublime-snippet",
@@ -530,30 +559,7 @@
 		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_button.sublime-snippet",
 		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_teaser.sublime-snippet",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_components/button.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_nav/component_nav.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_nav/component_nav.js",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/base/footer.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/scss/_base.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/scss/utils/_helpers.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/includes/_mnav.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/_config.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/components/_teaser.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/teaser.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/components/_typography.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/button.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/layout/mnav.html",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/snippet_grid__5_liquid.sublime-snippet",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/components/_button.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/includes/styleguide/_component.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/includes/styleguide/_component_nav.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/includes/styleguide/_highlight.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_nav.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/reset/_base.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/mnav.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/_theme.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/footer.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_scss/includes/_header.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/header.html"
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_nav/component_nav.html"
 	],
 	"find":
 	{
@@ -572,6 +578,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"FontAwesome",
+			"header",
+			"nav__more",
+			"    ",
+			"teaser",
+			"assets",
+			"  ",
+			"  	   ",
+			"  ",
+			"../fonts/",
+			"'We",
+			"'w",
+			"'W",
+			"teaser",
 			"teaser_triple",
 			"placeholder",
 			"triple",
@@ -685,21 +705,7 @@
 			"background",
 			"20px",
 			"p.url",
-			"20px",
-			"16",
-			"page.",
-			"page.url",
-			"\"nav",
-			"nav",
-			"nav__sub",
-			"include.level",
-			"<!--",
-			"-->",
-			"navigation",
-			"Navigation",
-			"navigation",
-			"6",
-			"responsive-cont"
+			"20px"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -775,12 +781,68 @@
 		"selected_items":
 		[
 			[
-				"teastriscs",
-				"_includes/components/teaser/_teaser_triple.scss"
+				"nav",
+				"_includes/components_base/nav/_nav.scss"
+			],
+			[
+				"brea",
+				"_includes/components/breadcrumb/_breadcrumb.scss"
+			],
+			[
+				"head",
+				"_includes/components_base/head/head.html"
+			],
+			[
+				"confi",
+				"_config.yml"
+			],
+			[
+				"config",
+				"_includes/_config.scss"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"teashmtl",
+				"_includes/components/teaser/teaser_single.html"
 			],
 			[
 				"inde",
 				"index.html"
+			],
+			[
+				"foot",
+				"_includes/components_base/footer/footer.html"
+			],
+			[
+				"",
+				"_config.yml"
+			],
+			[
+				"navjs",
+				"_includes/components_base/nav/nav.js"
+			],
+			[
+				"bread",
+				"_includes/components/breadcrumb/_breadcrumb.scss"
+			],
+			[
+				"con",
+				"_includes/_config.scss"
+			],
+			[
+				"teashtml",
+				"_includes/components/teaser/teaser_single.html"
+			],
+			[
+				"teasht",
+				"_includes/components/teaser/teaser_triple.html"
+			],
+			[
+				"teastriscs",
+				"_includes/components/teaser/_teaser_triple.scss"
 			],
 			[
 				"teassin",
@@ -799,28 +861,12 @@
 				"_includes/components/teaser/_teaser_triple.scss"
 			],
 			[
-				"config",
-				"_includes/_config.scss"
-			],
-			[
-				"confi",
-				"_includes/_config.scss"
-			],
-			[
 				"teasescss",
 				"_includes/components/teaser/_teaser_triple.scss"
 			],
 			[
 				"teasersc",
 				"_includes/components/teaser/_teaser_triple.scss"
-			],
-			[
-				"con",
-				"_includes/_config.scss"
-			],
-			[
-				"head",
-				"_includes/components_base/header/_header.scss"
 			],
 			[
 				"base",
@@ -857,10 +903,6 @@
 			[
 				"com",
 				"_pages\\components\\components.md"
-			],
-			[
-				"nav",
-				"_includes\\components_base\\nav\\nav.html"
 			],
 			[
 				"read",
@@ -983,10 +1025,6 @@
 				"_includes\\components_base\\nav\\navicon_more.svg"
 			],
 			[
-				"foot",
-				"_includes\\components_base\\footer\\footer.html"
-			],
-			[
 				"slide",
 				"_pages\\components\\slider.md"
 			],
@@ -1043,10 +1081,6 @@
 				"_includes\\components\\teaser\\_teaser.scss"
 			],
 			[
-				"index",
-				"index.html"
-			],
-			[
 				"hea",
 				"_includes\\components_base\\header\\header.html"
 			],
@@ -1097,10 +1131,6 @@
 			[
 				"bas",
 				"_includes\\_base.scss"
-			],
-			[
-				"",
-				"_config.yml"
 			],
 			[
 				"in",
@@ -1261,14 +1291,6 @@
 			[
 				"fun",
 				"wp-content\\themes\\WildCommunity\\functions.php"
-			],
-			[
-				"res",
-				"wp-content\\themes\\WildCommunity\\_inc\\css\\responsive.css"
-			],
-			[
-				"defacss",
-				"wp-content\\themes\\WildCommunity\\_inc\\css\\default.css"
 			]
 		],
 		"width": 0.0

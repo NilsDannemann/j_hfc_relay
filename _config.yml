@@ -30,4 +30,5 @@ use_ionicons: 	 false
 # Components
 use_components: 
   breadcrumb: 	true
+  button: 		true
   teaser: 		true

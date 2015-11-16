@@ -17,6 +17,10 @@
 {% if site.use_components.breadcrumb == true %}
 	@import 'components/breadcrumb/breadcrumb';
 {% endif %}
+{% if site.use_components.button == true %}
+	@import 'components/button/button';
+	@import 'components/button/buttongroup';
+{% endif %}
 {% if site.use_components.teaser == true %}
 	@import 'components/teaser/teaser';
 	@import 'components/teaser/teaser_single';
