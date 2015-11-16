@@ -22,9 +22,12 @@ sass:
   sass_dir: _includes
   style: compressed
 
-# Components
+# Scripts
 use_jquery: 	 true
+# Icon Sets
 use_fontawesome: true
+use_ionicons: 	 false
+# Components
 use_components: 
   breadcrumb: 	true
   teaser: 		true

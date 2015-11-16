@@ -31,7 +31,7 @@
 		
 		&:after {
 			content: '\f107';
-			font-family: 'FontAwesome';
+			font-family: 'fontawesome';
 			margin-left: 15px;
 			float: right;
 			color: $color-brand;
@@ -217,7 +217,7 @@
 			// Dropdown Icon
 			&:after {
 				content: '\f107';
-				font-family: 'FontAwesome';
+				font-family: 'fontawesome';
 			}
 		}
 		&__subnav {
