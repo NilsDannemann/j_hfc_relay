@@ -14,9 +14,13 @@
 @import 'base';
 
 /* ===COMPONENTS=== */
-@import 'components/breadcrumb/breadcrumb';
-@import 'components/teaser/teaser';
-@import 'components/teaser/teaser_single';
-@import 'components/teaser/teaser_double';
-@import 'components/teaser/teaser_triple';
+{% if site.use_components.breadcrumb == true %}
+	@import 'components/breadcrumb/breadcrumb';
+{% endif %}
+{% if site.use_components.teaser == true %}
+	@import 'components/teaser/teaser';
+	@import 'components/teaser/teaser_single';
+	@import 'components/teaser/teaser_double';
+	@import 'components/teaser/teaser_triple';
+{% endif %}
 

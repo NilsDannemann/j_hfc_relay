@@ -6,7 +6,9 @@
 </section>
 
 <!-- SCRIPTS: BASE -->
-<script src="{{ site.baseurl }}/assets/js/jquery-2.1.4.min.js"></script>
+{% if site.use_jquery == true %}
+	<script src="{{ site.baseurl }}/assets/js/jquery-2.1.4.min.js"></script>
+{% endif %}
 
 <!-- SCRIPTS: COMPONENTS -->
 {% include components_base/nav/nav.js %} 	

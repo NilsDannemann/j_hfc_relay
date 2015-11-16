@@ -13,8 +13,6 @@ collections:
 # Pages
 include: ['_pages']
 
-# Front Matter Defaults
-
 # General settings
 highlighter: pygments
 markdown: kramdown
@@ -23,3 +21,10 @@ kramdown:
 sass:
   sass_dir: _includes
   style: compressed
+
+# Components
+use_jquery: 	 true
+use_fontawesome: true
+use_components: 
+  breadcrumb: 	true
+  teaser: 		true
