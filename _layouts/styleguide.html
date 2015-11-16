@@ -1,15 +1,24 @@
-{% include components_base/head/head.html styleguide_css=true %}
+<!-- Head -->
+{% include components_base/head/head.html %}
 <body>
+	<!-- Nav -->
 	{% include components_base/nav/nav.html context="/" %}
+	<!-- Slider -->
 	{% include components_base/header/header.html %}
+
+	<!-- Content -->
 	<section class="content">
 		<div class="content__inner">
+			<!-- Content: Sidebar -->
 			{% include components_base/sidebar/sidebar.html %}
+			<!-- Content: Page -->
 			<div class="content__page">
 				{{ content }}
 			</div>
 		</div>
 	</section>
+	
+	<!-- Footer -->
 	{% include components_base/footer/footer.html %}
 </body>
 </html>
