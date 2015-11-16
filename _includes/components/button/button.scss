@@ -4,9 +4,13 @@
 /*
 /* =======================================*/
 .button {
-	color: $color-brand;
+	color: #fff;
+	background: $color-brand;
 	padding: $whitespace/2 $whitespace;
 	margin-bottom: $whitespace;
-	border: $border;
 	border-radius: $border-radius;
+
+	&:hover {
+		background: darken($color-brand, 10%);
+	}
 }
