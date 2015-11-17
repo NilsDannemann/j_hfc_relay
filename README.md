@@ -130,6 +130,14 @@ Optional: Define a **title**, a **link**, a **style** and/or a **color**.
 //width variables
 {% include components/button/button.html title="MyTitle" link="link" style="filled" color="brand" %}
 ```
+##### Buttongroup
+Optional: Define a **style** and/or a **color**.
+```Sass
+//without variables
+{% include components/button/buttongroup.html %}
+//width variables
+{% include components/button/buttongroup.html style="filled" color="brand" %}
+```
 
 #Other (in progress)
 
