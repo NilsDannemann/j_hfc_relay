@@ -123,13 +123,13 @@ You can test the mixins over here:<br>
 Used for building own components.
 
 ##### Button
-```liquid
+Optional: Define a **title**, a **link**, a **style** and/or a **color**.
+```Liquid
 //without variables
 {% include components/button/button.html %}
 //width variables
 {% include components/button/button.html title="Some Title" link="link" style="filled" color="lightgreen" %}
 ```
-Optional: Define a **title**, a **link**, a **style** and/or a **color**.
 
 #Other (in progress)
 
