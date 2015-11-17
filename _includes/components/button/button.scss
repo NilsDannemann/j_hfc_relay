@@ -3,54 +3,94 @@
 /* BUTTON
 /*
 /* =======================================*/
-// Mixin: Set Background & Hover + fitting Text Color
-@mixin button-bg($color) {
+// Mixin: Set Background Color & Hover + fitting Text Color
+@mixin button-background($color) {
 	@if (lightness($color) > 55%) {
 		color: $color-black;
 	}
 	@else {
 		color: #fff;
 	}
-	
 	background: $color;
 	&:hover { background: darken($color, 3%) };
 }
+// Mixin: Set Border Color & Hover + fitting Text Color
+@mixin button-border($color) {
+	background: #fff;
+	color: $color;
+	border: $border;
+	&:hover { 
+		@if (lightness($color) > 55%) {
+			color: $color-black;
+		}
+		@else {
+			color: #fff;
+		}
+		background: $color;
+		border-color: $color;
+	};
+}
 
 .button {
-	@include button-bg($color-grey);
+	@include button-background($color-grey);
 	display: inline-block;
 	padding: $whitespace/2 $whitespace;
 	margin-bottom: $whitespace;
 	border-radius: $border-radius;
 
-	&--brand 		{@include button-bg($color-brand);}
-	&--spaceblack 	{@include button-bg($color-spaceblack);}
-	&--grey 		{@include button-bg($color-grey);}
-	&--spacegrey 	{@include button-bg($color-spacegrey);}
+	&--brand 		{@include button-background($color-brand);}
+	&--spaceblack 	{@include button-background($color-spaceblack);}
+	&--grey 		{@include button-background($color-grey);}
+	&--spacegrey 	{@include button-background($color-spacegrey);}
 
-	&--red 			{@include button-bg($color-red);}
-	&--pink 		{@include button-bg($color-pink);}
-	&--purple 		{@include button-bg($color-purple);}
+	&--red 			{@include button-background($color-red);}
+	&--pink 		{@include button-background($color-pink);}
+	&--purple 		{@include button-background($color-purple);}
 
-	&--deeppurple 	{@include button-bg($color-deeppurple);}
-	&--indigo 		{@include button-bg($color-indigo);}
-	&--blue 		{@include button-bg($color-blue);}
+	&--deeppurple 	{@include button-background($color-deeppurple);}
+	&--indigo 		{@include button-background($color-indigo);}
+	&--blue 		{@include button-background($color-blue);}
 
-	&--lightblue 	{@include button-bg($color-lightblue);}
-	&--cyan 		{@include button-bg($color-cyan);}
-	&--teal 		{@include button-bg($color-teal);}
+	&--lightblue 	{@include button-background($color-lightblue);}
+	&--cyan 		{@include button-background($color-cyan);}
+	&--teal 		{@include button-background($color-teal);}
 
-	&--green 		{@include button-bg($color-green);}
-	&--lightgreen 	{@include button-bg($color-lightgreen);}
-	&--lime 		{@include button-bg($color-lime);}
+	&--green 		{@include button-background($color-green);}
+	&--lightgreen 	{@include button-background($color-lightgreen);}
+	&--lime 		{@include button-background($color-lime);}
 	
-	&--yellow 		{@include button-bg($color-yellow);}
-	&--amber 		{@include button-bg($color-amber);}
-	&--orange 		{@include button-bg($color-orange);}
+	&--yellow 		{@include button-background($color-yellow);}
+	&--amber 		{@include button-background($color-amber);}
+	&--orange 		{@include button-background($color-orange);}
 	
 
 	&--outlined {
-		@include button-bg(#fff);
+		@include button-background(#fff);
 		border: $border;
+
+		&.button--brand 		{@include button-border($color-brand);}
+		&.button--spaceblack 	{@include button-border($color-spaceblack);}
+		&.button--grey 			{@include button-border($color-grey);}
+		&.button--spacegrey 	{@include button-border($color-spacegrey);}
+
+		&.button--red 			{@include button-border($color-red);}
+		&.button--pink 			{@include button-border($color-pink);}
+		&.button--purple 		{@include button-border($color-purple);}
+
+		&.button--deeppurple 	{@include button-border($color-deeppurple);}
+		&.button--indigo 		{@include button-border($color-indigo);}
+		&.button--blue 			{@include button-border($color-blue);}
+
+		&.button--lightblue 	{@include button-border($color-lightblue);}
+		&.button--cyan 			{@include button-border($color-cyan);}
+		&.button--teal 			{@include button-border($color-teal);}
+
+		&.button--green 		{@include button-border($color-green);}
+		&.button--lightgreen 	{@include button-border($color-lightgreen);}
+		&.button--lime 			{@include button-border($color-lime);}
+		
+		&.button--yellow 		{@include button-border($color-yellow);}
+		&.button--amber 		{@include button-border($color-amber);}
+		&.button--orange 		{@include button-border($color-orange);}
 	}
 }
