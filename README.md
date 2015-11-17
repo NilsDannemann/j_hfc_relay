@@ -124,6 +124,8 @@ Parts can be used for building your own components.
 
 ##### Button
 Optional: Define a **title**, a **link**, a **style** and/or a **color**.
+- Style: can be "filled", "outlined" or "none". Default: "filled".
+- Color: can be "brand" or any of the color variables. Default: "grey".
 ```Sass
 //without variables
 {% include components/button/button.html %}
@@ -132,6 +134,8 @@ Optional: Define a **title**, a **link**, a **style** and/or a **color**.
 ```
 ##### Buttongroup
 Optional: Define a **style** and/or a **color**.
+- Style: can be "filled", "outlined" or "none". Default: "filled".
+- Color: can be "brand" or any of the color variables. Default: "grey".
 ```Sass
 //without variables
 {% include components/button/buttongroup.html %}
