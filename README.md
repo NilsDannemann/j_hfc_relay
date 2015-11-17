@@ -113,13 +113,13 @@ You can test the mixins over here:<br>
 [Open Breakpoint-Playground](http://codepen.io/NilsDannemann/pen/gaoZrE?editors=110)
 
 
-#Components
+#Components & Parts
 
 ### Base Components
 
 ### HFC Components
 
-### Component Parts
+### Parts
 Used for building own components.
 
 ##### Button
