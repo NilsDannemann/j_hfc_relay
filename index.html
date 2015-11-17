@@ -9,7 +9,6 @@ children: false
 <h1>Startseite</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, maiores.</p>
 
-{% include components/button/buttongroup.html %}
 
 {% include components/teaser/teaser_triple.html title="Teaser #1" image="placeholder.png" text="lorem" link="#" linktext="Weiterlesen" %}
 {% include components/teaser/teaser_triple.html title="Teaser #2" image="placeholder.png" text="lorem" link="#" linktext="Weiterlesen" %}
@@ -19,3 +18,9 @@ children: false
 {% include components/teaser/teaser_double.html title="Teaser #5" image="placeholder.png" text="lorem" link="#" linktext="Weiterlesen" %}
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus eaque vero perspiciatis sequi at odio mollitia odit tenetur aliquid. Assumenda quo reprehenderit officia illo architecto temporibus, vero vitae tenetur facere.</p>
+
+<section>
+<h2>Other Components</h2>
+{% include components/button/buttongroup.html %}
+{% include components/button/button.html title="This is Dog" link="about" %}
+</section>

@@ -3,14 +3,54 @@
 /* BUTTON
 /*
 /* =======================================*/
+// Mixin: Set Background & Hover + fitting Text Color
+@mixin button-bg($color) {
+    @if (lightness($color) > 40) {
+      color: $color-black;
+    }
+    @else {
+      color: #fff;
+    }
+    background: $color;
+    &:hover { background: darken($color, 3%) };
+}
+
 .button {
-	color: #fff;
-	background: $color-brand;
+	@include button-bg($color-grey);
+	display: inline-block;
+	background: $color-grey;
 	padding: $whitespace/2 $whitespace;
 	margin-bottom: $whitespace;
 	border-radius: $border-radius;
 
-	&:hover {
-		background: darken($color-brand, 10%);
+	&--brand 		{@include button-bg($color-brand);}
+	&--spaceblack 	{@include button-bg($color-spaceblack);}
+	&--grey 		{@include button-bg($color-grey);}
+	&--spacegrey 	{@include button-bg($color-spacegrey);}
+
+	&--red 			{@include button-bg($color-red);}
+	&--pink 		{@include button-bg($color-pink);}
+	&--purple 		{@include button-bg($color-purple);}
+
+	&--deeppurple 	{@include button-bg($color-deeppurple);}
+	&--indigo 		{@include button-bg($color-indigo);}
+	&--blue 		{@include button-bg($color-blue);}
+
+	&--lightblue 	{@include button-bg($color-lightblue);}
+	&--cyan 		{@include button-bg($color-cyan);}
+	&--teal 		{@include button-bg($color-teal);}
+
+	&--green 		{@include button-bg($color-green);}
+	&--lightgreen 	{@include button-bg($color-lightgreen);}
+	&--lime 		{@include button-bg($color-lime);}
+	
+	&--yellow 		{@include button-bg($color-yellow);}
+	&--amber 		{@include button-bg($color-amber);}
+	&--orange 		{@include button-bg($color-orange);}
+	
+
+	&--outlined {
+		@include button-bg(#fff);
+		border: $border;
 	}
 }
