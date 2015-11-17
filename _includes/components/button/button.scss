@@ -5,20 +5,20 @@
 /* =======================================*/
 // Mixin: Set Background & Hover + fitting Text Color
 @mixin button-bg($color) {
-    @if (lightness($color) > 40) {
-      color: $color-black;
-    }
-    @else {
-      color: #fff;
-    }
-    background: $color;
-    &:hover { background: darken($color, 3%) };
+	@if (lightness($color) > 55%) {
+		color: $color-black;
+	}
+	@else {
+		color: #fff;
+	}
+	
+	background: $color;
+	&:hover { background: darken($color, 3%) };
 }
 
 .button {
 	@include button-bg($color-grey);
 	display: inline-block;
-	background: $color-grey;
 	padding: $whitespace/2 $whitespace;
 	margin-bottom: $whitespace;
 	border-radius: $border-radius;

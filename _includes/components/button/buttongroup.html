@@ -1,11 +1,11 @@
 <div class="buttongroup">
-	<a href="#" class="button">
+	<a href="#" class="button {% if include.style == null or include.style == "none" or include.style == "filled" %}{% elsif include.style contains "outlined" %}button--outlined{% endif %} {% if include.color != null or include.style == "none" %}button--{{ include.color }}{% endif %}">
 		Button
 	</a>
-	<a href="#" class="button">
+	<a href="#" class="button {% if include.style == null or include.style == "none" or include.style == "filled" %}{% elsif include.style contains "outlined" %}button--outlined{% endif %} {% if include.color != null or include.style == "none" %}button--{{ include.color }}{% endif %}">
 		Button
 	</a>
-	<a href="#" class="button">
+	<a href="#" class="button {% if include.style == null or include.style == "none" or include.style == "filled" %}{% elsif include.style contains "outlined" %}button--outlined{% endif %} {% if include.color != null or include.style == "none" %}button--{{ include.color }}{% endif %}">
 		Button
 	</a>
 </div>
