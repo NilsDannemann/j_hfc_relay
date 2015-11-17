@@ -124,10 +124,11 @@ Parts can be used for building your own components.
 
 ##### Button
 Optional: Define a **title**, a **link**, a **style** and/or a **color**.
-```Liquid
+```Sass
+//without variables
 {% include components/button/button.html %}
-
-{% include components/button/button.html title="MyTitle" link="link" style="filled" color="lightgreen" %}
+//width variables
+{% include components/button/button.html title="MyTitle" link="link" style="filled" color="brand" %}
 ```
 
 #Other (in progress)
