@@ -120,15 +120,14 @@ You can test the mixins over here:<br>
 ### HFC Components
 
 ### Parts
-Used for building own components.
+Parts can be used for building your own components.
 
 ##### Button
 Optional: Define a **title**, a **link**, a **style** and/or a **color**.
 ```Liquid
-//without variables
 {% include components/button/button.html %}
-//width variables
-{% include components/button/button.html title="Some Title" link="link" style="filled" color="lightgreen" %}
+
+{% include components/button/button.html title="MyTitle" link="link" style="filled" color="lightgreen" %}
 ```
 
 #Other (in progress)
