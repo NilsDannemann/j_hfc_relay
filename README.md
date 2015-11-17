@@ -113,6 +113,24 @@ You can test the mixins over here:<br>
 [Open Breakpoint-Playground](http://codepen.io/NilsDannemann/pen/gaoZrE?editors=110)
 
 
+#Components
+
+### Base Components
+
+### HFC Components
+
+### Component Parts
+Used for building own components.
+
+##### Button
+```liquid
+//without variables
+{% include components/button/button.html %}
+//width variables
+{% include components/button/button.html title="Some Title" link="link" style="filled" color="lightgreen" %}
+```
+Optional: Define a **title**, a **link**, a **style** and/or a **color**.
+
 #Other (in progress)
 
 ###Container
