@@ -33,7 +33,6 @@
 .swiper-slide {
 	background: $color-brand;
 	background: linear-gradient(to bottom, $color-brand 0%, lighten($color-brand, 10%) 100%);
-	color: #fff;
 	text-align: center;
 	line-height: $whitespace*22;
 }

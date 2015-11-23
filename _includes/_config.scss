@@ -74,16 +74,14 @@ $border-radius-size-2	: 4px;
 $border-radius-size-3	: 6px;
 $border-radius-size-4	: 8px;
 $border-radius-size-5	: 10px;
-
 $border-radius			: $border-radius-size-1;
 
-$box-shadow-size-1	: 0px 1px 3px rgba(0, 0, 0, 0.15);
-$box-shadow-size-2	: 0px 2px 5px rgba(0, 0, 0, 0.15);
-$box-shadow-size-3	: 0px 4px 9px rgba(0, 0, 0, 0.15);
-$box-shadow-size-4	: 0px 8px 18px rgba(0, 0, 0, 0.15);
-$box-shadow-size-5	: 0px 16px 32px rgba(0, 0, 0, 0.15);
-
-$box-shadow			: $box-shadow-size-3;
+$box-shadow-size-1	: 0px 1px 3px rgba(0, 0, 0, 0.2);
+$box-shadow-size-2	: 0px 2px 5px rgba(0, 0, 0, 0.2);
+$box-shadow-size-3	: 0px 4px 9px rgba(0, 0, 0, 0.2);
+$box-shadow-size-4	: 0px 8px 18px rgba(0, 0, 0, 0.2);
+$box-shadow-size-5	: 0px 16px 32px rgba(0, 0, 0, 0.2);
+$box-shadow			: $box-shadow-size-2;
 
 @mixin transition() {
 	-webkit-transition: all 125ms ease-in;
