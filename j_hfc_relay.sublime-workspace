@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"color",
+				"color"
+			],
+			[
 				"color-space",
 				"color-spacegrey"
 			],
@@ -13,10 +17,6 @@
 			],
 			[
 				"colo",
-				"color-black"
-			],
-			[
-				"color",
 				"color-black"
 			],
 			[
@@ -235,7 +235,7 @@
 			"file": "_includes/_config.scss",
 			"settings":
 			{
-				"buffer_size": 8665,
+				"buffer_size": 8664,
 				"line_ending": "Unix"
 			}
 		}
@@ -435,29 +435,27 @@
 	"expanded_folders":
 	[
 		"/Users/nilsdannemann/Sites/j_hfc_relay",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_components",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/breadcrumb",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/assets",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/assets/css"
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser"
 	],
 	"file_history":
 	[
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_components/buttongroup.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_components/button.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/_config.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_config.yml",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/index.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/buttongroup.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/buttongroup.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/README.md",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/button.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/button.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/buttongroup.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/buttongroup.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_triple.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_config.yml",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/assets/css/style.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser_double.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/content/_content.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_components/button.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/styleguide.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/button.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/head/head.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/breadcrumb/_breadcrumb.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/nav/_nav.scss",
@@ -470,7 +468,6 @@
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_single.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/footer/footer.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/breadcrumb/breadcrumb.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_triple.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_double.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_components/breadcrumb.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/nav/nav.html",
@@ -571,9 +568,7 @@
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/menu.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_plugins/site_menus.rb",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/mnav/_mnav.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_mask/component_mask.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_sidebar/sidebar.html",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_respond.sublime-snippet"
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_mask/component_mask.html"
 	],
 	"find":
 	{
@@ -592,6 +587,30 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"{",
+			".",
+			"button-bg(",
+			"{",
+			"&",
+			"fase",
+			"% if include.",
+			"fase",
+			"{% if include.style ",
+			"    ",
+			"amber",
+			"yellow",
+			"lime",
+			"deeppurple",
+			"purple",
+			"pink",
+			"red",
+			"spacegrey",
+			"grey",
+			"spaceblack",
+			"brand",
+			"}}/{{",
+			"title",
+			"div",
 			"\"button",
 			"Button",
 			"button",
@@ -695,31 +714,7 @@
 			".open",
 			"$space",
 			"768",
-			"document.body.clientWidth",
-			"body.clientWidth",
-			"clientWidth",
-			"768",
-			".nav",
-			"more",
-			".nav",
-			".nav__item.is-hovered>.nav__subnav",
-			".nav__inner .nav__subnav .nav__item.is-hovered>.nav__subnav",
-			"none",
-			"$property: \"height\"",
-			"property",
-			"all ",
-			"all",
-			", opacity 0.3s ease 0.5s;",
-			"is-hover",
-			"hover",
-			"768",
-			"76",
-			"0.5s",
-			"-out",
-			"0.3",
-			"height",
-			"trans",
-			"parent"
+			"document.body.clientWidth"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -746,15 +741,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8665,
+						"buffer_size": 8664,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								634,
-								634
+								0,
+								0
 							]
 						],
 						"settings":
@@ -828,12 +823,40 @@
 		"selected_items":
 		[
 			[
+				"butt",
+				"_components/button.html"
+			],
+			[
 				"confi",
 				"_includes/_config.scss"
 			],
 			[
-				"group",
+				"read",
+				"README.md"
+			],
+			[
+				"teas",
+				"_includes/components/teaser/teaser_triple.html"
+			],
+			[
+				"grou",
 				"_includes/components/button/buttongroup.scss"
+			],
+			[
+				"group",
+				"_includes/components/button/buttongroup.html"
+			],
+			[
+				"butto",
+				"_includes/components/button/button.html"
+			],
+			[
+				"button",
+				"_includes/components/button/button.scss"
+			],
+			[
+				"inde",
+				"index.html"
 			],
 			[
 				"grp",
@@ -842,14 +865,6 @@
 			[
 				"conten",
 				"_includes/components_base/content/_content.scss"
-			],
-			[
-				"teas",
-				"_includes/components/teaser/_teaser_double.scss"
-			],
-			[
-				"inde",
-				"index.html"
 			],
 			[
 				"cofi",
@@ -972,10 +987,6 @@
 				"_pages\\components\\components.md"
 			],
 			[
-				"read",
-				"README.md"
-			],
-			[
 				"cont",
 				"_includes\\components_base\\content\\_content.scss"
 			],
@@ -1050,10 +1061,6 @@
 			[
 				"comp",
 				"_includes\\styleguide\\component_mask\\_component_mask.scss"
-			],
-			[
-				"butt",
-				"_includes\\components\\button\\_button.scss"
 			],
 			[
 				"abou",
@@ -1162,10 +1169,6 @@
 			[
 				"pro",
 				"_pages\\products.md"
-			],
-			[
-				"button",
-				"_includes\\components\\button\\_button.scss"
 			],
 			[
 				"fot",
@@ -1330,14 +1333,6 @@
 			[
 				"global",
 				"wp-content\\themes\\WildCommunity\\_inc\\global.js"
-			],
-			[
-				"sing",
-				"wp-content\\themes\\WildCommunity\\single.php"
-			],
-			[
-				"headr",
-				"wp-includes\\theme-compat\\header.php"
 			]
 		],
 		"width": 0.0

@@ -11,4 +11,18 @@
 {% endif %}
 
 <!-- SCRIPTS: COMPONENTS -->
-{% include components_base/nav/nav.js %} 	
+{% include components_base/nav/nav.js %}
+
+<script src="{{ site.baseurl }}/assets/js/swiper.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        centeredSlides: true,
+        grabCursor: true,
+        keyboardControl: true,
+        lazyLoading: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        pagination: '.swiper-pagination'
+    });
+</script>
+
