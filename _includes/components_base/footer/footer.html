@@ -13,16 +13,18 @@
 <!-- SCRIPTS: COMPONENTS -->
 {% include components_base/nav/nav.js %}
 
+<!-- SCRIPTS: SLIDER -->
 <script src="{{ site.baseurl }}/assets/js/swiper.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
+    	// direction: 'vertical',
         centeredSlides: true,
-        grabCursor: true,
         keyboardControl: true,
         lazyLoading: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
-        pagination: '.swiper-pagination'
+        pagination: '.swiper-pagination',
+        paginationClickable: true
     });
 </script>
 

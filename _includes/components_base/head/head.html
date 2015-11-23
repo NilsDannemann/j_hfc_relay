@@ -8,14 +8,15 @@
 	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Fonts -->
+	<!-- FONTS -->
 	{% if site.use_fontawesome == true %}
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	{% endif %}
 	{% if site.use_ionicons == true %}
 		<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	{% endif %}
-	<!-- Styles -->
+
+	<!-- STYLES -->
 	{% if include.styleguide_css == true %} 
 		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styleguide.css" media="screen">
 	{% endif %}
