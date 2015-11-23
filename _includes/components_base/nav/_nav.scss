@@ -1,5 +1,7 @@
 .nav {
 	background: #fff;
+	position: relative;
+	z-index: 99;
 	
 	// General: State
 	.is-active {}
