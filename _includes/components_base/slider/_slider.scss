@@ -6,14 +6,15 @@
 
 .slider {
 	width: 100%;
+	color: #fff;
 	height: $whitespace*22;
 	background: $color-brand;
 	background: linear-gradient(to bottom, $color-brand 0%, lighten($color-brand, 10%) 100%);
+	background: radial-gradient(ellipse at 0% 0%, lighten($color-brand, 10%) 0%, $color-brand 50%);
 
 	&__inner {
 		@include container();
 		height: $whitespace*22;
-		color: #fff;
 	}
 }
 
@@ -31,8 +32,6 @@
 	margin: auto;
 }
 .swiper-slide {
-	background: $color-brand;
-	background: linear-gradient(to bottom, $color-brand 0%, lighten($color-brand, 10%) 100%);
 	text-align: center;
 	line-height: $whitespace*22;
 }

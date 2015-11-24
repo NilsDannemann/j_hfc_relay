@@ -47,11 +47,11 @@
 	&--pink 		{@include button-background($color-pink);}
 	&--purple 		{@include button-background($color-purple);}
 
-	&--deeppurple 	{@include button-background($color-deeppurple);}
-	&--indigo 		{@include button-background($color-indigo);}
-	&--blue 		{@include button-background($color-blue);}
-
 	&--lightblue 	{@include button-background($color-lightblue);}
+	&--blue 		{@include button-background($color-blue);}
+	&--darkblue 	{@include button-background($color-darkblue);}
+
+	&--indigo 		{@include button-background($color-indigo);}
 	&--cyan 		{@include button-background($color-cyan);}
 	&--teal 		{@include button-background($color-teal);}
 
@@ -77,11 +77,11 @@
 		&.button--pink 			{@include button-border($color-pink);}
 		&.button--purple 		{@include button-border($color-purple);}
 
-		&.button--deeppurple 	{@include button-border($color-deeppurple);}
-		&.button--indigo 		{@include button-border($color-indigo);}
-		&.button--blue 			{@include button-border($color-blue);}
-
 		&.button--lightblue 	{@include button-border($color-lightblue);}
+		&.button--blue 			{@include button-border($color-blue);}
+		&.button--lightblue 	{@include button-border($color-lightblue);}
+
+		&.button--indigo 		{@include button-border($color-indigo);}
 		&.button--cyan 			{@include button-border($color-cyan);}
 		&.button--teal 			{@include button-border($color-teal);}
 

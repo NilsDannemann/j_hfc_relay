@@ -5,26 +5,17 @@
 	</div>
 </section>
 
-<!-- SCRIPTS: BASE -->
-{% if site.use_jquery == true %}
+{% if include.jquery != false %}
+	<!-- SCRIPTS: JQUERY -->
 	<script src="{{ site.baseurl }}/assets/js/jquery-2.1.4.min.js"></script>
 {% endif %}
 
-<!-- SCRIPTS: COMPONENTS -->
-{% include components_base/nav/nav.js %}
+{% if include.nav_js != false %}
+	<!-- SCRIPTS: NAV -->
+	<script>{% include components_base/nav/nav.js %}</script>
+{% endif %}
 
-<!-- SCRIPTS: SLIDER -->
-<script src="{{ site.baseurl }}/assets/js/swiper.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-    	// direction: 'vertical',
-        centeredSlides: true,
-        keyboardControl: true,
-        lazyLoading: true,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        pagination: '.swiper-pagination',
-        paginationClickable: true
-    });
-</script>
-
+{% if include.slider_js != false %}
+	<!-- SCRIPTS: SLIDER -->
+	<script>{% include components_base/slider/slider.js %}</script>
+{% endif %}

@@ -235,7 +235,63 @@
 			"file": "_includes/_config.scss",
 			"settings":
 			{
-				"buffer_size": 8664,
+				"buffer_size": 8652,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/components_base/head/head.html",
+			"settings":
+			{
+				"buffer_size": 1144,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/components_base/slider/slider.html",
+			"settings":
+			{
+				"buffer_size": 806,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/components_base/footer/footer.html",
+			"settings":
+			{
+				"buffer_size": 818,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/components_base/nav/nav.js",
+			"settings":
+			{
+				"buffer_size": 1217,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/js/swiper.js",
+			"settings":
+			{
+				"buffer_size": 178962,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/components_base/slider/_slider.scss",
+			"settings":
+			{
+				"buffer_size": 16183,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/components_base/nav/_nav.scss",
+			"settings":
+			{
+				"buffer_size": 4408,
 				"line_ending": "Unix"
 			}
 		}
@@ -435,30 +491,34 @@
 	"expanded_folders":
 	[
 		"/Users/nilsdannemann/Sites/j_hfc_relay",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/breadcrumb",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser"
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/nav"
 	],
 	"file_history":
 	[
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/button.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/index.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_config.yml",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/slider.js",
+		"/Users/nilsdannemann/Sites/Swiper/playground/index.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/nav/_nav.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/assets/js/swiper.js",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/slider_init.js",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_components/buttongroup.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_components/button.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/_config.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/index.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/README.md",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/button.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/button.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/buttongroup.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/buttongroup.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_triple.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_config.yml",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/assets/css/style.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser_double.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/content/_content.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/styleguide.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/head/head.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/breadcrumb/_breadcrumb.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/nav/_nav.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/slider.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/full.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/sidebar_double.html",
@@ -564,11 +624,7 @@
 		"/C/Users/Gothmog/Desktop/ResponsiveMultiLevelMenu/css/component.css",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/mnav/mnav.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/css/styleguide.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_plugins/menu_generator.rb",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/menu.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_plugins/site_menus.rb",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/mnav/_mnav.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_mask/component_mask.html"
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_plugins/menu_generator.rb"
 	],
 	"find":
 	{
@@ -587,6 +643,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"deep",
+			"15",
+			"swiper-button-black",
+			".swiper-pagination",
+			"l>.swiper-pagination",
+			"10px",
+			"awes",
+			".swiper-pagination",
+			".swiper-container-horizontal>.swiper-pagination",
+			"  ",
+			"Slide ",
+			"Slide",
+			"slide",
+			"Slide",
+			"build",
+			"llet, s.params.paginationBulletMessage.rep",
+			"3.x.x",
+			"nav",
+			"x.x",
 			"{",
 			".",
 			"button-bg(",
@@ -695,26 +770,7 @@
 			"})\n",
 			"nav__more",
 			"parent",
-			"$transition",
-			"125ms",
-			"135ms",
-			"0.2",
-			"nav__icon",
-			"nav__icon ",
-			".nav__icon ",
-			"example5",
-			".icon",
-			":hover",
-			"span",
-			"menu",
-			".navicon",
-			"navicon",
-			"NavIcon",
-			"navicon",
-			".open",
-			"$space",
-			"768",
-			"document.body.clientWidth"
+			"$transition"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -741,15 +797,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8664,
+						"buffer_size": 8652,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								628,
+								628
 							]
 						],
 						"settings":
@@ -765,6 +821,231 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_includes/components_base/head/head.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								896,
+								896
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_includes/components_base/slider/slider.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 806,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								787,
+								787
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "_includes/components_base/footer/footer.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 818,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								818,
+								818
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "_includes/components_base/nav/nav.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1217,
+								1217
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "assets/js/swiper.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 178962,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								302,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "_includes/components_base/slider/_slider.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16183,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								132,
+								132
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "_includes/components_base/nav/_nav.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4408,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								61,
+								87
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -823,12 +1104,36 @@
 		"selected_items":
 		[
 			[
-				"butt",
-				"_components/button.html"
+				"button",
+				"_includes/components/button/button.scss"
+			],
+			[
+				"nav",
+				"_includes/components_base/nav/_nav.scss"
+			],
+			[
+				"inde",
+				"index.html"
 			],
 			[
 				"confi",
-				"_includes/_config.scss"
+				"_config.yml"
+			],
+			[
+				"butt",
+				"_includes/components/button/button.scss"
+			],
+			[
+				"foot",
+				"_includes/components_base/footer/footer.html"
+			],
+			[
+				"head",
+				"_includes/components_base/head/head.html"
+			],
+			[
+				"sli",
+				"_includes/components_base/slider/slider.html"
 			],
 			[
 				"read",
@@ -851,14 +1156,6 @@
 				"_includes/components/button/button.html"
 			],
 			[
-				"button",
-				"_includes/components/button/button.scss"
-			],
-			[
-				"inde",
-				"index.html"
-			],
-			[
 				"grp",
 				"_includes/components/button/buttongroup.html"
 			],
@@ -875,16 +1172,8 @@
 				"_includes/_config.scss"
 			],
 			[
-				"nav",
-				"_includes/components_base/nav/_nav.scss"
-			],
-			[
 				"brea",
 				"_includes/components/breadcrumb/_breadcrumb.scss"
-			],
-			[
-				"head",
-				"_includes/components_base/head/head.html"
 			],
 			[
 				"config",
@@ -897,10 +1186,6 @@
 			[
 				"teashmtl",
 				"_includes/components/teaser/teaser_single.html"
-			],
-			[
-				"foot",
-				"_includes/components_base/footer/footer.html"
 			],
 			[
 				"",
@@ -1329,10 +1614,6 @@
 			[
 				"heade",
 				"wp-content\\themes\\WildCommunity\\header.php"
-			],
-			[
-				"global",
-				"wp-content\\themes\\WildCommunity\\_inc\\global.js"
 			]
 		],
 		"width": 0.0
