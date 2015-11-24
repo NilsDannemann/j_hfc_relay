@@ -302,6 +302,125 @@ $teaser-lines-to-show: 3;
 
 /* =======================================*/
 /*
+/* CSS ARROWS
+/* 
+/* =======================================*/
+
+/* =======================================*/
+/* ARROW UP - use: @include arrow-up($color, $size, $align) {...} 
+/* =======================================*/
+@mixin arrow-up($color: $color-brand, $size: $whitespace/2, $align: center) {
+	position: relative;
+	
+	&:before{
+		content: " ";
+		height: 0;
+		width: 0;
+		border: solid transparent;
+		bottom: 100%;
+		pointer-events: none;
+		position: absolute;
+		border-bottom-color: $color;
+		border-width: $size;
+		
+		// Alignment
+		@if $align == 'center' {
+			left: 50%;
+			margin-left: -($size);
+		} @else if $align == 'left' {
+			left: $whitespace;
+		} @else if $align == 'right' {
+			right: $whitespace;
+		}
+	}
+}
+/* =======================================*/
+/* ARROW DOWN - use: @include arrow-down($color, $size, $align) {...} 
+/* =======================================*/
+@mixin arrow-down($color: $color-brand, $size: $whitespace/2, $align: center) {
+	position: relative;
+	
+	&:before{
+		content: " ";
+		height: 0;
+		width: 0;
+		border: solid transparent;
+		top: 100%;
+		pointer-events: none;
+		position: absolute;
+		border-top-color: $color;
+		border-width: $size;
+		
+		// Alignment
+		@if $align == 'center' {
+			left: 50%;
+			margin-left: -($size);
+		} @else if $align == 'left' {
+			left: $whitespace;
+		} @else if $align == 'right' {
+			right: $whitespace;
+		}
+	}
+}
+/* =======================================*/
+/* ARROW LEFT - use: @include arrow-left($color, $size, $align) {...} 
+/* =======================================*/
+@mixin arrow-left($color: $color-brand, $size: $whitespace/2, $align: center) {
+	position: relative;
+	
+	&:before{
+		content: " ";
+		height: 0;
+		width: 0;
+		border: solid transparent;
+		right: 100%;
+		pointer-events: none;
+		position: absolute;
+		border-right-color: $color;
+		border-width: $size;
+		
+		// Alignment
+		@if $align == 'center' {
+			top: 50%;
+			margin-top: -($size);
+		} @else if $align == 'top' {
+			top: $whitespace;
+		} @else if $align == 'bottom' {
+			bottom: $whitespace;
+		}
+	}
+}
+/* =======================================*/
+/* ARROW RIGHT - use: @include arrow-right($color, $size, $align) {...} 
+/* =======================================*/
+@mixin arrow-right($color: $color-brand, $size: $whitespace/2, $align: center) {
+	position: relative;
+	
+	&:before{
+		content: " ";
+		height: 0;
+		width: 0;
+		border: solid transparent;
+		left: 100%;
+		pointer-events: none;
+		position: absolute;
+		border-left-color: $color;
+		border-width: $size;
+		
+		// Alignment
+		@if $align == 'center' {
+			top: 50%;
+			margin-top: -($size);
+		} @else if $align == 'top' {
+			top: $whitespace;
+		} @else if $align == 'bottom' {
+			bottom: $whitespace;
+		}
+	}
+}
+
+/* =======================================*/
+/*
 /* CLEARFIX
 /* 
 /* =======================================*/
