@@ -3,9 +3,9 @@
 In progress.
 
 # Arrows
-Implement css-arrows via sass-mixins.<br>
+Use css-arrows via sass-mixins.<br>
 
-###Basic Examples
+###Examples
 
 ```sass
 // centered up-arrow
@@ -25,7 +25,7 @@ This approach has the following advantages over conventional grids:<br>
 - **Cleanliness** - keep your Markup clean and readable
 - **Simplicity** - keep all styles in one place (no separation of concerns)
 
-###Basic Examples
+###Examples
 
 ```sass
 @include column('1/4');
@@ -66,7 +66,7 @@ Four sets of sass-mixins let you control the responsive flow of your document:
 - **At** a certain breakpoint (``` @include at(breakpoint-name) { ... } ```)
 - **From** a certain breakpoint (``` @include from(breakpoint-name, breakpoint-name) { ... } ```)
 
-###Basic Examples
+###Examples
 
 **Above** a certain breakpoint (mobile-first)
 ```sass

@@ -387,6 +387,50 @@ $teaser-lines-to-show: 3;
 
 /* =======================================*/
 /*
+/* QUANTITY QUERIES
+/* 
+/* =======================================*/
+
+/* =======================================*/
+/* AT LEAST - use: @include at-least(4) {...}; 
+/* =======================================*/
+@mixin at-least($number: 4) {
+	&:nth-last-child(n + #{$number}), 
+	&:nth-last-child(n + #{$number}) ~ & {
+		@content;
+	}
+}
+/* =======================================*/
+/* AT MOST - use: @include at-most(4) {...}; 
+/* =======================================*/
+@mixin at-most($number: 4) {
+	&:nth-last-child(-n + #{$number}):first-child, 
+	&:nth-last-child(-n + #{$number}):first-child ~ & {
+		@content;
+	}
+}
+/* =======================================*/
+/* AT BETWEEN - use: @include at-between(2, 4) {...}; 
+/* =======================================*/
+@mixin at-between($number1: 2, $number2: 4) {
+	&:nth-last-child(n + #{$number1}):nth-last-child(-n + #{$number2}):first-child, 
+	&:nth-last-child(n + #{$number1}):nth-last-child(-n + #{$number2}):first-child ~ & { 
+		@content;
+	}
+}
+/* =======================================*/
+/* AT EXACTLY - use: @include at-exactly(4) {...}; 
+/* =======================================*/
+@mixin at-exactly($number: 4) {
+	&:nth-last-child(n + #{$number}):nth-last-child(-n + #{$number}):first-child, 
+	&:nth-last-child(n + #{$number}):nth-last-child(-n + #{$number}):first-child ~ & { 
+		@content;
+	}
+}
+
+
+/* =======================================*/
+/*
 /* CLEARFIX
 /* 
 /* =======================================*/
