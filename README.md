@@ -8,7 +8,9 @@ Use position relative, absolute or fixed in shorthand.<br>
 ###Examples
 
 ```sass
+// shorthand
 @include position(relative, 10px, 0, 0, 0);
+
 // returns
 position: relative;
 top: 10px;
