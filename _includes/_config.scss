@@ -328,8 +328,10 @@ $teaser-lines-to-show: 3;
 
 			// Alignment
 			@if $align == 'center' {
+				top: inherit;
 				left: 50%;
-				margin-left: -($size);
+				right: inherit;
+				margin: 0 0 0 (-$size);
 			} @else if $align == 'left' {
 				left: $whitespace;
 			} @else if $align == 'right' {
@@ -344,7 +346,9 @@ $teaser-lines-to-show: 3;
 			// Alignment
 			@if $align == 'center' {
 				left: 50%;
-				margin-left: -($size);
+				bottom: inherit;
+				right: inherit;
+				margin: 0 0 0 (-$size);
 			} @else if $align == 'left' {
 				left: $whitespace;
 			} @else if $align == 'right' {
@@ -359,7 +363,9 @@ $teaser-lines-to-show: 3;
 			// Alignment
 			@if $align == 'center' {
 				top: 50%;
-				margin-top: -($size);
+				left: inherit;
+				bottom: inherit;
+				margin: (-$size) 0 0 0;
 			} @else if $align == 'top' {
 				top: $whitespace;
 			} @else if $align == 'bottom' {
@@ -374,7 +380,9 @@ $teaser-lines-to-show: 3;
 			// Alignment
 			@if $align == 'center' {
 				top: 50%;
-				margin-top: -($size);
+				bottom: inherit;
+				right: inherit;
+				margin: (-$size) 0 0 0;
 			} @else if $align == 'top' {
 				top: $whitespace;
 			} @else if $align == 'bottom' {
