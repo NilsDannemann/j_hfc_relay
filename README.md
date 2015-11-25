@@ -2,6 +2,19 @@
 
 In progress.
 
+# Arrows
+Implement css-arrows via sass-mixins.<br>
+
+###Basic Examples
+
+```sass
+// centered up-arrow
+@include arrow(); 
+// right-aligned down-arrow
+@include arrow($direction: down, $align: right);
+// top-aligned left-arrow with specific color & size
+@include arrow($direction: left, $align: top, $color: #eee, $size: 10px);
+```
 
 # The Grid
 The Grid uses flexible sass-mixins instead of fixed classes.<br>
