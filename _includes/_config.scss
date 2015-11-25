@@ -431,6 +431,24 @@ $teaser-lines-to-show: 3;
 
 /* =======================================*/
 /*
+/* POSITION SHORTHAND
+/* 
+/* =======================================*/
+
+/* =======================================*/
+/* POSITION - use: @include position(relative, 5px, 5px, 5px, 5px); 
+/* =======================================*/
+@mixin position($type: relative, $top: 0, $right: 0, $bottom: 0, $left: 0) {
+	position: $type;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+
+/* =======================================*/
+/*
 /* CLEARFIX
 /* 
 /* =======================================*/

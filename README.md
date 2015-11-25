@@ -2,6 +2,21 @@
 
 In progress.
 
+# Position Shorthand
+Use position relative, absolute or fixed in shorthand.<br>
+
+###Examples
+
+```sass
+@include position(relative, 10px, 0, 0, 0);
+// returns
+position: relative;
+top: 10px;
+right: 0;
+bottom: 0;
+left: 0;
+```
+
 # Arrows
 Use css-arrows via sass-mixins.<br>
 
