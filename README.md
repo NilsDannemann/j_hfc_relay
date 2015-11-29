@@ -83,13 +83,16 @@ Four sets of sass-mixins let you control the responsive flow of your document:
 - **At** a certain breakpoint (``` @include at(breakpoint-name) { ... } ```)
 - **From** a certain breakpoint (``` @include from(breakpoint-name, breakpoint-name) { ... } ```)
 
+You can also pass any px value instead of a breakpoint-name,
+
 ###Examples
 
 **Above** a certain breakpoint (mobile-first)
 ```sass
 .foo {
 	//styles
-	@include above(xs) { ... }				// breakpoint-names: xs, s, m, l, xl, xxl
+	@include above(xs) { ... }				// accpets breakpoint-names: xs, s, m, l, xl, xxl
+	@include above(500px) { ... }			// or specific px value
 }
 ```
 
@@ -97,7 +100,8 @@ Four sets of sass-mixins let you control the responsive flow of your document:
 ```sass
 .foo {
 	//styles
-	@include below(xs) { ... }				// breakpoint-names: xs, s, m, l, xl, xxl
+	@include below(xs) { ... }				// accpets breakpoint-names: xs, s, m, l, xl, xxl
+	@include below(500px) { ... }			// or specific px value
 }
 ```
 
@@ -105,7 +109,8 @@ Four sets of sass-mixins let you control the responsive flow of your document:
 ```sass
 .foo {
 	//styles
-	@include at(xs) { ... }					// breakpoint-names: xs, s, m, l, xl, xxl
+	@include at(xs) { ... }					// accepts breakpoint-names: xs, s, m, l, xl, xxl
+	@include at(500px) { ... }				// or specific px value
 }
 ```
 
@@ -113,7 +118,8 @@ Four sets of sass-mixins let you control the responsive flow of your document:
 ```sass
 .foo {
 	//styles
-	@include between(xs, m) { ... }			// breakpoint-names: xs, s, m, l, xl, xxl
+	@include between(xs, m) { ... }			// accepts breakpoint-names: xs, s, m, l, xl, xxl
+	@include between(500px, 900px) { ... }	// or two specific px values
 }
 ```
 

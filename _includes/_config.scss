@@ -29,7 +29,7 @@ $color-yellow		: #FFEB3B;
 $color-amber		: #FFC107;
 $color-orange		: #FF9800;
 
-$color-brand: $color-darkblue;
+$color-brand: $color-spaceblack;
 
 /* =======================================*/
 /*
@@ -106,6 +106,48 @@ $teaser-lines-to-show: 3;
 /* =======================================*/
 
 /* =======================================*/
+/* AT - use: @include at($name) {...} 
+/* =======================================*/
+@mixin at($name) {
+	@if $name == 'xs' and map-has-key($breakpoints, $name) and $responsive == true {
+		@media only screen and (max-width: map-get($breakpoints, 's')) {
+			@content;
+		}
+	}
+	@else if $name == 's' and map-has-key($breakpoints, $name) and $responsive == true {
+		@media only screen and (min-width: map-get($breakpoints, 's')) and (max-width: map-get($breakpoints, 'm')) {
+			@content;
+		}
+	}
+	@else if $name == 'm' and map-has-key($breakpoints, $name) and $responsive == true {
+		@media only screen and (min-width: map-get($breakpoints, 'm')) and (max-width: map-get($breakpoints, 'l')) {
+			@content;
+		}
+	}
+	@else if $name == 'l' and map-has-key($breakpoints, $name) and $responsive == true {
+		@media only screen and (min-width: map-get($breakpoints, 'l')) and (max-width: map-get($breakpoints, 'xl')) {
+			@content;
+		}
+	}
+	@else if $name == 'xl' and map-has-key($breakpoints, $name) and $responsive == true {
+		@media only screen and (min-width: map-get($breakpoints, 'xl')) and (max-width: map-get($breakpoints, 'xxl')) {
+			@content;
+		}
+	}
+	@else if $name == 'xxl' and map-has-key($breakpoints, $name) and $responsive == true {
+		@media only screen and (min-width: map-get($breakpoints, 'xxl')) {
+			@content;
+		}
+	}
+	// at specific px width
+	@else if $responsive == true {
+		@media only screen and (min-width: $name) and (max-width: $name) {
+			@content;
+		}
+	}
+}
+
+/* =======================================*/
 /* ABOVE - use: @include above($name) {...} 
 /* =======================================*/
 @mixin above($name) {
@@ -114,28 +156,74 @@ $teaser-lines-to-show: 3;
 			@content;
 		}
 	}
-	@if $name == 's' and map-has-key($breakpoints, $name) and $responsive == true {
+	@else if $name == 's' and map-has-key($breakpoints, $name) and $responsive == true {
 		@media only screen and (min-width: map-get($breakpoints, 's')) {
 			@content;
 		}
 	}
-	@if $name == 'm' and map-has-key($breakpoints, $name) and $responsive == true {
+	@else if $name == 'm' and map-has-key($breakpoints, $name) and $responsive == true {
 		@media only screen and (min-width: map-get($breakpoints, 'm')) {
 			@content;
 		}
 	}
-	@if $name == 'l' and map-has-key($breakpoints, $name) and $responsive == true {
+	@else if $name == 'l' and map-has-key($breakpoints, $name) and $responsive == true {
 		@media only screen and (min-width: map-get($breakpoints, 'l')) {
 			@content;
 		}
 	}
-	@if $name == 'xl' and map-has-key($breakpoints, $name) and $responsive == true {
+	@else if $name == 'xl' and map-has-key($breakpoints, $name) and $responsive == true {
 		@media only screen and (min-width: map-get($breakpoints, 'xl')) {
 			@content;
 		}
 	}
-	@if $name == 'xxl' and map-has-key($breakpoints, $name) and $responsive == true {
+	@else if $name == 'xxl' and map-has-key($breakpoints, $name) and $responsive == true {
 		@media only screen and (min-width: map-get($breakpoints, 'xxl')) {
+			@content;
+		}
+	}
+	// above specific px width
+	@else if $responsive == true {
+		@media only screen and (min-width: $name) {
+			@content;
+		}
+	}
+}
+
+/* =======================================*/
+/* BELOW - use: @include below($name) {...} 
+/* =======================================*/
+@mixin below($name) {
+	@if $name == 'xs' and map-has-key($breakpoints, $name) and $responsive == true {
+		// Below xs not possible
+	}
+	@else if $name == 's' and map-has-key($breakpoints, $name) and $responsive == true {
+		@media only screen and (max-width: map-get($breakpoints, 'm')) {
+			@content;
+		}
+	}
+	@else if $name == 'm' and map-has-key($breakpoints, $name) and $responsive == true {
+		@media only screen and (max-width: map-get($breakpoints, 'l')) {
+			@content;
+		}
+	}
+	@else if $name == 'l' and map-has-key($breakpoints, $name) and $responsive == true {
+		@media only screen and (max-width: map-get($breakpoints, 'xl')) {
+			@content;
+		}
+	}
+	@else if $name == 'xl' and map-has-key($breakpoints, $name) and $responsive == true {
+		@media only screen and (max-width: map-get($breakpoints, 'xxl')) {
+			@content;
+		}
+	}
+	@else if $name == 'xxl' and map-has-key($breakpoints, $name) and $responsive == true {
+		@media only screen {
+			@content;
+		}
+	}
+	// below specific px width
+	@else if $responsive == true {
+		@media only screen and (max-width: $name) {
 			@content;
 		}
 	}
@@ -150,76 +238,14 @@ $teaser-lines-to-show: 3;
 			@content;
 		}
 	}
-}
-/* =======================================*/
-/* AT - use: @include at($name) {...} 
-/* =======================================*/
-@mixin at($name) {
-	@if $name == 'xs' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen and (max-width: map-get($breakpoints, 's')) {
-			@content;
-		}
-	}
-	@if $name == 's' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen and (min-width: map-get($breakpoints, 's')) and (max-width: map-get($breakpoints, 'm')) {
-			@content;
-		}
-	}
-	@if $name == 'm' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen and (min-width: map-get($breakpoints, 'm')) and (max-width: map-get($breakpoints, 'l')) {
-			@content;
-		}
-	}
-	@if $name == 'l' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen and (min-width: map-get($breakpoints, 'l')) and (max-width: map-get($breakpoints, 'xl')) {
-			@content;
-		}
-	}
-	@if $name == 'xl' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen and (min-width: map-get($breakpoints, 'xl')) and (max-width: map-get($breakpoints, 'xxl')) {
-			@content;
-		}
-	}
-	@if $name == 'xxl' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen and (min-width: map-get($breakpoints, 'xxl')) {
+	// between specific px widths
+	@else if $responsive == true {
+		@media only screen and (min-width: $name1) and (max-width: $name2) {
 			@content;
 		}
 	}
 }
 
-/* =======================================*/
-/* BELOW - use: @include below($name) {...} 
-/* =======================================*/
-@mixin below($name) {
-	@if $name == 'xs' and map-has-key($breakpoints, $name) and $responsive == true {
-		// Below xs not possible
-	}
-	@if $name == 's' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen and (max-width: map-get($breakpoints, 'm')) {
-			@content;
-		}
-	}
-	@if $name == 'm' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen and (max-width: map-get($breakpoints, 'l')) {
-			@content;
-		}
-	}
-	@if $name == 'l' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen and (max-width: map-get($breakpoints, 'xl')) {
-			@content;
-		}
-	}
-	@if $name == 'xl' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen and (max-width: map-get($breakpoints, 'xxl')) {
-			@content;
-		}
-	}
-	@if $name == 'xxl' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen {
-			@content;
-		}
-	}
-}
 
 /* =======================================*/
 /*
