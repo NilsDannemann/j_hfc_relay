@@ -55,7 +55,7 @@
 						{% if p.children == true %}
 							{% comment %}Increment Level{% endcomment %}
 							{% assign level = level | plus: 1 %}
-							{% include components_base/nav/nav.html context=p.url level=level %}
+							{% include components_base/navigation/navigation.html context=p.url level=level %}
 						{% endif %}
 					</li>
 				{% endunless %}

@@ -5,6 +5,25 @@ baseurl: "/j_hfc_relay"
 url: ""
 github_repo: https://github.com/NilsDannemann/j_hfc_relay/blob/gh-pages
 
+# Icon Sets
+use_fontawesome: true
+use_ionicons: 	 false
+
+# Base Components
+use_base_components: 
+  typography:   true
+  navigation:   true
+  slider:       true
+  content:      true
+  sidebar:      true
+  footer:       true
+  
+# Components
+use_components: 
+  breadcrumb: 	true
+  button: 		true
+  teaser: 		true
+
 # Collections
 collections:
   components:
@@ -21,12 +40,3 @@ kramdown:
 sass:
   sass_dir: _includes
   style: compressed
-
-# Icon Sets
-use_fontawesome: true
-use_ionicons: 	 false
-# Components
-use_components: 
-  breadcrumb: 	true
-  button: 		true
-  teaser: 		true

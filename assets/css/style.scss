@@ -13,6 +13,26 @@
 @import 'config';
 @import 'base';
 
+/* ===BASE COMPONENTS=== */
+{% if site.use_base_components.typography == true %}
+	@import 'components_base/typography/typography';
+{% endif %}
+{% if site.use_base_components.navigation == true %}
+	@import 'components_base/navigation/navigation';
+{% endif %}
+{% if site.use_base_components.slider == true %}
+	@import 'components_base/slider/slider';
+{% endif %}
+{% if site.use_base_components.content == true %}
+	@import 'components_base/content/content';
+{% endif %}
+{% if site.use_base_components.sidebar == true %}
+	@import 'components_base/sidebar/sidebar';
+{% endif %}
+{% if site.use_base_components.footer == true %}
+	@import 'components_base/footer/footer';
+{% endif %}
+
 /* ===COMPONENTS=== */
 {% if site.use_components.breadcrumb == true %}
 	@import 'components/breadcrumb/breadcrumb';

@@ -31,6 +31,8 @@ $color-orange		: #FF9800;
 
 $color-brand: $color-spaceblack;
 
+
+
 /* =======================================*/
 /*
 /* LAYOUT
@@ -50,6 +52,8 @@ $breakpoints: (
 	'xxl'	: 1180px
 );
 
+
+
 /* =======================================*/
 /*
 /* TYPOGRAPHY
@@ -60,6 +64,8 @@ $font-family	: 'Helvetica', 'Arial', sans-serif;
 $font-size		: 14px;
 $line-height	: 1.6;
 $color-text		: $color-black;
+
+
 
 /* =======================================*/
 /*
@@ -91,6 +97,8 @@ $box-shadow			: $box-shadow-size-2;
 	transition: all 125ms ease-in;
 }
 
+
+
 /* =======================================*/
 /*
 /* COMPONENTS
@@ -98,6 +106,111 @@ $box-shadow			: $box-shadow-size-2;
 /* =======================================*/
 
 $teaser-lines-to-show: 3;
+
+
+
+/* =======================================*/
+/*
+/* CONTAINER
+/* 
+/* =======================================*/
+
+@mixin container() {
+	@if $responsive == true {
+		min-width: 0;
+	} 
+	@else {
+		min-width: map-get($breakpoints, xl);
+	}
+	max-width: map-get($breakpoints, xxl);
+	margin: 0 auto;
+}
+
+
+
+/* =======================================*/
+/*
+/* FLEXBOX
+/* 
+/* =======================================*/
+
+@mixin flexbox($type: null, $direction: null, $wrap: null, $justify: null, $align: null) {
+	// Flex or Inline-Flex
+	@if $type == 'inline-flex' {
+		display: inline-flex;
+		margin-right: -4px; //fix for: invisible spacing for inline-block
+	} @else {
+		display: flex;
+	} 
+	// Flex Direction
+	@if $direction == 'column' or $direction == 'col' {
+		flex-direction: column;
+	} @else {
+		flex-direction: row;
+	} 
+	// Flex Wrap
+	@if $wrap == 'nowrap' or $wrap == 'no-wrap' {
+		flex-wrap: nowrap;
+	} @else {
+		flex-wrap: wrap;
+	}
+	// Justify Content
+	@if $justify == null or $justify == 'space-between' or $justify == 'spacebetween' {
+		justify-content: space-between;
+	} @else if $justify == 'space-around' or $justify == 'spacearound' {
+		justify-content: space-around;
+	} @else if $justify == 'center' {
+		justify-content: center;
+	} @else if $justify == 'flex-start' or $justify == 'flexstart' or $justify == 'start'{
+		justify-content: flex-start;
+	} @else if $justify == 'flex-end' or $justify == 'flexend' or $justify == 'end' {
+		justify-content: flex-end;
+	}
+	// Align items
+	@if $align == null or $align == 'stretch' {
+		align-items: stretch;
+	} @else if $align == null or $align == 'baseline' {
+		align-items: baseline;
+	} @else if $align == 'center' {
+		align-items: center;
+	} @else if $align == 'flex-start' or $align == 'flexstart' or $align == 'start'{
+		align-items: flex-start;
+	} @else if $align == 'flex-end' or $align == 'flexend' or $align == 'end' {
+		align-items: flex-end;
+	}
+}
+
+
+
+/* =======================================*/
+/*
+/* GRID
+/*
+/* =======================================*/
+
+@mixin column($fraction: '1/1', $gutter: null) {
+	// No gutter (default)
+	@if ($gutter == null) {
+		width: calc(99.999999% * #{$fraction});
+	} 
+	@else if ($gutter == 0px or $gutter == false or $gutter == none) {
+		width: calc(99.999999% * #{$fraction});
+		margin-bottom: 0;
+	} 
+	// Base gutter
+	@else if ($gutter == true or $gutter == base) {
+		$gutter: $whitespace;
+		width: calc(99.999999% * #{$fraction} - (#{$gutter} - #{$gutter} * #{$fraction}));
+		margin-bottom: $whitespace;
+	}
+	// Specified gutter in px or %
+	@else {
+		width: calc(99.999999% * #{$fraction} - (#{$gutter} - #{$gutter} * #{$fraction}));
+		margin-bottom: $gutter;
+	}
+}
+
+
 
 /* =======================================*/
 /*
@@ -247,94 +360,58 @@ $teaser-lines-to-show: 3;
 }
 
 
+
 /* =======================================*/
 /*
-/* CONTAINER
+/* QUANTITY QUERIES
 /* 
 /* =======================================*/
 
-@mixin container() {
-	@if $responsive == true {
-		min-width: 0;
-	} 
-	@else {
-		min-width: map-get($breakpoints, xl);
+/* =======================================*/
+/* AT LEAST - use: @include at-least(4) {...}; 
+/* =======================================*/
+@mixin at-least($number: 4) {
+	&:nth-last-child(n + #{$number}), 
+	&:nth-last-child(n + #{$number}) ~ & {
+		@content;
 	}
-	max-width: map-get($breakpoints, xxl);
-	margin: 0 auto;
 }
-
 /* =======================================*/
-/*
-/* FLEXBOX
-/* 
+/* AT MOST - use: @include at-most(4) {...}; 
 /* =======================================*/
-
-@mixin flexbox($type: null, $direction: null, $wrap: null, $justify: null, $align: null) {
-	// Flex or Inline-Flex
-	@if $type == 'inline-flex' {
-		display: inline-flex;
-		margin-right: -4px; //fix for: invisible spacing for inline-block
-	} @else {
-		display: flex;
-	} 
-	// Flex Direction
-	@if $direction == 'column' or $direction == 'col' {
-		flex-direction: column;
-	} @else {
-		flex-direction: row;
-	} 
-	// Flex Wrap
-	@if $wrap == 'nowrap' or $wrap == 'no-wrap' {
-		flex-wrap: nowrap;
-	} @else {
-		flex-wrap: wrap;
+@mixin at-most($number: 4) {
+	&:nth-last-child(-n + #{$number}):first-child, 
+	&:nth-last-child(-n + #{$number}):first-child ~ & {
+		@content;
 	}
-	// Justify Content
-	@if $justify == null or $justify == 'space-between' or $justify == 'spacebetween' {
-		justify-content: space-between;
-	} @else if $justify == 'space-around' or $justify == 'spacearound' {
-		justify-content: space-around;
-	} @else if $justify == 'center' {
-		justify-content: center;
-	} @else if $justify == 'flex-start' or $justify == 'flexstart' or $justify == 'start'{
-		justify-content: flex-start;
-	} @else if $justify == 'flex-end' or $justify == 'flexend' or $justify == 'end' {
-		justify-content: flex-end;
+}
+/* =======================================*/
+/* AT BETWEEN - use: @include at-between(2, 4) {...}; 
+/* =======================================*/
+@mixin at-between($number1: 2, $number2: 4) {
+	&:nth-last-child(n + #{$number1}):nth-last-child(-n + #{$number2}):first-child, 
+	&:nth-last-child(n + #{$number1}):nth-last-child(-n + #{$number2}):first-child ~ & { 
+		@content;
 	}
-	// Align items
-	@if $align == null or $align == 'stretch' {
-		align-items: stretch;
-	} @else if $align == null or $align == 'baseline' {
-		align-items: baseline;
-	} @else if $align == 'center' {
-		align-items: center;
-	} @else if $align == 'flex-start' or $align == 'flexstart' or $align == 'start'{
-		align-items: flex-start;
-	} @else if $align == 'flex-end' or $align == 'flexend' or $align == 'end' {
-		align-items: flex-end;
+}
+/* =======================================*/
+/* AT EXACTLY - use: @include at-exactly(4) {...}; 
+/* =======================================*/
+@mixin at-exactly($number: 4) {
+	&:nth-last-child(n + #{$number}):nth-last-child(-n + #{$number}):first-child, 
+	&:nth-last-child(n + #{$number}):nth-last-child(-n + #{$number}):first-child ~ & { 
+		@content;
 	}
 }
 
-/* =======================================*/
-/*
-/* DEVMODE
-/* 
-/* =======================================*/
 
-@if $use-devmode == true {
-	* {background: rgba($color-brand, 0.075) !important;}
-} 
 
 /* =======================================*/
 /*
-/* CSS ARROWS
+/* CSS ARROW
 /* 
 /* =======================================*/
 
-/* =======================================*/
-/* ARROW - use: @include arrow($direction, $color, $size, $align); 
-/* =======================================*/
 @mixin arrow($direction: up, $align: center, $color: $color-brand, $size: $whitespace/2) {
 	position: relative;
 	
@@ -419,49 +496,6 @@ $teaser-lines-to-show: 3;
 }
 
 
-/* =======================================*/
-/*
-/* QUANTITY QUERIES
-/* 
-/* =======================================*/
-
-/* =======================================*/
-/* AT LEAST - use: @include at-least(4) {...}; 
-/* =======================================*/
-@mixin at-least($number: 4) {
-	&:nth-last-child(n + #{$number}), 
-	&:nth-last-child(n + #{$number}) ~ & {
-		@content;
-	}
-}
-/* =======================================*/
-/* AT MOST - use: @include at-most(4) {...}; 
-/* =======================================*/
-@mixin at-most($number: 4) {
-	&:nth-last-child(-n + #{$number}):first-child, 
-	&:nth-last-child(-n + #{$number}):first-child ~ & {
-		@content;
-	}
-}
-/* =======================================*/
-/* AT BETWEEN - use: @include at-between(2, 4) {...}; 
-/* =======================================*/
-@mixin at-between($number1: 2, $number2: 4) {
-	&:nth-last-child(n + #{$number1}):nth-last-child(-n + #{$number2}):first-child, 
-	&:nth-last-child(n + #{$number1}):nth-last-child(-n + #{$number2}):first-child ~ & { 
-		@content;
-	}
-}
-/* =======================================*/
-/* AT EXACTLY - use: @include at-exactly(4) {...}; 
-/* =======================================*/
-@mixin at-exactly($number: 4) {
-	&:nth-last-child(n + #{$number}):nth-last-child(-n + #{$number}):first-child, 
-	&:nth-last-child(n + #{$number}):nth-last-child(-n + #{$number}):first-child ~ & { 
-		@content;
-	}
-}
-
 
 /* =======================================*/
 /*
@@ -469,9 +503,6 @@ $teaser-lines-to-show: 3;
 /* 
 /* =======================================*/
 
-/* =======================================*/
-/* POSITION - use: @include position(relative, 5px, 5px, 5px, 5px); 
-/* =======================================*/
 @mixin position($type: relative, $top: 0, $right: 0, $bottom: 0, $left: 0) {
 	position: $type;
 	top: $top;
@@ -479,6 +510,7 @@ $teaser-lines-to-show: 3;
 	bottom: $bottom;
 	left: $left;
 }
+
 
 
 /* =======================================*/
@@ -498,3 +530,14 @@ $teaser-lines-to-show: 3;
 	}
 }
 
+
+
+/* =======================================*/
+/*
+/* DEVMODE
+/* 
+/* =======================================*/
+
+@if $use-devmode == true {
+	* {background: rgba($color-brand, 0.075) !important;}
+} 
