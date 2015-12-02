@@ -23,22 +23,22 @@
 	Top Level
 	{% endcomment %}
 	{% if include.level == null %}
-	<nav class="nav">
-		<a class="nav__icon" href="#">
+	<nav class="navigation">
+		<a class="navigation__icon" href="#">
 			<i></i>Navigation
 		</a>
-		<ul class="nav__inner">
+		<ul class="navigation__inner">
 	{% else %}
 	{% comment %}
 	Sub Level
 	{% endcomment %}
-	<ul class="nav__subnav">
+	<ul class="navigation__subnav">
 	{% endif %}
 			
 		{% comment %}Start-Page (fixed) {% endcomment %}
 		{% if include.context == "/" %}
-			<li class="nav__item">
-				<a class="nav__link {% if page.url == "/" %}is-active{% endif %}" href="{{ site.baseurl }}/">Startseite</a>
+			<li class="navigation__item">
+				<a class="navigation__link {% if page.url == "/" %}is-active{% endif %}" href="{{ site.baseurl }}/">Startseite</a>
 			</li>
 		{% endif %}
 		
@@ -50,8 +50,8 @@
 
 			{% if current == include.context %}
 				{% unless p.url contains "style" %}
-					<li class="nav__item">
-						<a class="nav__link {% if page.url contains p.url %}is-active{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+					<li class="navigation__item">
+						<a class="navigation__link {% if page.url contains p.url %}is-active{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
 						{% if p.children == true %}
 							{% comment %}Increment Level{% endcomment %}
 							{% assign level = level | plus: 1 %}

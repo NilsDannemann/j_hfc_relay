@@ -88,6 +88,23 @@ $box-shadow-size-3	: 0px 4px 9px rgba(0, 0, 0, 0.2);
 $box-shadow-size-4	: 0px 8px 18px rgba(0, 0, 0, 0.2);
 $box-shadow-size-5	: 0px 16px 32px rgba(0, 0, 0, 0.2);
 $box-shadow			: $box-shadow-size-2;
+@mixin box-shadow($size: 1) {
+	@if $size == 1 {
+		box-shadow: $box-shadow-size-1;
+	}
+	@else if $size == 2 {
+		box-shadow: $box-shadow-size-2;
+	}
+	@else if $size == 3 {
+		box-shadow: $box-shadow-size-3;
+	}
+	@else if $size == 4 {
+		box-shadow: $box-shadow-size-4;
+	}
+	@else if $size == 5 {
+		box-shadow: $box-shadow-size-5;
+	}
+}
 
 @mixin transition() {
 	-webkit-transition: all 125ms ease-in;

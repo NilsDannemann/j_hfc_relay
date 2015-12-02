@@ -1,0 +1,40 @@
+/* =======================================*/
+/*
+/* HEADER
+/*
+/* =======================================*/
+
+.header {
+	border-bottom: $border;
+	
+	&__inner {
+		@include container();
+		@include flexbox();
+	}
+	&__logo {
+		width: 80px;
+		padding: 10px 0;
+	}
+	&__navigation {
+		text-align: right;
+		margin: $whitespace/2 0;
+
+		a {
+			display: inline-block;
+			font-size: 12px;
+			padding-left: 20px;
+			color: #999;
+		}
+	}
+}
+		
+
+/* =======================================*/
+/* RESPONSIVE BEHAVIOR
+/* =======================================*/
+
+@include respond-below(m) {
+	.header {
+		padding: 0 $whitespace;
+	}
+}

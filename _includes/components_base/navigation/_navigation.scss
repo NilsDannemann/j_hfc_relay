@@ -1,8 +1,7 @@
-.nav {
+.navigation {
 	background: #fff;
 	position: relative;
 	z-index: 99;
-	box-shadow: $box-shadow;
 	
 	// General: State
 	.is-active {}
@@ -55,7 +54,7 @@
 		transform: translateY(10px);
 		@include transition();
 
-		.nav__link--parent {
+		.navigation__link--parent {
 		
 			&:after {
 				content: '\f105';
@@ -69,7 +68,7 @@
 /* SUBNAV - LEVEL 1
 /* =======================================*/
 
-.nav {
+.navigation {
 
 	// Show Subnav
 	&__item.is-hovered > &__subnav {
@@ -83,7 +82,7 @@
 	// Subnav Level 1
 	&__subnav {
 
-		.nav__item {
+		.navigation__item {
 			float: none;
 			border-top: $border;
 			border-right: none;
@@ -98,7 +97,7 @@
 /* SUBNAV - LEVEL 2 & 3
 /* =======================================*/
 
-.nav {
+.navigation {
 
 	// Show Subnav
 	&__item.is-hovered > &__subnav {
@@ -124,7 +123,7 @@
 /* =======================================*/
 
 @include respond-below(m) {
-	.nav {
+	.navigation {
 
 		// General: State
 		.is-active {}
@@ -139,7 +138,7 @@
 
 			// Toggle Navigation
 			&.is-active {
-				+.nav__inner {display: block;}
+				+.navigation__inner {display: block;}
 			}
 			
 			// Icon

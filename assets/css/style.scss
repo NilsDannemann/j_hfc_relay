@@ -14,9 +14,8 @@
 @import 'base';
 
 /* ===BASE COMPONENTS=== */
-{% if site.use_base_components.typography == true %}
-	@import 'components_base/typography/typography';
-{% endif %}
+@import 'components_base/header/header';
+
 {% if site.use_base_components.navigation == true %}
 	@import 'components_base/navigation/navigation';
 {% endif %}
@@ -31,6 +30,9 @@
 {% endif %}
 {% if site.use_base_components.footer == true %}
 	@import 'components_base/footer/footer';
+{% endif %}
+{% if site.use_base_components.typography == true %}
+	@import 'components_base/typography/typography';
 {% endif %}
 
 /* ===COMPONENTS=== */
