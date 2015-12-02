@@ -22,7 +22,7 @@
 /* =======================================*/
 /* RESPONSIVE BEHAVIOR
 /* =======================================*/
-@include at(xl) {
+@include respond-at(xl) {
 	.teaser--single {
 		@include flexbox($direction: column);
 		@include column('1/2', $gutter: true);
@@ -37,7 +37,7 @@
 	}
 }
 
-@include at(l) {
+@include respond-at(l) {
 	.teaser--single {
 		@include flexbox($direction: column);
 		@include column('1/1', $gutter: true);
@@ -52,7 +52,7 @@
 	}
 }
 
-@include at(m) {
+@include respond-at(m) {
 	.teaser--single {
 		@include flexbox($direction: row);
 
@@ -67,7 +67,7 @@
 }
 
 
-@include below(s) {
+@include respond-below(s) {
 	.teaser--single {
 		@include flexbox($direction: column);
 		@include column('1/2', $gutter: true);
@@ -81,6 +81,6 @@
 		}
 	}
 }
-@include at(xs) {
+@include respond-at(xs) {
 	.teaser--single {@include column('1/1', $gutter: true);}
 }

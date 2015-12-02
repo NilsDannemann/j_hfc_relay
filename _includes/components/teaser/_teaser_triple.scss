@@ -12,15 +12,15 @@
 /* =======================================*/
 /* RESPONSIVE BEHAVIOR
 /* =======================================*/
-@include at(xl) {
+@include respond-at(xl) {
 	.teaser--triple {@include column('1/2', $gutter: true);}
 }
-@include at(l) {
+@include respond-at(l) {
 	.teaser--triple {@include column('1/1', $gutter: true);}
 }
-@include at(s) {
+@include respond-at(s) {
 	.teaser--triple {@include column('1/2', $gutter: true);}
 }
-@include at(xs) {
+@include respond-at(xs) {
 	.teaser--triple {@include column('1/1', $gutter: true);}
 }

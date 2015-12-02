@@ -235,15 +235,23 @@
 			"file": "_includes/_config.scss",
 			"settings":
 			{
-				"buffer_size": 11411,
+				"buffer_size": 13456,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_includes/components/teaser/_teaser.scss",
+			"file": "assets/css/style.scss",
 			"settings":
 			{
-				"buffer_size": 615,
+				"buffer_size": 1376,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_config.yml",
+			"settings":
+			{
+				"buffer_size": 734,
 				"line_ending": "Unix"
 			}
 		}
@@ -443,43 +451,46 @@
 	"expanded_folders":
 	[
 		"/Users/nilsdannemann/Sites/j_hfc_relay",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base"
+		"/Users/nilsdannemann/Sites/j_hfc_relay/assets"
 	],
 	"file_history":
 	[
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/_base.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/navigation/navigation.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/sidebar_double.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/footer/footer.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/noslider.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/styleguide.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/sidebar_single.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/full.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/README.md",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/assets/css/style.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/grid/grid.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/index.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/_slider.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/sidebar/_sidebar.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/_config.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/nav/_nav.scss",
+		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_arrow.sublime-snippet",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser_double.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/button.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/_config.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/head/head.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/slider.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/sidebar_double.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/slider.js",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/footer/footer.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/index.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/noslider.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/full.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_config.yml",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/nav/nav.js",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/assets/js/swiper.js",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/_slider.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/nav/_nav.scss",
 		"/Users/nilsdannemann/Sites/Swiper/playground/index.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/slider_init.js",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_components/buttongroup.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_components/button.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/README.md",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/button.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/buttongroup.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/buttongroup.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_triple.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/assets/css/style.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/content/_content.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/styleguide.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/breadcrumb/_breadcrumb.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/sidebar_single.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/_base.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_single.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/breadcrumb/breadcrumb.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_double.html",
@@ -499,7 +510,6 @@
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/header/_header.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/typography/_typography.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser_single.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser.scss",
 		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_respond_at.sublime-snippet",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/j_hfc_relay.sublime-project",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/j_hfc_relay.sublime-workspace",
@@ -572,10 +582,7 @@
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_layouts/styleguide.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/_syntax_highlighting.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_nav/_component_nav.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/header/header.html",
-		"/C/Users/Gothmog/Desktop/ResponsiveMultiLevelMenu/css/default.css",
-		"/C/Users/Gothmog/Desktop/ResponsiveMultiLevelMenu/css/component.css",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/mnav/mnav.html"
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/header/header.html"
 	],
 	"find":
 	{
@@ -594,6 +601,33 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"sidebar",
+			"content",
+			"slider",
+			"nav",
+			"include",
+			"nav.",
+			"nav",
+			"slider",
+			"grid",
+			"gutt",
+			"position",
+			"px width\n	@else {",
+			"else",
+			"if",
+			"@if",
+			"-($size)",
+			"$whitespace",
+			"  ",
+			"10px",
+			"+5",
+			"+2",
+			"li",
+			"+4",
+			"li",
+			"name",
+			"###Basic Examples",
+			" {...} ",
 			"left",
 			"down",
 			"up",
@@ -694,34 +728,7 @@
 			"x-small",
 			"large",
 			"medium",
-			"small",
-			"x-small",
-			"small",
-			"large",
-			"ony",
-			"'",
-			"map-get",
-			"@media (",
-			";}",
-			"min",
-			"max",
-			"map-get",
-			"justifiy",
-			"Content",
-			"justi",
-			"25px",
-			"triple",
-			"  ",
-			"cycle",
-			"hovered",
-			", $cycle: 2",
-			" $cycle: 3",
-			"wrap",
-			"$wrap",
-			": null",
-			";\n",
-			"box",
-			"box2"
+			"small"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -748,15 +755,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11411,
+						"buffer_size": 13456,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8796,
-								8796
+								4883,
+								4883
 							]
 						],
 						"settings":
@@ -768,7 +775,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6287.0,
+						"translation.y": 1683.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -776,19 +783,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "_includes/components/teaser/_teaser.scss",
+					"file": "assets/css/style.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 615,
+						"buffer_size": 1376,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								115,
-								115
+								748,
+								748
 							]
 						],
 						"settings":
@@ -796,8 +803,38 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_config.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 734,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								734,
+								734
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/YAML/YAML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -862,6 +899,46 @@
 		"selected_items":
 		[
 			[
+				"foot",
+				"_includes/components_base/footer/footer.html"
+			],
+			[
+				"config",
+				"_config.yml"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"teasscss",
+				"_includes/components/teaser/_teaser.scss"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"sliscs",
+				"_includes/components_base/slider/_slider.scss"
+			],
+			[
+				"sidebsc",
+				"_includes/components_base/sidebar/_sidebar.scss"
+			],
+			[
+				"co",
+				"_includes/_config.scss"
+			],
+			[
+				"navsc",
+				"_includes/components_base/nav/_nav.scss"
+			],
+			[
+				"teasescss",
+				"_includes/components/teaser/_teaser.scss"
+			],
+			[
 				"buttoscss",
 				"_includes/components/button/button.scss"
 			],
@@ -870,16 +947,8 @@
 				"_includes/components_base/sidebar/_sidebar.scss"
 			],
 			[
-				"teasscss",
-				"_includes/components/teaser/_teaser_double.scss"
-			],
-			[
 				"confi",
 				"_config.yml"
-			],
-			[
-				"inde",
-				"index.html"
 			],
 			[
 				"button",
@@ -894,20 +963,12 @@
 				"_includes/components/button/button.scss"
 			],
 			[
-				"foot",
-				"_includes/components_base/footer/footer.html"
-			],
-			[
 				"head",
 				"_includes/components_base/head/head.html"
 			],
 			[
 				"sli",
 				"_includes/components_base/slider/slider.html"
-			],
-			[
-				"read",
-				"README.md"
 			],
 			[
 				"teas",
@@ -944,10 +1005,6 @@
 			[
 				"brea",
 				"_includes/components/breadcrumb/_breadcrumb.scss"
-			],
-			[
-				"config",
-				"_includes/_config.scss"
 			],
 			[
 				"index",
@@ -999,10 +1056,6 @@
 			],
 			[
 				"teaserscss",
-				"_includes/components/teaser/_teaser_triple.scss"
-			],
-			[
-				"teasescss",
 				"_includes/components/teaser/_teaser_triple.scss"
 			],
 			[
@@ -1356,22 +1409,6 @@
 			[
 				"sett",
 				"assets\\scss\\_settings.scss"
-			],
-			[
-				"blog",
-				"wp-content\\themes\\WildCommunity\\blog.php"
-			],
-			[
-				"templ",
-				"wp-content\\themes\\WildCommunity\\template-contact.php"
-			],
-			[
-				"single",
-				"wp-content\\themes\\WildCommunity\\single.php"
-			],
-			[
-				"feedb",
-				"wp-content\\themes\\WildCommunity\\template-feedback.php"
 			]
 		],
 		"width": 0.0

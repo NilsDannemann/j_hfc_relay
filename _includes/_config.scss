@@ -219,9 +219,9 @@ $teaser-lines-to-show: 3;
 /* =======================================*/
 
 /* =======================================*/
-/* AT - use: @include at($name) {...} 
+/* RESPOND AT - use: @include respond-at($name) {...} 
 /* =======================================*/
-@mixin at($name) {
+@mixin respond-at($name) {
 	@if $name == 'xs' and map-has-key($breakpoints, $name) and $responsive == true {
 		@media only screen and (max-width: map-get($breakpoints, 's')) {
 			@content;
@@ -261,9 +261,9 @@ $teaser-lines-to-show: 3;
 }
 
 /* =======================================*/
-/* ABOVE - use: @include above($name) {...} 
+/* RESPOND ABOVE - use: @include respond-above($name) {...} 
 /* =======================================*/
-@mixin above($name) {
+@mixin respond-above($name) {
 	@if $name == 'xs' and map-has-key($breakpoints, $name) and $responsive == true {
 		@media only screen {
 			@content;
@@ -303,9 +303,9 @@ $teaser-lines-to-show: 3;
 }
 
 /* =======================================*/
-/* BELOW - use: @include below($name) {...} 
+/* RESPOND BELOW - use: @include respond-below($name) {...} 
 /* =======================================*/
-@mixin below($name) {
+@mixin respond-below($name) {
 	@if $name == 'xs' and map-has-key($breakpoints, $name) and $responsive == true {
 		// Below xs not possible
 	}
@@ -343,9 +343,9 @@ $teaser-lines-to-show: 3;
 }
 
 /* =======================================*/
-/* BETWEEN - use: @include between($name1, $name2) {...} 
+/* RESPOND BETWEEN - use: @include respond-between($name1, $name2) {...} 
 /* =======================================*/
-@mixin between($name1, $name2) {
+@mixin respond-between($name1, $name2) {
 	@if map-has-key($breakpoints, $name1) and map-has-key($breakpoints, $name2) and $responsive == true {
 		@media only screen and (min-width: #{inspect(map-get($breakpoints, $name1))}) and (max-width: #{inspect(map-get($breakpoints, $name2))}) {
 			@content;
@@ -368,38 +368,38 @@ $teaser-lines-to-show: 3;
 /* =======================================*/
 
 /* =======================================*/
-/* AT LEAST - use: @include at-least(4) {...}; 
+/* QUANTITY AT - use: @include quantity-at(4) {...}; 
 /* =======================================*/
-@mixin at-least($number: 4) {
-	&:nth-last-child(n + #{$number}), 
-	&:nth-last-child(n + #{$number}) ~ & {
-		@content;
-	}
-}
-/* =======================================*/
-/* AT MOST - use: @include at-most(4) {...}; 
-/* =======================================*/
-@mixin at-most($number: 4) {
-	&:nth-last-child(-n + #{$number}):first-child, 
-	&:nth-last-child(-n + #{$number}):first-child ~ & {
-		@content;
-	}
-}
-/* =======================================*/
-/* AT BETWEEN - use: @include at-between(2, 4) {...}; 
-/* =======================================*/
-@mixin at-between($number1: 2, $number2: 4) {
-	&:nth-last-child(n + #{$number1}):nth-last-child(-n + #{$number2}):first-child, 
-	&:nth-last-child(n + #{$number1}):nth-last-child(-n + #{$number2}):first-child ~ & { 
-		@content;
-	}
-}
-/* =======================================*/
-/* AT EXACTLY - use: @include at-exactly(4) {...}; 
-/* =======================================*/
-@mixin at-exactly($number: 4) {
+@mixin quantity-at($number: 4) {
 	&:nth-last-child(n + #{$number}):nth-last-child(-n + #{$number}):first-child, 
 	&:nth-last-child(n + #{$number}):nth-last-child(-n + #{$number}):first-child ~ & { 
+		@content;
+	}
+}
+/* =======================================*/
+/* QUANTITY ABOVE - use: @include quantity-above(4) {...}; 
+/* =======================================*/
+@mixin quantity-above($number: 4) {
+	&:nth-last-child(n + #{$number + 1}), 
+	&:nth-last-child(n + #{$number + 1}) ~ & {
+		@content;
+	}
+}
+/* =======================================*/
+/* QUANTITY BELOW - use: @include quantity-below(4) {...}; 
+/* =======================================*/
+@mixin quantity-below($number: 4) {
+	&:nth-last-child(-n + #{$number - 1}):first-child, 
+	&:nth-last-child(-n + #{$number - 1}):first-child ~ & {
+		@content;
+	}
+}
+/* =======================================*/
+/* QUANTITY BETWEEN - use: @include quantity-between(2, 4) {...}; 
+/* =======================================*/
+@mixin quantity-between($number1: 2, $number2: 4) {
+	&:nth-last-child(n + #{$number1}):nth-last-child(-n + #{$number2}):first-child, 
+	&:nth-last-child(n + #{$number1}):nth-last-child(-n + #{$number2}):first-child ~ & { 
 		@content;
 	}
 }

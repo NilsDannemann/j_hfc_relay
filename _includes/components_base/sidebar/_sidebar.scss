@@ -23,7 +23,7 @@
 /* RESPONSIVE BEHAVIOR
 /* =======================================*/
 
-@include below(m) { 
+@include respond-below(m) { 
 	.sidebar {
 		width: 100%;
 	}

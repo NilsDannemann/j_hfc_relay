@@ -33,6 +33,19 @@ Use css-arrows via sass-mixins.<br>
 @include arrow($direction: left, $align: top, $color: #eee, $size: 10px);
 ```
 
+# Quantity Query Mixin
+Change styles based on the quantity of Elements.<br>
+
+###Examples
+
+```sass
+@include quantity-at(4) {...}
+@include quantity-above(4) {...}
+@include quantity-below(4) {...}
+@include quantity-between(2,4) {...}
+```
+
+
 # The Grid
 The Grid uses flexible sass-mixins instead of fixed classes.<br>
 
@@ -75,13 +88,13 @@ You can test the mixins over here:<br>
 [Open Grid-Playground](http://codepen.io/NilsDannemann/pen/NGwmqq?editors=110)
 
 
-#Responsive Workflow
+#Responsive Mixins
 Four sets of sass-mixins let you control the responsive flow of your document:
 
-- **Above** a certain breakpoint (``` @include above(breakpoint-name) { ... } ```)
-- **Below** a certain breakpoint (``` @include below(breakpoint-name) { ... } ```)
-- **At** a certain breakpoint (``` @include at(breakpoint-name) { ... } ```)
-- **From** a certain breakpoint (``` @include from(breakpoint-name, breakpoint-name) { ... } ```)
+- **Above** a certain breakpoint (``` @include respond-above(breakpoint-name) { ... } ```)
+- **Below** a certain breakpoint (``` @include respond-below(breakpoint-name) { ... } ```)
+- **At** a certain breakpoint (``` @include respond-at(breakpoint-name) { ... } ```)
+- **From** a certain breakpoint (``` @include respond-from(breakpoint-name, breakpoint-name) { ... } ```)
 
 You can also pass any px value instead of a breakpoint-name,
 
@@ -91,8 +104,8 @@ You can also pass any px value instead of a breakpoint-name,
 ```sass
 .foo {
 	//styles
-	@include above(xs) { ... }				// accpets breakpoint-names: xs, s, m, l, xl, xxl
-	@include above(500px) { ... }			// or specific px value
+	@include respond-above(xs) { ... }				// accpets breakpoint-names: xs, s, m, l, xl, xxl
+	@include respond-above(500px) { ... }			// or specific px value
 }
 ```
 
@@ -100,8 +113,8 @@ You can also pass any px value instead of a breakpoint-name,
 ```sass
 .foo {
 	//styles
-	@include below(xs) { ... }				// accpets breakpoint-names: xs, s, m, l, xl, xxl
-	@include below(500px) { ... }			// or specific px value
+	@include respond-below(xs) { ... }				// accpets breakpoint-names: xs, s, m, l, xl, xxl
+	@include respond-below(500px) { ... }			// or specific px value
 }
 ```
 
@@ -109,8 +122,8 @@ You can also pass any px value instead of a breakpoint-name,
 ```sass
 .foo {
 	//styles
-	@include at(xs) { ... }					// accepts breakpoint-names: xs, s, m, l, xl, xxl
-	@include at(500px) { ... }				// or specific px value
+	@include respond-at(xs) { ... }					// accepts breakpoint-names: xs, s, m, l, xl, xxl
+	@include respond-at(500px) { ... }				// or specific px value
 }
 ```
 
@@ -118,8 +131,8 @@ You can also pass any px value instead of a breakpoint-name,
 ```sass
 .foo {
 	//styles
-	@include between(xs, m) { ... }			// accepts breakpoint-names: xs, s, m, l, xl, xxl
-	@include between(500px, 900px) { ... }	// or two specific px values
+	@include respond-between(xs, m) { ... }			// accepts breakpoint-names: xs, s, m, l, xl, xxl
+	@include respond-between(500px, 900px) { ... }	// or two specific px values
 }
 ```
 
@@ -130,14 +143,14 @@ Either inside your class-declarations...
 ```sass
 .foo {
 	color: red
-	@include above(l) { color: blue }
+	@include respond-above(l) { color: blue }
 }
 ```
 
 ... or on their own.
 ```sass
 .foo {color: red}
-@include above(l) { 
+@include respond-above(l) { 
 	.foo { color: red }
 }
 ```
