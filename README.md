@@ -39,10 +39,10 @@ Change styles based on the quantity of Elements.<br>
 ###Examples
 
 ```sass
-@include quantity-at(4) {...}
-@include quantity-above(4) {...}
-@include quantity-below(4) {...}
-@include quantity-between(2,4) {...}
+@include quantity-at(4) {...} 			// styles when exactly 4 elements
+@include quantity-above(4) {...} 		// styles when more than 4 elements
+@include quantity-below(4) {...} 		// styles when less than 4 elements
+@include quantity-between(2,4) {...} 	// styles between 2 and 4 elements
 ```
 
 
