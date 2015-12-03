@@ -1,24 +1,21 @@
 /* =======================================*/
 /*
-/* HEADER
+/* LOGO
 /*
 /* =======================================*/
 
-.header {
-	
-	&__inner {
-		@include container();
-		@include flexbox();
-	}
+.logo {
+	width: 80px;
+	padding: $whitespace/2 0;
 }
-		
+
 
 /* =======================================*/
 /* RESPONSIVE BEHAVIOR
 /* =======================================*/
 
 @include respond-below(m) {
-	.header {
+	.logo {
 
 	}
 }
