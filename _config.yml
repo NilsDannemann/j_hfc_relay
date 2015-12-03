@@ -12,6 +12,7 @@ use_ionicons: 	 false
 # Base Components
 use_base_components: 
   typography:   true
+  tnav:         true
   mnav:         true
   slider:       true
   content:      true

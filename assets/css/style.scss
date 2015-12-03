@@ -16,8 +16,10 @@
 /* ===BASE COMPONENTS=== */
 @import 'components_base/header/header';
 @import 'components_base/logo/logo';
-@import 'components_base/tnav/tnav';
 
+{% if site.use_base_components.tnav == true %}
+@import 'components_base/tnav/tnav';
+{% endif %}
 {% if site.use_base_components.mnav == true %}
 	@import 'components_base/mnav/mnav';
 {% endif %}
