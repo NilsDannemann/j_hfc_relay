@@ -27,7 +27,7 @@
 /* RESPONSIVE BEHAVIOR
 /* =======================================*/
 
-@include respond-below(m) {
+@include respond-below(l) {
 	.content {
 		
 		&__inner {

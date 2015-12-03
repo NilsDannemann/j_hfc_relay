@@ -8,10 +8,6 @@
 	padding-bottom: $whitespace/2;
 	border-bottom: $border;
 
-	@include respond-below(m) {
-		padding-top: $whitespace/2;
-	}
-
 	&__link {
 		display: inline-block;
 		color: $color-brand;
@@ -33,5 +29,16 @@
 			font-family: 'fontawesome';
 			content: "\f105";
 		}
+	}
+}
+
+
+/* =======================================*/
+/* RESPONSIVE BEHAVIOR
+/* =======================================*/
+
+@include respond-below(l) { 
+	.breadcrumb {
+		padding-top: $whitespace/2;
 	}
 }
