@@ -1,7 +1,10 @@
 #component_nav {
 	display: block;
+	width: 100%;
 	background: #fff;
-	padding: $whitespace/2;
-	margin-top: $whitespace;
+	padding: $whitespace/2 $whitespace $whitespace/2 $whitespace/2;
 	border: $border;
+	border-radius: $border-radius;
+	-webkit-appearance: none;
+	outline: none;
 }

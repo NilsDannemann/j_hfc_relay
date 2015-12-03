@@ -1,0 +1,9 @@
+<!-- COMPONENT LIST -->
+<ul class="component_list">
+	{% for type in componentsByType %}
+		<span class="component_list__title">{{ type.name | capitalize }}</span>
+		{% for entry in type.items %}
+			<li class="component_list__item">{{ entry.title }}</li>
+		{% endfor %}
+	{% endfor %}
+</ul>

@@ -5,18 +5,11 @@
 	{% include components_base/header/header.html %}
 	<!-- Navigation -->
 	{% include components_base/mnav/mnav.html context="/" %}
-	<!-- Slider -->
-	{% include components_base/slider/slider.html %}
 
 	<!-- Content -->
 	<section class="content">
 		<div class="content__inner">
-			<!-- Content: Sidebar -->
-			{% include components_base/sidebar/sidebar.html %}
-			<!-- Content: Page -->
-			<div class="content__page">
-				{{ content }}
-			</div>
+			{{ content }}
 		</div>
 	</section>
 	

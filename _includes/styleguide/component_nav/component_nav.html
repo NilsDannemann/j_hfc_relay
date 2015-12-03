@@ -4,9 +4,8 @@
 	{% for type in componentsByType %}
 		<option value="#styleguide-section-{{ type.name }}">{{ type.name | capitalize }}</option>
 		{% for entry in type.items %}
-			<option value="#styleguide-section-{{ entry.title | slugify }}">&nbsp;&nbsp;&nbsp;{{ entry.title }}</option>
+			<option value="#styleguide-section-{{ entry.title | slugify }}">&nbsp;&nbsp;{{ entry.title }}</option>
 		{% endfor %}
 	{% endfor %}
 </select>
-
 {% include styleguide/component_nav/component_nav.js %}

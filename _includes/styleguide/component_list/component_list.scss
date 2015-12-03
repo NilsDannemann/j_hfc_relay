@@ -1,0 +1,17 @@
+.component_list {
+	margin-top: $whitespace;
+
+	&__title {
+		display: block;
+		font-weight: bold;
+		color: $color-black;
+		margin-top: $whitespace;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	&__item {
+		margin-left: $whitespace;
+	}
+}
