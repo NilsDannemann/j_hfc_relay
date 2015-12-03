@@ -46,7 +46,7 @@ $devmode-overlay	: false; 	// true or false
 $devmode-breakpoints: true; 	// true or false
 $breakpoints: (
 	'xs'	: 0px,
-	's'  	: 400px,
+	's'  	: 410px,
 	'm' 	: 650px,
 	'l'  	: 800px,
 	'xl'	: 960px,
@@ -283,7 +283,7 @@ $teaser-lines-to-show: 3;
 /* =======================================*/
 @mixin respond-above($name) {
 	@if $name == 'xs' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen {
+		@media only screen and (min-width: map-get($breakpoints, 'xs')) {
 			@content;
 		}
 	}
