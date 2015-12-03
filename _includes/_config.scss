@@ -39,10 +39,11 @@ $color-brand: $color-spaceblack;
 /*
 /* =======================================*/
 
-$whitespace		: 20px;
-$sidebar-width	: 205px;
-$responsive		: true; 	// true or false
-$use-devmode	: false; 	// true or false
+$whitespace			: 20px;
+$sidebar-width		: 205px;
+$responsive			: true; 	// true or false
+$devmode-overlay	: false; 	// true or false
+$devmode-breakpoints: true; 	// true or false
 $breakpoints: (
 	'xs'	: 0px,
 	's'  	: 400px,
@@ -327,27 +328,27 @@ $teaser-lines-to-show: 3;
 		// Below xs not possible
 	}
 	@else if $name == 's' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen and (max-width: map-get($breakpoints, 'm')) {
+		@media only screen and (max-width: map-get($breakpoints, 's')) {
 			@content;
 		}
 	}
 	@else if $name == 'm' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen and (max-width: map-get($breakpoints, 'l')) {
+		@media only screen and (max-width: map-get($breakpoints, 'm')) {
 			@content;
 		}
 	}
 	@else if $name == 'l' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen and (max-width: map-get($breakpoints, 'xl')) {
+		@media only screen and (max-width: map-get($breakpoints, 'l')) {
 			@content;
 		}
 	}
 	@else if $name == 'xl' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen and (max-width: map-get($breakpoints, 'xxl')) {
+		@media only screen and (max-width: map-get($breakpoints, 'xl')) {
 			@content;
 		}
 	}
 	@else if $name == 'xxl' and map-has-key($breakpoints, $name) and $responsive == true {
-		@media only screen {
+		@media only screen and (max-width: map-get($breakpoints, 'xxl')) {
 			@content;
 		}
 	}
@@ -554,7 +555,62 @@ $teaser-lines-to-show: 3;
 /* DEVMODE
 /* 
 /* =======================================*/
-
-@if $use-devmode == true {
-	* {background: rgba($color-brand, 0.075) !important;}
+@if $devmode-overlay == true {
+	* {background: rgba($color-spaceblack, 0.075) !important;}
 } 
+@if $devmode-breakpoints == true {
+	html:before,
+	html:after,
+	body:before,
+	body:after {
+		color: #444;
+		height: 28px;
+		padding: 5px;
+		font-size: 14px;
+		text-align: right;
+		display: block;
+		background: rgba(255, 255, 255, 0.8);
+		position: absolute;
+		right: 0;
+		z-index: 100000;
+		pointer-events: none;
+	}
+	html:before {
+		top: 30px;
+		font-size: 16px;
+		font-weight: bold;
+		@include respond-at(xxl) {content: "Breakpoint: XXL";}
+		@include respond-at(xl) {content: "Breakpoint: XL";}
+		@include respond-at(l) {content: "Breakpoint: L";}
+		@include respond-at(m) {content: "Breakpoint: M";}
+		@include respond-at(s) {content: "Breakpoint: S";}
+		@include respond-at(xs) {content: "Breakpoint: XS";}
+	}
+	html:after {
+		top: 65px;
+		@include respond-at(xxl) {content: "respond-at(xxl) ✓";}
+		@include respond-at(xl) {content: "respond-at(xl) ✓";}
+		@include respond-at(l) {content: "respond-at(l) ✓";}
+		@include respond-at(m) {content: "respond-at(m) ✓";}
+		@include respond-at(s) {content: "respond-at(s) ✓";}
+		@include respond-at(xs) {content: "respond-at(xs) ✓";}
+	}
+	body:before {
+		top: 95px;
+		@include respond-above(xs) {content: "respond-above(xs) ✓";}
+		@include respond-above(s) {content: "respond-above(s) ✓";}
+		@include respond-above(m) {content: "respond-above(m) ✓";}
+		@include respond-above(l) {content: "respond-above(l) ✓";}
+		@include respond-above(xl) {content: "respond-above(xl) ✓";}
+		@include respond-above(xxl) {content: "respond-above(xxl) ✓";}
+	}
+	body:after {
+		top: 125px;
+		@include respond-below(xxl) {content: "respond-below(xxl) ✓";}
+		@include respond-below(xl) {content: "respond-below(xl) ✓";}
+		@include respond-below(l) {content: "respond-below(l) ✓";}
+		@include respond-below(m) {content: "respond-below(m) ✓";}
+		@include respond-below(s) {content: "respond-below(s) ✓";}
+		@include respond-below(xs) {content: "respond-below(xs) ✓";}
+	}
+}

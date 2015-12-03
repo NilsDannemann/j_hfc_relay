@@ -1,5 +1,5 @@
 <!-- COMPONENT_NAV -->
-<select id="component_nav">
+<select id="component_nav" class="component_nav">
 	<option value>Jump to component...</option>
 	{% for type in componentsByType %}
 		<option value="#styleguide-section-{{ type.name }}">{{ type.name | capitalize }}</option>

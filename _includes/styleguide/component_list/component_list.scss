@@ -1,5 +1,10 @@
+/* =======================================*/
+/*
+/* COMPONEN LIST
+/*
+/* =======================================*/
+
 .component_list {
-	margin-top: $whitespace;
 
 	&__title {
 		display: block;
@@ -13,5 +18,16 @@
 	}
 	&__item {
 		margin-left: $whitespace;
+	}
+}
+
+
+/* =======================================*/
+/* RESPONSIVE BEHAVIOR
+/* =======================================*/
+
+@include respond-below(m) {
+	.component_list {
+		display: none;
 	}
 }

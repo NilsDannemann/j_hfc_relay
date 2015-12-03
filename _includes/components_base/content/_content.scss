@@ -31,7 +31,7 @@
 	.content {
 		
 		&__inner {
-			@include flexbox($direction: column);
+			@include flexbox($direction: column, $wrap: nowrap);
 		}
 
 		&__page {
