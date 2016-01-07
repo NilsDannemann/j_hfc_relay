@@ -22,8 +22,8 @@ use_base_components:
 # Components
 use_components: 
   breadcrumb: 	true
-  button: 		true
-  teaser: 		true
+  button: 		  true
+  teaser: 		  true
 
 # Collections
 collections:

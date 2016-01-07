@@ -29,7 +29,7 @@ $color-yellow		: #FFEB3B;
 $color-amber		: #FFC107;
 $color-orange		: #FF9800;
 
-$color-brand: $color-spaceblack;
+$color-brand: $color-green;
 
 
 
@@ -43,7 +43,7 @@ $whitespace			: 20px;
 $sidebar-width		: 205px;
 $responsive			: true; 	// true or false
 $devmode-overlay	: false; 	// true or false
-$devmode-breakpoints: true; 	// true or false
+$devmode-breakpoints: false; 	// true or false
 $breakpoints: (
 	'xs'	: 0px,
 	's'  	: 410px,
