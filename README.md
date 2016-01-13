@@ -19,6 +19,9 @@ bottom: 0;
 left: 0;
 ```
 
+
+
+
 # Arrows
 Use css-arrows via sass-mixins.<br>
 
@@ -33,6 +36,14 @@ Use css-arrows via sass-mixins.<br>
 @include arrow($direction: left, $align: top, $color: #eee, $size: 10px);
 ```
 
+###Play with it
+You can test the mixin over here:<br>
+![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
+[Open Grid-Playground](http://codepen.io/NilsDannemann/pen/xZLEWd?editors=110)
+
+
+
+
 # Quantity Query Mixin
 Change styles based on the quantity of Elements.<br>
 
@@ -44,6 +55,8 @@ Change styles based on the quantity of Elements.<br>
 @include quantity-below(4) {...} 		// styles when less than 4 elements
 @include quantity-between(2,4) {...} 	// styles between 2 and 4 elements
 ```
+
+
 
 
 # The Grid
@@ -87,9 +100,11 @@ You can also specify your own gutters like so:
 ```
 
 ###Play with it
-You can test the mixins over here:<br>
+You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
 [Open Grid-Playground](http://codepen.io/NilsDannemann/pen/NGwmqq?editors=110)
+
+
 
 
 #Responsive Mixins
@@ -161,9 +176,11 @@ Either inside your class-declarations...
 Both is fine.
 
 ###Play with it
-You can test the mixins over here:<br>
+You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
 [Open Breakpoint-Playground](http://codepen.io/NilsDannemann/pen/gaoZrE?editors=110)
+
+
 
 
 #Components & Parts
@@ -195,6 +212,8 @@ Optional: Define a **style** and/or a **color**.
 //width variables
 {% include components/button/buttongroup.html style="filled" color="brand" %}
 ```
+
+
 
 #Other (in progress)
 
