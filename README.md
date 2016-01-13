@@ -2,69 +2,6 @@
 
 In progress.
 
-# Position Shorthand
-Use position relative, absolute or fixed in shorthand.<br>
-
-###Examples
-
-```sass
-// shorthand
-@include position(relative, 10px, 0, 0, 0);
-
-// returns
-position: relative;
-top: 10px;
-right: 0;
-bottom: 0;
-left: 0;
-```
-
-###Play with it
-You can test the mixin over here:<br>
-![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
-[Open Grid-Playground](http://codepen.io/NilsDannemann/pen/XXajGM?editors=110)
-
-
-
-# Arrows
-Use css-arrows via sass-mixins.<br>
-
-###Examples
-
-```sass
-// centered up-arrow
-@include arrow(); 
-// right-aligned down-arrow
-@include arrow($direction: down, $align: right);
-// top-aligned left-arrow with specific color & size
-@include arrow($direction: left, $align: top, $color: #eee, $size: 10px);
-```
-
-###Play with it
-You can test the mixin over here:<br>
-![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
-[Open Grid-Playground](http://codepen.io/NilsDannemann/pen/xZLEWd?editors=110)
-
-
-
-
-# Quantity Query Mixin
-Change styles based on the quantity of Elements.<br>
-
-###Examples
-
-```sass
-@include quantity-at(4) {...} 			// styles when exactly 4 elements
-@include quantity-above(4) {...} 		// styles when more than 4 elements
-@include quantity-below(4) {...} 		// styles when less than 4 elements
-@include quantity-between(2,4) {...} 	// styles between 2 and 4 elements
-```
-
-###Play with it
-You can test the mixin over here:<br>
-![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
-[Open Breakpoint-Playground](http://codepen.io/NilsDannemann/pen/LGjRXe?editors=110)
-
 
 
 
@@ -188,6 +125,72 @@ Both is fine.
 You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
 [Open Breakpoint-Playground](http://codepen.io/NilsDannemann/pen/gaoZrE?editors=110)
+
+
+
+
+# Position Shorthand
+Use position relative, absolute or fixed in shorthand.<br>
+
+###Examples
+
+```sass
+// shorthand
+@include position(relative, 10px, 0, 0, 0);
+
+// returns
+position: relative;
+top: 10px;
+right: 0;
+bottom: 0;
+left: 0;
+```
+
+###Play with it
+You can test the mixin over here:<br>
+![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
+[Open Grid-Playground](http://codepen.io/NilsDannemann/pen/XXajGM?editors=110)
+
+
+
+# Arrows
+Use css-arrows via sass-mixins.<br>
+
+###Examples
+
+```sass
+// centered up-arrow
+@include arrow(); 
+// right-aligned down-arrow
+@include arrow($direction: down, $align: right);
+// top-aligned left-arrow with specific color & size
+@include arrow($direction: left, $align: top, $color: #eee, $size: 10px);
+```
+
+###Play with it
+You can test the mixin over here:<br>
+![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
+[Open Grid-Playground](http://codepen.io/NilsDannemann/pen/xZLEWd?editors=110)
+
+
+
+
+# Quantity Query Mixin
+Change styles based on the quantity of Elements.<br>
+
+###Examples
+
+```sass
+@include quantity-at(4) {...} 			// styles when exactly 4 elements
+@include quantity-above(4) {...} 		// styles when more than 4 elements
+@include quantity-below(4) {...} 		// styles when less than 4 elements
+@include quantity-between(2,4) {...} 	// styles between 2 and 4 elements
+```
+
+###Play with it
+You can test the mixin over here:<br>
+![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
+[Open Breakpoint-Playground](http://codepen.io/NilsDannemann/pen/LGjRXe?editors=110)
 
 
 
