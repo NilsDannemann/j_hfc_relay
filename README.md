@@ -57,7 +57,7 @@ This approach has the following advantages over conventional grids:<br>
 
 ###Requirements
 - Global Border Box (comes with the config.scss)
-- Flexbox (use @include flexbox(); on containing element)
+- Flexbox (use ```@include flexbox();``` on containing element)
 
 ###Examples
 
