@@ -3,20 +3,27 @@
 
 		<!-- Slider -->
 		<div class="swiper-container">
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
-			<div class="swiper-pagination swiper-pagination-white"></div>
+
+			<!-- Navigation -->
+			{% if include.arrows != "false" %}
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			{% endif %}
+			
+			<!-- Pagination -->
+			{% if include.pagination == "light" %}
+				<div class="swiper-pagination swiper-pagination-white"></div>
+			{% else if include.pagination == "dark" %}
+				<div class="swiper-pagination swiper-pagination-black"></div>
+			{% endif %}
+
+			<!-- Images/Content -->
 			<div class="swiper-wrapper">
-				<div class="swiper-slide">HFC Relay 1</div>
-				<div class="swiper-slide">HFC Relay 2</div>
-				<div class="swiper-slide">HFC Relay 3</div>
-				<div class="swiper-slide">HFC Relay 4</div>
-				<div class="swiper-slide">HFC Relay 5</div>
-				<div class="swiper-slide">HFC Relay 6</div>
-				<div class="swiper-slide">HFC Relay 7</div>
-				<div class="swiper-slide">HFC Relay 8</div>
-				<div class="swiper-slide">HFC Relay 9</div>
-				<div class="swiper-slide">HFC Relay 10</div>
+				<div class="swiper-slide"><img src="{{ site.baseurl }}/assets/images/slider/slide1.png" alt="image" /></div>
+				<div class="swiper-slide"><img src="{{ site.baseurl }}/assets/images/slider/slide2.png" alt="image" /></div>
+				<div class="swiper-slide"><img src="{{ site.baseurl }}/assets/images/slider/slide3.png" alt="image" /></div>
+				<div class="swiper-slide"><img src="{{ site.baseurl }}/assets/images/slider/slide4.png" alt="image" /></div>
+				<div class="swiper-slide"><img src="{{ site.baseurl }}/assets/images/slider/slide5.png" alt="image" /></div>
 			</div>
 		</div>
 
