@@ -55,6 +55,10 @@ This approach has the following advantages over conventional grids:<br>
 - **Cleanliness** - keep your Markup clean and readable
 - **Simplicity** - keep all styles in one place (no separation of concerns)
 
+###Requirements
+- Global Border Box (comes with the config.scss)
+- Flexbox (use @include flexbox(); on containing element)
+
 ###Examples
 
 ```sass
