@@ -19,6 +19,10 @@ bottom: 0;
 left: 0;
 ```
 
+###Play with it
+You can test the mixin over here:<br>
+![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
+[Open Grid-Playground](http://codepen.io/NilsDannemann/pen/XXajGM?editors=110)
 
 
 
