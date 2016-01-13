@@ -56,6 +56,11 @@ Change styles based on the quantity of Elements.<br>
 @include quantity-between(2,4) {...} 	// styles between 2 and 4 elements
 ```
 
+###Play with it
+You can test the mixin over here:<br>
+![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
+[Open Breakpoint-Playground](http://codepen.io/NilsDannemann/pen/LGjRXe?editors=110)
+
 
 
 
