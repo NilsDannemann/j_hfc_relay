@@ -5,16 +5,20 @@
 		<div class="swiper-container">
 
 			<!-- Navigation -->
-			{% if include.arrows != "false" %}
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
+			{% if include.arrows == "light" %}
+				<div class="swiper-button-prev swiper-button-prev-light"></div>
+				<div class="swiper-button-next swiper-button-next-light"></div>
+			{% else if include.arrows == "dark" %}
+				<div class="swiper-button-prev swiper-button-prev-dark"></div>
+				<div class="swiper-button-next swiper-button-next-dark"></div>
 			{% endif %}
-			
+
+
 			<!-- Pagination -->
 			{% if include.pagination == "light" %}
-				<div class="swiper-pagination swiper-pagination-white"></div>
+				<div class="swiper-pagination swiper-pagination-light"></div>
 			{% else if include.pagination == "dark" %}
-				<div class="swiper-pagination swiper-pagination-black"></div>
+				<div class="swiper-pagination swiper-pagination-dark"></div>
 			{% endif %}
 
 			<!-- Images/Content -->
