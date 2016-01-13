@@ -524,10 +524,18 @@ $teaser-lines-to-show: 3;
 
 @mixin position($type: relative, $top: 0, $right: 0, $bottom: 0, $left: 0) {
 	position: $type;
-	top: $top;
-	right: $right;
-	bottom: $bottom;
-	left: $left;
+	@if $top != 0 {
+		top: $top;
+	}
+	@if $right != 0 {
+		right: $right;
+	}
+	@if $bottom != 0 {
+		bottom: $bottom;
+	}
+	@if $left != 0 {
+		left: $left;
+	}
 }
 
 
