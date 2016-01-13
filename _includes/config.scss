@@ -42,6 +42,7 @@ $color-brand: $color-teal;
 $whitespace			: 20px;
 $sidebar-width		: 205px;
 $responsive			: true; 	// true or false
+$global-border-box  : true;		// true or false
 $devmode-overlay	: false; 	// true or false
 $devmode-breakpoints: false; 	// true or false
 $breakpoints: (
@@ -548,6 +549,25 @@ $teaser-lines-to-show: 3;
 	}
 }
 
+
+/* =======================================*/
+/*
+/* GLOBAL BORDER BOX
+/* 
+/* =======================================*/
+
+@if $global-border-box == true {
+	html {
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-ms-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+} 
 
 
 /* =======================================*/
