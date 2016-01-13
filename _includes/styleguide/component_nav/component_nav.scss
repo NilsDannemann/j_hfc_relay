@@ -1,27 +1,16 @@
 /* =======================================*/
 /*
-/* COMPONEN NAV
+/* COMPONENT NAV
 /*
 /* =======================================*/
 
 .component_nav {
 	display: block;
 	width: 100%;
-	background: #fff;
+	background: $color-grey;
 	padding: $whitespace/2 $whitespace $whitespace/2 $whitespace/2;
-	border: $border;
+	border: none;
 	border-radius: $border-radius;
 	-webkit-appearance: none;
 	outline: none;
-}
-
-
-/* =======================================*/
-/* RESPONSIVE BEHAVIOR
-/* =======================================*/
-
-@include respond-above(m) {
-	.component_nav {
-		display: none;
-	}
 }
