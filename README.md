@@ -8,7 +8,7 @@ In progress.
 Based on the [Swiper Slider](http://www.idangero.us/swiper/).<br>
 
 ###Usage
-- Place the include in one of your pages:
+- Place the include in one of your pages or layouts:
 ```sass
 {% include components_base/slider/slider.html arrows="light" pagination="light" %}
 // arrows & pagination can be set to "light", "dark" or "none".
