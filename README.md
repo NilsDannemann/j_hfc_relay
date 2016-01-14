@@ -11,8 +11,8 @@ Based on the [Swiper Slider](http://www.idangero.us/swiper/).<br>
 - Place the include in one of your pages:
 ```liquid
 {% include components_base/slider/slider.html arrows="light" pagination="light" %}
+// Arrows & Pagination can be set to "light", "dark" or "none".
 ```
-Arrows & Pagination can be set to "light", "dark" or "none".
 
 - To add/remove images just place them in this folder:
 ```
