@@ -13,7 +13,6 @@
 				<div class="swiper-button-next swiper-button-next-dark"></div>
 			{% endif %}
 
-
 			<!-- Pagination -->
 			{% if include.pagination == "light" %}
 				<div class="swiper-pagination swiper-pagination-light"></div>
@@ -23,11 +22,11 @@
 
 			<!-- Images/Content -->
 			<div class="swiper-wrapper">
-				<div class="swiper-slide"><img src="{{ site.baseurl }}/assets/images/slider/slide1.png" alt="image" /></div>
-				<div class="swiper-slide"><img src="{{ site.baseurl }}/assets/images/slider/slide2.png" alt="image" /></div>
-				<div class="swiper-slide"><img src="{{ site.baseurl }}/assets/images/slider/slide3.png" alt="image" /></div>
-				<div class="swiper-slide"><img src="{{ site.baseurl }}/assets/images/slider/slide4.png" alt="image" /></div>
-				<div class="swiper-slide"><img src="{{ site.baseurl }}/assets/images/slider/slide5.png" alt="image" /></div>
+				{% for image in site.static_files %}
+					{% if image.path contains 'images/slider' %}
+						<div class="swiper-slide"><img src="{{ site.baseurl }}{{ image.path }}" alt="image" /></div>
+					{% endif %}
+				{% endfor %}
 			</div>
 		</div>
 
