@@ -11,7 +11,7 @@ Based on the [Swiper Slider](http://www.idangero.us/swiper/).<br>
 - Place the include in one of your pages:
 ```sass
 {% include components_base/slider/slider.html arrows="light" pagination="light" %}
-// Arrows & Pagination can be set to "light", "dark" or "none".
+// arrows & pagination can be set to "light", "dark" or "none".
 ```
 
 - To add/remove images just place them in this folder:
