@@ -2,6 +2,8 @@
 title:  "Styleguide"
 permalink: "/styleguide/"
 layout: styleguide
+position: 99
+children: false
 ---
 
 <!-- ASSIGN COMPONENTS -->
