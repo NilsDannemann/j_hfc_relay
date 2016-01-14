@@ -5,14 +5,16 @@ In progress.
 
 
 # The Slider
-Based on the swiper-slider.<br>
+Based on the [Swiper Slider](http://www.idangero.us/swiper/).<br>
 
 ###Usage
-1. Include the Slider in one of your pages like so:
+- Place the include in one of your pages:
 ```liquid
 {% include components_base/slider/slider.html arrows="light" pagination="light" %}
 ```
-2. To add/remove images just place them in this folder:
+Arrows & Pagination can be set to "light", "dark" or "none".
+
+- To add/remove images just place them in this folder:
 ```
 assets/images/slider
 ```
