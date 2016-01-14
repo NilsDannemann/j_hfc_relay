@@ -4,6 +4,22 @@ In progress.
 
 
 
+# The Slider
+Based on the swiper-slider.<br>
+
+###Usage
+1. Include the Slider in one of your pages like so:
+```liquid
+{% include components_base/slider/slider.html arrows="light" pagination="light" %}
+```
+2. To add/remove images just place them in this folder:
+```
+assets/images/slider
+```
+Done!
+
+
+
 
 # The Grid
 The Grid uses flexible sass-mixins instead of fixed classes.<br>
