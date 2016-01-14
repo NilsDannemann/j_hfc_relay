@@ -5,7 +5,7 @@ In progress.
 
 
 # The Slider
-Based on the [Swiper Slider](http://www.idangero.us/swiper/).<br>
+Based on the [Swiper Slider](http://www.idangero.us/swiper/). Full API [here](http://www.idangero.us/swiper/api/), Demos [here](http://www.idangero.us/swiper/demos/)<br>
 
 ###Usage
 - Place the include in one of your pages or layouts:
@@ -17,6 +17,11 @@ Based on the [Swiper Slider](http://www.idangero.us/swiper/).<br>
 - To add/remove images just place them in this folder:
 ```
 assets/images/slider
+```
+
+- Change Slider-Settings here:
+```
+/_includes/components_base/slider/slider.js
 ```
 Done!
 
