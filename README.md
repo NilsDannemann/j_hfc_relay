@@ -5,7 +5,8 @@ In progress.
 
 
 # The Slider
-Based on the [Swiper Slider](http://www.idangero.us/swiper/). Full API [here](http://www.idangero.us/swiper/api/), Demos [here](http://www.idangero.us/swiper/demos/)<br>
+Based on the [Swiper Slider](http://www.idangero.us/swiper/). 
+Full API [here](http://www.idangero.us/swiper/api/), Demos [here](http://www.idangero.us/swiper/demos/)<br>
 
 ###Usage
 - Place the include in one of your pages or layouts:

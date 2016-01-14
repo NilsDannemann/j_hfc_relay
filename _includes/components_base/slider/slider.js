@@ -6,6 +6,8 @@ $(document).ready(function() {
     var swiper = new Swiper('.swiper-container', {
         direction: 'horizontal',
         effect: 'slide',
+        speed: 300,
+        spaceBetween: 0,
         slidesPerView: 1,
         centeredSlides: true,
         keyboardControl: true,
@@ -15,7 +17,8 @@ $(document).ready(function() {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         pagination: '.swiper-pagination',
-        paginationClickable: true
+        paginationClickable: true,
+        autoHeight: true
     });
 });
 
