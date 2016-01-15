@@ -2,6 +2,14 @@
 
 In progress.
 
+Features: 
+- No Plugins
+- Automatic Breadcrumb
+- Generated Navigation
+- Slider
+- Buttons & Button Groups (need work)
+- Sublime Snippets
+
 
 
 # The Navigation
