@@ -23,10 +23,10 @@ children: false
 
 ###Adding a Sub-Page
 - Create your my_subpage.md in the _pages folder 
-**Note:** you can also place it in a sub-folder for better organisation.
+<br> **Note:** you can also place it in a sub-folder for better organisation.
 
 - Add Front Matter
-**Note:** The permalink controls the sub-nav
+<br> **Note:** The permalink controls the sub-nav
 ```
 ---
 title: "my_subpage"
