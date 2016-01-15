@@ -4,6 +4,9 @@ In progress.
 
 Features: 
 - No Plugins
+- CSS: Fraction-based Grid
+- CSS: Responsive Snippets
+- CSS: Snippets & Helpers
 - Automatic Breadcrumb
 - Generated Navigation
 - Slider
