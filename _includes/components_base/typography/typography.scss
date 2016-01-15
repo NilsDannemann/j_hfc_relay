@@ -25,7 +25,7 @@ ul, ol {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-headline;
-	color: darken($color-text, 15%);
+	color: $color-headline;
 }
 h1 { }
 h2 { }

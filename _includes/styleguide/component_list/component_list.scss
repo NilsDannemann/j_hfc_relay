@@ -8,9 +8,7 @@
 
 	&__title {
 		display: block;
-		font-weight: bold;
-		color: darken($color-text, 15%);
-		margin-top: $whitespace;
+		margin: $whitespace 0 $whitespace/2 0;
 	}
 	&__item {
 		margin-left: $whitespace;

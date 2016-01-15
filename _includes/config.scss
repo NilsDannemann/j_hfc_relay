@@ -4,7 +4,7 @@
 /*
 /* =======================================*/
 
-$color-black		: #444;
+$color-black		: #333;
 $color-spaceblack	: #171F2D;
 $color-grey			: #eee;
 $color-spacegrey	: #a7adba;
@@ -66,7 +66,8 @@ $font-headline	: 'Raleway', sans-serif;
 $font-text		: 'Roboto', sans-serif;
 $font-size		: 14px;
 $line-height	: 1.6;
-$color-text		: $color-black;
+$color-headline	: $color-black;
+$color-text		: lighten($color-black, 20%);
 
 
 
