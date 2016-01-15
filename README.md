@@ -8,33 +8,28 @@ In progress.
 The Navigation is responsive out of the box.
 
 ###Adding a Page
-- Create your page in the _pages folder
+- Create your page.md in the _pages folder
 
 - Add Front Matter
-```
----
-title: "About"
-permalink: "/about/"
+```---
+title: "page"
+permalink: "/page/"
 layout: sidebar_double
 position: 2
 children: false
----
-```
+---```
 
 ###Adding a Sub-Page
-- Create your page in the _pages folder
-
-- Add Front Matter (note the permalink)
-```
----
-title: "About"
-permalink: "/about/my_subpage"
+- Create your my_subpage.md in the _pages folder (**Note:** you can also place it in a sub-folder for better organisation)
+- Add Front Matter (**Note:** The permalink controls the sub-nav)
+```---
+title: "my_subpage"
+permalink: "/page/my_subpage"
 layout: sidebar_double
 position: 2
 children: false
----
-```
-- Finally go to the parent page (here: about.md) and set ```children: true```
+---```
+- Finally go back to the **parent page** (here: page.md) and set ```children: true```
 
 
 
