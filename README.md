@@ -4,6 +4,40 @@ In progress.
 
 
 
+# The Navigation
+The Navigation is responsive out of the box.
+
+###Adding a Page
+- Create your page in the _pages folder
+
+- Add Front Matter
+```
+---
+title: "About"
+permalink: "/about/"
+layout: sidebar_double
+position: 2
+children: false
+---
+```
+
+###Adding a Sub-Page
+- Create your page in the _pages folder
+
+- Add Front Matter (note the permalink)
+```
+---
+title: "About"
+permalink: "/about/my_subpage"
+layout: sidebar_double
+position: 2
+children: false
+---
+```
+- Finally go to the parent page (here: about.md) and set ```children: true```
+
+
+
 # The Slider
 Based on the [Swiper Slider](http://www.idangero.us/swiper/). 
 Full API [here](http://www.idangero.us/swiper/api/), Demos [here](http://www.idangero.us/swiper/demos/)<br>
