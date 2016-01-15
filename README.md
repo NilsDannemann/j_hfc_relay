@@ -20,6 +20,7 @@ position: 2
 children: false
 ---
 ```
+Done!
 
 ###Adding a Sub-Page
 - Create your ```my_subpage.md``` in the _pages folder 
