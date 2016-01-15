@@ -15,7 +15,9 @@
 		* {margin: 0;}
 	}
 
-	&__img {}
+	&__img {
+		overflow: hidden;
+	}
 
 	&__content {
 		height: ($font-size - 1) * $line-height * $teaser-lines-to-show;
