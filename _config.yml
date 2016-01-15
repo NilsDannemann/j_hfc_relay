@@ -6,6 +6,7 @@ url: ""
 github_repo: https://github.com/NilsDannemann/j_hfc_relay/blob/gh-pages
 
 # Icon Sets
+use_googlefonts: true
 use_fontawesome: true
 use_ionicons: 	 false
 

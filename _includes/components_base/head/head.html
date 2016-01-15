@@ -9,6 +9,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Fonts -->
+	{% if site.use_googlefonts == true %}
+		<link href='https://fonts.googleapis.com/css?family=Raleway:500,600,400' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300' rel='stylesheet' type='text/css'>
+	{% endif %}
 	{% if site.use_fontawesome == true %}
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	{% endif %}
