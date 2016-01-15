@@ -11,24 +11,28 @@ The Navigation is responsive out of the box.
 - Create your page.md in the _pages folder
 
 - Add Front Matter
-```---
+```
+---
 title: "page"
 permalink: "/page/"
 layout: sidebar_double
 position: 2
 children: false
----```
+---
+```
 
 ###Adding a Sub-Page
 - Create your my_subpage.md in the _pages folder (**Note:** you can also place it in a sub-folder for better organisation)
 - Add Front Matter (**Note:** The permalink controls the sub-nav)
-```---
+```
+---
 title: "my_subpage"
 permalink: "/page/my_subpage"
 layout: sidebar_double
 position: 2
 children: false
----```
+---
+```
 - Finally go back to the **parent page** (here: page.md) and set ```children: true```
 
 
