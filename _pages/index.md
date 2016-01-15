@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Start"
 permalink: "/"
 layout: sidebar_double
 position: 1

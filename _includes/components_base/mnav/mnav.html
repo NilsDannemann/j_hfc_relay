@@ -1,27 +1,25 @@
 {% capture html %}
 	
-	{% comment %}
-	|||||||||||||||||||||
-	|       SETUP       |
-	|||||||||||||||||||||
-	{% endcomment %}
-
-	{% comment %}Set & Sort Pages {% endcomment %}
+	<!--================================================
+		|					|
+		|       SETUP       |
+		|					|
+	================================================-->
+	<!--Set & Sort Pages -->
 	{% assign pages = site.pages | sort: "position" %}
-
-	{% comment %}Set Navigation Level {% endcomment %}
+	<!--Set Navigation Level -->
 	{% assign level = level %}
 	
 
-	{% comment %}
-	|||||||||||||||||||||
-	| CREATE NAVIGATION |
-	|||||||||||||||||||||
-	{% endcomment %}
+	<!--================================================
+		|					|
+		| CREATE NAVIGATION |
+		|					|
+	================================================-->
 
-	{% comment %}
-	Top Level
-	{% endcomment %}
+	<!--================================================
+	CREATE NAV (If Level is 0 create normal nav)
+	================================================-->
 	{% if include.level == null %}
 	<nav class="mnav">
 		<a class="mnav__icon" href="#">
@@ -29,50 +27,64 @@
 		</a>
 		<ul class="mnav__inner">
 	{% else %}
-	{% comment %}
-	Sub Level
-	{% endcomment %}
+
+	<!--================================================
+	CREATE SUBNAV (If Level is above 0 create Subnav)
+	================================================-->
 	<ul class="mnav__subnav">
 	{% endif %}
 			
-		{% comment %}Start-Page (fixed){% endcomment %}
-		{% if include.context == "/" %}
-			<li class="mnav__item">
-				<a class="mnav__link {% if page.url == "/" %}is-active{% endif %}" href="{{ site.baseurl }}/">Home</a>
-			</li>
-		{% endif %}
-		
-		{% comment %}Other Pages (dynamic) {% endcomment %}
 		{% for p in pages %}
-			
+			<!-- Setup - Prepare url -->
 			{% capture slug %}{{ p.url | split: "/" | last }}{% endcapture %}
 			{% capture current %}{{ p.url | remove: slug | remove: "//" | append: "/" }}{% endcapture %}
+		
+			<!-- Setup - Prepare url -->
+			{% if current == include.context or current == "//" %}
+				{% unless p.url contains "style" %} <!-- For: excluding styleguide.md -->
+					
+					<!--================================================
+					CREATE SUBNAV-ITEMS (If Level above 0 (subnav) exclude Home)
+					================================================-->
+					{% if level >= 1 %}
+						{% unless p.url == "/" %}
+							<li class="mnav__item">
+								<a class="mnav__link {% if page.url contains p.url %}is-active{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+								{% if p.children == true %}
+									<!-- Increment Level-->
+									{% assign level = level | plus: 1 %}
+									{% include components_base/mnav/mnav.html context=p.url level=level %}
+								{% endif %}
+							</li>
+						{% endunless %}
 
-			{% if current == include.context %}
-				{% unless p.url contains "style" %}
-					<li class="mnav__item">
-						<a class="mnav__link {% if page.url contains p.url %}is-active{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
-						{% if p.children == true %}
-							{% comment %}Increment Level{% endcomment %}
-							{% assign level = level | plus: 1 %}
-							{% include components_base/mnav/mnav.html context=p.url level=level %}
-						{% endif %}
-					</li>
-				{% endunless %}
+					<!--================================================
+					CREATE NAV-ITEMS (If Level is 0 include Home)
+					================================================-->
+					{% else %}
+						<li class="mnav__item">
+							<a class="mnav__link {% if page.url contains p.url %}is-active{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+							{% if p.children == true %}
+								<!-- Increment Level-->
+								{% assign level = level | plus: 1 %}
+								{% include components_base/mnav/mnav.html context=p.url level=level %}
+							{% endif %}
+						</li>
+					{% endif %}
+
+				{% endunless %} <!-- For: excluding styleguide.md -->
 			{% endif %}
-
 		{% endfor %}
+
 	
-	{% comment %}
-	End: Top Level
-	{% endcomment %}
+	
+	<!-- End: Top Level -->
 	{% if include.level == null %}
 		</ul>
 	</nav>
 	{% else %}
-	{% comment %}
-	End: Sub Level
-	{% endcomment %}
+	
+	<!-- End: Sub Level -->
 	</ul>
 	{% endif %}
 
