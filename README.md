@@ -8,7 +8,7 @@ In progress.
 The Navigation is responsive out of the box.
 
 ###Adding a Page
-- Create your page.md in the _pages folder
+- Create your ```page.md``` in the _pages folder
 
 - Add Front Matter
 ```
@@ -22,7 +22,7 @@ children: false
 ```
 
 ###Adding a Sub-Page
-- Create your my_subpage.md in the _pages folder 
+- Create your ```my_subpage.md``` in the _pages folder 
 <br> **Note:** you can also place it in a sub-folder for better organisation.
 
 - Add Front Matter
@@ -36,7 +36,7 @@ position: 2
 children: false
 ---
 ```
-- Finally go back to the **parent page** (here: page.md) and set ```children: true```
+- Finally go back to the **parent page** (here: ```page.md```) and set ```children: true```
 
 
 
