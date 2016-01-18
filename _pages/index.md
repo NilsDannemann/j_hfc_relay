@@ -1,11 +1,18 @@
 ---
 title: "Home"
 permalink: "/"
-layout: sidebar_double
+layout: full
 position: 1
 children: false
 ---
-
+<div class="box">x</div>
+<div class="box">x</div>
+<div class="box">x</div>
+<div class="box">x</div>
+<div class="box">x</div>
+<div class="box">x</div>
+<div class="box">x</div>
+<div class="box">x</div>
 <h1>Home</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, maiores.</p>
 
@@ -16,7 +23,10 @@ children: false
 {% include components/teaser/teaser_double.html title="Teaser #4" image="placeholder.png" text="lorem" link="#" linktext="Weiterlesen" %}
 {% include components/teaser/teaser_double.html title="Teaser #5" image="placeholder.png" text="lorem" link="#" linktext="Weiterlesen" %}
 
+<h1>Headline</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus eaque vero perspiciatis sequi at odio mollitia odit tenetur aliquid. Assumenda quo reprehenderit officia illo architecto temporibus, vero vitae tenetur facere.</p>
+
+<hr>
 
 <section>
 	<h2>Component Parts</h2>

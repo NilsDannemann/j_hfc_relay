@@ -259,7 +259,23 @@
 			"file": "_includes/config.scss",
 			"settings":
 			{
-				"buffer_size": 16469,
+				"buffer_size": 16542,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/components/teaser/teaser.scss",
+			"settings":
+			{
+				"buffer_size": 637,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_pages/index.md",
+			"settings":
+			{
+				"buffer_size": 1353,
 				"line_ending": "Unix"
 			}
 		},
@@ -267,7 +283,7 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 6777,
+				"buffer_size": 7688,
 				"line_ending": "Unix"
 			}
 		}
@@ -279,8 +295,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 107.0,
-		"last_filter": "liq",
+		"height": 311.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -288,12 +304,20 @@
 				"Set Syntax: HTML (Liquid)"
 			],
 			[
-				"liqui",
-				"Set Syntax: HTML (Liquid)"
+				"mark",
+				"Set Syntax: Markdown"
 			],
 			[
 				"html",
 				"Set Syntax: HTML"
+			],
+			[
+				"li",
+				"Set Syntax: HTML (Liquid)"
+			],
+			[
+				"liqui",
+				"Set Syntax: HTML (Liquid)"
 			],
 			[
 				"sass",
@@ -310,10 +334,6 @@
 			[
 				"scss",
 				"Set Syntax: SCSS"
-			],
-			[
-				"mark",
-				"Set Syntax: Markdown"
 			],
 			[
 				"inst",
@@ -448,7 +468,7 @@
 				"Set Syntax: CSS3"
 			]
 		],
-		"width": 583.0
+		"width": 457.0
 	},
 	"console":
 	{
@@ -471,22 +491,39 @@
 	"expanded_folders":
 	[
 		"/Users/nilsdannemann/Sites/j_hfc_relay",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/component_nav"
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/component_list",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/component_mask",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_pages",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/assets",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/assets/css"
 	],
 	"file_history":
 	[
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/typography/typography.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/head/head.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_triple.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/mnav/mnav.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_config.yml",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/component_list/component_list.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/component_list/component_list.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/component_mask/component_mask.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/slider.scss",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_pages/index.md",
+		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_button.sublime-snippet",
+		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_teaser.sublime-snippet",
+		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_grid_column.sublime-snippet",
+		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/sidebar_double.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/mnav/mnav.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_pages/index2.md",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_pages/styleguide.md",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/full.html",
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/sidebar_single.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/slider.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/slider.js",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/slider.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/sidebar_single.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/full.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_pages/index.md",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/styleguide.md",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/mnav/mnav.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_single.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_double.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/breadcrumb/breadcrumb.html",
@@ -494,7 +531,6 @@
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/component_nav/component_nav.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/syntax_highlighting.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/component_nav/component_nav.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/component_list/component_list.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/styleguide.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/base.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/content/content.scss",
@@ -502,23 +538,18 @@
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_pages/about.md",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/assets/css/style.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_pages/index.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_triple.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/component_mask/component_mask.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/breadcrumb/breadcrumb.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/index.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/tnav/tnav.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/mnav/mnav.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/component_nav/component_nav.js",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/component_list/component_list.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/component_list/component_list.js",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/typography/typography.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/logo/logo.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/content/_content.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/breadcrumb/_breadcrumb.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/sidebar/_sidebar.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/_slider.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/head/head.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/styleguide.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/logo/logo.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/mnav/_mnav.scss",
@@ -550,7 +581,6 @@
 		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_quantity_below.sublime-snippet",
 		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_quantity_at.sublime-snippet",
 		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_quantity_above.sublime-snippet",
-		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/grid/grid.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/nav/_nav.scss",
 		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_arrow.sublime-snippet",
@@ -572,7 +602,6 @@
 		"/Users/nilsdannemann/Downloads/Linearicons.ttf",
 		"/Users/nilsdannemann/Downloads/Linearicons.woff",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/css/style.scss",
-		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_teaser.sublime-snippet",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_pages/icecream.md",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_pages/contact.md",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/header/_header.scss",
@@ -599,16 +628,11 @@
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/about.md",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/components.md",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/nav.js",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/_nav.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/README.md",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/nav.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/sidebar/_sidebar.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/_config.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components/teaser/teaser.html"
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/_nav.scss"
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -623,6 +647,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"text,",
+			"-->",
+			"<!--",
+			"{% endcomment %}",
+			"{% comment %}",
+			"{% endcomment %}",
+			"{% comment %}",
+			"{% comment %}Increment Level{% endcomment %}",
+			"dark",
 			"site",
 			"myimage",
 			"pages",
@@ -741,16 +774,7 @@
 			"{{index",
 			"index",
 			"//",
-			"nav",
-			"deep",
-			"15",
-			"swiper-button-black",
-			".swiper-pagination",
-			"l>.swiper-pagination",
-			"10px",
-			"awes",
-			".swiper-pagination",
-			".swiper-container-horizontal>.swiper-pagination"
+			"nav"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -768,7 +792,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -777,15 +801,47 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 16469,
+						"buffer_size": 16542,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								601,
-								601
+								1343,
+								1343
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_includes/components/teaser/teaser.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 637,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								203,
+								203
 							]
 						],
 						"settings":
@@ -804,20 +860,51 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "README.md",
+					"buffer": 2,
+					"file": "_pages/index.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6777,
+						"buffer_size": 1353,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								114,
-								114
+								183,
+								183
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7688,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								162,
+								162
 							]
 						],
 						"settings":
@@ -832,7 +919,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -840,7 +927,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 31.0
 	},
 	"input":
 	{
@@ -881,7 +968,7 @@
 	"project": "j_hfc_relay.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 58.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -890,6 +977,58 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"ind",
+				"_pages/index.md"
+			],
+			[
+				"teascss",
+				"_includes/components/teaser/teaser.scss"
+			],
+			[
+				"mnasc",
+				"_includes/components_base/mnav/mnav.scss"
+			],
+			[
+				"list",
+				"_includes/styleguide/component_list/component_list.html"
+			],
+			[
+				"typo",
+				"_includes/components_base/typography/typography.scss"
+			],
+			[
+				"head",
+				"_includes/components_base/head/head.html"
+			],
+			[
+				"slidsc",
+				"_includes/components_base/slider/slider.scss"
+			],
+			[
+				"in",
+				"_pages/index.md"
+			],
+			[
+				"inde",
+				"_pages/index.md"
+			],
+			[
+				"confi",
+				"_config.yml"
+			],
+			[
+				"slid",
+				"_includes/components_base/slider/slider.scss"
+			],
+			[
+				"side",
+				"_layouts/sidebar_double.html"
+			],
+			[
+				"mna",
+				"_includes/components_base/mnav/mnav.html"
+			],
 			[
 				"slider",
 				"_includes/components_base/slider/slider.html"
@@ -901,10 +1040,6 @@
 			[
 				"sinde",
 				"_pages/index.md"
-			],
-			[
-				"confi",
-				"_config.yml"
 			],
 			[
 				"teashtml",
@@ -935,10 +1070,6 @@
 				"_includes/components/teaser/teaser_triple.scss"
 			],
 			[
-				"inde",
-				"_pages/index.html"
-			],
-			[
 				"abou",
 				"_pages/about.md"
 			],
@@ -967,10 +1098,6 @@
 				"_includes/styleguide/component_nav/component_nav.html"
 			],
 			[
-				"list",
-				"_includes/styleguide/component_list/component_list.html"
-			],
-			[
 				"navs",
 				"_includes/styleguide/component_nav/component_nav.js"
 			],
@@ -987,20 +1114,8 @@
 				"_includes/components_base/content/_content.scss"
 			],
 			[
-				"typo",
-				"_includes/components_base/typography/_typography.scss"
-			],
-			[
 				"mask",
 				"_includes/styleguide/component_mask/component_mask.html"
-			],
-			[
-				"slidsc",
-				"_includes/components_base/slider/_slider.scss"
-			],
-			[
-				"slid",
-				"_includes/components_base/slider/slider.js"
 			],
 			[
 				"teasscs",
@@ -1017,10 +1132,6 @@
 			[
 				"_nav",
 				"_includes/styleguide/component_nav/component_nav.html"
-			],
-			[
-				"head",
-				"_includes/components_base/head/head.html"
 			],
 			[
 				"componenscss",
@@ -1319,10 +1430,6 @@
 				"_includes\\components_base\\grid\\grid.scss"
 			],
 			[
-				"side",
-				"_includes\\components_base\\sidebar\\_sidebar.scss"
-			],
-			[
 				"footer",
 				"_includes\\components_base\\footer\\_footer.scss"
 			],
@@ -1381,26 +1488,6 @@
 			[
 				"bas",
 				"_includes\\_base.scss"
-			],
-			[
-				"in",
-				"index.html"
-			],
-			[
-				"ma",
-				"_includes\\layout\\mnav.html"
-			],
-			[
-				"incltea",
-				"_includes\\teaser.html"
-			],
-			[
-				"high",
-				"_scss\\includes\\styleguide\\_highlight.scss"
-			],
-			[
-				"comteas",
-				"_components\\teaser.html"
 			]
 		],
 		"width": 0.0
@@ -1412,16 +1499,16 @@
 		"selected_items":
 		[
 			[
+				"",
+				"~/Sites/meteor-pdfmake/meteor-pdfmake.sublime-project"
+			],
+			[
 				"ki",
 				"~/Sites/KiwiQuest/wp_kiwiquest.sublime-project"
 			],
 			[
 				"kiw",
 				"~/Sites/KiwiQuest/wp_kiwiquest.sublime-project"
-			],
-			[
-				"",
-				"C:\\Users\\Nils Dannemann\\Desktop\\Sites\\m_workstreams\\workstreams.sublime-project"
 			]
 		],
 		"width": 475.0

@@ -103,7 +103,7 @@ This approach has the following advantages over conventional grids:<br>
 By default a column has no gutters. You can add gutters like so:
 
 ```sass
-@include column('1/4', $gutter: true); 		// adds global gutters (use: 'true' or 'basic')
+@include column('1/4', $gutter: true); 		// adds global gutters (use: 'true' or 'false')
 @include column('1/4', true); 				// shorthand 
 ```
 **Note:** This uses the global ```$whitespace``` variable for gutters.

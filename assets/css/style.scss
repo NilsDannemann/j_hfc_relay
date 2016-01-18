@@ -9,7 +9,7 @@
 /* ===RESET=== */
 @import 'normalize';
 
-/* ===THEME=== */
+/* ===CONFIG & BASE=== */
 @import 'config';
 @import 'base';
 
@@ -53,4 +53,7 @@
 	@import 'components/teaser/teaser_double';
 	@import 'components/teaser/teaser_triple';
 {% endif %}
+
+/* ===THEME=== */
+@import 'overrides';
 

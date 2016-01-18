@@ -1,0 +1,6 @@
+.box {
+	@include column('1/8', $gutter: true, $behavior: doubling);
+	background: $color-grey;
+	padding: 20px;
+	text-align: center;
+}
