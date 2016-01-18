@@ -103,18 +103,18 @@ This approach has the following advantages over conventional grids:<br>
 By default a column has no gutters. You can add gutters like so:
 
 ```sass
-@include column('1/4', $gutter: true); 		// adds global gutters (use: 'true' or 'false')
-@include column('1/4', true); 				// shorthand 
+@include column('1/6', $gutter: true); 		// adds global gutters (use: 'true' or 'false')
+@include column('1/6', true); 				// shorthand 
 ```
 **Note:** This uses the global ```$whitespace``` variable for gutters.
 
 You can also specify your own gutters like so:
 ```sass
-@include column('1/4', $gutter: 10px); 		// adds px gutters
-@include column('1/4', $gutter: 2em); 		// adds em gutters
-@include column('1/4', $gutter: 3%); 		// adds % gutters
-@include column('1/4', $gutter: $var); 		// you can also use sass-variables
-@include column('1/4', $gutter: $var/2); 	// you can even do math with them
+@include column('1/6', $gutter: 10px); 		// adds px gutters
+@include column('1/6', $gutter: 2em); 		// adds em gutters
+@include column('1/6', $gutter: 3%); 		// adds % gutters
+@include column('1/6', $gutter: $var); 		// you can also use sass-variables
+@include column('1/6', $gutter: $var/2); 	// you can even do math with them
 ```
 
 ###Adding Behavior
@@ -122,8 +122,8 @@ You can also specify your own gutters like so:
 By default a column has no special behavior. You can add two different behaviors like so:
 
 ```sass
-@include column('1/4', $gutter: true, $behavior: stacking);
-@include column('1/4', $gutter: true, $behavior: doubling);
+@include column('1/6', $gutter: true, $behavior: stacking);
+@include column('1/6', $gutter: true, $behavior: doubling);
 ```
 **Stacking:** Columns use full width on smallest breakpoint (common pattern)
 **Doubling:** Columns automatically respond to certain breakpoints (try it out to better understand)
