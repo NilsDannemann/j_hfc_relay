@@ -117,6 +117,18 @@ You can also specify your own gutters like so:
 @include column('1/4', $gutter: $var/2); 	// you can even do math with them
 ```
 
+###Adding Behavior
+
+By default a column has no special behavior. You can add two different behaviors like so:
+
+```sass
+@include column('1/4', $gutter: true, $behavior: stacking);
+@include column('1/4', $gutter: true, $behavior: doubling);
+```
+**Stacking:** Columns use full width on smallest breakpoint (common pattern)
+**Doubling:** Columns automatically respond to certain breakpoints (try it out to better understand)
+
+
 ###Play with it
 You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
