@@ -3,4 +3,23 @@
 	background: $color-grey;
 	padding: 20px;
 	text-align: center;
+	
+	@include respond-below(xxl) {
+		background: black;
+	}
+	@include respond-below(xl) {
+		background: beige;
+	}
+	@include respond-below(l) {
+		background: blue;
+	}
+	@include respond-below(m) {
+		background: red;
+	}
+	@include respond-below(s) {
+		background: yellow;
+	}
+	@include respond-below(xs) {
+		background: green;
+	}
 }
