@@ -8,7 +8,7 @@
 	border-top: $border;
 	position: relative;
 	z-index: 99;
-	box-shadow: $box-shadow-size-3;
+	box-shadow: $box-shadow-size-5;
 	
 	// General: State
 	.is-active {}
@@ -59,7 +59,7 @@
 
 		opacity: 0;
 		transform: translateY(10px);
-		box-shadow: $box-shadow-size-3;
+		box-shadow: $box-shadow-size-5;
 		@include transition();
 
 		.mnav__link--parent {

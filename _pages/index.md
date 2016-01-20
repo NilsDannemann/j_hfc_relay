@@ -5,14 +5,14 @@ layout: sidebar_double
 position: 1
 children: false
 ---
-<div class="box">x</div>
-<div class="box">x</div>
-<div class="box">x</div>
-<div class="box">x</div>
-<div class="box">x</div>
-<div class="box">x</div>
-<div class="box">x</div>
-<div class="box">x</div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
 <h1>Home</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, maiores.</p>
 

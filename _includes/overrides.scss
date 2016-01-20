@@ -1,25 +1,12 @@
+/* =======================================*/
+/*
+/* OVERRIDES
+/*
+/* =======================================*/
+
 .box {
 	@include column('1/8', $gutter: true, $behavior: doubling);
 	background: $color-grey;
-	padding: 20px;
 	text-align: center;
-	
-	@include respond-above(xs) {
-		background: green;
-	}
-	@include respond-above(s) {
-		background: yellow;
-	}
-	@include respond-above(m) {
-		background: red;
-	}
-	@include respond-above(l) {
-		background: blue;
-	}
-	@include respond-above(xl) {
-		background: beige;
-	}
-	@include respond-above(xxl) {
-		background: black;
-	}
+	padding: 20px;
 }
