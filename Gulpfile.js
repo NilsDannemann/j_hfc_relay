@@ -26,7 +26,10 @@ gulp.task('build', shell.task([
 gulp.task('html', ['build'], function() {
 	return gulp.src(outputfolder + '/**/*.html')
 		.pipe(htmlmin({
-			collapseWhitespace: true
+			removeComments: true,			//works - removes comments
+			minifyJS: true,					//works - minifies inline scripts
+			minifyCSS: true,				//works - minifies inline styles
+			collapseWhitespace: true		//works - collapses whitespace
 		}))
 		.pipe(gulp.dest(outputfolder));
 });
@@ -43,12 +46,6 @@ gulp.task('images', ['build'], function () {
 });
 
 
-// gulp serve - Triggers Jekylls serve command
-gulp.task('serve', shell.task([
-	'jekyll serve'
-]));
-
-
 
 
 
@@ -60,12 +57,12 @@ gulp.task('serve', shell.task([
 // gulp css - Compress css and put in outputfolder
 var gulp = require('gulp'),
     sass = require('gulp-sass'),					//works
-    importCss = require('gulp-import-css'),			//works (imports from remote sources like a CDN)
-    autoprefixer = require('gulp-autoprefixer'), 	//works	(autoprefixes)
-    cssnano = require('gulp-cssnano'),				//works (minifies)
-    glob = require('glob');							//works (grabs all html files and puts them into one file...)
-    uncss = require('gulp-uncss'),					//works (...scans that big html file and finds + removes unused css)
-    rename = require('gulp-rename'),				//works (rename to style.min.css)
+    importCss = require('gulp-import-css'),			//works - (imports from remote sources like a CDN)
+    autoprefixer = require('gulp-autoprefixer'), 	//works	- (autoprefixes)
+    cssnano = require('gulp-cssnano'),				//works - (minifies)
+    glob = require('glob');							//works - (grabs all html files and puts them into one file...)
+    uncss = require('gulp-uncss'),					//works - (...scans that big html file and finds + removes unused css)
+    rename = require('gulp-rename'),				//works - (rename to style.min.css)
 
 gulp.task('css', ['build'], function() {
    return gulp.src('assets/css/style.scss')
