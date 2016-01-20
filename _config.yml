@@ -5,6 +5,11 @@ baseurl: "/j_hfc_relay"
 url: ""
 github_repo: https://github.com/NilsDannemann/j_hfc_relay/blob/gh-pages
 
+# Generate ".deploy" folder on build
+source:      .
+destination: .deploy
+exclude: [node_modules, Gulpfile.js, package.json, README.md]
+
 # Icon Sets
 use_googlefonts: true
 use_fontawesome: true
