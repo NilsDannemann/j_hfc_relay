@@ -206,43 +206,23 @@ $teaser-lines-to-show: 3;
 /* RESPOND AT - use: @include respond-at($name) {...} 
 /* =======================================*/
 @mixin respond-at($name) {
-	@if $name == 'xs' and map-has-key($breakpoints, $name) {
-		@media only screen and (max-width: map-get($breakpoints, 's')) {
-			@content;
-		}
-	}
-	@else if $name == 's' and map-has-key($breakpoints, $name) {
-		@media only screen and (min-width: map-get($breakpoints, 's')) and (max-width: map-get($breakpoints, 'm')) {
-			@content;
-		}
-	}
-	@else if $name == 'm' and map-has-key($breakpoints, $name) {
-		@media only screen and (min-width: map-get($breakpoints, 'm')) and (max-width: map-get($breakpoints, 'l')) {
-			@content;
-		}
-	}
-	@else if $name == 'l' and map-has-key($breakpoints, $name) {
-		@media only screen and (min-width: map-get($breakpoints, 'l')) and (max-width: map-get($breakpoints, 'xl')) {
-			@content;
-		}
-	}
-	@else if $name == 'xl' and map-has-key($breakpoints, $name) {
-		@media only screen and (min-width: map-get($breakpoints, 'xl')) and (max-width: map-get($breakpoints, 'xxl')) {
-			@content;
-		}
-	}
-	@else if $name == 'xxl' and map-has-key($breakpoints, $name) {
-		@media only screen and (min-width: map-get($breakpoints, 'xxl')) {
-			@content;
-		}
-	}
-	// at specific px width
-	@else {
-		@media only screen and (min-width: $name) and (max-width: $name) {
-			@content;
+	$index: index(map_keys($breakpoints), $name);
+
+	@if map-has-key($breakpoints, $name) {
+		@if $index == length($breakpoints) {
+			@media only screen and (min-width: map-get($breakpoints, $name)) {
+				@content;
+			}
+		} @else {
+			@media only screen and (min-width: map-get($breakpoints, $name)) and (max-width: nth(map_values($breakpoints), ( $index + 1 ))) {
+				@content;
+			}
 		}
 	}
 }
+
+
+
 
 /* =======================================*/
 /* RESPOND ABOVE - use: @include respond-above($name) {...} 

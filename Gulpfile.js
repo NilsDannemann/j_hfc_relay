@@ -43,7 +43,7 @@ gulp.task('images', ['build'], function () {
 });
 
 
-// gulp serve - Triggers Jekylls build command
+// gulp serve - Triggers Jekylls serve command
 gulp.task('serve', shell.task([
 	'jekyll serve'
 ]));
