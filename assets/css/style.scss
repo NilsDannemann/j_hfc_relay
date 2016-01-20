@@ -1,3 +1,5 @@
+---
+---
 /* =======================================*/
 /*
 /* PARTIALS
@@ -5,30 +7,30 @@
 /* =======================================*/
 
 /* ===CONFIG & BASE=== */
-@import '_includes/config';
-@import '_includes/base';
+@import 'config';
+@import 'base';
 
 /* ===BASE COMPONENTS=== */
-@import '_includes/components_base/header/header';
-@import '_includes/components_base/logo/logo';
+@import 'components_base/header/header';
+@import 'components_base/logo/logo';
 
-@import '_includes/components_base/tnav/tnav';
-@import '_includes/components_base/mnav/mnav';
-@import '_includes/components_base/slider/slider';
-@import '_includes/components_base/content/content';
-@import '_includes/components_base/sidebar/sidebar';
-@import '_includes/components_base/footer/footer';
-@import '_includes/components_base/typography/typography';
+@import 'components_base/tnav/tnav';
+@import 'components_base/mnav/mnav';
+@import 'components_base/slider/slider';
+@import 'components_base/content/content';
+@import 'components_base/sidebar/sidebar';
+@import 'components_base/footer/footer';
+@import 'components_base/typography/typography';
 
 /* ===COMPONENTS=== */
-@import '_includes/components/breadcrumb/breadcrumb';
-@import '_includes/components/button/button';
-@import '_includes/components/button/buttongroup';
-@import '_includes/components/teaser/teaser';
-@import '_includes/components/teaser/teaser_single';
-@import '_includes/components/teaser/teaser_double';
-@import '_includes/components/teaser/teaser_triple';
+@import 'components/breadcrumb/breadcrumb';
+@import 'components/button/button';
+@import 'components/button/buttongroup';
+@import 'components/teaser/teaser';
+@import 'components/teaser/teaser_single';
+@import 'components/teaser/teaser_double';
+@import 'components/teaser/teaser_triple';
 
 /* ===THEME=== */
-@import '_includes/overrides';
+@import 'overrides';
 
