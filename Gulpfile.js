@@ -41,3 +41,9 @@ gulp.task('images', ['build'], function () {
 		}))
 		.pipe(gulp.dest(outputfolder + '/assets/images'));
 });
+
+
+// gulp serve - Triggers Jekylls build command
+gulp.task('serve', shell.task([
+	'jekyll serve'
+]));
