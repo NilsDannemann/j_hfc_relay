@@ -1,7 +1,7 @@
 ---
 title: "Home"
 permalink: "/"
-layout: full
+layout: sidebar_double
 position: 1
 children: false
 ---

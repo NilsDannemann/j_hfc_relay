@@ -5,22 +5,19 @@
 /* =======================================*/
 .teaser--double {
 	@include flexbox($direction: column);
-	@include column('1/2', $gutter: true);
+	@include column('1/2', $gutter: true, $behavior: stacking);
 }
 
 
 /* =======================================*/
 /* RESPONSIVE BEHAVIOR
 /* =======================================*/
-@include respond-at(xl) {
+@include respond-at(s) {
 	.teaser--double {@include column('1/2', $gutter: true);}
 }
 @include respond-at(l) {
 	.teaser--double {@include column('1/1', $gutter: true);}
 }
-@include respond-at(s) {
+@include respond-at(xl) {
 	.teaser--double {@include column('1/2', $gutter: true);}
-}
-@include respond-at(xs) {
-	.teaser--double {@include column('1/1', $gutter: true);}
 }

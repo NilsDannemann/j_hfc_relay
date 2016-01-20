@@ -41,7 +41,6 @@ $color-brand: $color-spaceblack;
 
 $whitespace			: 20px;
 $sidebar-width		: 205px;
-$responsive			: true; 	// true or false
 $global-border-box  : true;		// true or false
 $devmode-overlay	: false; 	// true or false
 $devmode-breakpoints: false; 	// true or false
@@ -137,12 +136,6 @@ $teaser-lines-to-show: 3;
 /* =======================================*/
 
 @mixin container() {
-	@if $responsive == true {
-		min-width: 0;
-	} 
-	@else {
-		min-width: map-get($breakpoints, xl);
-	}
 	max-width: map-get($breakpoints, xxl);
 	margin: 0 auto;
 }
@@ -213,38 +206,38 @@ $teaser-lines-to-show: 3;
 /* RESPOND AT - use: @include respond-at($name) {...} 
 /* =======================================*/
 @mixin respond-at($name) {
-	@if $name == 'xs' and map-has-key($breakpoints, $name) and $responsive == true {
+	@if $name == 'xs' and map-has-key($breakpoints, $name) {
 		@media only screen and (max-width: map-get($breakpoints, 's')) {
 			@content;
 		}
 	}
-	@else if $name == 's' and map-has-key($breakpoints, $name) and $responsive == true {
+	@else if $name == 's' and map-has-key($breakpoints, $name) {
 		@media only screen and (min-width: map-get($breakpoints, 's')) and (max-width: map-get($breakpoints, 'm')) {
 			@content;
 		}
 	}
-	@else if $name == 'm' and map-has-key($breakpoints, $name) and $responsive == true {
+	@else if $name == 'm' and map-has-key($breakpoints, $name) {
 		@media only screen and (min-width: map-get($breakpoints, 'm')) and (max-width: map-get($breakpoints, 'l')) {
 			@content;
 		}
 	}
-	@else if $name == 'l' and map-has-key($breakpoints, $name) and $responsive == true {
+	@else if $name == 'l' and map-has-key($breakpoints, $name) {
 		@media only screen and (min-width: map-get($breakpoints, 'l')) and (max-width: map-get($breakpoints, 'xl')) {
 			@content;
 		}
 	}
-	@else if $name == 'xl' and map-has-key($breakpoints, $name) and $responsive == true {
+	@else if $name == 'xl' and map-has-key($breakpoints, $name) {
 		@media only screen and (min-width: map-get($breakpoints, 'xl')) and (max-width: map-get($breakpoints, 'xxl')) {
 			@content;
 		}
 	}
-	@else if $name == 'xxl' and map-has-key($breakpoints, $name) and $responsive == true {
+	@else if $name == 'xxl' and map-has-key($breakpoints, $name) {
 		@media only screen and (min-width: map-get($breakpoints, 'xxl')) {
 			@content;
 		}
 	}
 	// at specific px width
-	@else if $responsive == true {
+	@else {
 		@media only screen and (min-width: $name) and (max-width: $name) {
 			@content;
 		}
@@ -255,13 +248,13 @@ $teaser-lines-to-show: 3;
 /* RESPOND ABOVE - use: @include respond-above($name) {...} 
 /* =======================================*/
 @mixin respond-above($name) {
-	@if $name != null and map-has-key($breakpoints, $name) and $responsive == true {
+	@if $name != null and map-has-key($breakpoints, $name) {
 		@media only screen and (min-width: map-get($breakpoints, $name)) {
 			@content;
 		}
 	}
 	// above specific px width
-	@else if $responsive == true {
+	@else {
 		@media only screen and (min-width: $name) {
 			@content;
 		}
@@ -275,13 +268,13 @@ $teaser-lines-to-show: 3;
 /* RESPOND BELOW - use: @include respond-below($name) {...} 
 /* =======================================*/
 @mixin respond-below($name) {
-	@if $name != null and map-has-key($breakpoints, $name) and $responsive == true {
+	@if $name != null and map-has-key($breakpoints, $name) {
 		@media only screen and (max-width: map-get($breakpoints, $name)) {
 			@content;
 		}
 	}
 	// below specific px width
-	@else if $responsive == true {
+	@else {
 		@media only screen and (max-width: $name) {
 			@content;
 		}
@@ -295,13 +288,13 @@ $teaser-lines-to-show: 3;
 /* RESPOND BETWEEN - use: @include respond-between($name1, $name2) {...} 
 /* =======================================*/
 @mixin respond-between($name1, $name2) {
-	@if map-has-key($breakpoints, $name1) and map-has-key($breakpoints, $name2) and $responsive == true {
+	@if map-has-key($breakpoints, $name1) and map-has-key($breakpoints, $name2) {
 		@media only screen and (min-width: #{inspect(map-get($breakpoints, $name1))}) and (max-width: #{inspect(map-get($breakpoints, $name2))}) {
 			@content;
 		}
 	}
 	// between specific px widths
-	@else if $responsive == true {
+	@else {
 		@media only screen and (min-width: $name1) and (max-width: $name2) {
 			@content;
 		}

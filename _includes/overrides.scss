@@ -4,22 +4,22 @@
 	padding: 20px;
 	text-align: center;
 	
-	@include respond-below(xxl) {
-		background: black;
+	@include respond-above(xs) {
+		background: green;
 	}
-	@include respond-below(xl) {
-		background: beige;
-	}
-	@include respond-below(l) {
-		background: blue;
-	}
-	@include respond-below(m) {
-		background: red;
-	}
-	@include respond-below(s) {
+	@include respond-above(s) {
 		background: yellow;
 	}
-	@include respond-below(xs) {
-		background: green;
+	@include respond-above(m) {
+		background: red;
+	}
+	@include respond-above(l) {
+		background: blue;
+	}
+	@include respond-above(xl) {
+		background: beige;
+	}
+	@include respond-above(xxl) {
+		background: black;
 	}
 }
