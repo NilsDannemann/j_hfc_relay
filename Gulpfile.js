@@ -47,3 +47,29 @@ gulp.task('images', ['build'], function () {
 gulp.task('serve', shell.task([
 	'jekyll serve'
 ]));
+
+
+
+// CSS
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    importCss = require('gulp-import-css'),
+    autoprefixer = require('gulp-autoprefixer'),
+    uncss = require('gulp-uncss'),
+    cssnano = require('gulp-cssnano'),
+    rename = require('gulp-rename'),
+    glob = require('glob');
+
+gulp.task('css', function() {
+   return gulp.src('assets/css/style.scss')
+       .pipe(sass())
+       .pipe(importCss())
+       .pipe(autoprefixer())
+       .pipe(uncss({
+           html: glob.sync(".deploy/**/*.html"),
+           ignore: ['label.active', '.dark-mode', 'span.tweet-time']
+       }))
+       .pipe(cssnano())
+       .pipe(rename('style.min.css'))
+       .pipe(gulp.dest(outputfolder + '/assets/css'));
+});
