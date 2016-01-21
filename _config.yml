@@ -19,10 +19,11 @@ collections:
   components:
     output: false
 
-# Pages
+# Include
 include: ['_pages']
 
 # General settings
+port: 3000
 highlighter: pygments
 markdown: kramdown
 kramdown:

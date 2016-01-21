@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/NilsDannemann/j_hfc_relay#readme",
   "devDependencies": {
+    "browser-sync": "^2.11.1",
     "glob": "^6.0.4",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",

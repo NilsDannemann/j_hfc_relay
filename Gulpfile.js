@@ -18,12 +18,16 @@ var gulp = require('gulp'),
 gulp.task('default', ['html', 'images']);
 
 // gulp build - Triggers Jekylls build command
-gulp.task('build', shell.task([
+gulp.task('jekyll_build', shell.task([
 	'jekyll build'
+]));
+// gulp serve - Triggers Jekylls serve command
+gulp.task('jekyll_serve', shell.task([
+	'jekyll serve'
 ]));
 
 // gulp html - Compress html and put in outputfolder
-gulp.task('html', ['build'], function() {
+gulp.task('html', ['jekyll_build'], function() {
 	return gulp.src(outputfolder + '/**/*.html')
 		.pipe(htmlmin({
 			removeComments: true,			//works - removes comments
@@ -35,7 +39,7 @@ gulp.task('html', ['build'], function() {
 });
 
 // gulp images - Compress images and put in outputfolder
-gulp.task('images', ['build'], function () {
+gulp.task('images', ['jekyll_build'], function () {
 	return gulp.src('assets/images/**')
 		.pipe(imagemin({
 			progressive: true,
@@ -64,7 +68,7 @@ var gulp = require('gulp'),
     uncss = require('gulp-uncss'),					//works - (...scans that big html file and finds + removes unused css)
     rename = require('gulp-rename'),				//works - (rename to style.min.css)
 
-gulp.task('css', ['build'], function() {
+gulp.task('css', ['jekyll_build'], function() {
    return gulp.src('assets/css/style.scss')
        .pipe(sass())
        .pipe(importCss())
@@ -77,3 +81,27 @@ gulp.task('css', ['build'], function() {
        .pipe(rename('style.min.css'))
        .pipe(gulp.dest(outputfolder + '/assets/css'));
 });
+
+
+
+
+
+
+
+// gulp sync-watch - browser sync and live-refresh 
+// NOTE: needs to have 'jekyll serve' running in another window)
+var gulp        = require('gulp'),
+	browserSync = require('browser-sync').create();
+
+gulp.task('sync', function() {
+    browserSync.init({
+        proxy: "http://127.0.0.1:3000/j_hfc_relay/"
+    });
+});
+gulp.task('watch', function () {
+    gulp.watch(['_includes/**/*', '_layouts/**/*', '_pages/**/*', 'assets/**/*'], ['reload']);
+});
+gulp.task('reload', ['jekyll_build'], function () {
+    browserSync.reload();
+});
+gulp.task('sync-watch', ['sync', 'watch']);
