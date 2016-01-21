@@ -17,6 +17,8 @@ var gulp = require('gulp'),
 	outputfolder = '.deploy';
 
 
+
+
 /*===========================
 GULP DEPLOY || run all tasks in order
 ===========================*/
@@ -29,6 +31,9 @@ gulp.task('jekyll_build', shell.task(['jekyll build']));
 GULP SERVE || triggers Jekylls serve command
 ===========================*/
 gulp.task('jekyll_serve', shell.task(['jekyll serve']));
+
+
+
 
 /*===========================
 GULP HTML || compress html + inline css + inline scripts & put in outputfolder
@@ -43,6 +48,9 @@ gulp.task('html', ['jekyll_build'], function() {
 		}))
 		.pipe(gulp.dest(outputfolder));
 });
+
+
+
 
 /*===========================
 GULP IMAGES || compress images & put in outputfolder
