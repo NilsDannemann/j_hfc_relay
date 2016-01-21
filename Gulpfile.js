@@ -1,32 +1,38 @@
+/*===========================
+GULP VARIABLES
+===========================*/
 var gulp = require('gulp'),
-	// Jekyll build
 	shell = require('gulp-shell'),
-	// HTML
-	htmlmin = require('gulp-htmlmin');
-	// Images
+	// For: gulp html
+	htmlmin = require('gulp-htmlmin'),
+	// For: gulp images
 	imagemin = require('gulp-imagemin'),
 	pngquant = require('imagemin-pngquant'),
 	jpegtran = require('imagemin-jpegtran'),
 	gifsicle = require('imagemin-gifsicle'),
 	optipng = require('imagemin-optipng'),
-	// Folder
+	// For: gulp sync-watch
+	browserSync = require('browser-sync').create(),
+	// For: Outputfolder variable
 	outputfolder = '.deploy';
 
 
+/*===========================
+GULP DEPLOY || run all tasks in order
+===========================*/
+gulp.task('deploy', ['html', 'images']);
+/*===========================
+GULP BUILD || triggers Jekylls build command
+===========================*/
+gulp.task('jekyll_build', shell.task(['jekyll build']));
+/*===========================
+GULP SERVE || triggers Jekylls serve command
+===========================*/
+gulp.task('jekyll_serve', shell.task(['jekyll serve']));
 
-// gulp - run all tasks in order
-gulp.task('default', ['html', 'images']);
-
-// gulp build - Triggers Jekylls build command
-gulp.task('jekyll_build', shell.task([
-	'jekyll build'
-]));
-// gulp serve - Triggers Jekylls serve command
-gulp.task('jekyll_serve', shell.task([
-	'jekyll serve'
-]));
-
-// gulp html - Compress html and put in outputfolder
+/*===========================
+GULP HTML || compress html + inline css + inline scripts & put in outputfolder
+===========================*/
 gulp.task('html', ['jekyll_build'], function() {
 	return gulp.src(outputfolder + '/**/*.html')
 		.pipe(htmlmin({
@@ -38,7 +44,9 @@ gulp.task('html', ['jekyll_build'], function() {
 		.pipe(gulp.dest(outputfolder));
 });
 
-// gulp images - Compress images and put in outputfolder
+/*===========================
+GULP IMAGES || compress images & put in outputfolder
+===========================*/
 gulp.task('images', ['jekyll_build'], function () {
 	return gulp.src('assets/images/**')
 		.pipe(imagemin({
@@ -57,8 +65,9 @@ gulp.task('images', ['jekyll_build'], function () {
 
 
 
-
-// gulp css - Compress css and put in outputfolder
+/*===========================
+GULP CSS || compress css & put in outputfolder
+===========================*/
 var gulp = require('gulp'),
     sass = require('gulp-sass'),					//works
     importCss = require('gulp-import-css'),			//works - (imports from remote sources like a CDN)
@@ -87,12 +96,9 @@ gulp.task('css', ['jekyll_build'], function() {
 
 
 
-
-// gulp sync-watch - browser sync and live-refresh 
-// NOTE: needs to have 'jekyll serve' running in another window)
-var gulp        = require('gulp'),
-	browserSync = require('browser-sync').create();
-
+/*===========================
+GULP SYNC-WATCH || browser sync & live-refresh 
+===========================*/
 gulp.task('sync', function() {
     browserSync.init({
         proxy: "http://127.0.0.1:3000/j_hfc_relay/"
