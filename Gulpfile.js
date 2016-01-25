@@ -30,14 +30,16 @@ var gulp = require('gulp'),
 
 
 /*===========================
-GULP DEPLOY || run all tasks in order
+GULP BUILD || run all tasks in order
 ===========================*/
-// gulp.task('deploy', ['html', 'images', 'css']);
-gulp.task('deploy', function(callback) {
-  runSequence('jekyll_build',
-              ['html', 'images', 'css'],
-              'publish',
-              callback);
+gulp.task('build', function(callback) {
+	runSequence(
+		'jekyll_build',
+		'html', 
+		'css',
+		'images', 
+		'publish',
+		callback);
 });
 /*===========================
 GULP BUILD || triggers Jekylls build command
@@ -115,9 +117,9 @@ gulp.task('css', ['css_add_mincss_to_head'], function() {
 
 
 /*===========================
-GULP SYNC-WATCH || browser sync (works) & live-refresh (works)
+GULP SERVE || browser sync (works) & live-refresh (works) ----------------------------------- ERROR with HTML omptimization??
 ===========================*/
-gulp.task('sync', function() {
+gulp.task('browser-sync', function() {
 	browserSync.init({
 		proxy: "http://127.0.0.1:3000/"
 	});
@@ -133,7 +135,7 @@ gulp.task('watch', function () {
 gulp.task('reload', ['jekyll_build'], function () {
 	browserSync.reload();
 });
-gulp.task('sync-watch', ['sync', 'watch']);
+gulp.task('serve', ['browser-sync', 'watch']);
 
 
 
