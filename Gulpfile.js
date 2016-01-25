@@ -22,7 +22,7 @@ var gulp = require('gulp'),
 /*===========================
 GULP DEPLOY || run all tasks in order
 ===========================*/
-gulp.task('deploy', ['html', 'images']);
+gulp.task('deploy', ['html', 'images', 'css']);
 /*===========================
 GULP BUILD || triggers Jekylls build command
 ===========================*/
@@ -68,16 +68,12 @@ gulp.task('images', ['jekyll_build'], function () {
 
 
 
-
-
-
-
-
 /*===========================
 GULP CSS || compress css & put in outputfolder
 ===========================*/
 var gulp = require('gulp'),
-	sass = require('gulp-sass'),					//works
+	replace = require('gulp-replace'),				//works - (remove jekyll frontmatter before processing)
+	sass = require('gulp-sass'),					//works - (process sass)
 	importCss = require('gulp-import-css'),			//works - (imports from remote sources like a CDN)
 	autoprefixer = require('gulp-autoprefixer'), 	//works	- (autoprefixes)
 	cssnano = require('gulp-cssnano'),				//works - (minifies)
@@ -85,21 +81,28 @@ var gulp = require('gulp'),
 	uncss = require('gulp-uncss'),					//works - (...scans that big html file and finds + removes unused css)
 	rename = require('gulp-rename'),				//works - (rename to style.min.css)
 
-gulp.task('css', ['jekyll_build'], function() {
+// Step 1 - Wait for jekyll_build, then include style.min.css
+gulp.task('css_add_mincss_to_head', ['jekyll_build'], function() {
+	return gulp.src(outputfolder + '/**/*.html')
+		.pipe(replace('style.css', 'style.min.css'))
+		.pipe(gulp.dest(outputfolder));
+});
+// Step 2 - Minify everything, then create style.min.css
+gulp.task('css', ['css_add_mincss_to_head'], function() {
 	return gulp.src('assets/css/style.scss')
-	   .pipe(sass())
-	   .pipe(importCss())
-	   .pipe(autoprefixer())
-	   .pipe(uncss({
+		.pipe(replace('---', ''))
+		.pipe(replace('@import \'', '@import \'_includes/'))
+		.pipe(sass())
+		.pipe(importCss())
+		.pipe(autoprefixer())
+		.pipe(uncss({
 			html: glob.sync(".deploy/**/*.html"),
 			ignore: ['is-*', 'has-*', '*--active']
-	   }))
-	   .pipe(cssnano())
-	   .pipe(rename('style.min.css'))
-	   .pipe(gulp.dest(outputfolder + '/assets/css'));
+		}))
+		.pipe(cssnano())
+		.pipe(rename('style.min.css'))
+		.pipe(gulp.dest(outputfolder + '/assets/css'));
 });
-
-
 
 
 
