@@ -1,7 +1,7 @@
 # Site settings
 title: HFC Relay - Frontend Framework
 description: Extremely efficient prototyping
-baseurl: "/j_hfc_relay"
+baseurl: ""
 url: ""
 github_repo: https://github.com/NilsDannemann/j_hfc_relay/blob/gh-pages
 

@@ -77,26 +77,26 @@ gulp.task('images', ['jekyll_build'], function () {
 GULP CSS || compress css & put in outputfolder
 ===========================*/
 var gulp = require('gulp'),
-    sass = require('gulp-sass'),					//works
-    importCss = require('gulp-import-css'),			//works - (imports from remote sources like a CDN)
-    autoprefixer = require('gulp-autoprefixer'), 	//works	- (autoprefixes)
-    cssnano = require('gulp-cssnano'),				//works - (minifies)
-    glob = require('glob');							//works - (grabs all html files and puts them into one file...)
-    uncss = require('gulp-uncss'),					//works - (...scans that big html file and finds + removes unused css)
-    rename = require('gulp-rename'),				//works - (rename to style.min.css)
+	sass = require('gulp-sass'),					//works
+	importCss = require('gulp-import-css'),			//works - (imports from remote sources like a CDN)
+	autoprefixer = require('gulp-autoprefixer'), 	//works	- (autoprefixes)
+	cssnano = require('gulp-cssnano'),				//works - (minifies)
+	glob = require('glob');							//works - (grabs all html files and puts them into one file...)
+	uncss = require('gulp-uncss'),					//works - (...scans that big html file and finds + removes unused css)
+	rename = require('gulp-rename'),				//works - (rename to style.min.css)
 
 gulp.task('css', ['jekyll_build'], function() {
-   return gulp.src('assets/css/style.scss')
-       .pipe(sass())
-       .pipe(importCss())
-       .pipe(autoprefixer())
-       .pipe(uncss({
-           html: glob.sync(".deploy/**/*.html"),
-           ignore: ['is-*', 'has-*', '*--active']
-       }))
-       .pipe(cssnano())
-       .pipe(rename('style.min.css'))
-       .pipe(gulp.dest(outputfolder + '/assets/css'));
+	return gulp.src('assets/css/style.scss')
+	   .pipe(sass())
+	   .pipe(importCss())
+	   .pipe(autoprefixer())
+	   .pipe(uncss({
+			html: glob.sync(".deploy/**/*.html"),
+			ignore: ['is-*', 'has-*', '*--active']
+	   }))
+	   .pipe(cssnano())
+	   .pipe(rename('style.min.css'))
+	   .pipe(gulp.dest(outputfolder + '/assets/css'));
 });
 
 
@@ -105,17 +105,22 @@ gulp.task('css', ['jekyll_build'], function() {
 
 
 /*===========================
-GULP SYNC-WATCH || browser sync & live-refresh 
+GULP SYNC-WATCH || browser sync (works) & live-refresh (works)
 ===========================*/
 gulp.task('sync', function() {
-    browserSync.init({
-        proxy: "http://127.0.0.1:3000/j_hfc_relay/"
-    });
+	browserSync.init({
+		proxy: "http://127.0.0.1:3000/"
+	});
 });
 gulp.task('watch', function () {
-    gulp.watch(['_includes/**/*', '_layouts/**/*', '_pages/**/*', 'assets/**/*'], ['reload']);
+	gulp.watch([
+		'_includes/**/*', 
+		'_layouts/**/*', 
+		'_pages/**/*', 
+		'assets/**/*'
+	], ['reload']);
 });
 gulp.task('reload', ['jekyll_build'], function () {
-    browserSync.reload();
+	browserSync.reload();
 });
 gulp.task('sync-watch', ['sync', 'watch']);
