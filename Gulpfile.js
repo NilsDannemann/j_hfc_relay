@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 	gifsicle = require('imagemin-gifsicle'),		//works - (minify gifsicle)
 	// For: gulp css
 	sass = require('gulp-sass'),					//works - (process sass)
-	importCss = require('gulp-import-css'),			//works - (imports from remote sources like a CDN)
+	cssImport = require('gulp-cssimport'),			//works - (imports from remote sources like a CDN)
 	autoprefixer = require('gulp-autoprefixer'), 	//works	- (autoprefixes)
 	cssnano = require('gulp-cssnano'),				//works - (minifies)
 	glob = require('glob');							//works - (grabs all html files and puts them into one file...)
@@ -121,16 +121,18 @@ gulp.task('optimize css', ['create style.min.css'], function() {
 		.pipe(replace('@import \'', '@import \'_includes/'))
 		.pipe(sass())
 		.pipe(notify({message: '[CSS] - importing remote styles...', onLast: true}))
-		.pipe(importCss())
+		.pipe(cssImport())
 		.pipe(notify({message: '[CSS] - autoprefixing...', onLast: true}))
 		.pipe(autoprefixer())
 		.pipe(notify({message: '[CSS] - removing unused styles...', onLast: true}))
 		.pipe(uncss({
 			html: glob.sync(".deploy/**/*.html"),
 			ignore: [
-				// don't remove dynamic classes like "is-active" & "has-focus"
+				// don't remove dynamic & js classes like "is-active"/"has-focus" & "js-something"/"something-js"
 				/(#|\.)(is-)/,
-				/(#|\.)(has-)/
+				/(#|\.)(has-)/,
+            	/(#|\.)(js-)/,
+            	/(#|\.)(-js)/  
 			]
 		}))
 		.pipe(notify({message: '[CSS] - minifying...'}))
@@ -187,5 +189,5 @@ gulp.task('cssinline', ['optimize css'], function() {
 			return '<style>\n' + style + '\n</style>';
 		}))
 		.pipe(gulp.dest(outputfolder))
-		.pipe(notify({message: '[SUCESS] CSS Inlined in head', onLast: true}));
+		.pipe(notify({message: '[CSS] - placing inline styles in head...', onLast: true}));
 });

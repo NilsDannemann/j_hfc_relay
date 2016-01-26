@@ -57,6 +57,21 @@ $breakpoints: (
 
 /* =======================================*/
 /*
+/* EXTERNAL IMPORTS
+/*
+/* =======================================*/
+
+// Iconsets
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css";
+@import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.css";
+// Google Fonts
+@import "https://fonts.googleapis.com/css?family=Raleway:500,600,400";
+@import "https://fonts.googleapis.com/css?family=Roboto:400,500,300";
+
+
+
+/* =======================================*/
+/*
 /* TYPOGRAPHY
 /*
 /* =======================================*/
@@ -67,7 +82,6 @@ $font-size		: 14px;
 $line-height	: 1.6;
 $color-headline	: $color-black;
 $color-text		: lighten($color-black, 20%);
-
 
 
 /* =======================================*/
