@@ -5,17 +5,9 @@
 	</div>
 </section>
 
-{% if include.jquery != false %}
-	<!-- SCRIPTS: jquery -->
-	<script src="{{ site.baseurl }}/assets/js/jquery-2.1.4.min.js"></script>
-{% endif %}
-
-{% if include.navigation_js != false %}
-	<!-- SCRIPTS: mnav -->
-	<script>{% include components_base/mnav/mnav.js %}</script>
-{% endif %}
-
-{% if include.slider_js != false %}
-	<!-- SCRIPTS: slider -->
-	<script>{% include components_base/slider/slider.js %}</script>
-{% endif %}
+<!-- SCRIPTS: jquery -->
+<script src="{{ site.baseurl }}/assets/js/jquery-2.1.4.min.js"></script>
+<!-- SCRIPTS: mnav -->
+<script>{% include components_base/mnav/mnav.js %}</script>
+<!-- SCRIPTS: slider -->
+<script>{% include components_base/slider/slider.js %}</script>

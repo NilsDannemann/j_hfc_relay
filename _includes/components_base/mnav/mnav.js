@@ -1,3 +1,8 @@
+/*===========================
+MNAV SCRIPT
+
+===========================*/
+
 var ww = window.innerWidth;
 
 $(document).ready(function() {
