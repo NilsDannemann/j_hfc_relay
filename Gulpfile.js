@@ -127,7 +127,11 @@ gulp.task('optimize css', ['create style.min.css'], function() {
 		.pipe(notify({message: '[CSS] - removing unused styles...', onLast: true}))
 		.pipe(uncss({
 			html: glob.sync(".deploy/**/*.html"),
-			ignore: ['is-*', 'has-*', '*--active']
+			ignore: [
+				// don't remove dynamic classes like "is-active" & "has-focus"
+				/(#|\.)(is-)/,
+				/(#|\.)(has-)/
+			]
 		}))
 		.pipe(notify({message: '[CSS] - minifying...'}))
 		.pipe(cssnano())
