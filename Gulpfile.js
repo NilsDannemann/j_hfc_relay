@@ -88,6 +88,7 @@ gulp.task('optimize images', function () {
 		.pipe(notify({message: '[IMAGES] - optimizing jpgs...', onLast: true}))
 		.pipe(notify({message: '[IMAGES] - optimizing pngs...', onLast: true}))
 		.pipe(notify({message: '[IMAGES] - optimizing gifs...', onLast: true}))
+		.pipe(notify({message: '[IMAGES] - optimizing svgs...', onLast: true}))
 		.pipe(notify({message: '[IMAGES] - saving optimized images...', onLast: true}))
 		.pipe(imagemin({
 			progressive: true,
