@@ -8,25 +8,26 @@ var gulp = require('gulp'),
 	fs = require('fs'),
 	notify = require('gulp-notify'),		
 	// For: gulp optimize_html
-	htmlmin = require('gulp-htmlmin'),				//works - (minifies html)
+	htmlmin = require('gulp-htmlmin'),						//works - (minifies html)
 	// For: gulp optimize_css
-	sass = require('gulp-sass'),					//works - (process sass)
-	cssImport = require('gulp-cssimport'),			//works - (imports from remote sources like a CDN)
-	autoprefixer = require('gulp-autoprefixer'), 	//works	- (autoprefixes)
-	cssnano = require('gulp-cssnano'),				//works - (minifies)
-	glob = require('glob');							//works - (grabs all html files and puts them into one file...)
-	uncss = require('gulp-uncss'),					//works - (...scans that big html file and finds + removes unused css)
-	rename = require('gulp-rename'),				//works - (rename to style.min.css)
+	sass = require('gulp-sass'),							//works - (process sass)
+	cssImport = require('gulp-cssimport'),					//works - (imports from remote sources like a CDN)
+	autoprefixer = require('gulp-autoprefixer'), 			//works	- (autoprefixes)
+	cssnano = require('gulp-cssnano'),						//works - (minifies)
+	glob = require('glob');									//works - (grabs all html files and puts them into one file...)
+	uncss = require('gulp-uncss'),							//works - (...scans that big html file and finds + removes unused css)
+	rename = require('gulp-rename'),						//works - (rename to style.min.css)
 	// For: gulp optimize_js
-	concat = require('gulp-concat');				//works - (concats all scripts)
+	concat = require('gulp-concat');						//works - (concats all scripts)
+	requirejsOptimize = require('gulp-requirejs-optimize'),	//works - (minifies)
 	// For: gulp optimize_images
-	imagemin = require('gulp-imagemin'),			//works - (general image minification)
-	pngquant = require('imagemin-pngquant'),		//works - (minify png)
-	optipng = require('imagemin-optipng'),			//works - (minify png2)
-	jpegtran = require('imagemin-jpegtran'),		//works - (minify jpg)
-	gifsicle = require('imagemin-gifsicle'),		//works - (minify gifsicle)
+	imagemin = require('gulp-imagemin'),					//works - (general image minification)
+	pngquant = require('imagemin-pngquant'),				//works - (minify png)
+	optipng = require('imagemin-optipng'),					//works - (minify png2)
+	jpegtran = require('imagemin-jpegtran'),				//works - (minify jpg)
+	gifsicle = require('imagemin-gifsicle'),				//works - (minify gifsicle)
 	// For: gulp sync-watch
-	browserSync = require('browser-sync').create(),	//works - (browser-sync & live refresh)
+	browserSync = require('browser-sync').create(),			//works - (browser-sync & live refresh)
 	// For: outputfolder variable
 	outputfolder = '.deploy';
 
@@ -108,13 +109,13 @@ gulp.task('optimize_images', function () {
 /*===========================
 GULP CSS || compress css & put in outputfolder
 ===========================*/
-// Step 1 - Wait for jekyll_build, then include style.min.css
+// Step 1 - place style.min.css reference in head
 gulp.task('place_style.min.css', function() {
 	return gulp.src(outputfolder + '/**/*.html')
 		.pipe(replace('style.css', 'style.min.css'))
 		.pipe(gulp.dest(outputfolder));
 });
-// Step 2 - Minify everything, then place_style.min.css
+// Step 2 - minify everything
 gulp.task('optimize_css', ['place_style.min.css'], function() {
 	return gulp.src('assets/css/style.scss')
 		.pipe(notify({message: '[CSS] ------------------------', onLast: true}))
@@ -145,9 +146,9 @@ gulp.task('optimize_css', ['place_style.min.css'], function() {
 		.pipe(notify({message: '[CSS] ------------------------', onLast: true}));
 });
 /*===========================
-GULP CSSINLINE || INLINE CSS IN HEAD (for google page speed)
+GULP INLINE_CSS || INLINE CSS IN HEAD (for google page speed)
 ===========================*/
-gulp.task('cssinline', ['optimize_css'], function() {
+gulp.task('inline_css', ['optimize_css'], function() {
 	return gulp.src(outputfolder + '/**/*.html')
 		.pipe(replace('<link rel=\"stylesheet\" href=\"/assets/css/style.min.css\">', function(s) {
 			var style = fs.readFileSync(outputfolder + '/assets/css/style.min.css', 'utf8');
@@ -163,18 +164,8 @@ gulp.task('cssinline', ['optimize_css'], function() {
 /*===========================
 GULP JS || concat & optimize js
 ===========================*/
-gulp.task('optimize_js', ['place_all.js'], function() {
-	return gulp.src(['./**/*.js', '!node_modules/**/*.js', '!Gulpfile.js'])
-		.pipe(notify({message: '[JS] ------------------------', onLast: true}))
-		.pipe(notify({message: '[JS] - grabbing all scripts...', onLast: true}))
-		.pipe(notify({message: '[JS] - concatenating...', onLast: true}))
-		.pipe(notify({message: '[JS] - placing scripts.min.js...', onLast: true}))
-		.pipe(concat('scripts.min.js'))
-		.pipe(gulp.dest(outputfolder + '/assets/js'))
-		.pipe(notify({message: '[JS] ------------------------', onLast: true}));
-});
-
-gulp.task('place_all.js', function() {
+// Step 1 - place scripts.min.js reference in footer
+gulp.task('place_scripts.min.js', function() {
 	return gulp.src(outputfolder + '/**/*.html')
 		.pipe(replace(/<script[\s\S]*?<\/script>/gmi, ''))
 		.pipe(replace(/<\/body>/, function(s) {
@@ -182,7 +173,37 @@ gulp.task('place_all.js', function() {
 		}))
 		.pipe(gulp.dest(outputfolder));
 });
-
+// Step 2 - create scripts.min.js (concat all scripts)
+gulp.task('concat_js', ['place_scripts.min.js'], function() {
+	return gulp.src(['./**/*.js', '!node_modules/**/*.js', '!Gulpfile.js'])
+		.pipe(concat('scripts.min.js'))
+		.pipe(gulp.dest(outputfolder + '/assets/js'))
+});
+// Step 3 - minify everything
+gulp.task('optimize_js', ['concat_js'], function() {
+	return gulp.src(outputfolder + '/assets/js/scripts.min.js')
+		.pipe(notify({message: '[JS] ------------------------', onLast: true}))
+		.pipe(notify({message: '[JS] - grabbing all scripts...', onLast: true}))
+		.pipe(notify({message: '[JS] - concatenating...', onLast: true}))
+		.pipe(requirejsOptimize())
+		.pipe(gulp.dest(outputfolder + '/assets/js'))
+		.pipe(notify({message: '[JS] - minifying...', onLast: true}))
+		.pipe(notify({message: '[JS] - placing scripts.min.js...', onLast: true}))
+		.pipe(notify({message: '[JS] ------------------------', onLast: true}));
+});
+/*===========================
+GULP INLINE_js || INLINE JS IN FOOTER (for google page speed)
+===========================*/
+gulp.task('inline_js', ['optimize_js'], function() {
+	return gulp.src(outputfolder + '/**/*.html')
+		.pipe(replace(/<script[\s\S]*?<\/script>/gmi, ''))
+		.pipe(replace(/<\/body>/, function(s) {
+			var script = fs.readFileSync(outputfolder + '/assets/js/scripts.min.js', 'utf8');
+			return '<script>\n' + script + '\n</script></body>';
+		}))
+		.pipe(gulp.dest(outputfolder))
+		.pipe(notify({message: '[JS] - placing inline scripts in footer...', onLast: true}));
+});
 
 
 
