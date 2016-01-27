@@ -20,6 +20,7 @@ var gulp = require('gulp'),
 	// For: gulp optimize_js
 	concat = require('gulp-concat');						//works - (concats all scripts)
 	requirejsOptimize = require('gulp-requirejs-optimize'),	//works - (minifies)
+	del = require('del'),									//works - (delete files)
 	// For: gulp optimize_images
 	imagemin = require('gulp-imagemin'),					//works - (general image minification)
 	pngquant = require('imagemin-pngquant'),				//works - (minify png)
@@ -161,10 +162,46 @@ gulp.task('inline_css', ['optimize_css'], function() {
 
 
 
+
+
+/*===========================
+GULP DOWNLOAD_REMOTE_FONTS || INLINE CSS IN HEAD (for google page speed)
+===========================*/
+// var download = require("gulp-download");
+
+// gulp.task('download_remote_fonts', function() {
+//   return download([
+//   	'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.eot?v=4.4.0',
+//   	'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.woff?v=4.4.0',
+//   	'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.ttf?v=4.4.0'
+//   	])
+//     .pipe(gulp.dest(outputfolder + 'assets/fonts'));
+// });
+
+
+
+
+
+
+
+
 /*===========================
 GULP JS || concat & optimize js
 ===========================*/
-// Step 1 - place scripts.min.js reference in footer
+// Step 1 - cleaning unneccessary scripts from outputfolder
+gulp.task('clean_outputfolder', function () {
+	return del([
+		outputfolder + '/**/*.js',
+		'!' + outputfolder + '/**/scripts.min.js'
+	]);
+});
+// Step 2 - create scripts.min.js (concat all scripts)
+gulp.task('concat_js', function() {
+	return gulp.src(['./**/*.js', '!node_modules/**/*.js', '!Gulpfile.js'])
+		.pipe(concat('scripts.min.js'))
+		.pipe(gulp.dest(outputfolder + '/assets/js'))
+});
+// Step 3 - place scripts.min.js reference in footer
 gulp.task('place_scripts.min.js', function() {
 	return gulp.src(outputfolder + '/**/*.html')
 		.pipe(replace(/<script[\s\S]*?<\/script>/gmi, ''))
@@ -173,20 +210,15 @@ gulp.task('place_scripts.min.js', function() {
 		}))
 		.pipe(gulp.dest(outputfolder));
 });
-// Step 2 - create scripts.min.js (concat all scripts)
-gulp.task('concat_js', ['place_scripts.min.js'], function() {
-	return gulp.src(['./**/*.js', '!node_modules/**/*.js', '!Gulpfile.js'])
-		.pipe(concat('scripts.min.js'))
-		.pipe(gulp.dest(outputfolder + '/assets/js'))
-});
-// Step 3 - minify everything
-gulp.task('optimize_js', ['concat_js'], function() {
+// Step 4 - minify everything
+gulp.task('optimize_js', ['clean_outputfolder', 'concat_js', 'place_scripts.min.js'], function() {
 	return gulp.src(outputfolder + '/assets/js/scripts.min.js')
-		.pipe(notify({message: '[JS] ------------------------', onLast: true}))
-		.pipe(notify({message: '[JS] - grabbing all scripts...', onLast: true}))
-		.pipe(notify({message: '[JS] - concatenating...', onLast: true}))
 		.pipe(requirejsOptimize())
 		.pipe(gulp.dest(outputfolder + '/assets/js'))
+		.pipe(notify({message: '[JS] ------------------------', onLast: true}))
+		.pipe(notify({message: '[JS] - cleaning outputfolder...', onLast: true}))
+		.pipe(notify({message: '[JS] - grabbing all scripts...', onLast: true}))
+		.pipe(notify({message: '[JS] - concatenating...', onLast: true}))
 		.pipe(notify({message: '[JS] - minifying...', onLast: true}))
 		.pipe(notify({message: '[JS] - placing scripts.min.js...', onLast: true}))
 		.pipe(notify({message: '[JS] ------------------------', onLast: true}));
@@ -204,6 +236,14 @@ gulp.task('inline_js', ['optimize_js'], function() {
 		.pipe(gulp.dest(outputfolder))
 		.pipe(notify({message: '[JS] - placing inline scripts in footer...', onLast: true}));
 });
+
+
+
+
+
+
+
+
 
 
 
