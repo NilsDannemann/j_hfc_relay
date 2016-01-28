@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 	runSequence = require('run-sequence'),
 	replace = require('gulp-replace'),	
 	fs = require('fs'),
-	notify = require('gulp-notify'),		
+	notify = require('gulp-notify'),						//works - (notifications)	
 	// For: gulp optimize_html
 	htmlmin = require('gulp-htmlmin'),						//works - (minifies html)
 	// For: gulp optimize_css
@@ -29,8 +29,13 @@ var gulp = require('gulp'),
 	gifsicle = require('imagemin-gifsicle'),				//works - (minify gifsicle)
 	// For: gulp sync-watch
 	browserSync = require('browser-sync').create(),			//works - (browser-sync & live refresh)
+	// For: Component generation
+	prompt = require("gulp-prompt"),						//works - (handles prompts)
+	source = require('vinyl-source-stream'),				//works - (creates files)
 	// For: outputfolder variable
 	outputfolder = '.deploy';
+	componentsfolder = '_includes/components/';
+
 
 
 
@@ -60,6 +65,7 @@ gulp.task('jekyll_serve', shell.task(['jekyll serve']));
 
 
 
+
 /*===========================
 GULP HTML || compress html + inline css + inline scripts & put in outputfolder
 ===========================*/
@@ -84,6 +90,7 @@ gulp.task('optimize_html', function() {
 
 
 
+
 /*===========================
 GULP IMAGES || compress images & put in outputfolder
 ===========================*/
@@ -103,6 +110,7 @@ gulp.task('optimize_images', function () {
 		.pipe(gulp.dest(outputfolder + '/assets/images'))
 		.pipe(notify({message: '[IMAGES] ------------------------', onLast: true}));
 });
+
 
 
 
@@ -185,6 +193,8 @@ GULP DOWNLOAD_REMOTE_FONTS || INLINE CSS IN HEAD (for google page speed)
 
 
 
+
+
 /*===========================
 GULP JS || concat & optimize js
 ===========================*/
@@ -241,13 +251,6 @@ gulp.task('inline_js', ['optimize_js'], function() {
 
 
 
-
-
-
-
-
-
-
 /*===========================
 GULP SERVE || browser sync (works) & live-refresh (works) ----------------------------------- ERROR with HTML omptimization??
 ===========================*/
@@ -268,6 +271,85 @@ gulp.task('reload', ['jekyll_build'], function () {
 	browserSync.reload();
 });
 gulp.task('serve', ['browser-sync', 'watch']);
+
+
+
+
+
+/*===========================
+GULP CREATE_COMPONENT || create a new component
+===========================*/
+gulp.task('create_component', function() {
+	return gulp.src('')
+		//GET COMPONENT NAME 
+		.pipe(prompt.prompt({
+			type: 'input',
+			name: 'component_name',
+			message: 'What is the name of component?'
+		}, function(res){
+			//CREATE HTML FILE
+				var component_html = source(res.component_name  +'.html');
+				component_html.end(
+					'<!-- ======================================' + '\n' +
+					'/ ' + '\n' +
+					'/ COMPONENT: ' + res.component_name + '\n' +
+					'/ ' + '\n' +
+					'/ ======================================-->' + '\n' +
+					'<div class="' + res.component_name + '">' + '\n' + 
+						'\t<div class="' + res.component_name + '__element">' + '\n' + 
+							'\t\t' + '\n' + 
+						'\t</div>' + '\n' + 
+					'</div>'
+				);
+				component_html.pipe(gulp.dest(componentsfolder + res.component_name));
+			//CREATE SCSS FILE
+				var component_css = source(res.component_name  +'.scss');
+				component_css.end(
+					'/* =======================================*/' + '\n' +
+					'/* ' + '\n' +
+					'/* COMPONENT: ' + res.component_name + '\n' +
+					'/* ' + '\n' +
+					'/* =======================================*/' + '\n' +
+					'.' + res.component_name + ' {' + '\n\t' +
+					'\n' +
+						'\t&__element {}' + '\n' +
+					'}'
+				);
+				component_css.pipe(gulp.dest(componentsfolder + res.component_name));
+			//CREATE JS FILE
+				var component_js = source(res.component_name  +'.js');
+				component_js.end(
+					'/* =======================================*/' + '\n' +
+					'/* ' + '\n' +
+					'/* COMPONENT: ' + res.component_name + '\n' +
+					'/* ' + '\n' +
+					'/* =======================================*/' + '\n' +
+
+					'$(document).ready(function() {' + '\n' +
+						'\t\n' +
+					'});'
+				);
+				component_js.pipe(gulp.dest(componentsfolder + res.component_name));
+		}));
+});
+/*===========================
+GULP REMOVE_COMPONENT || remove an existing component
+===========================*/
+gulp.task('remove_component', function() {
+	return gulp.src('')
+		//GET COMPONENT NAME 
+		.pipe(prompt.prompt({
+			type: 'input',
+			name: 'component_name',
+			message: 'Which component do you want to remove?'
+		}, function(res){
+			//DELETE HTML, SCSS & JS FILES + FOLDER
+				return del([
+					componentsfolder + res.component_name
+				]);
+		}));
+});
+
 
 
 
