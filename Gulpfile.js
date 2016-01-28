@@ -37,11 +37,6 @@ var gulp = require('gulp'),
 	componentsfolder = '_includes/components/',				//For: component generation & removal
 	component_name = 'new_component';						//For: component generation & removal
 
-
-
-
-
-
 /*===========================
 GULP OPTIMIZE || run all tasks in order
 ===========================*/
@@ -56,14 +51,10 @@ GULP OPTIMIZE || run all tasks in order
 			callback);
 	});
 /*===========================
-GULP BUILD || triggers Jekylls build command
+GULP BUILD / SERVE || triggers Jekylls build / serve command
 ===========================*/
 	gulp.task('jekyll_build', shell.task(['jekyll build']));
-/*===========================
-GULP SERVE || triggers Jekylls serve command
-===========================*/
 	gulp.task('jekyll_serve', shell.task(['jekyll serve']));
-
 
 
 
@@ -110,11 +101,6 @@ GULP IMAGES || compress images & put in outputfolder
 			.pipe(notify({message: '[IMAGES] ------------------------', onLast: true}));
 	});
 
-
-
-
-
-
 /*===========================
 GULP CSS || compress css & put in outputfolder
 ===========================*/
@@ -124,6 +110,7 @@ GULP CSS || compress css & put in outputfolder
 			.pipe(replace('style.css', 'style.min.css'))
 			.pipe(gulp.dest(outputfolder));
 	});
+
 	// Step 2 - minify everything
 	gulp.task('optimize_css', ['place_style.min.css'], function() {
 		return gulp.src('assets/css/style.scss')
@@ -154,9 +141,20 @@ GULP CSS || compress css & put in outputfolder
 			.pipe(gulp.dest(outputfolder + '/assets/css'))
 			.pipe(notify({message: '[CSS] ------------------------', onLast: true}));
 	});
-/*===========================
-GULP INLINE_CSS || INLINE CSS IN HEAD (for google page speed)
-===========================*/
+
+	// Step 3 - download remote fonts
+	// var download = require("gulp-download");
+
+	// gulp.task('download_remote_fonts', function() {
+	// 	return download([
+	// 		'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.eot?v=4.4.0',
+	// 		'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.woff?v=4.4.0',
+	// 		'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.ttf?v=4.4.0'
+	// 	])
+	// 	.pipe(gulp.dest(outputfolder + 'assets/fonts'));
+	// });
+
+	// Step 4 (optional) - place styles inline in head
 	gulp.task('inline_css', ['optimize_css'], function() {
 		return gulp.src(outputfolder + '/**/*.html')
 			.pipe(replace('<link rel=\"stylesheet\" href=\"/assets/css/style.min.css\">', function(s) {
@@ -166,29 +164,11 @@ GULP INLINE_CSS || INLINE CSS IN HEAD (for google page speed)
 			.pipe(gulp.dest(outputfolder))
 			.pipe(notify({message: '[CSS] - placing inline styles in head...', onLast: true}));
 	});
-/*===========================
-GULP DOWNLOAD_REMOTE_FONTS || --------------------------------------------------------------- ERROR - not working yet
-===========================*/
-	// var download = require("gulp-download");
-
-	// gulp.task('download_remote_fonts', function() {
-	//   return download([
-	//   	'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.eot?v=4.4.0',
-	//   	'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.woff?v=4.4.0',
-	//   	'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.ttf?v=4.4.0'
-	//   	])
-	//     .pipe(gulp.dest(outputfolder + 'assets/fonts'));
-	// });
-
-
-
-
-
 
 /*===========================
 GULP JS || concat & optimize js
 ===========================*/
-	// Step 1 - cleaning unneccessary scripts from outputfolder
+	// Step 1 - clean unneccessary scripts from outputfolder
 	gulp.task('clean_outputfolder', function () {
 		return del([
 			outputfolder + '/**/*.js',
@@ -223,9 +203,7 @@ GULP JS || concat & optimize js
 			.pipe(notify({message: '[JS] - placing scripts.min.js...', onLast: true}))
 			.pipe(notify({message: '[JS] ------------------------', onLast: true}));
 	});
-/*===========================
-GULP INLINE_js || INLINE JS IN FOOTER (for google page speed)
-===========================*/
+	// Step 4 (optional) - place scripts inline in footer
 	gulp.task('inline_js', ['optimize_js'], function() {
 		return gulp.src(outputfolder + '/**/*.html')
 			.pipe(replace(/<script[\s\S]*?<\/script>/gmi, ''))
@@ -241,9 +219,8 @@ GULP INLINE_js || INLINE JS IN FOOTER (for google page speed)
 
 
 
-
 /*===========================
-GULP SERVE || browser sync (works) & live-refresh (works) ----------------------------------- ERROR with HTML omptimization??
+GULP SERVE || browser sync (works) & live-refresh (works) ----------------------------------- ERROR with HTML omptimization?????
 ===========================*/
 	gulp.task('browser-sync', function() {
 		browserSync.init({
@@ -262,7 +239,6 @@ GULP SERVE || browser sync (works) & live-refresh (works) ----------------------
 		browserSync.reload();
 	});
 	gulp.task('serve', ['browser-sync', 'watch']);
-
 
 
 
@@ -399,7 +375,6 @@ GULP REMOVE_COMPONENT || remove an existing component
 			))
 			.pipe(gulp.dest('./_includes/components_base/footer'));
 	});
-
 
 
 
