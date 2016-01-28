@@ -169,9 +169,6 @@ gulp.task('inline_css', ['optimize_css'], function() {
 
 
 
-
-
-
 /*===========================
 GULP DOWNLOAD_REMOTE_FONTS || INLINE CSS IN HEAD (for google page speed)
 ===========================*/
@@ -279,49 +276,66 @@ gulp.task('serve', ['browser-sync', 'watch']);
 /*===========================
 GULP CREATE_COMPONENT || create a new component
 ===========================*/
-gulp.task('create_component', function() {
+
+// SET GLOBAL VARIABLE
+var component_name = 'new_component';
+
+// TASK ORDER
+gulp.task('create_component', function(callback) {
+	runSequence(
+		'build_component_files',
+		'place_component_styles',
+		'place_component_scripts',
+		callback);
+});
+
+
+// BUILD COMPONENT FILES
+gulp.task('build_component_files', function() {
 	return gulp.src('')
 		//GET COMPONENT NAME 
 		.pipe(prompt.prompt({
 			type: 'input',
 			name: 'component_name',
 			message: 'What is the name of component?'
-		}, function(res){
+		}, function create_files(res){
+			// SET VARIABLE
+			component_name = res.component_name;
 			//CREATE HTML FILE
-				var component_html = source(res.component_name  +'.html');
+				var component_html = source(component_name  +'.html');
 				component_html.end(
 					'<!-- ======================================' + '\n' +
 					'/ ' + '\n' +
-					'/ COMPONENT: ' + res.component_name + '\n' +
+					'/ COMPONENT: ' + component_name + '\n' +
 					'/ ' + '\n' +
 					'/ ======================================-->' + '\n' +
-					'<div class="' + res.component_name + '">' + '\n' + 
-						'\t<div class="' + res.component_name + '__element">' + '\n' + 
+					'<div class="' + component_name + '">' + '\n' + 
+						'\t<div class="' + component_name + '__element">' + '\n' + 
 							'\t\t' + '\n' + 
 						'\t</div>' + '\n' + 
 					'</div>'
 				);
-				component_html.pipe(gulp.dest(componentsfolder + res.component_name));
+				component_html.pipe(gulp.dest(componentsfolder + component_name));
 			//CREATE SCSS FILE
-				var component_css = source(res.component_name  +'.scss');
+				var component_css = source(component_name  +'.scss');
 				component_css.end(
 					'/* =======================================*/' + '\n' +
 					'/* ' + '\n' +
-					'/* COMPONENT: ' + res.component_name + '\n' +
+					'/* COMPONENT: ' + component_name + '\n' +
 					'/* ' + '\n' +
 					'/* =======================================*/' + '\n' +
-					'.' + res.component_name + ' {' + '\n\t' +
+					'.' + component_name + ' {' + '\n\t' +
 					'\n' +
 						'\t&__element {}' + '\n' +
 					'}'
 				);
-				component_css.pipe(gulp.dest(componentsfolder + res.component_name));
+				component_css.pipe(gulp.dest(componentsfolder + component_name));
 			//CREATE JS FILE
-				var component_js = source(res.component_name  +'.js');
+				var component_js = source(component_name  +'.js');
 				component_js.end(
 					'/* =======================================*/' + '\n' +
 					'/* ' + '\n' +
-					'/* COMPONENT: ' + res.component_name + '\n' +
+					'/* COMPONENT: ' + component_name + '\n' +
 					'/* ' + '\n' +
 					'/* =======================================*/' + '\n' +
 
@@ -329,9 +343,29 @@ gulp.task('create_component', function() {
 						'\t\n' +
 					'});'
 				);
-				component_js.pipe(gulp.dest(componentsfolder + res.component_name));
+				component_js.pipe(gulp.dest(componentsfolder + component_name));
 		}));
 });
+// PLACE COMPONENT STYLES
+gulp.task('place_component_styles', function() {
+	return gulp.src('assets/css/style.scss')
+		.pipe(replace(
+			'/* ===COMPONENTS=== */', 
+			'/* ===COMPONENTS=== */\n@import \'components/' + component_name + '/'  + component_name + '\';'
+		))
+		.pipe(gulp.dest('./assets/css'));
+});
+// PLACE COMPONENT SCRIPTS
+gulp.task('place_component_scripts', function() {
+	return gulp.src('_includes/components_base/footer/footer.html')
+		.pipe(replace(
+			'<!-- ===SCRIPTS=== -->', 
+			'<!-- ===SCRIPTS=== -->\n<script>{% include components/' + component_name + '/'  + component_name + '.js %}</script>'
+		))
+		.pipe(gulp.dest('./_includes/components_base/footer'));
+});
+
+
 /*===========================
 GULP REMOVE_COMPONENT || remove an existing component
 ===========================*/
@@ -342,10 +376,12 @@ gulp.task('remove_component', function() {
 			type: 'input',
 			name: 'component_name',
 			message: 'Which component do you want to remove?'
-		}, function(res){
+		}, function remove_files(res){
+			// SET VARIABLE
+			component_name = res.component_name;
 			//DELETE HTML, SCSS & JS FILES + FOLDER
 				return del([
-					componentsfolder + res.component_name
+					componentsfolder + component_name
 				]);
 		}));
 });
