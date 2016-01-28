@@ -149,9 +149,10 @@ GULP CSS || compress css & put in outputfolder
 	// 	return download([
 	// 		'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.eot?v=4.4.0',
 	// 		'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.woff?v=4.4.0',
+	// 		'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.woff2?v=4.4.0',
 	// 		'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.ttf?v=4.4.0'
 	// 	])
-	// 	.pipe(gulp.dest(outputfolder + 'assets/fonts'));
+	// 	.pipe(gulp.dest(outputfolder + '/assets/fonts'));
 	// });
 
 	// Step 4 (optional) - place styles inline in head
@@ -164,6 +165,11 @@ GULP CSS || compress css & put in outputfolder
 			.pipe(gulp.dest(outputfolder))
 			.pipe(notify({message: '[CSS] - placing inline styles in head...', onLast: true}));
 	});
+
+
+
+
+
 
 /*===========================
 GULP JS || concat & optimize js
