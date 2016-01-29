@@ -396,7 +396,7 @@ GULP PUBLISH || PUBLISH ON GITHUB
 
 	var options = { 
 	    branch: "gh-pages",
-	    message: "Deploy to gh-pages"
+	    message: "[deploy] to gh-pages"
 	};
 
 	gulp.task('deploy', function() {
