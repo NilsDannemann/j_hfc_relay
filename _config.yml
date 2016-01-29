@@ -1,40 +1,24 @@
 # Site settings
 title: HFC Relay - Frontend Framework
-description: Extremely efficient prototyping
-baseurl: "/j_hfc_relay"
+description: HFC prototyping Framework
+baseurl: ""
 url: ""
 github_repo: https://github.com/NilsDannemann/j_hfc_relay/blob/gh-pages
 
-# Icon Sets
-use_googlefonts: true
-use_fontawesome: true
-use_ionicons: 	 false
-
-# Base Components
-use_base_components: 
-  typography:   true
-  tnav:         true
-  mnav:         true
-  slider:       true
-  content:      true
-  sidebar:      true
-  footer:       true
-  
-# Components
-use_components: 
-  breadcrumb: 	true
-  button: 		  true
-  teaser: 		  true
+# Generate ".deploy" folder on build
+destination: .deploy
+exclude: [node_modules, Gulpfile.js, package.json, README.md]
 
 # Collections
 collections:
   components:
     output: false
 
-# Pages
+# Include
 include: ['_pages']
 
 # General settings
+port: 3000
 highlighter: pygments
 markdown: kramdown
 kramdown:

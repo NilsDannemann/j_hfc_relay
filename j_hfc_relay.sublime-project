@@ -6,14 +6,12 @@
 			[
 				"j_hfc_relay.sublime-project",
 				".gitattributes",
-				".jekyll-metadata",
-				".gitignore",
-				"_normalize.scss"
+				".jekyll-metadata"
 			],
 			"folder_exclude_patterns":
 			[
-				".sass-cache",
-				"_site"
+				"node_modules",
+				".sass-cache"
 			],
 			"path": "."
 		}

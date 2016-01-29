@@ -6,9 +6,6 @@
 /*
 /* =======================================*/
 
-/* ===RESET=== */
-@import 'normalize';
-
 /* ===CONFIG & BASE=== */
 @import 'config';
 @import 'base';
@@ -17,42 +14,24 @@
 @import 'components_base/header/header';
 @import 'components_base/logo/logo';
 
-{% if site.use_base_components.tnav == true %}
 @import 'components_base/tnav/tnav';
-{% endif %}
-{% if site.use_base_components.mnav == true %}
-	@import 'components_base/mnav/mnav';
-{% endif %}
-{% if site.use_base_components.slider == true %}
-	@import 'components_base/slider/slider';
-{% endif %}
-{% if site.use_base_components.content == true %}
-	@import 'components_base/content/content';
-{% endif %}
-{% if site.use_base_components.sidebar == true %}
-	@import 'components_base/sidebar/sidebar';
-{% endif %}
-{% if site.use_base_components.footer == true %}
-	@import 'components_base/footer/footer';
-{% endif %}
-{% if site.use_base_components.typography == true %}
-	@import 'components_base/typography/typography';
-{% endif %}
+@import 'components_base/mnav/mnav';
+@import 'components_base/slider/slider';
+@import 'components_base/content/content';
+@import 'components_base/sidebar/sidebar';
+@import 'components_base/footer/footer';
+@import 'components_base/typography/typography';
+@import 'components_base/typography/fontawesome/fontawesome';
+@import 'components_base/typography/ionicons/ionicons';
 
 /* ===COMPONENTS=== */
-{% if site.use_components.breadcrumb == true %}
-	@import 'components/breadcrumb/breadcrumb';
-{% endif %}
-{% if site.use_components.button == true %}
-	@import 'components/button/button';
-	@import 'components/button/buttongroup';
-{% endif %}
-{% if site.use_components.teaser == true %}
-	@import 'components/teaser/teaser';
-	@import 'components/teaser/teaser_single';
-	@import 'components/teaser/teaser_double';
-	@import 'components/teaser/teaser_triple';
-{% endif %}
+@import 'components/breadcrumb/breadcrumb';
+@import 'components/button/button';
+@import 'components/button/buttongroup';
+@import 'components/teaser/teaser';
+@import 'components/teaser/teaser_single';
+@import 'components/teaser/teaser_double';
+@import 'components/teaser/teaser_triple';
 
 /* ===THEME=== */
 @import 'overrides';

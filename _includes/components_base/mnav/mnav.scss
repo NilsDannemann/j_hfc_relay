@@ -168,27 +168,23 @@
 			// Transition
 			&.is-active i {
 				background: rgba(0,0,0,0.0);
-				-webkit-transition-delay: 175ms; transition-delay: 175ms;
+				transition-delay: 175ms;
 			}
 			& i:before {
-				-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
-				-webkit-transition-duration: 175ms; transition-duration: 175ms;
-				-webkit-transition-delay: 175ms, 0s; transition-delay: 175ms, 0s;
+				transition: margin 175ms 175ms, transform 175ms 0s;
 			}
 			&.is-active i:before {
 				margin-top: 0;
-				-webkit-transform: rotate(45deg); transform: rotate(45deg);
-				-webkit-transition-delay: 0s, 175ms; transition-delay: 0s, 175ms;
+				transform: rotate(45deg);
+				transition: margin 175ms 0ms, transform 175ms 175ms;
 			}
 			& i:after {
-				-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
-				-webkit-transition-duration: 175ms; transition-duration: 175ms;
-				-webkit-transition-delay: 175ms, 0s; transition-delay: 175ms, 0s;
+				transition: margin 175ms 175ms, transform 175ms 0s;
 			}
 			&.is-active i:after {
 				margin-top: 0;
-				-webkit-transform: rotate(-45deg); transform: rotate(-45deg);
-				-webkit-transition-delay: 0s, 175ms; transition-delay: 0s, 175ms;
+				transform: rotate(-45deg);
+				transition: margin 175ms 0ms, transform 175ms 175ms;
 			}
 		}
 			
