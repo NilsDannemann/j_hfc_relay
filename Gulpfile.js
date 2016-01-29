@@ -394,6 +394,7 @@ GULP PUBLISH || PUBLISH ON GITHUB
 ===========================*/
 	var options = { 
 		branch: "gh-pages",
+		cacheDir: ".deploy_cacheDir",
 		message: "[deploy] to gh-pages"
 	};
 

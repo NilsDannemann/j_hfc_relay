@@ -1,5 +1,5 @@
 .sass-cache
 .DS_Store
 .deploy
-.publish
+.deploy_cacheDir
 node_modules
