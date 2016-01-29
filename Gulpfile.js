@@ -181,12 +181,14 @@ GULP JS || concat & optimize js
 			'!' + outputfolder + '/**/scripts.min.js'
 		]);
 	});
+
 	// Step 2 - create scripts.min.js (concat all scripts)
 	gulp.task('concat_js', function() {
 		return gulp.src(['./**/*.js', '!node_modules/**/*.js', '!Gulpfile.js'])
 			.pipe(concat('scripts.min.js'))
 			.pipe(gulp.dest(outputfolder + '/assets/js'))
 	});
+
 	// Step 3 - place scripts.min.js reference in footer
 	gulp.task('place_scripts.min.js', function() {
 		return gulp.src(outputfolder + '/**/*.html')
@@ -196,6 +198,7 @@ GULP JS || concat & optimize js
 			}))
 			.pipe(gulp.dest(outputfolder));
 	});
+
 	// Step 4 - minify everything
 	gulp.task('optimize_js', ['clean_outputfolder', 'concat_js', 'place_scripts.min.js'], function() {
 		return gulp.src(outputfolder + '/assets/js/scripts.min.js')
@@ -209,6 +212,7 @@ GULP JS || concat & optimize js
 			.pipe(notify({message: '[JS] - placing scripts.min.js...', onLast: true}))
 			.pipe(notify({message: '[JS] ------------------------', onLast: true}));
 	});
+
 	// Step 4 (optional + optimize before) - place scripts inline in footer
 	gulp.task('inline_js', function() {
 		return gulp.src(outputfolder + '/**/*.html')
@@ -220,31 +224,6 @@ GULP JS || concat & optimize js
 			.pipe(gulp.dest(outputfolder))
 			.pipe(notify({message: '[JS] - placing inline scripts in footer...', onLast: true}));
 	});
-
-
-
-
-
-/*===========================
-GULP SERVE || browser sync (works) & live-refresh (works) ----------------------------------- ERROR with HTML omptimization?????
-===========================*/
-	gulp.task('browser-sync', function() {
-		browserSync.init({
-			proxy: "http://127.0.0.1:3000/"
-		});
-	});
-	gulp.task('watch', function () {
-		gulp.watch([
-			'_includes/**/*', 
-			'_layouts/**/*', 
-			'_pages/**/*', 
-			'assets/**/*'
-		], ['reload']);
-	});
-	gulp.task('reload', ['jekyll_build'], function () {
-		browserSync.reload();
-	});
-	gulp.task('serve', ['browser-sync', 'watch']);
 
 
 
@@ -335,6 +314,7 @@ GULP CREATE_COMPONENT || create a new component
 			))
 			.pipe(gulp.dest('./_includes/components_base/footer'));
 	});
+
 /*===========================
 GULP REMOVE_COMPONENT || remove an existing component
 ===========================*/
@@ -385,6 +365,26 @@ GULP REMOVE_COMPONENT || remove an existing component
 
 
 
+/*===========================
+GULP SERVE || browser sync (works) & live-refresh (works)
+===========================*/
+	gulp.task('browser-sync', function() {
+		browserSync.init({
+			proxy: "http://127.0.0.1:3000/"
+		});
+	});
+	gulp.task('watch', function () {
+		gulp.watch([
+			'_includes/**/*', 
+			'_layouts/**/*', 
+			'_pages/**/*', 
+			'assets/**/*'
+		], ['reload']);
+	});
+	gulp.task('reload', ['jekyll_build'], function () {
+		browserSync.reload();
+	});
+	gulp.task('serve', ['browser-sync', 'watch']);
 
 /*===========================
 GULP PUBLISH || PUBLISH ON GITHUB
