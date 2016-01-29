@@ -12,6 +12,8 @@ Features:
 - Slider
 - Buttons & Button Groups (need work)
 - Sublime Snippets
+- Gulp: automatic optimizations
+- Gulp: component creation
 
 
 
