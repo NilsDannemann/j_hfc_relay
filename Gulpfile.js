@@ -395,7 +395,7 @@ GULP PUBLISH || PUBLISH ON GITHUB
 	var options = { 
 		branch: "gh-pages",
 		cacheDir: ".deploy_cacheDir",
-		message: "[deploy] to gh-pages"
+		message: "[deploy] to gh-pages from master"
 	};
 
 	gulp.task('deploy', function() {
