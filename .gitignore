@@ -1,4 +1,4 @@
 .sass-cache
 .DS_Store
-.deploy
+.deploy/*
 node_modules
