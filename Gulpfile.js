@@ -396,10 +396,10 @@ GULP PUBLISH || PUBLISH ON GITHUB
 
 	var options = { 
 	    branch: "gh-pages",
-	    message: "Deploy to gh-pages [timestamp]"
+	    message: "Deploy to gh-pages"
 	};
 
-	gulp.task('publish', function() {
+	gulp.task('deploy', function() {
 		return gulp.src('.deploy/**/*')
 			.pipe(ghPages(options));
 	});
