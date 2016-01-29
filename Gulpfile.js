@@ -365,6 +365,7 @@ GULP REMOVE_COMPONENT || remove an existing component
 
 
 
+
 /*===========================
 GULP SERVE || browser sync (works) & live-refresh (works)
 ===========================*/
@@ -389,6 +390,9 @@ GULP SERVE || browser sync (works) & live-refresh (works)
 /*===========================
 GULP PUBLISH || PUBLISH ON GITHUB
 ===========================*/
+	var ghPages = require('gulp-gh-pages');
+
 	gulp.task('publish', function() {
-		// in progress
+		return gulp.src('.deploy/**/*')
+			.pipe(ghPages());
 	});
