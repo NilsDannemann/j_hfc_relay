@@ -397,7 +397,8 @@ GULP PUBLISH || PUBLISH ON GITHUB
 
 	var options = { 
 	    branch: "gh-pages",
-	    message: "Update [timestamp]"};
+	    cacheDir: ".deploy",
+	    message: "Update" [timestamp]};
 
 	gulp.task('publish', function() {
 		return gulp.src('.deploy/**/*')
