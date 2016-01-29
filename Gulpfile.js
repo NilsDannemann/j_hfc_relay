@@ -38,7 +38,7 @@ var gulp = require('gulp'),
 	component_name = 'new_component';						//For: component generation & removal
 
 /*===========================
-GULP OPTIMIZE || run all tasks in order
+GULP OPTIMIZE || optimization WITHOUT inlining styles & scripts
 ===========================*/
 	gulp.task('optimize', function(callback) {
 		runSequence(
@@ -47,6 +47,21 @@ GULP OPTIMIZE || run all tasks in order
 			'optimize_css',
 			'optimize_js',
 			'optimize_images', 
+			'publish',
+			callback);
+	});
+/*===========================
+GULP OPTIMIZE_FULL || optimization WITH inlining styles & scripts
+===========================*/
+	gulp.task('optimize_full', function(callback) {
+		runSequence(
+			'jekyll_build',
+			'optimize_html', 
+			'optimize_css',
+			'optimize_js',
+			'optimize_images', 
+			'inline_css',
+			'inline_js',
 			'publish',
 			callback);
 	});
@@ -145,20 +160,7 @@ GULP CSS || compress css & put in outputfolder
 			.pipe(notify({message: '[CSS] ------------------------', onLast: true}));
 	});
 
-	// Step 3 - download remote fonts
-	// var download = require("gulp-download");
-
-	// gulp.task('download_remote_fonts', function() {
-	// 	return download([
-	// 		'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.eot?v=4.4.0',
-	// 		'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.woff?v=4.4.0',
-	// 		'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.woff2?v=4.4.0',
-	// 		'https://netdna.bootstrapcdn.com/font-awesome/fonts/fontawesome-webfont.ttf?v=4.4.0'
-	// 	])
-	// 	.pipe(gulp.dest(outputfolder + '/assets/fonts'));
-	// });
-
-	// Step 4 (optional + optimize before) - place styles inline in head
+	// Step 3 (optional + optimize before) - place styles inline in head
 	gulp.task('inline_css', function() {
 		return gulp.src(outputfolder + '/**/*.html')
 			.pipe(replace('<link rel=\"stylesheet\" href=\"/assets/css/style.min.css\">', function(s) {
@@ -168,11 +170,6 @@ GULP CSS || compress css & put in outputfolder
 			.pipe(gulp.dest(outputfolder))
 			.pipe(notify({message: '[CSS] - placing styles inline in head...', onLast: true}));
 	});
-
-
-
-
-
 
 /*===========================
 GULP JS || concat & optimize js
@@ -212,8 +209,8 @@ GULP JS || concat & optimize js
 			.pipe(notify({message: '[JS] - placing scripts.min.js...', onLast: true}))
 			.pipe(notify({message: '[JS] ------------------------', onLast: true}));
 	});
-	// Step 4 (optional) - place scripts inline in footer
-	gulp.task('inline_js', ['optimize_js'], function() {
+	// Step 4 (optional + optimize before) - place scripts inline in footer
+	gulp.task('inline_js', function() {
 		return gulp.src(outputfolder + '/**/*.html')
 			.pipe(replace(/<script[\s\S]*?<\/script>/gmi, ''))
 			.pipe(replace(/<\/body>/, function(s) {
