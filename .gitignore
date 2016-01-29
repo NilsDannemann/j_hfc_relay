@@ -1,4 +1,3 @@
-.sass-cache
-.DS_Store
-.deploy/*
+.*
+!/.gitignore
 node_modules
