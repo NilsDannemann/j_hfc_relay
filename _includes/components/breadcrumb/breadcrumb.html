@@ -1,9 +1,0 @@
-{% capture page_url %}{{ page.url }}{% endcapture %}
-{% assign url_parts = page_url | split: '/' %}
-{% capture url_parts_count %}{{ url_parts.size }}{% endcapture %}
-
-<div class="breadcrumb">
-	<a class="breadcrumb__link" href="{{site.baseurl}}/">Home</a>{% for i in (1..url_parts_count) %}{% capture current_breadcrumb_url %}{{next_prepender}}/{{url_parts[i]}}/{% endcapture %}{% capture next_prepender %}{{next_prepender}}/{{url_parts[i]}}{% endcapture %}{% for p in site.pages %}{% if current_breadcrumb_url == p.url %}{% capture breadcrumb_page_page_url %}{{p.url}}{% endcapture %}
-	<div class="breadcrumb__divider"></div>
-	<a class="breadcrumb__link" href="{{site.baseurl}}{{breadcrumb_page_page_url}}">{{p.title}}</a>{% endif %}{% endfor %}{% endfor %}
-</div>

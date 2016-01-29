@@ -1,3 +1,0 @@
-<a href="{% if include.link != null %}{{site.baseurl}}/{{ include.link }}{% else %}#{% endif %}" class="button {% if include.style == null or include.style == "none" or include.style == "filled" %}{% elsif include.style contains "outlined" %}button--outlined{% endif %} {% if include.color != null or include.style == "none" %}button--{{ include.color }}{% endif %}">
-	{% if include.title != null %}{{ include.title }}{% else %}Button{% endif %}
-</a>
