@@ -390,9 +390,15 @@ GULP SERVE || browser sync (works) & live-refresh (works)
 /*===========================
 GULP PUBLISH || PUBLISH ON GITHUB
 ===========================*/
-	var ghPages = require('gulp-gh-pages');
+	// var ghPages = require('gulp-gh-pages');
 
-	gulp.task('publish', function() {
-		return gulp.src('.deploy/**/*')
-			.pipe(ghPages());
-	});
+	// gulp.task('publish', function() {
+	// 	return gulp.src('.deploy/**/*')
+	// 		.pipe(ghPages());
+	// });
+
+// var shell = require('gulp-shell');
+
+gulp.task('deploy', shell.task([
+	'git checkout gh-pages && git merge master -m "project published" && git push origin gh-pages && git checkout master'
+]));
