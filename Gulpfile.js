@@ -137,7 +137,10 @@ GULP CSS || compress css & put in outputfolder
 			.pipe(notify({message: '[CSS] - minifying...'}))
 			.pipe(cssnano())
 			.pipe(notify({message: '[CSS] - placing styles.min.css...', onLast: true}))
-			.pipe(rename('style.min.css'))
+			.pipe(rename({
+				suffix: ".min",
+				extname: ".css"
+			}))
 			.pipe(gulp.dest(outputfolder + '/assets/css'))
 			.pipe(notify({message: '[CSS] ------------------------', onLast: true}));
 	});
@@ -155,15 +158,15 @@ GULP CSS || compress css & put in outputfolder
 	// 	.pipe(gulp.dest(outputfolder + '/assets/fonts'));
 	// });
 
-	// Step 4 (optional) - place styles inline in head
-	gulp.task('inline_css', ['optimize_css'], function() {
+	// Step 4 (optional + optimize before) - place styles inline in head
+	gulp.task('inline_css', function() {
 		return gulp.src(outputfolder + '/**/*.html')
 			.pipe(replace('<link rel=\"stylesheet\" href=\"/assets/css/style.min.css\">', function(s) {
 				var style = fs.readFileSync(outputfolder + '/assets/css/style.min.css', 'utf8');
 				return '<style>\n' + style + '\n</style>';
 			}))
 			.pipe(gulp.dest(outputfolder))
-			.pipe(notify({message: '[CSS] - placing inline styles in head...', onLast: true}));
+			.pipe(notify({message: '[CSS] - placing styles inline in head...', onLast: true}));
 	});
 
 
