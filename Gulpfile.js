@@ -33,7 +33,7 @@ var gulp = require('gulp'),
 	prompt = require("gulp-prompt"),						//works - (handles prompts)
 	source = require('vinyl-source-stream'),				//works - (creates files)
 	// For: Publishing to Github ------------------------------------------------------------------------------------
-	ghPages = require('gulp-gh-pages'),						//works - (creates files)
+	ghPages = require('gulp-gh-pages'),						//works - (publish .deploy to gh-pages)
 	// Variables ----------------------------------------------------------------------------------------------------
 	outputfolder = '.deploy',								//For: setting outputfolder
 	componentsfolder = '_includes/components/',				//For: component generation & removal
@@ -392,11 +392,9 @@ GULP SERVE || browser sync (works) & live-refresh (works)
 /*===========================
 GULP PUBLISH || PUBLISH ON GITHUB
 ===========================*/
-	var ghPages = require('gulp-gh-pages');
-
 	var options = { 
-	    branch: "gh-pages",
-	    message: "[deploy] to gh-pages"
+		branch: "gh-pages",
+		message: "[deploy] to gh-pages"
 	};
 
 	gulp.task('deploy', function() {
