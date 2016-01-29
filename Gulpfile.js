@@ -32,6 +32,8 @@ var gulp = require('gulp'),
 	// For: Component generation ------------------------------------------------------------------------------------
 	prompt = require("gulp-prompt"),						//works - (handles prompts)
 	source = require('vinyl-source-stream'),				//works - (creates files)
+	// For: Publishing to Github ------------------------------------------------------------------------------------
+	ghPages = require('gulp-gh-pages'),						//works - (creates files)
 	// Variables ----------------------------------------------------------------------------------------------------
 	outputfolder = '.deploy',								//For: setting outputfolder
 	componentsfolder = '_includes/components/',				//For: component generation & removal
@@ -47,7 +49,7 @@ GULP OPTIMIZE || optimization WITHOUT inlining styles & scripts
 			'optimize_css',
 			'optimize_js',
 			'optimize_images', 
-			'publish',
+			// 'publish',
 			callback);
 	});
 /*===========================
@@ -62,7 +64,7 @@ GULP OPTIMIZE_FULL || optimization WITH inlining styles & scripts
 			'optimize_images', 
 			'inline_css',
 			'inline_js',
-			'publish',
+			// 'publish',
 			callback);
 	});
 /*===========================
@@ -390,9 +392,6 @@ GULP SERVE || browser sync (works) & live-refresh (works)
 /*===========================
 GULP PUBLISH || PUBLISH ON GITHUB
 ===========================*/
-	// gulp.task('publish', shell.task([
-	// 	'git checkout gh-pages && git merge master -m "project published" && git push origin gh-pages && git checkout master'
-	// ]));
 	var ghPages = require('gulp-gh-pages');
 
 	var options = { 
