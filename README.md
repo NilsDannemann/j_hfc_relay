@@ -12,8 +12,9 @@ Features:
 - Slider
 - Buttons & Button Groups (need work)
 - Sublime Snippets
-- Gulp: automatic optimizations
+- Gulp: automatic optimizations (html, js, css)
 - Gulp: component creation
+- Gulp: browser-sync & live refresh
 
 
 
