@@ -38,9 +38,10 @@ var gulp = require('gulp'),
 	outputfolder = '.deploy',								//For: setting outputfolder
 	componentsfolder = '_includes/components/',				//For: component generation & removal
 	component_name = 'new_component';						//For: component generation & removal
-	configYml = fs.readFileSync('_config.yml', 'utf8'),		//For: capturing baseurl from _config.yml
-	baseUrlRegex = configYml.match(/(baseurl: ")(.*)(")/mi),//For: capturing baseurl from _config.yml
-	baseUrl = baseUrlRegex[2],								//For: capturing baseurl from _config.yml
+	// Capturing baseUrl --------------------------------------------------------------------------------------------
+	configYml = fs.readFileSync('_config.yml', 'utf8'),		
+	baseUrlRegex = configYml.match(/(github_repo: )(.*)(\/[^\/].*)/mi),
+	baseUrl = baseUrlRegex[3]				
 
 
 
@@ -54,8 +55,7 @@ GULP OPTIMIZE || optimization WITHOUT inlining styles & scripts
 			'optimize_html', 
 			'optimize_css',
 			'optimize_js',
-			'optimize_images', 
-			// 'publish',
+			'optimize_images',
 			callback);
 	});
 /*===========================
@@ -70,14 +70,28 @@ GULP OPTIMIZE_FULL || optimization WITH inlining styles & scripts
 			'optimize_images', 
 			'inline_css',
 			'inline_js',
-			// 'publish',
 			callback);
 	});
 /*===========================
-GULP BUILD / SERVE || triggers Jekylls build / serve command
+GULP SERVE || serve & watch via browser-sync
 ===========================*/
-	gulp.task('jekyll_build', shell.task(['jekyll build']));
-	gulp.task('jekyll_serve', shell.task(['jekyll serve']));
+	gulp.task('serve', function(callback) {
+		runSequence(
+			'browser-sync',
+			'watch', 
+			callback);
+	});
+/*===========================
+GULP DEPLOY || deploy to github
+===========================*/
+	gulp.task('deploy', function(callback) {
+		runSequence(
+			'update_links',
+			'deploy_to_github', 
+			'reset_links',
+			callback);
+	});
+
 
 
 
@@ -199,7 +213,7 @@ GULP JS || concat & optimize js
 		return gulp.src(outputfolder + '/**/*.html')
 			.pipe(replace(/<script[\s\S]*?<\/script>/gmi, ''))
 			.pipe(replace(/<\/body>/, function(s) {
-				return '<script src="' + baseUrl + '/assets/js/scripts.min.js"></script></body>';
+				return '<script src="/assets/js/scripts.min.js"></script></body>';
 			}))
 			.pipe(gulp.dest(outputfolder));
 	});
@@ -376,7 +390,7 @@ GULP SERVE || browser sync (works) & live-refresh (works)
 ===========================*/
 	gulp.task('browser-sync', function() {
 		browserSync.init({
-			proxy: 'http://127.0.0.1:3000' + baseUrl + '/'
+			proxy: 'http://127.0.0.1:3000'
 		});
 	});
 	gulp.task('watch', function () {
@@ -390,18 +404,50 @@ GULP SERVE || browser sync (works) & live-refresh (works)
 	gulp.task('reload', ['jekyll_build'], function () {
 		browserSync.reload();
 	});
-	gulp.task('serve', ['browser-sync', 'watch']);
 
 /*===========================
-GULP PUBLISH || PUBLISH ON GITHUB
+GULP DEPLOY || DEPLOY ON GITHUB
 ===========================*/
 	var options = { 
 		branch: "gh-pages",
 		cacheDir: ".deploy_cacheDir",
 		message: "[deploy] to gh-pages from master"
 	};
-
-	gulp.task('deploy', function() {
-		return gulp.src('.deploy/**/*')
-			.pipe(ghPages(options));
+	
+	gulp.task('update_links', function() {
+		return gulp.src(outputfolder + '/**/*.html')
+			.pipe(replace('src="', function(s) {
+				return 'src="' + baseUrl;
+			}))
+			.pipe(replace('href="', function(s) {
+				return 'href="' + baseUrl;
+			}))
+			.pipe(gulp.dest(outputfolder))
 	});
+
+	gulp.task('deploy_to_github', function() {
+		return gulp.src('.deploy/**/*')
+			.pipe(ghPages(options))
+	});
+
+	gulp.task('reset_links', function() {
+		return gulp.src(outputfolder + '/**/*.html')
+			.pipe(replace('src="' + baseUrl, 'src="'))
+			.pipe(replace('href="' + baseUrl, 'href="'))
+			.pipe(gulp.dest(outputfolder))
+			.pipe(notify({message: '[DEPLOY] ------------------------', onLast: true}))
+			.pipe(notify({message: '[DEPLOY] - updating links...', onLast: true}))
+			.pipe(notify({message: '[DEPLOY] - uploading...', onLast: true}))
+			.pipe(notify({message: '[DEPLOY] - resetting links...', onLast: true}))
+			.pipe(notify({message: '[DEPLOY] ------------------------', onLast: true}));
+	});
+
+
+
+
+
+/*===========================
+JEKYLL BUILD / SERVE || triggers Jekylls build / serve command
+===========================*/
+	gulp.task('jekyll_build', shell.task(['jekyll build']));
+	gulp.task('jekyll_serve', shell.task(['jekyll serve']));
