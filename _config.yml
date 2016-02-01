@@ -7,7 +7,7 @@ github_repo: https://github.com/NilsDannemann/j_hfc_relay/blob/gh-pages
 
 # Generate ".deploy" folder on build
 destination: .deploy
-exclude: [node_modules, Gulpfile.js, package.json, README.md]
+exclude: ['node_modules', 'Gulpfile.js', 'package.json', 'README.md', '*.sublime-project', '*.sublime-workspace']
 
 # Collections
 collections:
