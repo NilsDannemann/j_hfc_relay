@@ -35,11 +35,12 @@ var gulp = require('gulp'),
 	// For: Publishing to Github ------------------------------------------------------------------------------------
 	ghPages = require('gulp-gh-pages'),						//works - (publish .deploy to gh-pages)
 	// Variables ----------------------------------------------------------------------------------------------------
-	configYml = fs.readFileSync('_config.yml', 'utf8'),		//For: capturing baseurl from _config.yml
-	baseUrl = configYml.match(/(baseurl: ")(.*)(")/mi),		//For: capturing baseurl from _config.yml
 	outputfolder = '.deploy',								//For: setting outputfolder
 	componentsfolder = '_includes/components/',				//For: component generation & removal
 	component_name = 'new_component';						//For: component generation & removal
+	configYml = fs.readFileSync('_config.yml', 'utf8'),		//For: capturing baseurl from _config.yml
+	baseUrlRegex = configYml.match(/(baseurl: ")(.*)(")/mi),//For: capturing baseurl from _config.yml
+	baseUrl = baseUrlRegex[2],								//For: capturing baseurl from _config.yml
 
 
 
@@ -198,7 +199,7 @@ GULP JS || concat & optimize js
 		return gulp.src(outputfolder + '/**/*.html')
 			.pipe(replace(/<script[\s\S]*?<\/script>/gmi, ''))
 			.pipe(replace(/<\/body>/, function(s) {
-				return '<script src="' + baseUrl[2] + '/assets/js/scripts.min.js"></script></body>';
+				return '<script src="' + baseUrl + '/assets/js/scripts.min.js"></script></body>';
 			}))
 			.pipe(gulp.dest(outputfolder));
 	});
@@ -375,7 +376,7 @@ GULP SERVE || browser sync (works) & live-refresh (works)
 ===========================*/
 	gulp.task('browser-sync', function() {
 		browserSync.init({
-			proxy: "http://127.0.0.1:3000/"
+			proxy: 'http://127.0.0.1:3000' + baseUrl + '/'
 		});
 	});
 	gulp.task('watch', function () {
