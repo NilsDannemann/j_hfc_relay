@@ -35,9 +35,14 @@ var gulp = require('gulp'),
 	// For: Publishing to Github ------------------------------------------------------------------------------------
 	ghPages = require('gulp-gh-pages'),						//works - (publish .deploy to gh-pages)
 	// Variables ----------------------------------------------------------------------------------------------------
+	configYml = fs.readFileSync('_config.yml', 'utf8'),		//For: capturing baseurl from _config.yml
+	baseUrl = configYml.match(/(baseurl: ")(.*)(")/mi),		//For: capturing baseurl from _config.yml
 	outputfolder = '.deploy',								//For: setting outputfolder
 	componentsfolder = '_includes/components/',				//For: component generation & removal
 	component_name = 'new_component';						//For: component generation & removal
+
+
+
 
 /*===========================
 GULP OPTIMIZE || optimization WITHOUT inlining styles & scripts
@@ -154,10 +159,7 @@ GULP CSS || compress css & put in outputfolder
 			.pipe(notify({message: '[CSS] - minifying...'}))
 			.pipe(cssnano())
 			.pipe(notify({message: '[CSS] - placing styles.min.css...', onLast: true}))
-			.pipe(rename({
-				suffix: ".min",
-				extname: ".css"
-			}))
+			.pipe(rename('style.min.css'))
 			.pipe(gulp.dest(outputfolder + '/assets/css'))
 			.pipe(notify({message: '[CSS] ------------------------', onLast: true}));
 	});
@@ -196,7 +198,7 @@ GULP JS || concat & optimize js
 		return gulp.src(outputfolder + '/**/*.html')
 			.pipe(replace(/<script[\s\S]*?<\/script>/gmi, ''))
 			.pipe(replace(/<\/body>/, function(s) {
-				return '<script src="/assets/js/scripts.min.js"></script></body>';
+				return '<script src="' + baseUrl[2] + '/assets/js/scripts.min.js"></script></body>';
 			}))
 			.pipe(gulp.dest(outputfolder));
 	});

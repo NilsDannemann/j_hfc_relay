@@ -2,6 +2,7 @@
 SLIDER SETTINGS
 Full API: http://www.idangero.us/swiper/api/
 ===========================*/
+
 $(document).ready(function() {
     var swiper = new Swiper('.swiper-container', {
         direction: 'horizontal',
