@@ -27,7 +27,14 @@
 				{% for image in site.static_files %}
 					{% if image.path contains 'images/slider' %}
 						<div class="swiper-slide">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+							<!-- Image -->
+							<img class="slider__image" src="{{site.baseurl}}{{image.path}}" alt="image" />
+							<!-- Content -->
+							<div class="slider__content">
+								<h1 class="slider__title">HFC Relay</h1>
+								<p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, esse! Assumenda, deserunt non molestias.</p>
+								<a href="#" class="slider__link">Read more...</a>
+							</div>
 						</div>
 					{% endif %}
 				{% endfor %}

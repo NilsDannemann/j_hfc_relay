@@ -5,12 +5,38 @@
 /* =======================================*/
 .slider {
 	width: 100%;
-	color: #fff;
+	// color: #fff;
 	background: $color-brand;
 	background: radial-gradient(ellipse at 0% 0%, lighten($color-brand, 10%) 0%, $color-brand 50%);
-
+	
 	&__inner {
 		@include container();
+		position: relative;
+	}
+	&__image {
+	}
+	&__content {
+		padding: 20px;
+		background: #fff;
+		border-bottom: $border;
+
+		@include respond-above(l) {
+			width: 350px;
+			text-align: left;
+			position: absolute;
+			bottom: 40px;
+			left: 40px;
+   			border-bottom: none;
+		}
+	}
+	&__title {
+		margin-top: 0;
+	}
+	&__text {
+		font-size: 13px;
+	}
+	&__link {
+		color: $color-brand;
 	}
 }
 
@@ -48,7 +74,8 @@
 	position: relative;
 	overflow: hidden;
 	/* Fix of Webkit flickering */
-	z-index: 1;
+	// z-index: 1;
+	z-index: 0;
 }
 .swiper-container-no-flexbox .swiper-slide {
 	float: left;
