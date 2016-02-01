@@ -8,7 +8,7 @@ children: false
 <div class="box">x</div>
 <div class="box">x</div>
 <div class="box">x</div>
-<div class="box">xfefef</div>
+<div class="box">x</div>
 <div class="box">x</div>
 <div class="box">x</div>
 <h1>Home</h1>
