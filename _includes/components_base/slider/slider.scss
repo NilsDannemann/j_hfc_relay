@@ -17,6 +17,8 @@
 	&__image {
 	}
 	&__content {
+		@include arrow($direction: right, $align: center, $color: #fff, $size: 10px);
+		
 		background: #fff;
 		padding: $whitespace $whitespace $whitespace*2 $whitespace;
 		border-bottom: $border;
