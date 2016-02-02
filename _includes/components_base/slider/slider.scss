@@ -44,7 +44,7 @@
 		@include respond-below(l) {font-size: 11px;}
 	}
 	&__link {
-		margin-bottom: 0 !important;
+		margin-bottom: 0;
 	}
 }
 

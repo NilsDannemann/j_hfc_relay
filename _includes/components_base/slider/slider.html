@@ -29,16 +29,17 @@
 						<div class="swiper-slide">
 							<!-- Image -->
 							<img class="slider__image" src="{{site.baseurl}}{{image.path}}" alt="image" />
-							<!-- Content -->
-							<div class="slider__content">
-								<h1 class="slider__title">{% if include.title == null %}This is a Headline{% else %}{{ include.title }}{% endif %}</h1>
-								<p class="slider__text">{% if include.text != null %}{% if include.text == "Lorem" or include.text == "lorem" %}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, esse! Assumenda, deserunt non molestias.{% else %}{{ include.text }}{% endif %}{% else %}Text{% endif %}</p>
-								<a href="{% if include.link != null %}{{site.baseurl}}/{{include.link}}{% else %}#{% endif %}" class="slider__link button button--brand">Read more...</a>
-							</div>
 						</div>
 					{% endif %}
 				{% endfor %}
 			</div>
+		</div>
+		
+		<!-- Content -->
+		<div class="slider__content">
+			<h1 class="slider__title">{% if include.title == null %}This is a Headline{% else %}{{ include.title }}{% endif %}</h1>
+			<p class="slider__text">{% if include.text != null %}{% if include.text == "Lorem" or include.text == "lorem" %}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, esse! Assumenda, deserunt non molestias.{% else %}{{ include.text }}{% endif %}{% else %}Text{% endif %}</p>
+			<a href="{% if include.link != null %}{{site.baseurl}}/{{include.link}}{% else %}#{% endif %}" class="slider__link button button--brand">Read more...</a>
 		</div>
 
 	</div>

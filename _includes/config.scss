@@ -29,7 +29,7 @@ $color-yellow		: #FFEB3B;
 $color-amber		: #FFC107;
 $color-orange		: #FF9800;
 
-$color-brand: $color-blue;
+$color-brand: $color-spaceblack;
 
 
 
@@ -124,10 +124,6 @@ $box-shadow			: $box-shadow-size-2;
 }
 
 @mixin transition() {
-	-webkit-transition: all 125ms ease-in;
-	-moz-transition: all 125ms ease-in;
-	-ms-transition: all 125ms ease-in; // IE10 is actually unprefixed //
-	-o-transition: all 125ms ease-in;
 	transition: all 125ms ease-in;
 }
 

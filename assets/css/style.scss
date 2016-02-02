@@ -10,6 +10,10 @@
 @import 'config';
 @import 'base';
 
+/* ===PARTS=== */
+@import 'components_parts/button/button';
+@import 'components_parts/button/buttongroup';
+
 /* ===BASE COMPONENTS=== */
 @import 'components_base/header/header';
 @import 'components_base/logo/logo';
@@ -25,9 +29,9 @@
 @import 'components_base/typography/ionicons/ionicons';
 
 /* ===COMPONENTS=== */
+@import 'components/form/form';
+@import 'components/table/table';
 @import 'components/breadcrumb/breadcrumb';
-@import 'components/button/button';
-@import 'components/button/buttongroup';
 @import 'components/teaser/teaser';
 @import 'components/teaser/teaser_single';
 @import 'components/teaser/teaser_double';

@@ -17,12 +17,10 @@
 		}
 		
 		&--outlined {
+			border-right: none;
 			
-			&:first-child {
-				border-right: none;
-			}
 			&:last-child {
-				border-left: none;
+				border-right: $border;
 			}
 		}
 	}

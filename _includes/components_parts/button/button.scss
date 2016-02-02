@@ -33,10 +33,12 @@
 
 .button {
 	@include button-background($color-grey);
+	@include transition();
 	display: inline-block;
 	padding: $whitespace/2 $whitespace;
 	margin-bottom: $whitespace;
 	border-radius: $border-radius;
+	outline: none;
 
 	&--brand 		{@include button-background($color-brand);}
 	&--spaceblack 	{@include button-background($color-spaceblack);}
