@@ -8,7 +8,8 @@
 	// color: #fff;
 	background: $color-brand;
 	background: radial-gradient(ellipse at 0% 0%, lighten($color-brand, 10%) 0%, $color-brand 50%);
-	
+	position: relative;
+
 	&__inner {
 		@include container();
 		position: relative;
@@ -16,27 +17,32 @@
 	&__image {
 	}
 	&__content {
-		padding: 20px;
 		background: #fff;
+		padding: $whitespace $whitespace $whitespace*2 $whitespace;
 		border-bottom: $border;
+		box-sizing: border-box;
 
 		@include respond-above(l) {
-			width: 350px;
+			width: 400px;
 			text-align: left;
+			padding: $whitespace;
 			position: absolute;
-			bottom: 40px;
-			left: 40px;
-   			border-bottom: none;
+			bottom: $whitespace*2;
+			border-bottom: none;
 		}
 	}
 	&__title {
 		margin-top: 0;
+
+		@include respond-below(l) {font-size: 18px;}
 	}
 	&__text {
 		font-size: 13px;
+
+		@include respond-below(l) {font-size: 11px;}
 	}
 	&__link {
-		color: $color-brand;
+		margin-bottom: 0 !important;
 	}
 }
 
@@ -205,7 +211,7 @@
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
 	text-align: left;
-	left: 0px;
+	left: $whitespace;
 	right: auto;
 
 	&:after {
@@ -216,7 +222,7 @@
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
 	text-align: right;
-	right: 0px;
+	right: $whitespace;
 	left: auto;
 
 	&:after {

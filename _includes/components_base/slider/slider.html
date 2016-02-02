@@ -1,18 +1,18 @@
 <section class="slider">
+	<!-- Navigation -->
+	{% if include.arrows == "light" %}
+		<div class="swiper-button-prev swiper-button-prev-light"></div>
+		<div class="swiper-button-next swiper-button-next-light"></div>
+	{% endif %}
+	{% if include.arrows == "dark" %}
+		<div class="swiper-button-prev swiper-button-prev-dark"></div>
+		<div class="swiper-button-next swiper-button-next-dark"></div>
+	{% endif %}
+
 	<div class="slider__inner">
 
 		<!-- Slider -->
 		<div class="swiper-container">
-
-			<!-- Navigation -->
-			{% if include.arrows == "light" %}
-				<div class="swiper-button-prev swiper-button-prev-light"></div>
-				<div class="swiper-button-next swiper-button-next-light"></div>
-			{% endif %}
-			{% if include.arrows == "dark" %}
-				<div class="swiper-button-prev swiper-button-prev-dark"></div>
-				<div class="swiper-button-next swiper-button-next-dark"></div>
-			{% endif %}
 
 			<!-- Pagination -->
 			{% if include.pagination == "light" %}
@@ -31,9 +31,9 @@
 							<img class="slider__image" src="{{site.baseurl}}{{image.path}}" alt="image" />
 							<!-- Content -->
 							<div class="slider__content">
-								<h1 class="slider__title">HFC Relay</h1>
-								<p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, esse! Assumenda, deserunt non molestias.</p>
-								<a href="#" class="slider__link">Read more...</a>
+								<h1 class="slider__title">{% if include.title == null %}This is a Headline{% else %}{{ include.title }}{% endif %}</h1>
+								<p class="slider__text">{% if include.text != null %}{% if include.text == "Lorem" or include.text == "lorem" %}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, esse! Assumenda, deserunt non molestias.{% else %}{{ include.text }}{% endif %}{% else %}Text{% endif %}</p>
+								<a href="{% if include.link != null %}{{site.baseurl}}/{{include.link}}{% else %}#{% endif %}" class="slider__link button button--brand">Read more...</a>
 							</div>
 						</div>
 					{% endif %}
