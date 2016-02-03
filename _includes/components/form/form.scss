@@ -7,3 +7,27 @@
 	
 	&__element {}
 }
+
+.select-label {
+	position: relative;
+
+	&:after {
+		font-family: Fontawesome;
+		content: "\f0dd";
+		font-size: 10px;
+		color: darken($color-grey, 20%);
+		position: absolute;
+		top: 0px;
+		right: 15px;
+		pointer-events: none;
+	}
+}
+
+.select {
+	background:none;
+	border: $border;
+	outline: none;
+	box-sizing: border-box;
+	appearance: none;
+	padding: $whitespace;
+}

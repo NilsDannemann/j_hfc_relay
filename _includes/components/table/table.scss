@@ -58,7 +58,7 @@ table.dataTable thead .sorting_desc_disabled {
 		font-family: FontAwesome;
 		float: right;
 		font-size: 10px;
-		color: #ccc;
+		color: darken($color-grey, 20%);
 		margin-right: -$whitespace/2;
 		padding-top: 2px;
 	}

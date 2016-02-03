@@ -1117,7 +1117,7 @@ $(document).ready(function() {
                 "aria-controls": c,
                 "class": b.sLengthSelect
             }), g = 0, j = f.length; g < j; g++) e[0][g] = new Option(d[g], f[g]);
-        var i = h("<div><label/></div>").addClass(b.sLength);
+        var i = h("<div><label class=\"select-label\"></div>").addClass(b.sLength);
         a.aanFeatures.l || (i[0].id = c + "_length");
         i.children().append(a.oLanguage.sLengthMenu.replace("_MENU_", e[0].outerHTML));
         h("select", i).val(a._iDisplayLength).bind("change.DT", function() {
@@ -3266,7 +3266,7 @@ $(document).ready(function() {
             sInfoPostFix: "",
             sDecimal: "",
             sThousands: ",",
-            sLengthMenu: "Show _MENU_ entries",
+            sLengthMenu: "Show: _MENU_",
             sLoadingRecords: "Loading...",
             sProcessing: "Processing...",
             sSearch: "Search:",
@@ -3502,7 +3502,7 @@ $(document).ready(function() {
         sSortableNone: "sorting_disabled",
         sSortColumn: "sorting_",
         sFilterInput: "",
-        sLengthSelect: "",
+        sLengthSelect: "select",
         sScrollWrapper: "dataTables_scroll",
         sScrollHead: "dataTables_scrollHead",
         sScrollHeadInner: "dataTables_scrollHeadInner",
