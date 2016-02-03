@@ -10,6 +10,14 @@ children: false
 {% include components/table/table.html %}
 
 <hr>
+<div class="buttongroup">
+	{% include components_parts/button/button.html title="Button" link="about" style="outlined" color="brand" %}
+	{% include components_parts/button/button.html title="Button" link="about" style="outlined" color="brand" %}
+	{% include components_parts/button/button.html title="Button" link="about" style="outlined" color="brand" %}
+</div>
+{% include components_parts/button/button.html title="Button" link="about" style="filled" color="brand" %}
+{% include components_parts/button/button.html title="Button" link="about" style="filled" color="brand" %}
+{% include components_parts/button/button.html title="Button" link="about" style="filled" color="brand" %}
 
 <h1>Component Parts</h1>
 {% include components/teaser/teaser_triple.html title="Teaser #1" image="placeholder.png" text="lorem" link="#" linktext="Weiterlesen" %}

@@ -12,14 +12,21 @@
 		color: #fff;
 	}
 	background: $color;
-	&:hover { background: darken($color, 5%) };
+	&:hover,
+	&.is-active { background: darken($color, 5%) };
+	&.is-disabled {
+		background: $color-grey;
+		color: darken($color-grey, 20%);
+	}
 }
+
 // Mixin: Set Border Color & Hover + fitting Text Color
 @mixin button-border($color) {
 	background: #fff;
 	color: $color;
 	border: $border;
-	&:hover { 
+	&:hover,
+	&.is-active { 
 		@if (lightness($color) > 55%) {
 			color: $color-black;
 		}
@@ -27,8 +34,11 @@
 			color: #fff;
 		}
 		background: $color;
-		border-color: $color;
+		border-color: $color !important;
 	};
+	&.is-disabled {
+		color: darken($color-grey, 20%);
+	}
 }
 
 .button {
@@ -38,7 +48,13 @@
 	padding: $whitespace/2 $whitespace;
 	margin-bottom: $whitespace;
 	border-radius: $border-radius;
+	cursor: pointer;
 	outline: none;
+	
+	&.is-disabled {
+		cursor: default;
+		pointer-events: none;
+	}
 
 	&--brand 		{@include button-background($color-brand);}
 	&--spaceblack 	{@include button-background($color-spaceblack);}
