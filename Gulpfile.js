@@ -160,17 +160,17 @@ GULP CSS || compress css & put in outputfolder
 			.pipe(cssImport())
 			.pipe(notify({message: '[CSS] - autoprefixing...', onLast: true}))
 			.pipe(autoprefixer())
-			.pipe(notify({message: '[CSS] - removing unused styles...', onLast: true}))
-			.pipe(uncss({
-				html: glob.sync(".deploy/**/*.html"),
-				ignore: [
-					// don't remove dynamic & js classes like "is-active"/"has-focus" & "js-something"/"something-js"
-					/(#|\.)(is-)/,
-					/(#|\.)(has-)/,
-					/(#|\.)(js-)/,
-					/(#|\.)(-js)/  
-				]
-			}))
+			// .pipe(notify({message: '[CSS] - removing unused styles...', onLast: true}))
+			// .pipe(uncss({
+			// 	html: glob.sync(".deploy/**/*.html"),
+			// 	ignore: [
+			// 		// don't remove dynamic & js classes like "is-active"/"has-focus" & "js-something"/"something-js"
+			// 		/(#|\.)(is-)/,
+			// 		/(#|\.)(has-)/,
+			// 		/(#|\.)(js-)/,
+			// 		/(#|\.)(-js)/  
+			// 	]
+			// }))
 			.pipe(notify({message: '[CSS] - minifying...'}))
 			.pipe(cssnano())
 			.pipe(notify({message: '[CSS] - placing styles.min.css...', onLast: true}))

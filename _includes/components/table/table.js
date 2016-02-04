@@ -3587,7 +3587,7 @@ $(document).ready(function() {
                         for (r = d.length; n < r; n++) {
                             s = d[n];
                             if (h.isArray(s)) {
-                                t = h("<" + (s.DT_el || "div") + " class=\"buttongroup\" />").appendTo(b);
+                                t = h("<" + (s.DT_el || "div") + " class=\"\" />").appendTo(b); //buttongroup class here
                                 p(t, s)
                             } else {
                                 k = null;
@@ -3877,7 +3877,7 @@ $(document).ready(function() {
  2014-2015 SpryMedia Ltd - datatables.net/license
 */
 (function(c) {
-    "function" === typeof define && define.amd ? define(["jquery", "datatables.net"], function(j) {
+    "function" === typeof define && define.amd ? define(["jquery"], function(j) {
         return c(j, window, document)
     }) : "object" === typeof exports ? module.exports = function(j, k) {
         j || (j = window);

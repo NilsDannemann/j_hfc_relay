@@ -392,7 +392,8 @@ table.dataTable tbody td.dt-body-nowrap {
 table.dataTable,
 table.dataTable th,
 table.dataTable td {
-    box-sizing: content-box
+    box-sizing: content-box;
+    outline: none;
 }
 
 .dataTables_wrapper {
@@ -457,8 +458,9 @@ table.dataTable td {
     }
 }
 
-.dataTables_wrapper .dataTables_paginate .paginate_button {
-    
+.dataTables_wrapper .dataTables_paginate .paginate_button:not(.previous):not(.next) {
+    padding: $whitespace/2;
+    margin: 0 2px;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current,
@@ -481,7 +483,7 @@ table.dataTable td {
 }
 
 .dataTables_wrapper .dataTables_paginate .ellipsis {
-    padding: 0 1em
+    padding: 0 $whitespace/2;
 }
 
 .dataTables_wrapper .dataTables_processing {
