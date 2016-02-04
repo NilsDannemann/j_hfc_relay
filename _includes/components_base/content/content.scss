@@ -8,7 +8,7 @@
 	padding: $whitespace;
 	
 	&__inner {
-		@include flexbox();
+		@include flexbox($wrap: nowrap);
 		@include container();
 	}
 

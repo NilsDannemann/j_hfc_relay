@@ -122,33 +122,33 @@ table.dataTable.row-border tbody tr:first-child th,
 table.dataTable.row-border tbody tr:first-child td,
 table.dataTable.display tbody tr:first-child th,
 table.dataTable.display tbody tr:first-child td {
-    border-top: none
+    border-top: none;
 }
 
 table.dataTable.cell-border tbody th,
 table.dataTable.cell-border tbody td {
     border-top: $border;
-    border-right: $border
+    border-right: $border;
 }
 
 table.dataTable.cell-border tbody tr th:first-child,
 table.dataTable.cell-border tbody tr td:first-child {
-    border-left: $border
+    border-left: $border;
 }
 
 table.dataTable.cell-border tbody tr:first-child th,
 table.dataTable.cell-border tbody tr:first-child td {
-    border-top: none
+    border-top: none;
 }
 
 table.dataTable.stripe tbody tr.odd,
 table.dataTable.display tbody tr.odd {
-    background-color: lighten($color-grey, 4%);
+    background-color: lighten($color-grey, 5%);
 }
 
 table.dataTable.stripe tbody tr.odd.selected,
 table.dataTable.display tbody tr.odd.selected {
-    background-color: #acbad4
+    background-color: #acbad4;
 }
 
 table.dataTable.hover tbody tr:hover,
@@ -158,7 +158,7 @@ table.dataTable.display tbody tr:hover {
 
 table.dataTable.hover tbody tr:hover.selected,
 table.dataTable.display tbody tr:hover.selected {
-    background-color: #aab7d1
+    background-color: #aab7d1;
 }
 
 table.dataTable.order-column tbody tr>.sorting_1,
@@ -167,7 +167,7 @@ table.dataTable.order-column tbody tr>.sorting_3,
 table.dataTable.display tbody tr>.sorting_1,
 table.dataTable.display tbody tr>.sorting_2,
 table.dataTable.display tbody tr>.sorting_3 {
-    background-color: #fafafa
+    background-color: #fafafa;
 }
 
 table.dataTable.order-column tbody tr.selected>.sorting_1,
@@ -269,15 +269,21 @@ table.dataTable.order-column.hover tbody tr:hover.selected>.sorting_3 {
     background-color: #a5b2cb
 }
 
-table.dataTable.no-footer {
-    border-bottom: 1px solid $color-black
+
+// NOFOOTER
+table.dataTable.no-footer tfoot {
+   display: none;
 }
 
+
+// =NOWRAP
 table.dataTable.nowrap th,
 table.dataTable.nowrap td {
     white-space: nowrap
 }
 
+
+// =COMPACT
 table.dataTable.compact thead th,
 table.dataTable.compact thead td {
     padding: 4px 17px 4px 4px
@@ -291,6 +297,10 @@ table.dataTable.compact tfoot td {
 table.dataTable.compact tbody th,
 table.dataTable.compact tbody td {
     padding: 4px
+}
+table.dataTable.compact>tbody>tr.child ul li {
+    padding: $whitespace/4 0;
+    font-size: 13px;
 }
 
 table.dataTable th.dt-left,
@@ -481,7 +491,7 @@ table.dataTable td {
     width: 100%;
     height: 40px;
     margin-left: -50%;
-    margin-top: -25px;
+    margin-top: -2$whitespace/4;
     padding-top: 20px;
     text-align: center;
     font-size: 1.2em;
@@ -538,10 +548,20 @@ table.dataTable td {
 
 
 
-// Responsive
+
+
+
+
+
+
+/* =======================================*/
+/* 
+/* =RESPONSIVE
+/* 
+/* =======================================*/
 @include respond-below(l) {
     .dataTables_wrapper .dataTables_info {
-        padding-top: 5px;
+        padding-top: $whitespace/4;
     }
     .dataTables_wrapper .dataTables_info,
     .dataTables_wrapper .dataTables_paginate {
@@ -553,17 +573,199 @@ table.dataTable td {
             display: flex;
             justify-content: center;
         }
+    }    
+    div.dtr-modal div.dtr-modal-display {
+        width: 95%
     }
-    
 }
 @include respond-below(m) {
-    table.dataTable {background: blue;}
-    .dataTables_wrapper .dataTables_length,
     .dataTables_wrapper .dataTables_filter {
-        float: none;
-        text-align: center
+        margin-top: 0;
     }
-    .dataTables_wrapper .dataTables_filter {
-        margin-top: 0.5em
-    }
+}
+
+
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.child,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th.child,
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.dataTables_empty {
+    cursor: default !important
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.child:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th.child:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.dataTables_empty:before {
+    display: none !important
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child {
+    position: relative;
+    padding-left: $whitespace*1.5;
+    cursor: pointer
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+    content: '\f0dd';
+    font-family: Fontawesome;
+    color: $color-brand;
+    font-size: 10px;
+    position: absolute;
+    top: $whitespace/2;
+    left: $whitespace/2;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td:first-child:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child:before {
+    content: '-';
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr.child td:before {
+    display: none
+}
+
+table.dataTable.dtr-inline.collapsed.compact>tbody>tr>td:first-child,
+table.dataTable.dtr-inline.collapsed.compact>tbody>tr>th:first-child {
+    padding-left: $whitespace;
+}
+
+table.dataTable.dtr-inline.collapsed.compact>tbody>tr>td:first-child:before,
+table.dataTable.dtr-inline.collapsed.compact>tbody>tr>th:first-child:before {
+    top: 4px;
+    left: 7px;
+}
+
+table.dataTable.dtr-column>tbody>tr>td.control,
+table.dataTable.dtr-column>tbody>tr>th.control {
+    position: relative;
+    cursor: pointer
+}
+
+table.dataTable.dtr-column>tbody>tr>td.control:before,
+table.dataTable.dtr-column>tbody>tr>th.control:before {
+    top: 50%;
+    left: 50%;
+    height: 16px;
+    width: 16px;
+    margin-top: -$whitespace/2;
+    margin-left: -$whitespace/2;
+    display: block;
+    position: absolute;
+    color: white;
+    border: 2px solid white;
+    border-radius: 16px;
+    box-shadow: 0 0 3px #444;
+    box-sizing: content-box;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    text-indent: 4px;
+    line-height: 16px;
+    content: '+';
+    background-color: #31b131
+}
+
+table.dataTable.dtr-column>tbody>tr.parent td.control:before,
+table.dataTable.dtr-column>tbody>tr.parent th.control:before {
+    content: '-';
+    background-color: #d33333
+}
+
+table.dataTable>tbody>tr.child {
+    padding: $whitespace/2 1em
+}
+
+table.dataTable>tbody>tr.child:hover {
+    background: transparent !important
+}
+
+table.dataTable>tbody>tr.child ul {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+table.dataTable>tbody>tr.child ul li {
+    border-bottom: 1px solid #efefef;
+    padding: $whitespace/2 0;
+    margin-bottom: 0;
+}
+
+table.dataTable>tbody>tr.child ul li:first-child {
+
+}
+
+table.dataTable>tbody>tr.child ul li:last-child {
+    border-bottom: none;
+}
+
+table.dataTable>tbody>tr.child span.dtr-title {
+    font-family: $font-headline;
+    color: $color-black;
+    display: inline-block;
+    min-width: $whitespace*5;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+div.dtr-modal {
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    padding: 10em 1em
+}
+
+div.dtr-modal div.dtr-modal-display {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    margin: auto;
+    z-index: 102;
+    overflow: auto;
+    background-color: #f5f5f7;
+    border: 1px solid black;
+    border-radius: $whitespace/2;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6)
+}
+
+div.dtr-modal div.dtr-modal-content {
+    position: relative;
+    padding: 1em
+}
+
+div.dtr-modal div.dtr-modal-close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #eaeaea;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 12
+}
+
+div.dtr-modal div.dtr-modal-close:hover {
+    background-color: #eaeaea
+}
+
+div.dtr-modal div.dtr-modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+    background: rgba(0, 0, 0, 0.6)
 }
