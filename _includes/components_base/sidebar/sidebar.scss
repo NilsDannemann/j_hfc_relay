@@ -5,30 +5,7 @@
 /* =======================================*/
 
 .sidebar {
-	width: 100%;
-	margin: 0 $whitespace 0 0;
+	@include column('2/10', $gutter: true, $behavior: stacking);
 	padding: $whitespace;
 	border: $border;
-	
-	&__inner {}
-}
-
-// For: 2 sidebars
-* + .sidebar {
-	margin: 0;
-}
-
-
-/* =======================================*/
-/* RESPONSIVE BEHAVIOR
-/* =======================================*/
-
-@include respond-above(l) { 
-	.sidebar {
-		width: $sidebar-width;
-	}
-
-	* + .sidebar {
-		margin: 0 0 0 $whitespace;
-	}
 }

@@ -179,7 +179,7 @@ $teaser-lines-to-show: 3;
 		flex-wrap: wrap;
 	}
 	// Justify Content
-	@if $justify == null or $justify == 'space-between' or $justify == 'spacebetween' {
+	@if $justify == null or $justify == 'space-between' {
 		justify-content: space-between;
 	} @else if $justify == 'space-around' or $justify == 'spacearound' {
 		justify-content: space-around;
@@ -191,16 +191,16 @@ $teaser-lines-to-show: 3;
 		justify-content: flex-end;
 	}
 	// Align items
-	@if $align == null or $align == 'stretch' {
-		align-items: stretch;
-	} @else if $align == null or $align == 'baseline' {
+	@if $align == null or $align == 'flex-start' {
+		align-items: flex-start;
+	} @else if $align == 'flex-end' {
+		align-items: flex-end;
+	} @else if $align == 'baseline' {
 		align-items: baseline;
 	} @else if $align == 'center' {
 		align-items: center;
-	} @else if $align == 'flex-start' or $align == 'flexstart' or $align == 'start'{
-		align-items: flex-start;
-	} @else if $align == 'flex-end' or $align == 'flexend' or $align == 'end' {
-		align-items: flex-end;
+	} @else if $align == 'stretch' {
+		align-items: stretch;
 	}
 }
 
@@ -299,6 +299,9 @@ $teaser-lines-to-show: 3;
 /* GRID
 /*
 /* =======================================*/
+@function convert-fraction-to-full($fraction){
+	@return #{$fraction} / #{$fraction} / #{$fraction};
+}
 
 @mixin column($fraction: '1/1', $gutter: null, $behavior: null) {
 	// GRID: NO GUTTERS (default)
@@ -319,6 +322,11 @@ $teaser-lines-to-show: 3;
 		}
 		width: calc(99.999999% * #{$fraction} - (#{$gutter} - #{$gutter} * #{$fraction}));
 		margin-bottom: $gutter;
+		
+		&:not(:nth-child(#{convert-fraction-to-full($fraction)}n) {
+			margin-right: $gutter;
+		}
+
 		// BEHAVIOR: DOUBLING
 		@if ($behavior == 'doubling') {
 			@include respond-below(xl) 	{width: calc(99.999999% * (#{$fraction} * 2) - (#{$gutter} - #{$gutter} * (#{$fraction} * 2)));}

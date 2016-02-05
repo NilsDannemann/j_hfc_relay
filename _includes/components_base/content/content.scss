@@ -8,34 +8,16 @@
 	padding: $whitespace;
 	
 	&__inner {
-		@include flexbox($wrap: nowrap);
+		@include flexbox($align: stretch);
 		@include container();
 	}
 
 	&__page {
-		flex: 1;
+		@include column('6/10', $gutter: true, $behavior: stacking);
 		@include flexbox();
 
 		> * {
 			width: 100%; // for: flexbox
-		}
-	}
-}
-		
-
-/* =======================================*/
-/* RESPONSIVE BEHAVIOR
-/* =======================================*/
-
-@include respond-below(l) {
-	.content {
-		
-		&__inner {
-			@include flexbox($direction: column, $wrap: nowrap);
-		}
-
-		&__page {
-			flex: inherit;
 		}
 	}
 }
