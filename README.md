@@ -353,7 +353,7 @@ The Snippets for Sublime Text are optional but make the workflow much faster. <b
 ###Playground
 You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
-[Open Grid-Playground](http://codepen.io/NilsDannemann/pen/RrEJPL?editors=1100)
+[Open Grid-Playground](http://codepen.io/NilsDannemann/pen/RrEJPL/?editors=1100)
 
 
 
