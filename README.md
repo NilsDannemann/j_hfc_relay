@@ -294,7 +294,7 @@ Use position relative, absolute or fixed in shorthand.<br>
 
 
 
-###Examples
+###Usage
 
 ```sass
 // shorthand
@@ -310,7 +310,7 @@ left: 0;
 
 
 
-###Play with it
+###Playground
 You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
 [Open Grid-Playground](http://codepen.io/NilsDannemann/pen/XXajGM?editors=110)
@@ -329,7 +329,7 @@ Use css-arrows via sass-mixins.<br>
 
 
 
-###Examples
+###Usage
 
 ```sass
 // centered up-arrow
@@ -342,7 +342,7 @@ Use css-arrows via sass-mixins.<br>
 
 
 
-###Play with it
+###Playground
 You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
 [Open Grid-Playground](http://codepen.io/NilsDannemann/pen/xZLEWd?editors=110)
@@ -358,10 +358,10 @@ You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/devices.jpg)
 # Quantity Query Mixin
 Change styles based on the quantity of Elements.<br>
+**Example Usecase:** Too many Elements in a horizontal Navigation
 
 
-
-###Examples
+###Usage
 
 ```sass
 @include quantity-at(4) {...} 			// styles when exactly 4 elements
@@ -371,11 +371,16 @@ Change styles based on the quantity of Elements.<br>
 ```
 
 
+###Snippets
+The Snippets for Sublime Text are optional but make the workflow much faster. <br>
+**Install:** [Download](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/snippets.zip) the Snippets and place them in your `(path_to_sublime)/Packages/User` folder.<br>
+**Usage:** Just type `column` and hit `TAB` to place your include.
 
-###Play with it
+
+###Playground
 You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
-[Open Breakpoint-Playground](http://codepen.io/NilsDannemann/pen/LGjRXe?editors=110)
+[Open Breakpoint-Playground](http://codepen.io/NilsDannemann/pen/zryjQY?editors=1100)
 
 
 
