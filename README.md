@@ -94,7 +94,7 @@ This approach has the following advantages over conventional grids:<br>
 - Flexbox (use ```@include flexbox();``` on containing element)
 - Row containers (working to get rid of those)
 
-###Examples
+###Usage
 
 ```sass
 @include column(1/4);
@@ -133,6 +133,13 @@ By default a column has no special behavior. You can add two different behaviors
 **Doubling:** Columns automatically respond to certain breakpoints (try it out to better understand)
 
 
+###Snippets
+
+The Snippets for Sublime Text are optional but make the workflow much faster. <br>
+**Install:** [Download](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/snippets.zip) the Snippets and place them in your `(path_to_sublime)/Packages/User` folder.<br>
+**Usage:** Just type `column` and hit `TAB` to place your include.
+
+
 ###Play with it
 You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
@@ -151,7 +158,7 @@ Four sets of sass-mixins let you control the responsive flow of your document:
 
 You can also pass any px value instead of a breakpoint-name,
 
-###Examples
+###Usage
 
 **Above** a certain breakpoint (mobile-first)
 ```sass
@@ -189,7 +196,7 @@ You can also pass any px value instead of a breakpoint-name,
 }
 ```
 
-###Usage
+###Flexible Placement
 You can use the breakpoint-mixins in two ways:
 
 Either inside your class-declarations...
