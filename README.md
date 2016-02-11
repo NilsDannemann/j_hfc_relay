@@ -24,85 +24,6 @@ Features:
 
 
 <br><br><br><hr>
-# The Navigation
-The Navigation is responsive out of the box.
-
-
-
-###Adding a Page
-- Create your ```page.md``` in the _pages folder
-
-- Add Front Matter
-```
----
-title: "page"
-permalink: "/page/"
-layout: sidebar_double
-position: 2
-children: false
----
-```
-Done!
-
-
-
-###Adding a Sub-Page
-- Create your ```my_subpage.md``` in the _pages folder 
-<br> **Note:** you can also place it in a sub-folder for better organisation.
-
-- Add Front Matter
-<br> **Note:** The permalink controls the sub-nav
-```
----
-title: "my_subpage"
-permalink: "/page/my_subpage"
-layout: sidebar_double
-position: 2
-children: false
----
-```
-- Finally go back to the **parent page** (here: ```page.md```) and set ```children: true```
-
-
-
-
-
-
-
-
-<br><br><br><hr>
-# The Slider
-Based on the [Swiper Slider](http://www.idangero.us/swiper/). 
-Full API [here](http://www.idangero.us/swiper/api/), Demos [here](http://www.idangero.us/swiper/demos/)<br>
-
-
-
-###Usage
-- Place the include in one of your pages or layouts:
-```sass
-{% include components_base/slider/slider.html arrows="light" pagination="light" %}
-// arrows & pagination can be set to "light", "dark" or "none".
-```
-
-- To add/remove images just place them in this folder:
-```
-assets/images/slider
-```
-
-- Change Slider-Settings here:
-```
-/_includes/components_base/slider/slider.js
-```
-Done!
-
-
-
-
-
-
-
-
-<br><br><br><hr>
 # The Grid
 The Grid is a **fraction-based** grid system and uses flexible sass-mixins instead of fixed classes.<br>
 
@@ -274,6 +195,85 @@ The Snippets for Sublime Text are optional but make the workflow much faster. <b
 You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
 [Open Breakpoint-Playground](http://codepen.io/NilsDannemann/pen/wMRmrK?editors=1100)
+
+
+
+
+
+
+
+
+<br><br><br><hr>
+# The Navigation
+The Navigation is responsive out of the box.
+
+
+
+###Adding a Page
+- Create your ```page.md``` in the _pages folder
+
+- Add Front Matter
+```
+---
+title: "page"
+permalink: "/page/"
+layout: sidebar_double
+position: 2
+children: false
+---
+```
+Done!
+
+
+
+###Adding a Sub-Page
+- Create your ```my_subpage.md``` in the _pages folder 
+<br> **Note:** you can also place it in a sub-folder for better organisation.
+
+- Add Front Matter
+<br> **Note:** The permalink controls the sub-nav
+```
+---
+title: "my_subpage"
+permalink: "/page/my_subpage"
+layout: sidebar_double
+position: 2
+children: false
+---
+```
+- Finally go back to the **parent page** (here: ```page.md```) and set ```children: true```
+
+
+
+
+
+
+
+
+<br><br><br><hr>
+# The Slider
+Based on the [Swiper Slider](http://www.idangero.us/swiper/). 
+Full API [here](http://www.idangero.us/swiper/api/), Demos [here](http://www.idangero.us/swiper/demos/)<br>
+
+
+
+###Usage
+- Place the include in one of your pages or layouts:
+```sass
+{% include components_base/slider/slider.html arrows="light" pagination="light" %}
+// arrows & pagination can be set to "light", "dark" or "none".
+```
+
+- To add/remove images just place them in this folder:
+```
+assets/images/slider
+```
+
+- Change Slider-Settings here:
+```
+/_includes/components_base/slider/slider.js
+```
+Done!
 
 
 
