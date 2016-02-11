@@ -17,12 +17,12 @@ Features:
 - Gulp: browser-sync & live refresh
 
 
-
+<hr>
 # The Navigation
 The Navigation is responsive out of the box.
 
 
-<hr>
+
 ###Adding a Page
 - Create your ```page.md``` in the _pages folder
 
@@ -39,7 +39,7 @@ children: false
 Done!
 
 
-<hr>
+
 ###Adding a Sub-Page
 - Create your ```my_subpage.md``` in the _pages folder 
 <br> **Note:** you can also place it in a sub-folder for better organisation.
@@ -58,13 +58,13 @@ children: false
 - Finally go back to the **parent page** (here: ```page.md```) and set ```children: true```
 
 
-
+<hr>
 # The Slider
 Based on the [Swiper Slider](http://www.idangero.us/swiper/). 
 Full API [here](http://www.idangero.us/swiper/api/), Demos [here](http://www.idangero.us/swiper/demos/)<br>
 
 
-<hr>
+
 ###Usage
 - Place the include in one of your pages or layouts:
 ```sass
@@ -85,7 +85,7 @@ Done!
 
 
 
-
+<hr>
 # The Grid
 The Grid is a **fraction-based** grid system and uses flexible sass-mixins instead of fixed classes.<br>
 
@@ -96,14 +96,14 @@ This approach has the following advantages over conventional grids:<br>
 - **Simplicity** - keep all styles & behavior in one place (separation of concerns)
 
 
-<hr>
+
 ###Requirements
 - Global Border Box
 - Flexbox (use ```@include flexbox();``` on containing element)
 - Row containers (working to get rid of those)
 
 
-<hr>
+
 ###Usage
 
 ```sass
@@ -113,7 +113,7 @@ This approach has the following advantages over conventional grids:<br>
 ```
 
 
-<hr>
+
 ###Adding Gutters
 
 By default a column has no gutters. You can add gutters like so:
@@ -134,7 +134,7 @@ You can also specify your own gutters like so:
 ```
 
 
-<hr>
+
 ###Beta: Adding Behavior
 
 By default a column has no special behavior. You can add two different behaviors like so:
@@ -148,7 +148,7 @@ By default a column has no special behavior. You can add two different behaviors
 
 
 
-<hr>
+
 ###Snippets
 The Snippets for Sublime Text are optional but make the workflow much faster. <br>
 **Install:** [Download](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/snippets.zip) the Snippets and place them in your `(path_to_sublime)/Packages/User` folder.<br>
@@ -156,7 +156,7 @@ The Snippets for Sublime Text are optional but make the workflow much faster. <b
 
 
 
-<hr>
+
 ###Playground
 You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
@@ -176,7 +176,7 @@ Four sets of sass-mixins let you control the responsive flow of your document:
 You can also pass any px value instead of a breakpoint-name,
 
 
-<hr>
+
 ###Usage
 
 **Above** a certain breakpoint (mobile-first)
@@ -216,7 +216,7 @@ You can also pass any px value instead of a breakpoint-name,
 ```
 
 
-<hr>
+
 ###Placement
 You can use the breakpoint-mixins in two ways:
 
@@ -239,7 +239,7 @@ Both is fine.
 
 
 
-<hr>
+
 ###Snippets
 The Snippets for Sublime Text are optional but make the workflow much faster. <br>
 **Install:** [Download](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/snippets.zip) the Snippets and place them in your `(path_to_sublime)/Packages/User` folder.<br>
@@ -247,7 +247,7 @@ The Snippets for Sublime Text are optional but make the workflow much faster. <b
 
 
 
-<hr>
+
 ###Playground
 You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
@@ -255,12 +255,12 @@ You can test the mixin over here:<br>
 
 
 
-
+<hr>
 # Position Shorthand
 Use position relative, absolute or fixed in shorthand.<br>
 
 
-<hr>
+
 ###Examples
 
 ```sass
@@ -276,19 +276,19 @@ left: 0;
 ```
 
 
-<hr>
+
 ###Play with it
 You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
 [Open Grid-Playground](http://codepen.io/NilsDannemann/pen/XXajGM?editors=110)
 
 
-
+<hr>
 # Arrows
 Use css-arrows via sass-mixins.<br>
 
 
-<hr>
+
 ###Examples
 
 ```sass
@@ -301,7 +301,7 @@ Use css-arrows via sass-mixins.<br>
 ```
 
 
-<hr>
+
 ###Play with it
 You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
@@ -309,12 +309,12 @@ You can test the mixin over here:<br>
 
 
 
-
+<hr>
 # Quantity Query Mixin
 Change styles based on the quantity of Elements.<br>
 
 
-<hr>
+
 ###Examples
 
 ```sass
@@ -325,7 +325,7 @@ Change styles based on the quantity of Elements.<br>
 ```
 
 
-<hr>
+
 ###Play with it
 You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
@@ -337,20 +337,20 @@ You can test the mixin over here:<br>
 #Components & Parts
 
 
-<hr>
+
 ### Base Components
 
 
-<hr>
+
 ### HFC Components
 
 
-<hr>
+
 ### Parts
 Parts can be used for building your own components.
 
 
-<hr>
+
 ##### Button
 Optional: Define a **title**, a **link**, a **style** and/or a **color**.
 - Style: can be "filled", "outlined" or "none". Default: "filled".
@@ -362,7 +362,7 @@ Optional: Define a **title**, a **link**, a **style** and/or a **color**.
 {% include components/button/button.html title="MyTitle" link="link" style="filled" color="brand" %}
 ```
 
-<hr>
+
 ##### Buttongroup
 Optional: Define a **style** and/or a **color**.
 - Style: can be "filled", "outlined" or "none". Default: "filled".
@@ -379,7 +379,7 @@ Optional: Define a **style** and/or a **color**.
 #Other (in progress)
 
 
-<hr>
+
 ###Container
 **Basic Container**
 ```sass
@@ -387,7 +387,7 @@ Optional: Define a **style** and/or a **color**.
 ```
 
 
-<hr>
+
 ###Flexbox 
 **Use Flexbox**
 ```sass
