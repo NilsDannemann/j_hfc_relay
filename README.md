@@ -23,7 +23,7 @@ Features:
 
 
 
-<br><br><br>
+<br><br><br><br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/devices.jpg)
 <hr>
 # The Grid
@@ -109,7 +109,7 @@ You can test the mixin over here:<br>
 
 
 
-<br><br><br>
+<br><br><br><br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/devices.jpg)
 #Responsive Mixins
 Four sets of sass-mixins let you control the responsive flow of your document:
@@ -206,7 +206,7 @@ You can test the mixin over here:<br>
 
 
 
-<br><br><br>
+<br><br><br><br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/devices.jpg)
 # The Navigation
 The Navigation is responsive out of the box.
@@ -254,7 +254,7 @@ children: false
 
 
 
-<br><br><br>
+<br><br><br><br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/devices.jpg)
 # The Slider
 Based on the [Swiper Slider](http://www.idangero.us/swiper/). 
@@ -287,7 +287,7 @@ Done!
 
 
 
-<br><br><br>
+<br><br><br><br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/devices.jpg)
 # Position Shorthand
 Use position relative, absolute or fixed in shorthand.<br>
@@ -322,7 +322,7 @@ You can test the mixin over here:<br>
 
 
 
-<br><br><br>
+<br><br><br><br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/devices.jpg)
 # Arrows
 Use css-arrows via sass-mixins.<br>
@@ -354,7 +354,7 @@ You can test the mixin over here:<br>
 
 
 
-<br><br><br>
+<br><br><br><br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/devices.jpg)
 # Quantity Query Mixin
 Change styles based on the quantity of Elements.<br>
@@ -384,7 +384,7 @@ You can test the mixin over here:<br>
 
 
 
-<br><br><br>
+<br><br><br><br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/devices.jpg)
 #Components & Parts
 
@@ -433,7 +433,7 @@ Optional: Define a **style** and/or a **color**.
 
 
 
-<br><br><br>
+<br><br><br><br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/devices.jpg)
 #Other (in progress)
 
