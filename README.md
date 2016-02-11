@@ -38,7 +38,7 @@ This approach has the following advantages over conventional grids:<br>
 
 
 ###Requirements
-- Global Border Box
+- Global Border Box ([recommended usage](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/))
 - Flexbox (use ```@include flexbox();``` on containing element)
 - Row containers (working to get rid of those)
 
@@ -119,7 +119,7 @@ Four sets of sass-mixins let you control the responsive flow of your document:
 - **At** a certain breakpoint (``` @include respond-at(breakpoint-name) { ... } ```)
 - **From** a certain breakpoint (``` @include respond-from(breakpoint-name, breakpoint-name) { ... } ```)
 
-You can also pass any px value instead of a breakpoint-name,
+You can also pass a px value instead of a breakpoint-name.
 
 
 
