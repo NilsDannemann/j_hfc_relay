@@ -81,7 +81,7 @@ Done!
 
 
 # The Grid
-The Grid uses flexible sass-mixins instead of fixed classes.<br>
+The Grid is a **fraction-based** grid system and uses flexible sass-mixins instead of fixed classes.<br>
 
 This approach has the following advantages over conventional grids:<br>
 
@@ -90,8 +90,9 @@ This approach has the following advantages over conventional grids:<br>
 - **Simplicity** - keep all styles & behavior in one place (separation of concerns)
 
 ###Requirements
-- Global Border Box (comes with the config.scss)
+- Global Border Box
 - Flexbox (use ```@include flexbox();``` on containing element)
+- Row containers (working to get rid of those)
 
 ###Examples
 
@@ -120,7 +121,7 @@ You can also specify your own gutters like so:
 @include column(1/6, $gutter: $var/2); 		// you can even do math with them
 ```
 
-###Adding Behavior
+###Beta: Adding Behavior
 
 By default a column has no special behavior. You can add two different behaviors like so:
 
@@ -128,7 +129,7 @@ By default a column has no special behavior. You can add two different behaviors
 @include column(1/6, $gutter: true, $behavior: stacking);
 @include column(1/6, $gutter: true, $behavior: doubling);
 ```
-**Stacking:** Columns use full width on smallest breakpoint (common pattern)
+**Stacking:** Columns use the full width on smallest breakpoint (common pattern) <br>
 **Doubling:** Columns automatically respond to certain breakpoints (try it out to better understand)
 
 
