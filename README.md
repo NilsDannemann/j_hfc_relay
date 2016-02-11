@@ -374,7 +374,7 @@ Change styles based on the quantity of Elements.<br>
 ###Snippets
 The Snippets for Sublime Text are optional but make the workflow much faster. <br>
 **Install:** [Download](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/snippets.zip) the Snippets and place them in your `(path_to_sublime)/Packages/User` folder.<br>
-**Usage:** Just type `column` and hit `TAB` to place your include.
+**Usage:** Just type `quantity`, choose your type (above, below, at or between) and hit `TAB` to place your include.
 
 
 ###Playground
