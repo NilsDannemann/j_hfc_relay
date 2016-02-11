@@ -23,7 +23,7 @@ Features:
 
 
 
-<br><br><hr>
+<br><br><br><hr>
 # The Navigation
 The Navigation is responsive out of the box.
 
@@ -70,7 +70,7 @@ children: false
 
 
 
-<br><br><hr>
+<br><br><br><hr>
 # The Slider
 Based on the [Swiper Slider](http://www.idangero.us/swiper/). 
 Full API [here](http://www.idangero.us/swiper/api/), Demos [here](http://www.idangero.us/swiper/demos/)<br>
@@ -102,7 +102,7 @@ Done!
 
 
 
-<br><br><hr>
+<br><br><br><hr>
 # The Grid
 The Grid is a **fraction-based** grid system and uses flexible sass-mixins instead of fixed classes.<br>
 
@@ -186,7 +186,7 @@ You can test the mixin over here:<br>
 
 
 
-<br><br><hr>
+<br><br><br><hr>
 #Responsive Mixins
 Four sets of sass-mixins let you control the responsive flow of your document:
 
@@ -282,7 +282,7 @@ You can test the mixin over here:<br>
 
 
 
-<br><br><hr>
+<br><br><br><hr>
 # Position Shorthand
 Use position relative, absolute or fixed in shorthand.<br>
 
@@ -316,7 +316,7 @@ You can test the mixin over here:<br>
 
 
 
-<br><br><hr>
+<br><br><br><hr>
 # Arrows
 Use css-arrows via sass-mixins.<br>
 
@@ -347,7 +347,7 @@ You can test the mixin over here:<br>
 
 
 
-<br><br><hr>
+<br><br><br><hr>
 # Quantity Query Mixin
 Change styles based on the quantity of Elements.<br>
 
@@ -376,7 +376,7 @@ You can test the mixin over here:<br>
 
 
 
-<br><br><hr>
+<br><br><br><hr>
 #Components & Parts
 
 
@@ -424,7 +424,7 @@ Optional: Define a **style** and/or a **color**.
 
 
 
-<br><br><hr>
+<br><br><br><hr>
 #Other (in progress)
 
 
