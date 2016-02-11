@@ -364,7 +364,7 @@ You can test the mixin over here:<br>
 
 <br><br><br><br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/devices.jpg)
-# Quantity Query Mixin
+# Quantity Queries
 Change styles based on the quantity of Elements.<br>
 **Example Usecase:** Too many Elements in a horizontal Navigation
 
