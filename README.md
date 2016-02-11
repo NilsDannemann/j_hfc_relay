@@ -342,10 +342,18 @@ Use css-arrows via sass-mixins.<br>
 
 
 
+###Snippets
+The Snippets for Sublime Text are optional but make the workflow much faster. <br>
+**Install:** [Download](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/snippets.zip) the Snippets and place them in your `(path_to_sublime)/Packages/User` folder.<br>
+**Usage:** Just type `arrow` and hit `TAB` to place your include.
+
+
+
+
 ###Playground
 You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
-[Open Grid-Playground](http://codepen.io/NilsDannemann/pen/xZLEWd?editors=110)
+[Open Grid-Playground](http://codepen.io/NilsDannemann/pen/RrEJPL?editors=1100)
 
 
 
