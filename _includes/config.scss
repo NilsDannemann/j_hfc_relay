@@ -299,19 +299,15 @@ $teaser-lines-to-show: 3;
 /* GRID
 /*
 /* =======================================*/
-@function convert-fraction-to-full($fraction){
-	@return #{$fraction} / #{$fraction} / #{$fraction};
-}
-
-@mixin column($fraction: '1/1', $gutter: null, $behavior: null) {
+@mixin column($fraction: 1/1, $gutter: null, $behavior: null) {
 	// GRID: NO GUTTERS (default)
 	@if ($gutter == 0px or $gutter == false or $gutter == null) {
-		width: calc(99.999999% * #{$fraction});
+		width: calc(99.999999% * (#{$fraction}));
 		margin-bottom: 0;
 		// BEHAVIOR: DOUBLING
 		@if ($behavior == 'doubling') {
-			@include respond-below(xl) 	{width: calc(99.999999% * #{$fraction} * 2);}
-			@include respond-below(m) 	{width: calc(99.999999% * #{$fraction} / (#{$fraction} * 2));}
+			@include respond-below(xl) 	{width: calc(99.999999% * (#{$fraction}) * 2);}
+			@include respond-below(m) 	{width: calc(99.999999% * (#{$fraction}) / ((#{$fraction}) * 2));}
 			@include respond-below(s) 	{width: 100%;}
 		}
 	}
@@ -320,24 +316,22 @@ $teaser-lines-to-show: 3;
 		@if ($gutter == true) {
 			$gutter: $whitespace;
 		}
-		width: calc(99.999999% * #{$fraction} - (#{$gutter} - #{$gutter} * #{$fraction}));
+		width: calc(99.999999% * (#{$fraction}) - (#{$gutter} - #{$gutter} * (#{$fraction})));
 		margin-bottom: $gutter;
-		
-		&:not(:nth-child(#{convert-fraction-to-full($fraction)}n) {
-			margin-right: $gutter;
-		}
 
 		// BEHAVIOR: DOUBLING
-		@if ($behavior == 'doubling') {
-			@include respond-below(xl) 	{width: calc(99.999999% * (#{$fraction} * 2) - (#{$gutter} - #{$gutter} * (#{$fraction} * 2)));}
-			@include respond-below(m) 	{width: calc(99.999999% * (#{$fraction} / (#{$fraction} * 2)) - (#{$gutter} - #{$gutter} * (#{$fraction} / (#{$fraction} * 2))));}
+		@if ($behavior == doubling) {
+			@include respond-below(xl) 	{width: calc(99.999999% * ((#{$fraction}) * 2) - (#{$gutter} - #{$gutter} * ((#{$fraction}) * 2)));}
+			@include respond-below(m) 	{width: calc(99.999999% * ((#{$fraction}) / ((#{$fraction}) * 2)) - (#{$gutter} - #{$gutter} * ((#{$fraction}) / ((#{$fraction}) * 2))));}
 			@include respond-below(s) 	{width: 100%;}
 		}
 	}
 	// BEHAVIOR: STACKING
-	@if ($behavior == 'stacking') {
+	@if ($behavior == stacking) {
 		@include respond-below(s) {
 			width: 100%;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
 		}
 	}
 }

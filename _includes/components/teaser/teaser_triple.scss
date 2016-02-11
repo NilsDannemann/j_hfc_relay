@@ -5,7 +5,7 @@
 /* =======================================*/
 .teaser--triple {
 	@include flexbox($direction: column);
-	@include column('1/3', $gutter: true, $behavior: stacking);
+	@include column(1/3, $gutter: true, $behavior: stacking);
 }
 
 
@@ -13,11 +13,11 @@
 /* RESPONSIVE BEHAVIOR
 /* =======================================*/
 @include respond-at(s) {
-	.teaser--triple {@include column('1/2', $gutter: true);}
+	.teaser--triple {@include column(1/2, $gutter: true);}
 }
 @include respond-at(l) {
-	.teaser--triple {@include column('1/1', $gutter: true);}
+	.teaser--triple {@include column(1/1, $gutter: true);}
 }
 @include respond-at(xl) {
-	.teaser--triple {@include column('1/2', $gutter: true);}
+	.teaser--triple {@include column(1/2, $gutter: true);}
 }

@@ -13,8 +13,9 @@
 	}
 
 	&__page {
-		@include column('6/10', $gutter: true, $behavior: stacking);
+		@include column(6/10, $gutter: true, $behavior: stacking);
 		@include flexbox();
+		flex: 1;
 
 		> * {
 			width: 100%; // for: flexbox

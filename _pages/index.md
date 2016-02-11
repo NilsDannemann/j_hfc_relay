@@ -17,9 +17,9 @@ children: false
 	{% include components_parts/button/button.html title="Button" link="about" style="outlined" color="brand" %}
 	{% include components_parts/button/button.html title="Button" link="about" style="outlined" color="brand" %}
 </div>
-	{% include components_parts/button/button.html title="Button" link="about" style="filled" color="brand" %}
-	{% include components_parts/button/button.html title="Button" link="about" style="filled" color="brand" %}
-	{% include components_parts/button/button.html title="Button" link="about" style="filled" color="brand" %}
+{% include components_parts/button/button.html title="Button" link="about" style="filled" color="brand" %}
+{% include components_parts/button/button.html title="Button" link="about" style="filled" color="brand" %}
+{% include components_parts/button/button.html title="Button" link="about" style="filled" color="brand" %}
 <hr>
 
 
