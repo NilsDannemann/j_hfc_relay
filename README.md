@@ -87,7 +87,7 @@ This approach has the following advantages over conventional grids:<br>
 
 - **Flexibility** - just pass any ```$fraction``` and ```$gutter``` you like
 - **Cleanliness** - keep your Markup clean and readable
-- **Simplicity** - keep all styles in one place (no separation of concerns)
+- **Simplicity** - keep all styles & behavior in one place (separation of concerns)
 
 ###Requirements
 - Global Border Box (comes with the config.scss)
