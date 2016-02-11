@@ -17,6 +17,12 @@ Features:
 - Gulp: browser-sync & live refresh
 
 
+
+
+
+
+
+
 <br><br><hr>
 # The Navigation
 The Navigation is responsive out of the box.
@@ -58,6 +64,12 @@ children: false
 - Finally go back to the **parent page** (here: ```page.md```) and set ```children: true```
 
 
+
+
+
+
+
+
 <br><br><hr>
 # The Slider
 Based on the [Swiper Slider](http://www.idangero.us/swiper/). 
@@ -82,6 +94,11 @@ assets/images/slider
 /_includes/components_base/slider/slider.js
 ```
 Done!
+
+
+
+
+
 
 
 
@@ -165,6 +182,11 @@ You can test the mixin over here:<br>
 
 
 
+
+
+
+
+<br><br><hr>
 #Responsive Mixins
 Four sets of sass-mixins let you control the responsive flow of your document:
 
@@ -255,6 +277,11 @@ You can test the mixin over here:<br>
 
 
 
+
+
+
+
+
 <br><br><hr>
 # Position Shorthand
 Use position relative, absolute or fixed in shorthand.<br>
@@ -283,6 +310,12 @@ You can test the mixin over here:<br>
 [Open Grid-Playground](http://codepen.io/NilsDannemann/pen/XXajGM?editors=110)
 
 
+
+
+
+
+
+
 <br><br><hr>
 # Arrows
 Use css-arrows via sass-mixins.<br>
@@ -306,6 +339,11 @@ Use css-arrows via sass-mixins.<br>
 You can test the mixin over here:<br>
 ![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/code-playground.png)
 [Open Grid-Playground](http://codepen.io/NilsDannemann/pen/xZLEWd?editors=110)
+
+
+
+
+
 
 
 
@@ -334,6 +372,11 @@ You can test the mixin over here:<br>
 
 
 
+
+
+
+
+<br><br><hr>
 #Components & Parts
 
 
@@ -376,6 +419,12 @@ Optional: Define a **style** and/or a **color**.
 
 
 
+
+
+
+
+
+<br><br><hr>
 #Other (in progress)
 
 
