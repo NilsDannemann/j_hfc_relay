@@ -89,21 +89,21 @@ By default a column has no special behavior. You can add two different behaviors
 
 
 
-###Beta: Fixed & Auto Widths
+###Beta: Fixed & Auto Columns
 
-Fixed Widths can be used like so:
+Fixed Width-Columns can be used like so:
 
 ```sass
 @include column(250px);
 ```
 
-Auto Widths can be used like so:
+Auto Width-Columns can be used like so:
 
 ```sass
 @include column();
 ```
 
-**Warning:** Neither of those have access to gutters! 
+**Warning:** Neither of those have access to gutters or behaviors! 
 
 
 

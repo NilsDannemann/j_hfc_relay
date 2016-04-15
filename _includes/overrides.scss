@@ -5,16 +5,15 @@
 /* =======================================*/
 
 .fixed {
-	@include column($sidebar-width, $gutter: true);
+	@include column($sidebar-width, $behavior: stacking);
 	background: $color-grey;
 	height: $whitespace*2;
 }
 .flexible {
-	@include column($gutter: true);
+	@include column($behavior: stacking);
 	background: $color-red;
 	height: $whitespace*2;
 }
-
 .eigth {
 	@include column(1/8, $gutter: true, $behavior: doubling);
 	background: $color-grey;
