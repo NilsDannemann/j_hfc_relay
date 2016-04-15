@@ -89,6 +89,25 @@ By default a column has no special behavior. You can add two different behaviors
 
 
 
+###Beta: Fixed & Auto Widths
+
+Fixed Widths can be used like so:
+
+```sass
+@include column(250px);
+```
+
+Auto Widths can be used like so:
+
+```sass
+@include column();
+```
+
+**Warning:** Neither of those have access to gutters! 
+
+
+
+
 ###Snippets
 The Snippets for Sublime Text are optional but make the workflow much faster. <br>
 **Install:** [Download](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/snippets.zip) the Snippets and place them in your `(path_to_sublime)/Packages/User` folder.<br>
