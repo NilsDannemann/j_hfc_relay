@@ -8,20 +8,21 @@ children: false
 
 <h1>Grid</h1>
 
-<div class="box">box</div>
-<div class="box">box</div>
-<div class="box">box</div>
-<div class="box">box</div>
-<div class="box">box</div>
-<div class="box">box</div>
-<div class="box">box</div>
-<div class="box">box</div>
+<div class="fixed"></div>
+<div class="flexible"></div>
+<div class="flexible"></div>
+<div class="flexible"></div>
+<div class="flexible"></div>
+<div class="fixed"></div>
 
-<div class="box">box</div>
-<div class="box">box</div>
-<div class="box">box</div>
-<div class="box">box</div>
-<div class="box">box</div>
-<div class="box">box</div>
-<div class="box">box</div>
-<div class="box">box</div>
+
+<!-- <div class="eigth"></div>
+<div class="eigth"></div>
+<div class="eigth"></div>
+<div class="eigth"></div>
+<div class="eigth"></div>
+<div class="eigth"></div>
+<div class="eigth"></div>
+<div class="eigth"></div> -->
+
+

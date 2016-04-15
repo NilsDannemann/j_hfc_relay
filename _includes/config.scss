@@ -299,16 +299,29 @@ $teaser-lines-to-show: 3;
 /* GRID
 /*
 /* =======================================*/
-@mixin column($fraction: 1/1, $gutter: null, $behavior: null) {
+@mixin column($fraction: null, $gutter: null, $behavior: null) {
 	// GRID: NO GUTTERS (default)
 	@if ($gutter == 0px or $gutter == false or $gutter == null) {
-		width: calc(99.999999% * (#{$fraction}));
-		margin-bottom: 0;
-		// BEHAVIOR: DOUBLING
-		@if ($behavior == 'doubling') {
-			@include respond-below(xl) 	{width: calc(99.999999% * (#{$fraction}) * 2);}
-			@include respond-below(m) 	{width: calc(99.999999% * (#{$fraction}) / ((#{$fraction}) * 2));}
-			@include respond-below(s) 	{width: 100%;}
+		// FRACTION WIDTH
+		@if ($fraction != null and $fraction <= 1) {
+			width: calc(99.999999% * (#{$fraction}));
+			margin-bottom: 0;
+			// BEHAVIOR: DOUBLING
+			@if ($behavior == 'doubling') {
+				@include respond-below(xl) 	{width: calc(99.999999% * (#{$fraction}) * 2);}
+				@include respond-below(m) 	{width: calc(99.999999% * (#{$fraction}) / ((#{$fraction}) * 2));}
+				@include respond-below(s) 	{width: 100%;}
+			}
+		}
+		// PX WIDTH
+		@if ($fraction != null and $fraction > 1) {
+			width: $fraction;
+			margin-bottom: 0;
+		}
+		// AUTO WIDTH
+		@if ($fraction == null) {
+			flex: 1;
+			margin-bottom: 0;
 		}
 	}
 	// GRID: WITH GUTTERS (accepts $whitespace variable, px or % as gutter)
@@ -316,14 +329,24 @@ $teaser-lines-to-show: 3;
 		@if ($gutter == true) {
 			$gutter: $whitespace;
 		}
-		width: calc(99.999999% * (#{$fraction}) - (#{$gutter} - #{$gutter} * (#{$fraction})));
-		margin-bottom: $gutter;
-
-		// BEHAVIOR: DOUBLING
-		@if ($behavior == doubling) {
-			@include respond-below(xl) 	{width: calc(99.999999% * ((#{$fraction}) * 2) - (#{$gutter} - #{$gutter} * ((#{$fraction}) * 2)));}
-			@include respond-below(m) 	{width: calc(99.999999% * ((#{$fraction}) / ((#{$fraction}) * 2)) - (#{$gutter} - #{$gutter} * ((#{$fraction}) / ((#{$fraction}) * 2))));}
-			@include respond-below(s) 	{width: 100%;}
+		// FRACTION WIDTH
+		@if ($fraction != null and $fraction <= 1) {
+			width: calc(99.999999% * (#{$fraction}) - (#{$gutter} - #{$gutter} * (#{$fraction})));
+			margin-bottom: $gutter;
+			// BEHAVIOR: DOUBLING
+			@if ($behavior == doubling) {
+				@include respond-below(xl) 	{width: calc(99.999999% * ((#{$fraction}) * 2) - (#{$gutter} - #{$gutter} * ((#{$fraction}) * 2)));}
+				@include respond-below(m) 	{width: calc(99.999999% * ((#{$fraction}) / ((#{$fraction}) * 2)) - (#{$gutter} - #{$gutter} * ((#{$fraction}) / ((#{$fraction}) * 2))));}
+				@include respond-below(s) 	{width: 100%;}
+			}
+		}
+		// PX WIDTH (-> no gutters possible)
+		@if ($fraction != null and $fraction > 1) {
+			width: $fraction;
+		}
+		// AUTO WIDTH (-> no gutters possible)
+		@if ($fraction == null) {
+			flex: 1;
 		}
 	}
 	// BEHAVIOR: STACKING
